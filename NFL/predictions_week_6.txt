@@ -1,0 +1,79 @@
+NFL PREDICTIONS - WEEK 6
+Successfully predicted: 15/15 games
+====================================================================================================
+
+Game 1: Philadelphia Eagles @ New York Giants
+  PREDICTION: Philadelphia Eagles wins
+  Confidence: 95%
+  Points: New York Giants 4.1 - 10.2 Philadelphia Eagles
+
+Game 2: Denver Broncos @ New York Jets
+  PREDICTION: New York Jets wins
+  Confidence: 37%
+  Points: New York Jets 6.2 - 4.0 Denver Broncos
+
+Game 3: Arizona Cardinals @ Indianapolis Colts
+  PREDICTION: Indianapolis Colts wins
+  Confidence: 95%
+  Points: Indianapolis Colts 17.6 - 7.2 Arizona Cardinals
+
+Game 4: Los Angeles Chargers @ Miami Dolphins
+  PREDICTION: Miami Dolphins wins
+  Confidence: 17%
+  Points: Miami Dolphins 6.1 - 5.0 Los Angeles Chargers
+
+Game 5: New England Patriots @ New Orleans Saints
+  PREDICTION: New England Patriots wins
+  Confidence: 91%
+  Points: New Orleans Saints 4.6 - 10.1 New England Patriots
+
+Game 6: Cleveland Browns @ Pittsburgh Steelers
+  PREDICTION: Pittsburgh Steelers wins
+  Confidence: 95%
+  Points: Pittsburgh Steelers 11.2 - 0.6 Cleveland Browns
+
+Game 7: Dallas Cowboys @ Carolina Panthers
+  PREDICTION: Dallas Cowboys wins
+  Confidence: 47%
+  Points: Carolina Panthers 7.2 - 10.0 Dallas Cowboys
+
+Game 8: Seattle Seahawks @ Jacksonville Jaguars
+  PREDICTION: Jacksonville Jaguars wins
+  Confidence: 64%
+  Points: Jacksonville Jaguars 14.4 - 10.6 Seattle Seahawks
+
+Game 9: Los Angeles Rams @ Baltimore Ravens
+  PREDICTION: Baltimore Ravens wins
+  Confidence: 95%
+  Points: Baltimore Ravens 17.6 - 7.0 Los Angeles Rams
+
+Game 10: Tennessee Titans @ Las Vegas Raiders
+  PREDICTION: TIE wins
+  Confidence: 50%
+  Points: Las Vegas Raiders 4.6 - 4.6 Tennessee Titans
+
+Game 11: Cincinnati Bengals @ Green Bay Packers
+  PREDICTION: Green Bay Packers wins
+  Confidence: 59%
+  Points: Green Bay Packers 9.5 - 6.0 Cincinnati Bengals
+
+Game 12: San Francisco 49ers @ Tampa Bay Buccaneers
+  PREDICTION: Tampa Bay Buccaneers wins
+  Confidence: 95%
+  Points: Tampa Bay Buccaneers 12.9 - 7.2 San Francisco 49ers
+
+Game 13: Detroit Lions @ Kansas City Chiefs
+  PREDICTION: Detroit Lions wins
+  Confidence: 70%
+  Points: Kansas City Chiefs 8.0 - 12.2 Detroit Lions
+
+Game 14: Buffalo Bills @ Atlanta Falcons
+  PREDICTION: Buffalo Bills wins
+  Confidence: 95%
+  Points: Atlanta Falcons 8.5 - 15.2 Buffalo Bills
+
+Game 15: Chicago Bears @ Washington Commanders
+  PREDICTION: Washington Commanders wins
+  Confidence: 5%
+  Points: Washington Commanders 8.1 - 7.8 Chicago Bears
+

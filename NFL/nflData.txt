@@ -1,0 +1,1156 @@
+NFL Game Data - Last Updated: 2025-10-07 17:06:00
+====================================================================================================
+
+
+====================================================================================================
+PRESEASON_WEEK_1
+====================================================================================================
+
+[PRESEASON_WEEK_1] Los Angeles Chargers @ Detroit Lions | 34-7 | Final
+  AWAY (Los Angeles Chargers):
+    Total Yards: 261 | Yards/Play: 4.4 | Possession: 32:13
+    Passing: 140yds | Rushing: 121yds | 1st Downs: 16
+    3rd Down: 4-13 | Turnovers: 0 | Sacks: 1
+  HOME (Detroit Lions):
+    Total Yards: 197 | Yards/Play: 3.9 | Possession: 27:47
+    Passing: 104yds | Rushing: 93yds | 1st Downs: 12
+    3rd Down: 1-11 | Turnovers: 5 | Sacks: 2
+
+
+====================================================================================================
+PRESEASON_WEEK_2
+====================================================================================================
+
+[PRESEASON_WEEK_2] Indianapolis Colts @ Baltimore Ravens | 16-24 | Final
+  AWAY (Indianapolis Colts):
+    Total Yards: 366 | Yards/Play: 4.7 | Possession: 32:39
+    Passing: 240yds | Rushing: 126yds | 1st Downs: 19
+    3rd Down: 6-19 | Turnovers: 1 | Sacks: 2
+  HOME (Baltimore Ravens):
+    Total Yards: 226 | Yards/Play: 3.8 | Possession: 27:21
+    Passing: 49yds | Rushing: 177yds | 1st Downs: 15
+    3rd Down: 5-14 | Turnovers: 2 | Sacks: 2
+
+[PRESEASON_WEEK_2] Cincinnati Bengals @ Philadelphia Eagles | 27-34 | Final
+  AWAY (Cincinnati Bengals):
+    Total Yards: 325 | Yards/Play: 5.4 | Possession: 27:04
+    Passing: 268yds | Rushing: 57yds | 1st Downs: 19
+    3rd Down: 3-12 | Turnovers: 1 | Sacks: 1
+  HOME (Philadelphia Eagles):
+    Total Yards: 432 | Yards/Play: 5.9 | Possession: 32:56
+    Passing: 300yds | Rushing: 132yds | 1st Downs: 23
+    3rd Down: 3-15 | Turnovers: 1 | Sacks: 2
+
+[PRESEASON_WEEK_2] Las Vegas Raiders @ Seattle Seahawks | 23-23 | Final
+  AWAY (Las Vegas Raiders):
+    Total Yards: 392 | Yards/Play: 5.9 | Possession: 28:52
+    Passing: 288yds | Rushing: 104yds | 1st Downs: 21
+    3rd Down: 5-14 | Turnovers: 2 | Sacks: 1
+  HOME (Seattle Seahawks):
+    Total Yards: 368 | Yards/Play: 5.7 | Possession: 31:08
+    Passing: 198yds | Rushing: 170yds | 1st Downs: 23
+    3rd Down: 8-15 | Turnovers: 1 | Sacks: 1
+
+[PRESEASON_WEEK_2] Detroit Lions @ Atlanta Falcons | 17-10 | Final
+  AWAY (Detroit Lions):
+    Total Yards: 246 | Yards/Play: 5.3 | Possession: 24:50
+    Passing: 146yds | Rushing: 100yds | 1st Downs: 14
+    3rd Down: 3-9 | Turnovers: 2 | Sacks: 3
+  HOME (Atlanta Falcons):
+    Total Yards: 207 | Yards/Play: 5.8 | Possession: 28:51
+    Passing: 185yds | Rushing: 22yds | 1st Downs: 9
+    3rd Down: 1-7 | Turnovers: 0 | Sacks: 2
+
+[PRESEASON_WEEK_2] Cleveland Browns @ Carolina Panthers | 30-10 | Final
+  AWAY (Cleveland Browns):
+    Total Yards: 308 | Yards/Play: 4.7 | Possession: 34:28
+    Passing: 183yds | Rushing: 125yds | 1st Downs: 20
+    3rd Down: 6-15 | Turnovers: 0 | Sacks: 3
+  HOME (Carolina Panthers):
+    Total Yards: 251 | Yards/Play: 4.7 | Possession: 25:32
+    Passing: 211yds | Rushing: 40yds | 1st Downs: 13
+    3rd Down: 3-12 | Turnovers: 2 | Sacks: 4
+
+[PRESEASON_WEEK_2] Washington Commanders @ New England Patriots | 18-48 | Final
+  AWAY (Washington Commanders):
+    Total Yards: 338 | Yards/Play: 5.1 | Possession: 30:39
+    Passing: 237yds | Rushing: 101yds | 1st Downs: 20
+    3rd Down: 5-13 | Turnovers: 2 | Sacks: 0
+  HOME (New England Patriots):
+    Total Yards: 327 | Yards/Play: 5.4 | Possession: 29:21
+    Passing: 174yds | Rushing: 153yds | 1st Downs: 23
+    3rd Down: 7-14 | Turnovers: 1 | Sacks: 1
+
+[PRESEASON_WEEK_2] New York Giants @ Buffalo Bills | 34-25 | Final
+  AWAY (New York Giants):
+    Total Yards: 396 | Yards/Play: 5.2 | Possession: 36:19
+    Passing: 317yds | Rushing: 79yds | 1st Downs: 21
+    3rd Down: 9-19 | Turnovers: 0 | Sacks: 0
+  HOME (Buffalo Bills):
+    Total Yards: 389 | Yards/Play: 7.1 | Possession: 23:41
+    Passing: 331yds | Rushing: 58yds | 1st Downs: 20
+    3rd Down: 1-9 | Turnovers: 1 | Sacks: 2
+
+[PRESEASON_WEEK_2] Houston Texans @ Minnesota Vikings | 10-20 | Final
+  AWAY (Houston Texans):
+    Total Yards: 194 | Yards/Play: 3.7 | Possession: 26:23
+    Passing: 129yds | Rushing: 65yds | 1st Downs: 13
+    3rd Down: 6-14 | Turnovers: 3 | Sacks: 2
+  HOME (Minnesota Vikings):
+    Total Yards: 261 | Yards/Play: 4.1 | Possession: 33:37
+    Passing: 175yds | Rushing: 86yds | 1st Downs: 20
+    3rd Down: 5-13 | Turnovers: 1 | Sacks: 2
+
+[PRESEASON_WEEK_2] Dallas Cowboys @ Los Angeles Rams | 21-31 | Final
+  AWAY (Dallas Cowboys):
+    Total Yards: 297 | Yards/Play: 5.0 | Possession: 26:40
+    Passing: 149yds | Rushing: 148yds | 1st Downs: 19
+    3rd Down: 4-11 | Turnovers: 1 | Sacks: 1
+  HOME (Los Angeles Rams):
+    Total Yards: 364 | Yards/Play: 5.8 | Possession: 33:20
+    Passing: 183yds | Rushing: 181yds | 1st Downs: 22
+    3rd Down: 5-11 | Turnovers: 1 | Sacks: 1
+
+[PRESEASON_WEEK_2] Pittsburgh Steelers @ Jacksonville Jaguars | 31-25 | Final
+  AWAY (Pittsburgh Steelers):
+    Total Yards: 367 | Yards/Play: 5.6 | Possession: 30:44
+    Passing: 301yds | Rushing: 66yds | 1st Downs: 25
+    3rd Down: 8-13 | Turnovers: 0 | Sacks: 2
+  HOME (Jacksonville Jaguars):
+    Total Yards: 339 | Yards/Play: 5.6 | Possession: 29:16
+    Passing: 273yds | Rushing: 66yds | 1st Downs: 21
+    3rd Down: 3-10 | Turnovers: 0 | Sacks: 0
+
+[PRESEASON_WEEK_2] Tennessee Titans @ Tampa Bay Buccaneers | 7-29 | Final
+  AWAY (Tennessee Titans):
+    Total Yards: 201 | Yards/Play: 3.6 | Possession: 25:01
+    Passing: 135yds | Rushing: 66yds | 1st Downs: 11
+    3rd Down: 5-13 | Turnovers: 3 | Sacks: 2
+  HOME (Tampa Bay Buccaneers):
+    Total Yards: 348 | Yards/Play: 5.2 | Possession: 34:59
+    Passing: 170yds | Rushing: 178yds | 1st Downs: 20
+    3rd Down: 7-16 | Turnovers: 1 | Sacks: 1
+
+[PRESEASON_WEEK_2] New York Jets @ Green Bay Packers | 30-10 | Final
+  AWAY (New York Jets):
+    Total Yards: 403 | Yards/Play: 5.9 | Possession: 38:41
+    Passing: 256yds | Rushing: 147yds | 1st Downs: 21
+    3rd Down: 8-15 | Turnovers: 0 | Sacks: 0
+  HOME (Green Bay Packers):
+    Total Yards: 188 | Yards/Play: 4.0 | Possession: 21:19
+    Passing: 64yds | Rushing: 124yds | 1st Downs: 12
+    3rd Down: 1-10 | Turnovers: 2 | Sacks: 4
+
+[PRESEASON_WEEK_2] Kansas City Chiefs @ Arizona Cardinals | 17-20 | Final
+  AWAY (Kansas City Chiefs):
+    Total Yards: 249 | Yards/Play: 4.0 | Possession: 29:36
+    Passing: 157yds | Rushing: 92yds | 1st Downs: 17
+    3rd Down: 5-13 | Turnovers: 2 | Sacks: 1
+  HOME (Arizona Cardinals):
+    Total Yards: 355 | Yards/Play: 5.8 | Possession: 30:24
+    Passing: 215yds | Rushing: 140yds | 1st Downs: 24
+    3rd Down: 4-9 | Turnovers: 3 | Sacks: 1
+
+[PRESEASON_WEEK_2] Denver Broncos @ San Francisco 49ers | 30-9 | Final
+  AWAY (Denver Broncos):
+    Total Yards: 368 | Yards/Play: 5.1 | Possession: 36:58
+    Passing: 215yds | Rushing: 153yds | 1st Downs: 20
+    3rd Down: 6-16 | Turnovers: 0 | Sacks: 2
+  HOME (San Francisco 49ers):
+    Total Yards: 203 | Yards/Play: 3.8 | Possession: 23:02
+    Passing: 107yds | Rushing: 96yds | 1st Downs: 11
+    3rd Down: 1-12 | Turnovers: 4 | Sacks: 3
+
+[PRESEASON_WEEK_2] Miami Dolphins @ Chicago Bears | 24-24 | Final
+  AWAY (Miami Dolphins):
+    Total Yards: 272 | Yards/Play: 4.2 | Possession: 26:50
+    Passing: 171yds | Rushing: 101yds | 1st Downs: 16
+    3rd Down: 7-16 | Turnovers: 2 | Sacks: 6
+  HOME (Chicago Bears):
+    Total Yards: 295 | Yards/Play: 4.5 | Possession: 33:10
+    Passing: 205yds | Rushing: 90yds | 1st Downs: 22
+    3rd Down: 6-14 | Turnovers: 1 | Sacks: 3
+
+[PRESEASON_WEEK_2] New Orleans Saints @ Los Angeles Chargers | 13-27 | Final
+  AWAY (New Orleans Saints):
+    Total Yards: 300 | Yards/Play: 4.5 | Possession: 31:08
+    Passing: 239yds | Rushing: 61yds | 1st Downs: 17
+    3rd Down: 3-13 | Turnovers: 3 | Sacks: 5
+  HOME (Los Angeles Chargers):
+    Total Yards: 248 | Yards/Play: 4.4 | Possession: 28:52
+    Passing: 100yds | Rushing: 148yds | 1st Downs: 15
+    3rd Down: 6-14 | Turnovers: 1 | Sacks: 3
+
+
+====================================================================================================
+PRESEASON_WEEK_3
+====================================================================================================
+
+[PRESEASON_WEEK_3] Tennessee Titans @ Atlanta Falcons | 23-20 | Final
+  AWAY (Tennessee Titans):
+    Total Yards: 313 | Yards/Play: 5.1 | Possession: 30:29
+    Passing: 195yds | Rushing: 118yds | 1st Downs: 19
+    3rd Down: 5-13 | Turnovers: 2 | Sacks: 1
+  HOME (Atlanta Falcons):
+    Total Yards: 289 | Yards/Play: 4.5 | Possession: 29:31
+    Passing: 174yds | Rushing: 115yds | 1st Downs: 13
+    3rd Down: 5-15 | Turnovers: 1 | Sacks: 2
+
+[PRESEASON_WEEK_3] Kansas City Chiefs @ Seattle Seahawks | 16-33 | Final
+  AWAY (Kansas City Chiefs):
+    Total Yards: 156 | Yards/Play: 4.0 | Possession: 21:22
+    Passing: 88yds | Rushing: 68yds | 1st Downs: 9
+    3rd Down: 4-9 | Turnovers: 0 | Sacks: 2
+  HOME (Seattle Seahawks):
+    Total Yards: 477 | Yards/Play: 6.9 | Possession: 38:38
+    Passing: 209yds | Rushing: 268yds | 1st Downs: 29
+    3rd Down: 7-12 | Turnovers: 0 | Sacks: 0
+
+[PRESEASON_WEEK_3] Miami Dolphins @ Detroit Lions | 24-17 | Final
+  AWAY (Miami Dolphins):
+    Total Yards: 356 | Yards/Play: 5.8 | Possession: 30:19
+    Passing: 259yds | Rushing: 97yds | 1st Downs: 21
+    3rd Down: 7-13 | Turnovers: 1 | Sacks: 1
+  HOME (Detroit Lions):
+    Total Yards: 274 | Yards/Play: 4.3 | Possession: 29:41
+    Passing: 170yds | Rushing: 104yds | 1st Downs: 18
+    3rd Down: 1-12 | Turnovers: 1 | Sacks: 3
+
+[PRESEASON_WEEK_3] Green Bay Packers @ Indianapolis Colts | 23-19 | Final
+  AWAY (Green Bay Packers):
+    Total Yards: 356 | Yards/Play: 5.1 | Possession: 32:18
+    Passing: 197yds | Rushing: 159yds | 1st Downs: 24
+    3rd Down: 8-16 | Turnovers: 1 | Sacks: 1
+  HOME (Indianapolis Colts):
+    Total Yards: 360 | Yards/Play: 5.8 | Possession: 27:42
+    Passing: 267yds | Rushing: 93yds | 1st Downs: 22
+    3rd Down: 3-11 | Turnovers: 0 | Sacks: 1
+
+[PRESEASON_WEEK_3] New England Patriots @ Minnesota Vikings | 20-12 | Final
+  AWAY (New England Patriots):
+    Total Yards: 314 | Yards/Play: 4.5 | Possession: 34:10
+    Passing: 207yds | Rushing: 107yds | 1st Downs: 19
+    3rd Down: 12-20 | Turnovers: 0 | Sacks: 0
+  HOME (Minnesota Vikings):
+    Total Yards: 273 | Yards/Play: 4.3 | Possession: 25:50
+    Passing: 219yds | Rushing: 54yds | 1st Downs: 15
+    3rd Down: 5-15 | Turnovers: 2 | Sacks: 4
+
+[PRESEASON_WEEK_3] Cleveland Browns @ Philadelphia Eagles | 22-13 | Final
+  AWAY (Cleveland Browns):
+    Total Yards: 331 | Yards/Play: 5.3 | Possession: 35:57
+    Passing: 199yds | Rushing: 132yds | 1st Downs: 15
+    3rd Down: 9-16 | Turnovers: 2 | Sacks: 3
+  HOME (Philadelphia Eagles):
+    Total Yards: 88 | Yards/Play: 2.0 | Possession: 24:03
+    Passing: 55yds | Rushing: 33yds | 1st Downs: 8
+    3rd Down: 4-12 | Turnovers: 1 | Sacks: 1
+
+[PRESEASON_WEEK_3] Carolina Panthers @ Houston Texans | 3-20 | Final
+  AWAY (Carolina Panthers):
+    Total Yards: 164 | Yards/Play: 3.6 | Possession: 29:07
+    Passing: 86yds | Rushing: 78yds | 1st Downs: 11
+    3rd Down: 1-10 | Turnovers: 2 | Sacks: 3
+  HOME (Houston Texans):
+    Total Yards: 266 | Yards/Play: 4.1 | Possession: 30:53
+    Passing: 157yds | Rushing: 109yds | 1st Downs: 18
+    3rd Down: 5-14 | Turnovers: 0 | Sacks: 1
+
+[PRESEASON_WEEK_3] San Francisco 49ers @ Las Vegas Raiders | 22-19 | Final
+  AWAY (San Francisco 49ers):
+    Total Yards: 348 | Yards/Play: 5.3 | Possession: 32:24
+    Passing: 284yds | Rushing: 64yds | 1st Downs: 24
+    3rd Down: 3-11 | Turnovers: 1 | Sacks: 2
+  HOME (Las Vegas Raiders):
+    Total Yards: 271 | Yards/Play: 4.5 | Possession: 27:36
+    Passing: 194yds | Rushing: 77yds | 1st Downs: 18
+    3rd Down: 9-16 | Turnovers: 2 | Sacks: 4
+
+[PRESEASON_WEEK_3] Baltimore Ravens @ Dallas Cowboys | 31-13 | Final
+  AWAY (Baltimore Ravens):
+    Total Yards: 399 | Yards/Play: 5.1 | Possession: 40:11
+    Passing: 251yds | Rushing: 148yds | 1st Downs: 26
+    3rd Down: 8-17 | Turnovers: 2 | Sacks: 0
+  HOME (Dallas Cowboys):
+    Total Yards: 176 | Yards/Play: 3.7 | Possession: 19:49
+    Passing: 125yds | Rushing: 51yds | 1st Downs: 7
+    3rd Down: 2-11 | Turnovers: 2 | Sacks: 4
+
+[PRESEASON_WEEK_3] Los Angeles Chargers @ Los Angeles Rams | 22-23 | Final
+  AWAY (Los Angeles Chargers):
+    Total Yards: 291 | Yards/Play: 5.2 | Possession: 24:03
+    Passing: 208yds | Rushing: 83yds | 1st Downs: 16
+    3rd Down: 5-13 | Turnovers: 0 | Sacks: 2
+  HOME (Los Angeles Rams):
+    Total Yards: 458 | Yards/Play: 6.0 | Possession: 35:57
+    Passing: 324yds | Rushing: 134yds | 1st Downs: 26
+    3rd Down: 5-13 | Turnovers: 1 | Sacks: 1
+
+[PRESEASON_WEEK_3] New York Jets @ New York Giants | 12-31 | Final
+  AWAY (New York Jets):
+    Total Yards: 333 | Yards/Play: 4.8 | Possession: 33:10
+    Passing: 192yds | Rushing: 141yds | 1st Downs: 18
+    3rd Down: 8-17 | Turnovers: 1 | Sacks: 0
+  HOME (New York Giants):
+    Total Yards: 478 | Yards/Play: 7.8 | Possession: 26:50
+    Passing: 398yds | Rushing: 80yds | 1st Downs: 27
+    3rd Down: 5-9 | Turnovers: 2 | Sacks: 2
+
+[PRESEASON_WEEK_3] Tampa Bay Buccaneers @ Pittsburgh Steelers | 17-14 | Final
+  AWAY (Tampa Bay Buccaneers):
+    Total Yards: 240 | Yards/Play: 3.8 | Possession: 30:29
+    Passing: 199yds | Rushing: 41yds | 1st Downs: 13
+    3rd Down: 6-18 | Turnovers: 2 | Sacks: 1
+  HOME (Pittsburgh Steelers):
+    Total Yards: 316 | Yards/Play: 5.4 | Possession: 29:31
+    Passing: 186yds | Rushing: 130yds | 1st Downs: 16
+    3rd Down: 2-12 | Turnovers: 3 | Sacks: 4
+
+[PRESEASON_WEEK_3] Arizona Cardinals @ Denver Broncos | 7-27 | Final
+  AWAY (Arizona Cardinals):
+    Total Yards: 135 | Yards/Play: 2.9 | Possession: 24:56
+    Passing: 99yds | Rushing: 36yds | 1st Downs: 8
+    3rd Down: 2-13 | Turnovers: 0 | Sacks: 2
+  HOME (Denver Broncos):
+    Total Yards: 562 | Yards/Play: 7.8 | Possession: 35:04
+    Passing: 395yds | Rushing: 167yds | 1st Downs: 27
+    3rd Down: 5-11 | Turnovers: 1 | Sacks: 1
+
+[PRESEASON_WEEK_3] Jacksonville Jaguars @ New Orleans Saints | 17-17 | Final
+  AWAY (Jacksonville Jaguars):
+    Total Yards: 337 | Yards/Play: 5.3 | Possession: 28:48
+    Passing: 241yds | Rushing: 96yds | 1st Downs: 21
+    3rd Down: 6-12 | Turnovers: 3 | Sacks: 0
+  HOME (New Orleans Saints):
+    Total Yards: 335 | Yards/Play: 5.7 | Possession: 31:12
+    Passing: 248yds | Rushing: 87yds | 1st Downs: 18
+    3rd Down: 4-13 | Turnovers: 1 | Sacks: 2
+
+[PRESEASON_WEEK_3] Buffalo Bills @ Chicago Bears | 0-38 | Final
+  AWAY (Buffalo Bills):
+    Total Yards: 180 | Yards/Play: 4.2 | Possession: 20:48
+    Passing: 103yds | Rushing: 77yds | 1st Downs: 12
+    3rd Down: 0-8 | Turnovers: 1 | Sacks: 2
+  HOME (Chicago Bears):
+    Total Yards: 528 | Yards/Play: 6.4 | Possession: 39:12
+    Passing: 357yds | Rushing: 171yds | 1st Downs: 31
+    3rd Down: 9-16 | Turnovers: 0 | Sacks: 1
+
+[PRESEASON_WEEK_3] Cincinnati Bengals @ Washington Commanders | 31-17 | Final
+  AWAY (Cincinnati Bengals):
+    Total Yards: 293 | Yards/Play: 4.1 | Possession: 37:19
+    Passing: 206yds | Rushing: 87yds | 1st Downs: 24
+    3rd Down: 6-15 | Turnovers: 0 | Sacks: 2
+  HOME (Washington Commanders):
+    Total Yards: 270 | Yards/Play: 5.5 | Possession: 22:41
+    Passing: 85yds | Rushing: 185yds | 1st Downs: 14
+    3rd Down: 4-10 | Turnovers: 2 | Sacks: 0
+
+
+====================================================================================================
+REGULAR_WEEK_1
+====================================================================================================
+
+[REGULAR_WEEK_1] Dallas Cowboys @ Philadelphia Eagles | 20-24 | Final
+  AWAY (Dallas Cowboys):
+    Total Yards: 307 | Yards/Play: 5.5 | Possession: 25:08
+    Passing: 188yds | Rushing: 119yds | 1st Downs: 22
+    3rd Down: 7-11 | Turnovers: 1 | Sacks: 0
+  HOME (Philadelphia Eagles):
+    Total Yards: 302 | Yards/Play: 4.9 | Possession: 34:52
+    Passing: 144yds | Rushing: 158yds | 1st Downs: 20
+    3rd Down: 8-13 | Turnovers: 0 | Sacks: 1
+
+[REGULAR_WEEK_1] Kansas City Chiefs @ Los Angeles Chargers | 21-27 | Final
+  AWAY (Kansas City Chiefs):
+    Total Yards: 347 | Yards/Play: 6.0 | Possession: 27:16
+    Passing: 249yds | Rushing: 98yds | 1st Downs: 18
+    3rd Down: 5-14 | Turnovers: 0 | Sacks: 2
+  HOME (Los Angeles Chargers):
+    Total Yards: 394 | Yards/Play: 6.4 | Possession: 32:44
+    Passing: 304yds | Rushing: 90yds | 1st Downs: 22
+    3rd Down: 7-13 | Turnovers: 0 | Sacks: 3
+
+[REGULAR_WEEK_1] Tampa Bay Buccaneers @ Atlanta Falcons | 23-20 | Final
+  AWAY (Tampa Bay Buccaneers):
+    Total Yards: 260 | Yards/Play: 4.6 | Possession: 24:48
+    Passing: 159yds | Rushing: 101yds | 1st Downs: 16
+    3rd Down: 7-14 | Turnovers: 0 | Sacks: 1
+  HOME (Atlanta Falcons):
+    Total Yards: 358 | Yards/Play: 5.0 | Possession: 35:12
+    Passing: 289yds | Rushing: 69yds | 1st Downs: 23
+    3rd Down: 6-15 | Turnovers: 0 | Sacks: 1
+
+[REGULAR_WEEK_1] Cincinnati Bengals @ Cleveland Browns | 17-16 | Final
+  AWAY (Cincinnati Bengals):
+    Total Yards: 141 | Yards/Play: 2.9 | Possession: 24:11
+    Passing: 95yds | Rushing: 46yds | 1st Downs: 11
+    3rd Down: 7-14 | Turnovers: 0 | Sacks: 3
+  HOME (Cleveland Browns):
+    Total Yards: 327 | Yards/Play: 4.6 | Possession: 35:49
+    Passing: 278yds | Rushing: 49yds | 1st Downs: 22
+    3rd Down: 9-16 | Turnovers: 2 | Sacks: 2
+
+[REGULAR_WEEK_1] Miami Dolphins @ Indianapolis Colts | 8-33 | Final
+  AWAY (Miami Dolphins):
+    Total Yards: 211 | Yards/Play: 4.6 | Possession: 21:17
+    Passing: 133yds | Rushing: 78yds | 1st Downs: 12
+    3rd Down: 5-10 | Turnovers: 3 | Sacks: 3
+  HOME (Indianapolis Colts):
+    Total Yards: 418 | Yards/Play: 6.0 | Possession: 38:43
+    Passing: 262yds | Rushing: 156yds | 1st Downs: 27
+    3rd Down: 7-15 | Turnovers: 0 | Sacks: 1
+
+[REGULAR_WEEK_1] Las Vegas Raiders @ New England Patriots | 20-13 | Final
+  AWAY (Las Vegas Raiders):
+    Total Yards: 389 | Yards/Play: 6.3 | Possession: 29:55
+    Passing: 333yds | Rushing: 56yds | 1st Downs: 21
+    3rd Down: 5-13 | Turnovers: 1 | Sacks: 4
+  HOME (New England Patriots):
+    Total Yards: 336 | Yards/Play: 4.9 | Possession: 30:05
+    Passing: 276yds | Rushing: 60yds | 1st Downs: 18
+    3rd Down: 4-14 | Turnovers: 1 | Sacks: 4
+
+[REGULAR_WEEK_1] Arizona Cardinals @ New Orleans Saints | 20-13 | Final
+  AWAY (Arizona Cardinals):
+    Total Yards: 276 | Yards/Play: 4.5 | Possession: 33:46
+    Passing: 130yds | Rushing: 146yds | 1st Downs: 19
+    3rd Down: 6-13 | Turnovers: 0 | Sacks: 5
+  HOME (New Orleans Saints):
+    Total Yards: 315 | Yards/Play: 4.6 | Possession: 26:14
+    Passing: 208yds | Rushing: 107yds | 1st Downs: 21
+    3rd Down: 5-14 | Turnovers: 0 | Sacks: 1
+
+[REGULAR_WEEK_1] Pittsburgh Steelers @ New York Jets | 34-32 | Final
+  AWAY (Pittsburgh Steelers):
+    Total Yards: 271 | Yards/Play: 5.0 | Possession: 25:17
+    Passing: 218yds | Rushing: 53yds | 1st Downs: 19
+    3rd Down: 4-10 | Turnovers: 0 | Sacks: 4
+  HOME (New York Jets):
+    Total Yards: 394 | Yards/Play: 6.4 | Possession: 34:43
+    Passing: 212yds | Rushing: 182yds | 1st Downs: 23
+    3rd Down: 7-14 | Turnovers: 1 | Sacks: 1
+
+[REGULAR_WEEK_1] New York Giants @ Washington Commanders | 6-21 | Final
+  AWAY (New York Giants):
+    Total Yards: 231 | Yards/Play: 3.7 | Possession: 30:32
+    Passing: 157yds | Rushing: 74yds | 1st Downs: 17
+    3rd Down: 4-16 | Turnovers: 0 | Sacks: 2
+  HOME (Washington Commanders):
+    Total Yards: 432 | Yards/Play: 6.6 | Possession: 29:28
+    Passing: 212yds | Rushing: 220yds | 1st Downs: 25
+    3rd Down: 4-11 | Turnovers: 0 | Sacks: 3
+
+[REGULAR_WEEK_1] Carolina Panthers @ Jacksonville Jaguars | 10-26 | Final
+  AWAY (Carolina Panthers):
+    Total Yards: 255 | Yards/Play: 4.2 | Possession: 29:00
+    Passing: 142yds | Rushing: 113yds | 1st Downs: 15
+    3rd Down: 8-15 | Turnovers: 3 | Sacks: 1
+  HOME (Jacksonville Jaguars):
+    Total Yards: 378 | Yards/Play: 6.0 | Possession: 31:00
+    Passing: 178yds | Rushing: 200yds | 1st Downs: 19
+    3rd Down: 5-12 | Turnovers: 1 | Sacks: 0
+
+[REGULAR_WEEK_1] Tennessee Titans @ Denver Broncos | 12-20 | Final
+  AWAY (Tennessee Titans):
+    Total Yards: 133 | Yards/Play: 2.4 | Possession: 28:04
+    Passing: 62yds | Rushing: 71yds | 1st Downs: 7
+    3rd Down: 2-14 | Turnovers: 2 | Sacks: 6
+  HOME (Denver Broncos):
+    Total Yards: 317 | Yards/Play: 4.5 | Possession: 31:56
+    Passing: 166yds | Rushing: 151yds | 1st Downs: 20
+    3rd Down: 6-15 | Turnovers: 4 | Sacks: 1
+
+[REGULAR_WEEK_1] San Francisco 49ers @ Seattle Seahawks | 17-13 | Final
+  AWAY (San Francisco 49ers):
+    Total Yards: 384 | Yards/Play: 5.3 | Possession: 37:58
+    Passing: 265yds | Rushing: 119yds | 1st Downs: 24
+    3rd Down: 7-14 | Turnovers: 2 | Sacks: 1
+  HOME (Seattle Seahawks):
+    Total Yards: 230 | Yards/Play: 4.6 | Possession: 22:02
+    Passing: 146yds | Rushing: 84yds | 1st Downs: 14
+    3rd Down: 3-10 | Turnovers: 2 | Sacks: 1
+
+[REGULAR_WEEK_1] Detroit Lions @ Green Bay Packers | 13-27 | Final
+  AWAY (Detroit Lions):
+    Total Yards: 246 | Yards/Play: 3.8 | Possession: 35:25
+    Passing: 200yds | Rushing: 46yds | 1st Downs: 16
+    3rd Down: 5-15 | Turnovers: 1 | Sacks: 4
+  HOME (Green Bay Packers):
+    Total Yards: 266 | Yards/Play: 5.7 | Possession: 24:35
+    Passing: 188yds | Rushing: 78yds | 1st Downs: 14
+    3rd Down: 4-10 | Turnovers: 0 | Sacks: 0
+
+[REGULAR_WEEK_1] Houston Texans @ Los Angeles Rams | 9-14 | Final
+  AWAY (Houston Texans):
+    Total Yards: 265 | Yards/Play: 4.6 | Possession: 31:25
+    Passing: 151yds | Rushing: 114yds | 1st Downs: 18
+    3rd Down: 2-9 | Turnovers: 2 | Sacks: 3
+  HOME (Los Angeles Rams):
+    Total Yards: 296 | Yards/Play: 5.2 | Possession: 28:35
+    Passing: 224yds | Rushing: 72yds | 1st Downs: 18
+    3rd Down: 7-13 | Turnovers: 1 | Sacks: 3
+
+[REGULAR_WEEK_1] Baltimore Ravens @ Buffalo Bills | 40-41 | Final
+  AWAY (Baltimore Ravens):
+    Total Yards: 432 | Yards/Play: 8.6 | Possession: 25:11
+    Passing: 194yds | Rushing: 238yds | 1st Downs: 19
+    3rd Down: 6-11 | Turnovers: 1 | Sacks: 2
+  HOME (Buffalo Bills):
+    Total Yards: 497 | Yards/Play: 6.4 | Possession: 34:49
+    Passing: 389yds | Rushing: 108yds | 1st Downs: 29
+    3rd Down: 7-15 | Turnovers: 0 | Sacks: 1
+
+[REGULAR_WEEK_1] Minnesota Vikings @ Chicago Bears | 27-24 | Final
+  AWAY (Minnesota Vikings):
+    Total Yards: 254 | Yards/Play: 5.2 | Possession: 27:07
+    Passing: 134yds | Rushing: 120yds | 1st Downs: 14
+    3rd Down: 3-12 | Turnovers: 1 | Sacks: 3
+  HOME (Chicago Bears):
+    Total Yards: 317 | Yards/Play: 5.0 | Possession: 32:53
+    Passing: 198yds | Rushing: 119yds | 1st Downs: 20
+    3rd Down: 3-12 | Turnovers: 1 | Sacks: 2
+
+
+====================================================================================================
+REGULAR_WEEK_2
+====================================================================================================
+
+[REGULAR_WEEK_2] Washington Commanders @ Green Bay Packers | 18-27 | Final
+  AWAY (Washington Commanders):
+    Total Yards: 230 | Yards/Play: 3.5 | Possession: 27:34
+    Passing: 179yds | Rushing: 51yds | 1st Downs: 15
+    3rd Down: 5-16 | Turnovers: 0 | Sacks: 4
+  HOME (Green Bay Packers):
+    Total Yards: 404 | Yards/Play: 6.4 | Possession: 32:26
+    Passing: 269yds | Rushing: 135yds | 1st Downs: 22
+    3rd Down: 5-12 | Turnovers: 0 | Sacks: 2
+
+[REGULAR_WEEK_2] Jacksonville Jaguars @ Cincinnati Bengals | 27-31 | Final
+  AWAY (Jacksonville Jaguars):
+    Total Yards: 400 | Yards/Play: 5.7 | Possession: 33:11
+    Passing: 261yds | Rushing: 139yds | 1st Downs: 21
+    3rd Down: 6-13 | Turnovers: 2 | Sacks: 1
+  HOME (Cincinnati Bengals):
+    Total Yards: 350 | Yards/Play: 5.4 | Possession: 26:49
+    Passing: 302yds | Rushing: 48yds | 1st Downs: 24
+    3rd Down: 6-14 | Turnovers: 3 | Sacks: 3
+
+[REGULAR_WEEK_2] New York Giants @ Dallas Cowboys | 37-40 | Final
+  AWAY (New York Giants):
+    Total Yards: 506 | Yards/Play: 7.8 | Possession: 32:39
+    Passing: 422yds | Rushing: 84yds | 1st Downs: 22
+    3rd Down: 6-14 | Turnovers: 1 | Sacks: 3
+  HOME (Dallas Cowboys):
+    Total Yards: 478 | Yards/Play: 5.8 | Possession: 37:21
+    Passing: 343yds | Rushing: 135yds | 1st Downs: 32
+    3rd Down: 6-14 | Turnovers: 1 | Sacks: 3
+
+[REGULAR_WEEK_2] Chicago Bears @ Detroit Lions | 21-52 | Final
+  AWAY (Chicago Bears):
+    Total Yards: 339 | Yards/Play: 5.3 | Possession: 29:40
+    Passing: 205yds | Rushing: 134yds | 1st Downs: 19
+    3rd Down: 7-13 | Turnovers: 2 | Sacks: 4
+  HOME (Detroit Lions):
+    Total Yards: 511 | Yards/Play: 8.8 | Possession: 30:20
+    Passing: 334yds | Rushing: 177yds | 1st Downs: 25
+    3rd Down: 4-10 | Turnovers: 0 | Sacks: 0
+
+[REGULAR_WEEK_2] Los Angeles Rams @ Tennessee Titans | 33-19 | Final
+  AWAY (Los Angeles Rams):
+    Total Yards: 439 | Yards/Play: 7.4 | Possession: 29:53
+    Passing: 290yds | Rushing: 149yds | 1st Downs: 22
+    3rd Down: 5-12 | Turnovers: 1 | Sacks: 1
+  HOME (Tennessee Titans):
+    Total Yards: 252 | Yards/Play: 3.9 | Possession: 30:07
+    Passing: 143yds | Rushing: 109yds | 1st Downs: 18
+    3rd Down: 6-15 | Turnovers: 1 | Sacks: 5
+
+[REGULAR_WEEK_2] New England Patriots @ Miami Dolphins | 33-27 | Final
+  AWAY (New England Patriots):
+    Total Yards: 333 | Yards/Play: 6.1 | Possession: 33:45
+    Passing: 211yds | Rushing: 122yds | 1st Downs: 18
+    3rd Down: 7-12 | Turnovers: 0 | Sacks: 3
+  HOME (Miami Dolphins):
+    Total Yards: 358 | Yards/Play: 6.9 | Possession: 26:15
+    Passing: 297yds | Rushing: 61yds | 1st Downs: 16
+    3rd Down: 4-10 | Turnovers: 1 | Sacks: 5
+
+[REGULAR_WEEK_2] San Francisco 49ers @ New Orleans Saints | 26-21 | Final
+  AWAY (San Francisco 49ers):
+    Total Yards: 344 | Yards/Play: 5.1 | Possession: 30:45
+    Passing: 267yds | Rushing: 77yds | 1st Downs: 23
+    3rd Down: 8-15 | Turnovers: 1 | Sacks: 3
+  HOME (New Orleans Saints):
+    Total Yards: 307 | Yards/Play: 4.6 | Possession: 29:15
+    Passing: 186yds | Rushing: 121yds | 1st Downs: 21
+    3rd Down: 4-11 | Turnovers: 1 | Sacks: 3
+
+[REGULAR_WEEK_2] Buffalo Bills @ New York Jets | 30-10 | Final
+  AWAY (Buffalo Bills):
+    Total Yards: 403 | Yards/Play: 5.7 | Possession: 38:21
+    Passing: 179yds | Rushing: 224yds | 1st Downs: 25
+    3rd Down: 5-14 | Turnovers: 0 | Sacks: 1
+  HOME (New York Jets):
+    Total Yards: 154 | Yards/Play: 3.3 | Possession: 21:39
+    Passing: 54yds | Rushing: 100yds | 1st Downs: 11
+    3rd Down: 0-11 | Turnovers: 1 | Sacks: 4
+
+[REGULAR_WEEK_2] Seattle Seahawks @ Pittsburgh Steelers | 31-17 | Final
+  AWAY (Seattle Seahawks):
+    Total Yards: 395 | Yards/Play: 6.2 | Possession: 31:17
+    Passing: 278yds | Rushing: 117yds | 1st Downs: 21
+    3rd Down: 6-14 | Turnovers: 2 | Sacks: 2
+  HOME (Pittsburgh Steelers):
+    Total Yards: 267 | Yards/Play: 4.5 | Possession: 28:43
+    Passing: 195yds | Rushing: 72yds | 1st Downs: 13
+    3rd Down: 5-15 | Turnovers: 2 | Sacks: 3
+
+[REGULAR_WEEK_2] Cleveland Browns @ Baltimore Ravens | 17-41 | Final
+  AWAY (Cleveland Browns):
+    Total Yards: 323 | Yards/Play: 4.5 | Possession: 31:49
+    Passing: 208yds | Rushing: 115yds | 1st Downs: 17
+    3rd Down: 7-18 | Turnovers: 2 | Sacks: 2
+  HOME (Baltimore Ravens):
+    Total Yards: 242 | Yards/Play: 4.6 | Possession: 28:11
+    Passing: 197yds | Rushing: 45yds | 1st Downs: 14
+    3rd Down: 3-12 | Turnovers: 0 | Sacks: 3
+
+[REGULAR_WEEK_2] Denver Broncos @ Indianapolis Colts | 28-29 | Final
+  AWAY (Denver Broncos):
+    Total Yards: 324 | Yards/Play: 6.0 | Possession: 27:53
+    Passing: 206yds | Rushing: 118yds | 1st Downs: 23
+    3rd Down: 4-9 | Turnovers: 1 | Sacks: 0
+  HOME (Indianapolis Colts):
+    Total Yards: 473 | Yards/Play: 7.1 | Possession: 32:07
+    Passing: 306yds | Rushing: 167yds | 1st Downs: 26
+    3rd Down: 6-13 | Turnovers: 0 | Sacks: 1
+
+[REGULAR_WEEK_2] Carolina Panthers @ Arizona Cardinals | 22-27 | Final
+  AWAY (Carolina Panthers):
+    Total Yards: 352 | Yards/Play: 4.6 | Possession: 33:15
+    Passing: 303yds | Rushing: 49yds | 1st Downs: 26
+    3rd Down: 5-15 | Turnovers: 2 | Sacks: 3
+  HOME (Arizona Cardinals):
+    Total Yards: 293 | Yards/Play: 6.1 | Possession: 26:45
+    Passing: 211yds | Rushing: 82yds | 1st Downs: 16
+    3rd Down: 3-9 | Turnovers: 1 | Sacks: 1
+
+[REGULAR_WEEK_2] Philadelphia Eagles @ Kansas City Chiefs | 20-17 | Final
+  AWAY (Philadelphia Eagles):
+    Total Yards: 216 | Yards/Play: 3.7 | Possession: 32:34
+    Passing: 94yds | Rushing: 122yds | 1st Downs: 16
+    3rd Down: 5-14 | Turnovers: 0 | Sacks: 2
+  HOME (Kansas City Chiefs):
+    Total Yards: 294 | Yards/Play: 5.2 | Possession: 27:26
+    Passing: 173yds | Rushing: 121yds | 1st Downs: 17
+    3rd Down: 4-12 | Turnovers: 1 | Sacks: 2
+
+[REGULAR_WEEK_2] Atlanta Falcons @ Minnesota Vikings | 22-6 | Final
+  AWAY (Atlanta Falcons):
+    Total Yards: 326 | Yards/Play: 5.2 | Possession: 36:32
+    Passing: 108yds | Rushing: 218yds | 1st Downs: 19
+    3rd Down: 6-15 | Turnovers: 1 | Sacks: 3
+  HOME (Minnesota Vikings):
+    Total Yards: 198 | Yards/Play: 4.3 | Possession: 23:28
+    Passing: 120yds | Rushing: 78yds | 1st Downs: 10
+    3rd Down: 4-11 | Turnovers: 4 | Sacks: 6
+
+[REGULAR_WEEK_2] Tampa Bay Buccaneers @ Houston Texans | 20-19 | Final
+  AWAY (Tampa Bay Buccaneers):
+    Total Yards: 360 | Yards/Play: 5.0 | Possession: 37:09
+    Passing: 191yds | Rushing: 169yds | 1st Downs: 25
+    3rd Down: 6-14 | Turnovers: 0 | Sacks: 4
+  HOME (Houston Texans):
+    Total Yards: 266 | Yards/Play: 5.8 | Possession: 22:51
+    Passing: 182yds | Rushing: 84yds | 1st Downs: 12
+    3rd Down: 2-9 | Turnovers: 0 | Sacks: 3
+
+[REGULAR_WEEK_2] Los Angeles Chargers @ Las Vegas Raiders | 20-9 | Final
+  AWAY (Los Angeles Chargers):
+    Total Yards: 317 | Yards/Play: 5.8 | Possession: 28:17
+    Passing: 236yds | Rushing: 81yds | 1st Downs: 15
+    3rd Down: 4-11 | Turnovers: 1 | Sacks: 2
+  HOME (Las Vegas Raiders):
+    Total Yards: 218 | Yards/Play: 3.4 | Possession: 31:43
+    Passing: 150yds | Rushing: 68yds | 1st Downs: 15
+    3rd Down: 9-18 | Turnovers: 3 | Sacks: 3
+
+
+====================================================================================================
+REGULAR_WEEK_3
+====================================================================================================
+
+[REGULAR_WEEK_3] Miami Dolphins @ Buffalo Bills | 21-31 | Final
+  AWAY (Miami Dolphins):
+    Total Yards: 276 | Yards/Play: 4.7 | Possession: 28:13
+    Passing: 146yds | Rushing: 130yds | 1st Downs: 19
+    3rd Down: 10-15 | Turnovers: 1 | Sacks: 0
+  HOME (Buffalo Bills):
+    Total Yards: 360 | Yards/Play: 6.3 | Possession: 31:47
+    Passing: 203yds | Rushing: 157yds | 1st Downs: 23
+    3rd Down: 6-11 | Turnovers: 0 | Sacks: 2
+
+[REGULAR_WEEK_3] Green Bay Packers @ Cleveland Browns | 10-13 | Final
+  AWAY (Green Bay Packers):
+    Total Yards: 230 | Yards/Play: 3.8 | Possession: 34:14
+    Passing: 149yds | Rushing: 81yds | 1st Downs: 14
+    3rd Down: 10-18 | Turnovers: 1 | Sacks: 5
+  HOME (Cleveland Browns):
+    Total Yards: 221 | Yards/Play: 3.9 | Possession: 25:46
+    Passing: 125yds | Rushing: 96yds | 1st Downs: 15
+    3rd Down: 4-13 | Turnovers: 1 | Sacks: 2
+
+[REGULAR_WEEK_3] Indianapolis Colts @ Tennessee Titans | 41-20 | Final
+  AWAY (Indianapolis Colts):
+    Total Yards: 365 | Yards/Play: 6.9 | Possession: 28:41
+    Passing: 228yds | Rushing: 137yds | 1st Downs: 22
+    3rd Down: 2-8 | Turnovers: 0 | Sacks: 0
+  HOME (Tennessee Titans):
+    Total Yards: 282 | Yards/Play: 4.3 | Possession: 31:19
+    Passing: 196yds | Rushing: 86yds | 1st Downs: 21
+    3rd Down: 5-14 | Turnovers: 1 | Sacks: 4
+
+[REGULAR_WEEK_3] Cincinnati Bengals @ Minnesota Vikings | 10-48 | Final
+  AWAY (Cincinnati Bengals):
+    Total Yards: 171 | Yards/Play: 3.3 | Possession: 29:04
+    Passing: 118yds | Rushing: 53yds | 1st Downs: 12
+    3rd Down: 3-11 | Turnovers: 5 | Sacks: 4
+  HOME (Minnesota Vikings):
+    Total Yards: 352 | Yards/Play: 6.1 | Possession: 30:56
+    Passing: 183yds | Rushing: 169yds | 1st Downs: 22
+    3rd Down: 4-12 | Turnovers: 0 | Sacks: 3
+
+[REGULAR_WEEK_3] Pittsburgh Steelers @ New England Patriots | 21-14 | Final
+  AWAY (Pittsburgh Steelers):
+    Total Yards: 203 | Yards/Play: 4.1 | Possession: 26:40
+    Passing: 139yds | Rushing: 64yds | 1st Downs: 17
+    3rd Down: 4-9 | Turnovers: 1 | Sacks: 0
+  HOME (New England Patriots):
+    Total Yards: 369 | Yards/Play: 5.2 | Possession: 33:20
+    Passing: 250yds | Rushing: 119yds | 1st Downs: 26
+    3rd Down: 6-13 | Turnovers: 5 | Sacks: 5
+
+[REGULAR_WEEK_3] Los Angeles Rams @ Philadelphia Eagles | 26-33 | Final
+  AWAY (Los Angeles Rams):
+    Total Yards: 356 | Yards/Play: 5.4 | Possession: 29:25
+    Passing: 196yds | Rushing: 160yds | 1st Downs: 22
+    3rd Down: 3-10 | Turnovers: 1 | Sacks: 1
+  HOME (Philadelphia Eagles):
+    Total Yards: 288 | Yards/Play: 4.6 | Possession: 30:35
+    Passing: 202yds | Rushing: 86yds | 1st Downs: 19
+    3rd Down: 5-14 | Turnovers: 1 | Sacks: 4
+
+[REGULAR_WEEK_3] New York Jets @ Tampa Bay Buccaneers | 27-29 | Final
+  AWAY (New York Jets):
+    Total Yards: 267 | Yards/Play: 4.2 | Possession: 27:49
+    Passing: 168yds | Rushing: 99yds | 1st Downs: 21
+    3rd Down: 3-11 | Turnovers: 2 | Sacks: 4
+  HOME (Tampa Bay Buccaneers):
+    Total Yards: 347 | Yards/Play: 5.4 | Possession: 32:11
+    Passing: 225yds | Rushing: 122yds | 1st Downs: 19
+    3rd Down: 4-13 | Turnovers: 0 | Sacks: 1
+
+[REGULAR_WEEK_3] Las Vegas Raiders @ Washington Commanders | 24-41 | Final
+  AWAY (Las Vegas Raiders):
+    Total Yards: 354 | Yards/Play: 5.7 | Possession: 31:53
+    Passing: 261yds | Rushing: 93yds | 1st Downs: 17
+    3rd Down: 3-14 | Turnovers: 0 | Sacks: 5
+  HOME (Washington Commanders):
+    Total Yards: 400 | Yards/Play: 7.4 | Possession: 28:07
+    Passing: 199yds | Rushing: 201yds | 1st Downs: 17
+    3rd Down: 5-10 | Turnovers: 1 | Sacks: 1
+
+[REGULAR_WEEK_3] Atlanta Falcons @ Carolina Panthers | 0-30 | Final
+  AWAY (Atlanta Falcons):
+    Total Yards: 332 | Yards/Play: 5.0 | Possession: 28:02
+    Passing: 201yds | Rushing: 131yds | 1st Downs: 17
+    3rd Down: 5-13 | Turnovers: 3 | Sacks: 0
+  HOME (Carolina Panthers):
+    Total Yards: 224 | Yards/Play: 4.1 | Possession: 31:58
+    Passing: 114yds | Rushing: 110yds | 1st Downs: 15
+    3rd Down: 3-11 | Turnovers: 1 | Sacks: 1
+
+[REGULAR_WEEK_3] Houston Texans @ Jacksonville Jaguars | 10-17 | Final
+  AWAY (Houston Texans):
+    Total Yards: 271 | Yards/Play: 4.6 | Possession: 28:42
+    Passing: 184yds | Rushing: 87yds | 1st Downs: 13
+    3rd Down: 4-15 | Turnovers: 3 | Sacks: 2
+  HOME (Jacksonville Jaguars):
+    Total Yards: 291 | Yards/Play: 4.4 | Possession: 31:18
+    Passing: 205yds | Rushing: 86yds | 1st Downs: 17
+    3rd Down: 4-15 | Turnovers: 1 | Sacks: 2
+
+[REGULAR_WEEK_3] Denver Broncos @ Los Angeles Chargers | 20-23 | Final
+  AWAY (Denver Broncos):
+    Total Yards: 265 | Yards/Play: 5.5 | Possession: 23:40
+    Passing: 147yds | Rushing: 118yds | 1st Downs: 9
+    3rd Down: 2-13 | Turnovers: 0 | Sacks: 2
+  HOME (Los Angeles Chargers):
+    Total Yards: 376 | Yards/Play: 4.7 | Possession: 36:20
+    Passing: 270yds | Rushing: 106yds | 1st Downs: 29
+    3rd Down: 8-17 | Turnovers: 2 | Sacks: 5
+
+[REGULAR_WEEK_3] New Orleans Saints @ Seattle Seahawks | 13-44 | Final
+  AWAY (New Orleans Saints):
+    Total Yards: 284 | Yards/Play: 4.1 | Possession: 32:16
+    Passing: 205yds | Rushing: 79yds | 1st Downs: 21
+    3rd Down: 5-15 | Turnovers: 1 | Sacks: 2
+  HOME (Seattle Seahawks):
+    Total Yards: 320 | Yards/Play: 5.9 | Possession: 27:44
+    Passing: 233yds | Rushing: 87yds | 1st Downs: 22
+    3rd Down: 3-9 | Turnovers: 1 | Sacks: 0
+
+[REGULAR_WEEK_3] Dallas Cowboys @ Chicago Bears | 14-31 | Final
+  AWAY (Dallas Cowboys):
+    Total Yards: 396 | Yards/Play: 5.9 | Possession: 32:58
+    Passing: 275yds | Rushing: 121yds | 1st Downs: 23
+    3rd Down: 3-11 | Turnovers: 4 | Sacks: 2
+  HOME (Chicago Bears):
+    Total Yards: 385 | Yards/Play: 6.8 | Possession: 27:02
+    Passing: 298yds | Rushing: 87yds | 1st Downs: 19
+    3rd Down: 8-14 | Turnovers: 0 | Sacks: 0
+
+[REGULAR_WEEK_3] Arizona Cardinals @ San Francisco 49ers | 15-16 | Final
+  AWAY (Arizona Cardinals):
+    Total Yards: 260 | Yards/Play: 4.1 | Possession: 34:39
+    Passing: 154yds | Rushing: 106yds | 1st Downs: 16
+    3rd Down: 5-15 | Turnovers: 0 | Sacks: 1
+  HOME (San Francisco 49ers):
+    Total Yards: 355 | Yards/Play: 5.7 | Possession: 25:21
+    Passing: 282yds | Rushing: 73yds | 1st Downs: 19
+    3rd Down: 2-10 | Turnovers: 1 | Sacks: 1
+
+[REGULAR_WEEK_3] Kansas City Chiefs @ New York Giants | 22-9 | Final
+  AWAY (Kansas City Chiefs):
+    Total Yards: 306 | Yards/Play: 4.6 | Possession: 31:50
+    Passing: 201yds | Rushing: 105yds | 1st Downs: 22
+    3rd Down: 8-15 | Turnovers: 0 | Sacks: 2
+  HOME (New York Giants):
+    Total Yards: 281 | Yards/Play: 4.6 | Possession: 28:10
+    Passing: 151yds | Rushing: 130yds | 1st Downs: 19
+    3rd Down: 1-10 | Turnovers: 2 | Sacks: 2
+
+[REGULAR_WEEK_3] Detroit Lions @ Baltimore Ravens | 38-30 | Final
+  AWAY (Detroit Lions):
+    Total Yards: 426 | Yards/Play: 6.5 | Possession: 33:18
+    Passing: 202yds | Rushing: 224yds | 1st Downs: 24
+    3rd Down: 7-14 | Turnovers: 0 | Sacks: 0
+  HOME (Baltimore Ravens):
+    Total Yards: 318 | Yards/Play: 5.9 | Possession: 26:42
+    Passing: 233yds | Rushing: 85yds | 1st Downs: 21
+    3rd Down: 6-11 | Turnovers: 1 | Sacks: 7
+
+
+====================================================================================================
+REGULAR_WEEK_4
+====================================================================================================
+
+[REGULAR_WEEK_4] Seattle Seahawks @ Arizona Cardinals | 23-20 | Final
+  AWAY (Seattle Seahawks):
+    Total Yards: 384 | Yards/Play: 6.0 | Possession: 32:24
+    Passing: 229yds | Rushing: 155yds | 1st Downs: 20
+    3rd Down: 6-13 | Turnovers: 1 | Sacks: 3
+  HOME (Arizona Cardinals):
+    Total Yards: 253 | Yards/Play: 4.0 | Possession: 27:36
+    Passing: 164yds | Rushing: 89yds | 1st Downs: 18
+    3rd Down: 6-15 | Turnovers: 2 | Sacks: 6
+
+[REGULAR_WEEK_4] Minnesota Vikings @ Pittsburgh Steelers | 21-24 | Final
+  AWAY (Minnesota Vikings):
+    Total Yards: 372 | Yards/Play: 5.2 | Possession: 33:34
+    Passing: 302yds | Rushing: 70yds | 1st Downs: 23
+    3rd Down: 4-14 | Turnovers: 2 | Sacks: 6
+  HOME (Pittsburgh Steelers):
+    Total Yards: 313 | Yards/Play: 5.9 | Possession: 26:26
+    Passing: 182yds | Rushing: 131yds | 1st Downs: 19
+    3rd Down: 4-10 | Turnovers: 0 | Sacks: 2
+
+[REGULAR_WEEK_4] Washington Commanders @ Atlanta Falcons | 27-34 | Final
+  AWAY (Washington Commanders):
+    Total Yards: 294 | Yards/Play: 5.8 | Possession: 25:45
+    Passing: 147yds | Rushing: 147yds | 1st Downs: 17
+    3rd Down: 1-8 | Turnovers: 1 | Sacks: 2
+  HOME (Atlanta Falcons):
+    Total Yards: 435 | Yards/Play: 6.8 | Possession: 34:15
+    Passing: 307yds | Rushing: 128yds | 1st Downs: 24
+    3rd Down: 6-12 | Turnovers: 1 | Sacks: 1
+
+[REGULAR_WEEK_4] New Orleans Saints @ Buffalo Bills | 19-31 | Final
+  AWAY (New Orleans Saints):
+    Total Yards: 298 | Yards/Play: 4.6 | Possession: 28:39
+    Passing: 109yds | Rushing: 189yds | 1st Downs: 22
+    3rd Down: 5-13 | Turnovers: 1 | Sacks: 3
+  HOME (Buffalo Bills):
+    Total Yards: 356 | Yards/Play: 6.2 | Possession: 31:21
+    Passing: 191yds | Rushing: 165yds | 1st Downs: 20
+    3rd Down: 3-10 | Turnovers: 1 | Sacks: 3
+
+[REGULAR_WEEK_4] Cleveland Browns @ Detroit Lions | 10-34 | Final
+  AWAY (Cleveland Browns):
+    Total Yards: 249 | Yards/Play: 3.8 | Possession: 31:44
+    Passing: 170yds | Rushing: 79yds | 1st Downs: 16
+    3rd Down: 3-14 | Turnovers: 3 | Sacks: 3
+  HOME (Detroit Lions):
+    Total Yards: 277 | Yards/Play: 4.9 | Possession: 28:16
+    Passing: 168yds | Rushing: 109yds | 1st Downs: 16
+    3rd Down: 6-14 | Turnovers: 1 | Sacks: 0
+
+[REGULAR_WEEK_4] Carolina Panthers @ New England Patriots | 13-42 | Final
+  AWAY (Carolina Panthers):
+    Total Yards: 326 | Yards/Play: 5.0 | Possession: 35:14
+    Passing: 197yds | Rushing: 129yds | 1st Downs: 21
+    3rd Down: 5-14 | Turnovers: 0 | Sacks: 1
+  HOME (New England Patriots):
+    Total Yards: 307 | Yards/Play: 6.4 | Possession: 24:46
+    Passing: 203yds | Rushing: 104yds | 1st Downs: 16
+    3rd Down: 3-9 | Turnovers: 0 | Sacks: 1
+
+[REGULAR_WEEK_4] Los Angeles Chargers @ New York Giants | 18-21 | Final
+  AWAY (Los Angeles Chargers):
+    Total Yards: 338 | Yards/Play: 6.0 | Possession: 24:32
+    Passing: 186yds | Rushing: 152yds | 1st Downs: 17
+    3rd Down: 4-12 | Turnovers: 2 | Sacks: 2
+  HOME (New York Giants):
+    Total Yards: 250 | Yards/Play: 3.6 | Possession: 35:28
+    Passing: 89yds | Rushing: 161yds | 1st Downs: 20
+    3rd Down: 7-15 | Turnovers: 0 | Sacks: 6
+
+[REGULAR_WEEK_4] Philadelphia Eagles @ Tampa Bay Buccaneers | 31-25 | Final
+  AWAY (Philadelphia Eagles):
+    Total Yards: 200 | Yards/Play: 3.4 | Possession: 28:08
+    Passing: 112yds | Rushing: 88yds | 1st Downs: 16
+    3rd Down: 5-14 | Turnovers: 0 | Sacks: 2
+  HOME (Tampa Bay Buccaneers):
+    Total Yards: 376 | Yards/Play: 5.5 | Possession: 31:52
+    Passing: 272yds | Rushing: 104yds | 1st Downs: 18
+    3rd Down: 3-13 | Turnovers: 2 | Sacks: 2
+
+[REGULAR_WEEK_4] Tennessee Titans @ Houston Texans | 0-26 | Final
+  AWAY (Tennessee Titans):
+    Total Yards: 175 | Yards/Play: 3.8 | Possession: 21:39
+    Passing: 93yds | Rushing: 82yds | 1st Downs: 10
+    3rd Down: 2-11 | Turnovers: 1 | Sacks: 2
+  HOME (Houston Texans):
+    Total Yards: 353 | Yards/Play: 5.4 | Possession: 38:21
+    Passing: 224yds | Rushing: 129yds | 1st Downs: 20
+    3rd Down: 6-15 | Turnovers: 0 | Sacks: 2
+
+[REGULAR_WEEK_4] Indianapolis Colts @ Los Angeles Rams | 20-27 | Final
+  AWAY (Indianapolis Colts):
+    Total Yards: 333 | Yards/Play: 5.9 | Possession: 28:16
+    Passing: 248yds | Rushing: 85yds | 1st Downs: 17
+    3rd Down: 4-12 | Turnovers: 3 | Sacks: 2
+  HOME (Los Angeles Rams):
+    Total Yards: 462 | Yards/Play: 6.6 | Possession: 31:44
+    Passing: 360yds | Rushing: 102yds | 1st Downs: 24
+    3rd Down: 4-12 | Turnovers: 1 | Sacks: 3
+
+[REGULAR_WEEK_4] Jacksonville Jaguars @ San Francisco 49ers | 26-21 | Final
+  AWAY (Jacksonville Jaguars):
+    Total Yards: 325 | Yards/Play: 5.2 | Possession: 32:31
+    Passing: 174yds | Rushing: 151yds | 1st Downs: 18
+    3rd Down: 4-14 | Turnovers: 0 | Sacks: 0
+  HOME (San Francisco 49ers):
+    Total Yards: 389 | Yards/Play: 6.2 | Possession: 27:29
+    Passing: 306yds | Rushing: 83yds | 1st Downs: 22
+    3rd Down: 8-13 | Turnovers: 4 | Sacks: 1
+
+[REGULAR_WEEK_4] Baltimore Ravens @ Kansas City Chiefs | 20-37 | Final
+  AWAY (Baltimore Ravens):
+    Total Yards: 360 | Yards/Play: 6.8 | Possession: 25:15
+    Passing: 194yds | Rushing: 166yds | 1st Downs: 18
+    3rd Down: 3-10 | Turnovers: 2 | Sacks: 3
+  HOME (Kansas City Chiefs):
+    Total Yards: 382 | Yards/Play: 5.5 | Possession: 34:45
+    Passing: 264yds | Rushing: 118yds | 1st Downs: 24
+    3rd Down: 5-15 | Turnovers: 0 | Sacks: 1
+
+[REGULAR_WEEK_4] Chicago Bears @ Las Vegas Raiders | 25-24 | Final
+  AWAY (Chicago Bears):
+    Total Yards: 271 | Yards/Play: 4.2 | Possession: 33:10
+    Passing: 202yds | Rushing: 69yds | 1st Downs: 16
+    3rd Down: 7-16 | Turnovers: 1 | Sacks: 1
+  HOME (Las Vegas Raiders):
+    Total Yards: 357 | Yards/Play: 6.9 | Possession: 26:50
+    Passing: 117yds | Rushing: 240yds | 1st Downs: 17
+    3rd Down: 2-8 | Turnovers: 4 | Sacks: 0
+
+[REGULAR_WEEK_4] Green Bay Packers @ Dallas Cowboys | 40-40 | Final
+  AWAY (Green Bay Packers):
+    Total Yards: 489 | Yards/Play: 6.2 | Possession: 35:33
+    Passing: 325yds | Rushing: 164yds | 1st Downs: 32
+    3rd Down: 10-14 | Turnovers: 1 | Sacks: 1
+  HOME (Dallas Cowboys):
+    Total Yards: 436 | Yards/Play: 6.5 | Possession: 34:27
+    Passing: 319yds | Rushing: 117yds | 1st Downs: 26
+    3rd Down: 4-11 | Turnovers: 0 | Sacks: 1
+
+[REGULAR_WEEK_4] New York Jets @ Miami Dolphins | 21-27 | Final
+  AWAY (New York Jets):
+    Total Yards: 404 | Yards/Play: 7.1 | Possession: 29:12
+    Passing: 207yds | Rushing: 197yds | 1st Downs: 23
+    3rd Down: 4-9 | Turnovers: 3 | Sacks: 2
+  HOME (Miami Dolphins):
+    Total Yards: 300 | Yards/Play: 5.4 | Possession: 30:48
+    Passing: 177yds | Rushing: 123yds | 1st Downs: 19
+    3rd Down: 4-12 | Turnovers: 0 | Sacks: 0
+
+[REGULAR_WEEK_4] Cincinnati Bengals @ Denver Broncos | 3-28 | Final
+  AWAY (Cincinnati Bengals):
+    Total Yards: 159 | Yards/Play: 3.7 | Possession: 22:02
+    Passing: 106yds | Rushing: 53yds | 1st Downs: 9
+    3rd Down: 2-11 | Turnovers: 0 | Sacks: 3
+  HOME (Denver Broncos):
+    Total Yards: 512 | Yards/Play: 6.4 | Possession: 37:58
+    Passing: 326yds | Rushing: 186yds | 1st Downs: 29
+    3rd Down: 8-14 | Turnovers: 1 | Sacks: 0
+
+
+====================================================================================================
+REGULAR_WEEK_5
+====================================================================================================
+
+[REGULAR_WEEK_5] San Francisco 49ers @ Los Angeles Rams | 26-23 | Final
+  AWAY (San Francisco 49ers):
+    Total Yards: 407 | Yards/Play: 4.9 | Possession: 40:04
+    Passing: 333yds | Rushing: 74yds | 1st Downs: 27
+    3rd Down: 7-18 | Turnovers: 0 | Sacks: 1
+  HOME (Los Angeles Rams):
+    Total Yards: 456 | Yards/Play: 7.1 | Possession: 26:20
+    Passing: 378yds | Rushing: 78yds | 1st Downs: 27
+    3rd Down: 4-10 | Turnovers: 2 | Sacks: 1
+
+[REGULAR_WEEK_5] Minnesota Vikings @ Cleveland Browns | 21-17 | Final
+  AWAY (Minnesota Vikings):
+    Total Yards: 349 | Yards/Play: 5.7 | Possession: 29:31
+    Passing: 252yds | Rushing: 97yds | 1st Downs: 20
+    3rd Down: 3-9 | Turnovers: 2 | Sacks: 3
+  HOME (Cleveland Browns):
+    Total Yards: 322 | Yards/Play: 4.8 | Possession: 30:29
+    Passing: 182yds | Rushing: 140yds | 1st Downs: 17
+    3rd Down: 3-15 | Turnovers: 0 | Sacks: 2
+
+[REGULAR_WEEK_5] Las Vegas Raiders @ Indianapolis Colts | 6-40 | Final
+  AWAY (Las Vegas Raiders):
+    Total Yards: 296 | Yards/Play: 4.6 | Possession: 33:25
+    Passing: 190yds | Rushing: 106yds | 1st Downs: 22
+    3rd Down: 8-14 | Turnovers: 2 | Sacks: 4
+  HOME (Indianapolis Colts):
+    Total Yards: 317 | Yards/Play: 5.6 | Possession: 26:35
+    Passing: 221yds | Rushing: 96yds | 1st Downs: 24
+    3rd Down: 8-10 | Turnovers: 0 | Sacks: 0
+
+[REGULAR_WEEK_5] New York Giants @ New Orleans Saints | 14-26 | Final
+  AWAY (New York Giants):
+    Total Yards: 335 | Yards/Play: 4.8 | Possession: 31:50
+    Passing: 199yds | Rushing: 136yds | 1st Downs: 23
+    3rd Down: 3-10 | Turnovers: 5 | Sacks: 1
+  HOME (New Orleans Saints):
+    Total Yards: 332 | Yards/Play: 5.4 | Possession: 28:10
+    Passing: 244yds | Rushing: 88yds | 1st Downs: 18
+    3rd Down: 7-15 | Turnovers: 0 | Sacks: 0
+
+[REGULAR_WEEK_5] Dallas Cowboys @ New York Jets | 37-22 | Final
+  AWAY (Dallas Cowboys):
+    Total Yards: 416 | Yards/Play: 7.1 | Possession: 25:24
+    Passing: 236yds | Rushing: 180yds | 1st Downs: 22
+    3rd Down: 6-13 | Turnovers: 0 | Sacks: 1
+  HOME (New York Jets):
+    Total Yards: 378 | Yards/Play: 5.2 | Possession: 34:36
+    Passing: 234yds | Rushing: 144yds | 1st Downs: 25
+    3rd Down: 7-16 | Turnovers: 1 | Sacks: 5
+
+[REGULAR_WEEK_5] Denver Broncos @ Philadelphia Eagles | 21-17 | Final
+  AWAY (Denver Broncos):
+    Total Yards: 358 | Yards/Play: 5.1 | Possession: 34:17
+    Passing: 228yds | Rushing: 130yds | 1st Downs: 23
+    3rd Down: 5-16 | Turnovers: 0 | Sacks: 2
+  HOME (Philadelphia Eagles):
+    Total Yards: 302 | Yards/Play: 5.5 | Possession: 25:43
+    Passing: 257yds | Rushing: 45yds | 1st Downs: 16
+    3rd Down: 2-11 | Turnovers: 0 | Sacks: 6
+
+[REGULAR_WEEK_5] Miami Dolphins @ Carolina Panthers | 24-27 | Final
+  AWAY (Miami Dolphins):
+    Total Yards: 248 | Yards/Play: 4.7 | Possession: 28:46
+    Passing: 229yds | Rushing: 19yds | 1st Downs: 15
+    3rd Down: 5-13 | Turnovers: 0 | Sacks: 3
+  HOME (Carolina Panthers):
+    Total Yards: 418 | Yards/Play: 6.4 | Possession: 31:14
+    Passing: 179yds | Rushing: 239yds | 1st Downs: 26
+    3rd Down: 5-11 | Turnovers: 2 | Sacks: 3
+
+[REGULAR_WEEK_5] Houston Texans @ Baltimore Ravens | 44-10 | Final
+  AWAY (Houston Texans):
+    Total Yards: 417 | Yards/Play: 6.3 | Possession: 36:33
+    Passing: 250yds | Rushing: 167yds | 1st Downs: 27
+    3rd Down: 7-12 | Turnovers: 0 | Sacks: 2
+  HOME (Baltimore Ravens):
+    Total Yards: 207 | Yards/Play: 5.2 | Possession: 23:27
+    Passing: 163yds | Rushing: 44yds | 1st Downs: 12
+    3rd Down: 3-8 | Turnovers: 3 | Sacks: 1
+
+[REGULAR_WEEK_5] Tennessee Titans @ Arizona Cardinals | 22-21 | Final
+  AWAY (Tennessee Titans):
+    Total Yards: 327 | Yards/Play: 5.0 | Possession: 27:20
+    Passing: 249yds | Rushing: 78yds | 1st Downs: 20
+    3rd Down: 5-15 | Turnovers: 2 | Sacks: 2
+  HOME (Arizona Cardinals):
+    Total Yards: 360 | Yards/Play: 5.6 | Possession: 32:40
+    Passing: 192yds | Rushing: 168yds | 1st Downs: 16
+    3rd Down: 7-16 | Turnovers: 3 | Sacks: 3
+
+[REGULAR_WEEK_5] Tampa Bay Buccaneers @ Seattle Seahawks | 38-35 | Final
+  AWAY (Tampa Bay Buccaneers):
+    Total Yards: 426 | Yards/Play: 7.3 | Possession: 33:12
+    Passing: 370yds | Rushing: 56yds | 1st Downs: 25
+    3rd Down: 7-11 | Turnovers: 0 | Sacks: 1
+  HOME (Seattle Seahawks):
+    Total Yards: 463 | Yards/Play: 8.6 | Possession: 26:48
+    Passing: 341yds | Rushing: 122yds | 1st Downs: 27
+    3rd Down: 6-9 | Turnovers: 2 | Sacks: 0
+
+[REGULAR_WEEK_5] Detroit Lions @ Cincinnati Bengals | 37-24 | Final
+  AWAY (Detroit Lions):
+    Total Yards: 365 | Yards/Play: 6.0 | Possession: 34:21
+    Passing: 247yds | Rushing: 118yds | 1st Downs: 23
+    3rd Down: 2-8 | Turnovers: 1 | Sacks: 4
+  HOME (Cincinnati Bengals):
+    Total Yards: 322 | Yards/Play: 5.6 | Possession: 25:39
+    Passing: 237yds | Rushing: 85yds | 1st Downs: 21
+    3rd Down: 4-11 | Turnovers: 3 | Sacks: 2
+
+[REGULAR_WEEK_5] Washington Commanders @ Los Angeles Chargers | 27-10 | Final
+  AWAY (Washington Commanders):
+    Total Yards: 389 | Yards/Play: 7.1 | Possession: 25:41
+    Passing: 226yds | Rushing: 163yds | 1st Downs: 22
+    3rd Down: 2-7 | Turnovers: 1 | Sacks: 1
+  HOME (Los Angeles Chargers):
+    Total Yards: 336 | Yards/Play: 5.2 | Possession: 34:19
+    Passing: 181yds | Rushing: 155yds | 1st Downs: 18
+    3rd Down: 9-16 | Turnovers: 2 | Sacks: 5
+
+[REGULAR_WEEK_5] New England Patriots @ Buffalo Bills | 23-20 | Final
+  AWAY (New England Patriots):
+    Total Yards: 338 | Yards/Play: 6.0 | Possession: 25:29
+    Passing: 267yds | Rushing: 71yds | 1st Downs: 21
+    3rd Down: 3-9 | Turnovers: 1 | Sacks: 4
+  HOME (Buffalo Bills):
+    Total Yards: 363 | Yards/Play: 6.0 | Possession: 34:31
+    Passing: 245yds | Rushing: 118yds | 1st Downs: 25
+    3rd Down: 5-9 | Turnovers: 3 | Sacks: 1
+
+[REGULAR_WEEK_5] Kansas City Chiefs @ Jacksonville Jaguars | 28-31 | Final
+  AWAY (Kansas City Chiefs):
+    Total Yards: 476 | Yards/Play: 7.6 | Possession: 31:59
+    Passing: 318yds | Rushing: 158yds | 1st Downs: 26
+    3rd Down: 5-9 | Turnovers: 1 | Sacks: 0
+  HOME (Jacksonville Jaguars):
+    Total Yards: 319 | Yards/Play: 5.9 | Possession: 28:01
+    Passing: 210yds | Rushing: 109yds | 1st Downs: 21
+    3rd Down: 5-9 | Turnovers: 2 | Sacks: 3
+
+
+====================================================================================================
+Total games recorded: 111

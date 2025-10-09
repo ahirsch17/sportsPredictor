@@ -1,0 +1,4 @@
+requests  # For API calls (ESPN, weather)
+# Built-in modules (no install needed):
+# json, datetime, time
+
