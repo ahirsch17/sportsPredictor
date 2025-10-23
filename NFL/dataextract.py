@@ -52,7 +52,7 @@ def get_games_for_week(season_type, week_num, year=2024):
 
 def get_game_details(game_id):
     """
-    gets detailed stats for a specific game from ESPN API
+    gets detailed stats for a specific game from ESPN API INCLUDING QB stats
     """
     game_detail_url = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary"
     params = {'event': game_id}
@@ -86,6 +86,42 @@ def get_game_details(game_id):
                 game_info['away_team']['name'] = team_name
                 game_info['away_team']['score'] = score
         
+        # Extract QB stats from players section
+        if 'boxscore' in data and 'players' in data['boxscore']:
+            players_by_team = data['boxscore']['players']
+            
+            for team_players in players_by_team:
+                team_info = team_players.get('team', {})
+                team_name = team_info.get('displayName', '')
+                
+                # Find passing statistics
+                for stat_group in team_players.get('statistics', []):
+                    if stat_group.get('name') == 'passing':
+                        athletes = stat_group.get('athletes', [])
+                        if athletes:
+                            # Get primary QB (first in list)
+                            qb = athletes[0]
+                            qb_name = qb.get('athlete', {}).get('displayName', 'Unknown')
+                            qb_stats = qb.get('stats', [])
+                            
+                            # Parse QB stats: ['17/34', '204', '6.0', '1', '3', '1-6', '31.5', '41.8']
+                            qb_data = {
+                                'name': qb_name,
+                                'comp_att': qb_stats[0] if len(qb_stats) > 0 else '0/0',
+                                'yards': qb_stats[1] if len(qb_stats) > 1 else '0',
+                                'ypa': qb_stats[2] if len(qb_stats) > 2 else '0.0',
+                                'tds': qb_stats[3] if len(qb_stats) > 3 else '0',
+                                'ints': qb_stats[4] if len(qb_stats) > 4 else '0',
+                                'sacks_lost': qb_stats[5] if len(qb_stats) > 5 else '0-0',
+                                'qb_rating': qb_stats[7] if len(qb_stats) > 7 else '0.0'
+                            }
+                            
+                            # Store QB data for the correct team
+                            if team_name == game_info['home_team'].get('name'):
+                                game_info['home_team']['qb'] = qb_data
+                            elif team_name == game_info['away_team'].get('name'):
+                                game_info['away_team']['qb'] = qb_data
+        
         # extract team statistics from boxscore
         if 'boxscore' in data:
             boxscore = data['boxscore']
@@ -95,13 +131,19 @@ def get_game_details(game_id):
                 team_info = team.get('team', {})
                 team_name = team_info.get('displayName', '')
                 
-                # create stats dict
+                # create stats dict - capture ALL available stats
                 stats = {}
                 statistics = team.get('statistics', [])
                 for stat in statistics:
                     stat_name = stat.get('name', '')
                     stat_value = stat.get('displayValue', '')
                     stats[stat_name] = stat_value
+                
+                # Also capture numeric values for key stats
+                for stat in statistics:
+                    stat_name = stat.get('name', '')
+                    if 'value' in stat and isinstance(stat.get('value'), (int, float)):
+                        stats[f"{stat_name}_value"] = stat.get('value')
                 
                 # determine if home or away and store stats
                 if team_name == game_info['home_team'].get('name'):
@@ -219,28 +261,44 @@ def write_to_file(games):
             f.write(f"[{game['week']}] {away['name']} @ {home['name']} | "
                    f"{away['score']}-{home['score']} | {game['status']}\n")
             
+            # QB stats (if available)
+            if 'qb' in away:
+                qb = away['qb']
+                f.write(f"  AWAY QB ({qb['name']}): {qb['comp_att']} for {qb['yards']}yds, {qb['tds']}TD/{qb['ints']}INT, "
+                       f"{qb['ypa']} YPA, {qb['qb_rating']} RTG\n")
+            if 'qb' in home:
+                qb = home['qb']
+                f.write(f"  HOME QB ({qb['name']}): {qb['comp_att']} for {qb['yards']}yds, {qb['tds']}TD/{qb['ints']}INT, "
+                       f"{qb['ypa']} YPA, {qb['qb_rating']} RTG\n")
+            
             # detailed stats
             f.write(f"  AWAY ({away['name']}):\n")
             f.write(f"    Total Yards: {away_stats.get('totalYards', '0')} | "
                    f"Yards/Play: {away_stats.get('yardsPerPlay', '0')} | "
                    f"Possession: {away_stats.get('possessionTime', '0:00')}\n")
-            f.write(f"    Passing: {away_stats.get('netPassingYards', '0')}yds | "
-                   f"Rushing: {away_stats.get('rushingYards', '0')}yds | "
+            f.write(f"    Passing: {away_stats.get('netPassingYards', '0')}yds ({away_stats.get('completionAttempts', '0-0')}) | "
+                   f"Rushing: {away_stats.get('rushingYards', '0')}yds ({away_stats.get('yardsPerRushAttempt', '0.0')} avg) | "
                    f"1st Downs: {away_stats.get('firstDowns', '0')}\n")
             f.write(f"    3rd Down: {away_stats.get('thirdDownEff', '0-0')} | "
-                   f"Turnovers: {away_stats.get('turnovers', '0')} | "
-                   f"Sacks: {away_stats.get('sacksYardsLost', '0-0').split('-')[0] if '-' in away_stats.get('sacksYardsLost', '0') else '0'}\n")
+                   f"4th Down: {away_stats.get('fourthDownEff', '0-0')} | "
+                   f"Red Zone: {away_stats.get('redZoneAttempts', '0-0')}\n")
+            f.write(f"    Turnovers: {away_stats.get('turnovers', '0')} (INT: {away_stats.get('interceptions', '0')}, Fum: {away_stats.get('fumblesLost', '0')}) | "
+                   f"Sacks: {away_stats.get('sacksYardsLost', '0-0').split('-')[0] if '-' in away_stats.get('sacksYardsLost', '0') else '0'} | "
+                   f"Penalties: {away_stats.get('totalPenaltiesYards', '0-0')}\n")
             
             f.write(f"  HOME ({home['name']}):\n")
             f.write(f"    Total Yards: {home_stats.get('totalYards', '0')} | "
                    f"Yards/Play: {home_stats.get('yardsPerPlay', '0')} | "
                    f"Possession: {home_stats.get('possessionTime', '0:00')}\n")
-            f.write(f"    Passing: {home_stats.get('netPassingYards', '0')}yds | "
-                   f"Rushing: {home_stats.get('rushingYards', '0')}yds | "
+            f.write(f"    Passing: {home_stats.get('netPassingYards', '0')}yds ({home_stats.get('completionAttempts', '0-0')}) | "
+                   f"Rushing: {home_stats.get('rushingYards', '0')}yds ({home_stats.get('yardsPerRushAttempt', '0.0')} avg) | "
                    f"1st Downs: {home_stats.get('firstDowns', '0')}\n")
             f.write(f"    3rd Down: {home_stats.get('thirdDownEff', '0-0')} | "
-                   f"Turnovers: {home_stats.get('turnovers', '0')} | "
-                   f"Sacks: {home_stats.get('sacksYardsLost', '0-0').split('-')[0] if '-' in home_stats.get('sacksYardsLost', '0') else '0'}\n")
+                   f"4th Down: {home_stats.get('fourthDownEff', '0-0')} | "
+                   f"Red Zone: {home_stats.get('redZoneAttempts', '0-0')}\n")
+            f.write(f"    Turnovers: {home_stats.get('turnovers', '0')} (INT: {home_stats.get('interceptions', '0')}, Fum: {home_stats.get('fumblesLost', '0')}) | "
+                   f"Sacks: {home_stats.get('sacksYardsLost', '0-0').split('-')[0] if '-' in home_stats.get('sacksYardsLost', '0') else '0'} | "
+                   f"Penalties: {home_stats.get('totalPenaltiesYards', '0-0')}\n")
             f.write("\n")
         
         f.write(f"\n{'=' * 100}\n")
@@ -320,14 +378,14 @@ def update_mode():
     
     if season_type == 'preseason':
         # finish preseason, then start regular season
-        for week in range(last_week_num + 1, 4):
+        for week in range(last_week_num, 4):  # Re-check current week for missed games
             weeks_to_scrape.append(('preseason', week))
         # add all regular season weeks
         for week in range(1, 19):
             weeks_to_scrape.append(('regular', week))
     else:  # regular season
-        # just get remaining regular season weeks
-        for week in range(last_week_num + 1, 19):
+        # Re-check the last scraped week to catch any missed games, then continue
+        for week in range(last_week_num, 19):  # Start from last week, not last+1
             weeks_to_scrape.append(('regular', week))
     
     if not weeks_to_scrape:
@@ -406,27 +464,44 @@ def update_mode():
             f.write(f"[{game['week']}] {away['name']} @ {home['name']} | "
                    f"{away['score']}-{home['score']} | {game['status']}\n")
             
+            # QB stats (if available)
+            if 'qb' in away:
+                qb = away['qb']
+                f.write(f"  AWAY QB ({qb['name']}): {qb['comp_att']} for {qb['yards']}yds, {qb['tds']}TD/{qb['ints']}INT, "
+                       f"{qb['ypa']} YPA, {qb['qb_rating']} RTG\n")
+            if 'qb' in home:
+                qb = home['qb']
+                f.write(f"  HOME QB ({qb['name']}): {qb['comp_att']} for {qb['yards']}yds, {qb['tds']}TD/{qb['ints']}INT, "
+                       f"{qb['ypa']} YPA, {qb['qb_rating']} RTG\n")
+            
+            # detailed stats with enhanced metrics
             f.write(f"  AWAY ({away['name']}):\n")
             f.write(f"    Total Yards: {away_stats.get('totalYards', '0')} | "
                    f"Yards/Play: {away_stats.get('yardsPerPlay', '0')} | "
                    f"Possession: {away_stats.get('possessionTime', '0:00')}\n")
-            f.write(f"    Passing: {away_stats.get('netPassingYards', '0')}yds | "
-                   f"Rushing: {away_stats.get('rushingYards', '0')}yds | "
+            f.write(f"    Passing: {away_stats.get('netPassingYards', '0')}yds ({away_stats.get('completionAttempts', '0-0')}) | "
+                   f"Rushing: {away_stats.get('rushingYards', '0')}yds ({away_stats.get('yardsPerRushAttempt', '0.0')} avg) | "
                    f"1st Downs: {away_stats.get('firstDowns', '0')}\n")
             f.write(f"    3rd Down: {away_stats.get('thirdDownEff', '0-0')} | "
-                   f"Turnovers: {away_stats.get('turnovers', '0')} | "
-                   f"Sacks: {away_stats.get('sacksYardsLost', '0-0').split('-')[0] if '-' in away_stats.get('sacksYardsLost', '0') else '0'}\n")
+                   f"4th Down: {away_stats.get('fourthDownEff', '0-0')} | "
+                   f"Red Zone: {away_stats.get('redZoneAttempts', '0-0')}\n")
+            f.write(f"    Turnovers: {away_stats.get('turnovers', '0')} (INT: {away_stats.get('interceptions', '0')}, Fum: {away_stats.get('fumblesLost', '0')}) | "
+                   f"Sacks: {away_stats.get('sacksYardsLost', '0-0').split('-')[0] if '-' in away_stats.get('sacksYardsLost', '0') else '0'} | "
+                   f"Penalties: {away_stats.get('totalPenaltiesYards', '0-0')}\n")
             
             f.write(f"  HOME ({home['name']}):\n")
             f.write(f"    Total Yards: {home_stats.get('totalYards', '0')} | "
                    f"Yards/Play: {home_stats.get('yardsPerPlay', '0')} | "
                    f"Possession: {home_stats.get('possessionTime', '0:00')}\n")
-            f.write(f"    Passing: {home_stats.get('netPassingYards', '0')}yds | "
-                   f"Rushing: {home_stats.get('rushingYards', '0')}yds | "
+            f.write(f"    Passing: {home_stats.get('netPassingYards', '0')}yds ({home_stats.get('completionAttempts', '0-0')}) | "
+                   f"Rushing: {home_stats.get('rushingYards', '0')}yds ({home_stats.get('yardsPerRushAttempt', '0.0')} avg) | "
                    f"1st Downs: {home_stats.get('firstDowns', '0')}\n")
             f.write(f"    3rd Down: {home_stats.get('thirdDownEff', '0-0')} | "
-                   f"Turnovers: {home_stats.get('turnovers', '0')} | "
-                   f"Sacks: {home_stats.get('sacksYardsLost', '0-0').split('-')[0] if '-' in home_stats.get('sacksYardsLost', '0') else '0'}\n")
+                   f"4th Down: {home_stats.get('fourthDownEff', '0-0')} | "
+                   f"Red Zone: {home_stats.get('redZoneAttempts', '0-0')}\n")
+            f.write(f"    Turnovers: {home_stats.get('turnovers', '0')} (INT: {home_stats.get('interceptions', '0')}, Fum: {home_stats.get('fumblesLost', '0')}) | "
+                   f"Sacks: {home_stats.get('sacksYardsLost', '0-0').split('-')[0] if '-' in home_stats.get('sacksYardsLost', '0') else '0'} | "
+                   f"Penalties: {home_stats.get('totalPenaltiesYards', '0-0')}\n")
             f.write("\n")
     
     print(f"Update complete! Added {len(new_games)} games to nflData.txt")

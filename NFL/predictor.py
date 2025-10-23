@@ -31,8 +31,14 @@ def parse_stat(stat_str, stat_type='int'):
             if len(parts) == 2 and int(parts[1]) > 0:
                 return int(parts[0]) / int(parts[1])
             return 0.0
+        elif stat_type == 'completion':
+            # parse like "15/23" to completion percentage
+            parts = stat_str.split('/')
+            if len(parts) == 2 and int(parts[1]) > 0:
+                return int(parts[0]) / int(parts[1])
+            return 0.0
     except:
-        return 0 if stat_type != 'ratio' else 0.0
+        return 0 if stat_type not in ['ratio', 'completion'] else 0.0
 
 
 def read_nfl_data():
@@ -79,12 +85,86 @@ def read_nfl_data():
                     # parse detailed stats from next lines
                     away_stats = {}
                     home_stats = {}
+                    away_qb_stats = {}
+                    home_qb_stats = {}
                     
-                    # look ahead for AWAY stats
+                    # Check for QB stats (new format)
+                    peek_idx = i + 1
+                    if peek_idx < len(lines) and 'AWAY QB' in lines[peek_idx]:
+                        # Parse AWAY QB line: "  AWAY QB (Name): 17/34 for 204yds, 1TD/3INT, 6.0 YPA, 41.8 RTG"
+                        qb_line = lines[peek_idx].strip()
+                        try:
+                            qb_name = qb_line.split('(')[1].split(')')[0]
+                            qb_data = qb_line.split('):')[1].strip()
+                            parts = qb_data.split(',')
+                            
+                            # comp/att for yards
+                            comp_att = parts[0].split('for')[0].strip()
+                            yards = parts[0].split('for')[1].replace('yds', '').strip()
+                            
+                            # TDs/INTs
+                            td_int = parts[1].strip().split('/')
+                            tds = td_int[0].replace('TD', '').strip()
+                            ints = td_int[1].replace('INT', '').strip()
+                            
+                            # YPA
+                            ypa = parts[2].replace('YPA', '').strip()
+                            
+                            # QB Rating
+                            rating = parts[3].replace('RTG', '').strip() if len(parts) > 3 else '0.0'
+                            
+                            away_qb_stats = {
+                                'comp_att': comp_att,
+                                'yards': int(yards),
+                                'tds': int(tds),
+                                'ints': int(ints),
+                                'ypa': float(ypa),
+                                'rating': float(rating)
+                            }
+                        except:
+                            pass
+                        i += 1
+                    
+                    if peek_idx + 1 < len(lines) and 'HOME QB' in lines[peek_idx + 1]:
+                        # Parse HOME QB line
+                        qb_line = lines[peek_idx + 1].strip()
+                        try:
+                            qb_name = qb_line.split('(')[1].split(')')[0]
+                            qb_data = qb_line.split('):')[1].strip()
+                            parts = qb_data.split(',')
+                            
+                            # comp/att for yards
+                            comp_att = parts[0].split('for')[0].strip()
+                            yards = parts[0].split('for')[1].replace('yds', '').strip()
+                            
+                            # TDs/INTs
+                            td_int = parts[1].strip().split('/')
+                            tds = td_int[0].replace('TD', '').strip()
+                            ints = td_int[1].replace('INT', '').strip()
+                            
+                            # YPA
+                            ypa = parts[2].replace('YPA', '').strip()
+                            
+                            # QB Rating
+                            rating = parts[3].replace('RTG', '').strip() if len(parts) > 3 else '0.0'
+                            
+                            home_qb_stats = {
+                                'comp_att': comp_att,
+                                'yards': int(yards),
+                                'tds': int(tds),
+                                'ints': int(ints),
+                                'ypa': float(ypa),
+                                'rating': float(rating)
+                            }
+                        except:
+                            pass
+                        i += 1
+                    
+                    # look ahead for AWAY stats (now 4 lines instead of 3)
                     if i + 1 < len(lines) and 'AWAY' in lines[i + 1]:
                         i += 2  # skip "AWAY (team):" line
                         
-                        # parse away yards line
+                        # Line 1: parse away yards line
                         if i < len(lines):
                             stats_line = lines[i].strip()
                             if 'Total Yards:' in stats_line:
@@ -98,39 +178,83 @@ def read_nfl_data():
                                         away_stats['possession'] = parse_stat(part.split(':')[1].strip(), 'time')
                             i += 1
                         
-                        # parse away passing/rushing line
+                        # Line 2: parse away passing/rushing line (with completion % and rush avg)
                         if i < len(lines):
                             stats_line = lines[i].strip()
                             if 'Passing:' in stats_line:
                                 parts = stats_line.split('|')
                                 for part in parts:
                                     if 'Passing:' in part:
-                                        away_stats['passingYards'] = parse_stat(part.split(':')[1].replace('yds', '').strip())
+                                        # Extract "198yds (17/34)" -> passingYards=198, completion=17/34
+                                        pass_data = part.split(':')[1].strip()
+                                        if '(' in pass_data:
+                                            yds_part = pass_data.split('(')[0].replace('yds', '').strip()
+                                            comp_part = pass_data.split('(')[1].replace(')', '').strip()
+                                            away_stats['passingYards'] = parse_stat(yds_part)
+                                            away_stats['completionRate'] = parse_stat(comp_part, 'completion')
+                                        else:
+                                            away_stats['passingYards'] = parse_stat(pass_data.replace('yds', '').strip())
                                     elif 'Rushing:' in part:
-                                        away_stats['rushingYards'] = parse_stat(part.split(':')[1].replace('yds', '').strip())
+                                        # Extract "140yds (7.8 avg)" -> rushingYards=140, rushAvg=7.8
+                                        rush_data = part.split(':')[1].strip()
+                                        if '(' in rush_data:
+                                            yds_part = rush_data.split('(')[0].replace('yds', '').strip()
+                                            avg_part = rush_data.split('(')[1].replace('avg', '').replace(')', '').strip()
+                                            away_stats['rushingYards'] = parse_stat(yds_part)
+                                            away_stats['rushingAvg'] = parse_stat(avg_part, 'float')
+                                        else:
+                                            away_stats['rushingYards'] = parse_stat(rush_data.replace('yds', '').strip())
                                     elif '1st Downs:' in part:
                                         away_stats['firstDowns'] = parse_stat(part.split(':')[1].strip())
                             i += 1
                         
-                        # parse away efficiency line
+                        # Line 3: parse away efficiency line (3rd down, 4th down, red zone)
                         if i < len(lines):
                             stats_line = lines[i].strip()
-                            if '3rd Down:' in stats_line:
+                            if '3rd Down:' in stats_line or '4th Down:' in stats_line:
                                 parts = stats_line.split('|')
                                 for part in parts:
                                     if '3rd Down:' in part:
                                         away_stats['thirdDownRate'] = parse_stat(part.split(':')[1].strip(), 'ratio')
-                                    elif 'Turnovers:' in part:
-                                        away_stats['turnovers'] = parse_stat(part.split(':')[1].strip())
-                                    elif 'Sacks:' in part:
+                                    elif '4th Down:' in part:
+                                        away_stats['fourthDownRate'] = parse_stat(part.split(':')[1].strip(), 'ratio')
+                                    elif 'Red Zone:' in part:
+                                        away_stats['redZoneRate'] = parse_stat(part.split(':')[1].strip(), 'ratio')
+                            i += 1
+                        
+                        # Line 4: parse turnovers, sacks, penalties
+                        if i < len(lines):
+                            stats_line = lines[i].strip()
+                            if 'Turnovers:' in stats_line:
+                                parts = stats_line.split('|')
+                                for part in parts:
+                                    if 'Turnovers:' in part:
+                                        # Extract "3 (INT: 2, Fum: 1)" -> turnovers=3, ints=2, fumbles=1
+                                        to_data = part.split(':')[1].strip()
+                                        if '(' in to_data:
+                                            total_to = to_data.split('(')[0].strip()
+                                            away_stats['turnovers'] = parse_stat(total_to)
+                                            # Parse INT and Fum
+                                            detail = to_data.split('(')[1].replace(')', '')
+                                            if 'INT:' in detail:
+                                                int_val = detail.split('INT:')[1].split(',')[0].strip()
+                                                away_stats['interceptions'] = parse_stat(int_val)
+                                            if 'Fum:' in detail:
+                                                fum_val = detail.split('Fum:')[1].strip()
+                                                away_stats['fumbles'] = parse_stat(fum_val)
+                                        else:
+                                            away_stats['turnovers'] = parse_stat(to_data)
+                                    elif 'Sacks:' in part and 'Sacks-' not in part:
                                         away_stats['sacks'] = parse_stat(part.split(':')[1].strip())
+                                    elif 'Penalties:' in part:
+                                        away_stats['penalties'] = parse_stat(part.split(':')[1].strip(), 'ratio')
                             i += 1
                     
-                    # look ahead for HOME stats
+                    # look ahead for HOME stats (now 4 lines instead of 3)
                     if i < len(lines) and 'HOME' in lines[i]:
                         i += 1  # skip "HOME (team):" line
                         
-                        # parse home yards line
+                        # Line 1: parse home yards line
                         if i < len(lines):
                             stats_line = lines[i].strip()
                             if 'Total Yards:' in stats_line:
@@ -144,32 +268,76 @@ def read_nfl_data():
                                         home_stats['possession'] = parse_stat(part.split(':')[1].strip(), 'time')
                             i += 1
                         
-                        # parse home passing/rushing line
+                        # Line 2: parse home passing/rushing line (with completion % and rush avg)
                         if i < len(lines):
                             stats_line = lines[i].strip()
                             if 'Passing:' in stats_line:
                                 parts = stats_line.split('|')
                                 for part in parts:
                                     if 'Passing:' in part:
-                                        home_stats['passingYards'] = parse_stat(part.split(':')[1].replace('yds', '').strip())
+                                        # Extract "198yds (17/34)" -> passingYards=198, completion=17/34
+                                        pass_data = part.split(':')[1].strip()
+                                        if '(' in pass_data:
+                                            yds_part = pass_data.split('(')[0].replace('yds', '').strip()
+                                            comp_part = pass_data.split('(')[1].replace(')', '').strip()
+                                            home_stats['passingYards'] = parse_stat(yds_part)
+                                            home_stats['completionRate'] = parse_stat(comp_part, 'completion')
+                                        else:
+                                            home_stats['passingYards'] = parse_stat(pass_data.replace('yds', '').strip())
                                     elif 'Rushing:' in part:
-                                        home_stats['rushingYards'] = parse_stat(part.split(':')[1].replace('yds', '').strip())
+                                        # Extract "140yds (7.8 avg)" -> rushingYards=140, rushAvg=7.8
+                                        rush_data = part.split(':')[1].strip()
+                                        if '(' in rush_data:
+                                            yds_part = rush_data.split('(')[0].replace('yds', '').strip()
+                                            avg_part = rush_data.split('(')[1].replace('avg', '').replace(')', '').strip()
+                                            home_stats['rushingYards'] = parse_stat(yds_part)
+                                            home_stats['rushingAvg'] = parse_stat(avg_part, 'float')
+                                        else:
+                                            home_stats['rushingYards'] = parse_stat(rush_data.replace('yds', '').strip())
                                     elif '1st Downs:' in part:
                                         home_stats['firstDowns'] = parse_stat(part.split(':')[1].strip())
                             i += 1
                         
-                        # parse home efficiency line
+                        # Line 3: parse home efficiency line (3rd down, 4th down, red zone)
                         if i < len(lines):
                             stats_line = lines[i].strip()
-                            if '3rd Down:' in stats_line:
+                            if '3rd Down:' in stats_line or '4th Down:' in stats_line:
                                 parts = stats_line.split('|')
                                 for part in parts:
                                     if '3rd Down:' in part:
                                         home_stats['thirdDownRate'] = parse_stat(part.split(':')[1].strip(), 'ratio')
-                                    elif 'Turnovers:' in part:
-                                        home_stats['turnovers'] = parse_stat(part.split(':')[1].strip())
-                                    elif 'Sacks:' in part:
+                                    elif '4th Down:' in part:
+                                        home_stats['fourthDownRate'] = parse_stat(part.split(':')[1].strip(), 'ratio')
+                                    elif 'Red Zone:' in part:
+                                        home_stats['redZoneRate'] = parse_stat(part.split(':')[1].strip(), 'ratio')
+                            i += 1
+                        
+                        # Line 4: parse turnovers, sacks, penalties
+                        if i < len(lines):
+                            stats_line = lines[i].strip()
+                            if 'Turnovers:' in stats_line:
+                                parts = stats_line.split('|')
+                                for part in parts:
+                                    if 'Turnovers:' in part:
+                                        # Extract "3 (INT: 2, Fum: 1)" -> turnovers=3, ints=2, fumbles=1
+                                        to_data = part.split(':')[1].strip()
+                                        if '(' in to_data:
+                                            total_to = to_data.split('(')[0].strip()
+                                            home_stats['turnovers'] = parse_stat(total_to)
+                                            # Parse INT and Fum
+                                            detail = to_data.split('(')[1].replace(')', '')
+                                            if 'INT:' in detail:
+                                                int_val = detail.split('INT:')[1].split(',')[0].strip()
+                                                home_stats['interceptions'] = parse_stat(int_val)
+                                            if 'Fum:' in detail:
+                                                fum_val = detail.split('Fum:')[1].strip()
+                                                home_stats['fumbles'] = parse_stat(fum_val)
+                                        else:
+                                            home_stats['turnovers'] = parse_stat(to_data)
+                                    elif 'Sacks:' in part and 'Sacks-' not in part:
                                         home_stats['sacks'] = parse_stat(part.split(':')[1].strip())
+                                    elif 'Penalties:' in part:
+                                        home_stats['penalties'] = parse_stat(part.split(':')[1].strip(), 'ratio')
                             i += 1
                     
                     # determine winner and create game records
@@ -188,7 +356,8 @@ def read_nfl_data():
                             'point_diff': point_diff,
                             'preseason': is_preseason,
                             'off_stats': away_stats,
-                            'def_stats': home_stats  # opponent's offense = our defense faced
+                            'def_stats': home_stats,  # opponent's offense = our defense faced
+                            'qb_stats': away_qb_stats  # ACTUAL QB stats
                         })
                         
                         if home_team not in teams_data:
@@ -202,7 +371,8 @@ def read_nfl_data():
                             'point_diff': point_diff,
                             'preseason': is_preseason,
                             'off_stats': home_stats,
-                            'def_stats': away_stats
+                            'def_stats': away_stats,
+                            'qb_stats': home_qb_stats  # ACTUAL QB stats
                         })
                     
                     elif home_score > away_score:
@@ -220,7 +390,8 @@ def read_nfl_data():
                             'point_diff': point_diff,
                             'preseason': is_preseason,
                             'off_stats': home_stats,
-                            'def_stats': away_stats
+                            'def_stats': away_stats,
+                            'qb_stats': home_qb_stats  # ACTUAL QB stats
                         })
                         
                         if away_team not in teams_data:
@@ -234,7 +405,8 @@ def read_nfl_data():
                             'point_diff': point_diff,
                             'preseason': is_preseason,
                             'off_stats': away_stats,
-                            'def_stats': home_stats
+                            'def_stats': home_stats,
+                            'qb_stats': away_qb_stats  # ACTUAL QB stats
                         })
                 
                 except Exception as e:
@@ -339,35 +511,190 @@ def calculate_team_averages(team, teams_data, regular_only=True):
     total_yards_vals = [g['off_stats'].get('totalYards', 0) for g in games]
     points_scored_vals = [g['score_for'] for g in games]
     third_down_vals = [g['off_stats'].get('thirdDownRate', 0) for g in games]
+    fourth_down_vals = [g['off_stats'].get('fourthDownRate', 0) for g in games]
+    red_zone_vals = [g['off_stats'].get('redZoneRate', 0) for g in games]
     turnovers_vals = [g['off_stats'].get('turnovers', 0) for g in games]
+    interceptions_vals = [g['off_stats'].get('interceptions', 0) for g in games]
+    fumbles_vals = [g['off_stats'].get('fumbles', 0) for g in games]
     rushing_vals = [g['off_stats'].get('rushingYards', 0) for g in games]
+    rushing_avg_vals = [g['off_stats'].get('rushingAvg', 0) for g in games]
     passing_vals = [g['off_stats'].get('passingYards', 0) for g in games]
+    completion_vals = [g['off_stats'].get('completionRate', 0) for g in games]
     sacks_vals = [g['off_stats'].get('sacks', 0) for g in games]
+    penalties_vals = [g['off_stats'].get('penalties', 0) for g in games]
+    
+    # === ACTUAL QB STATS (Priority #1!) ===
+    qb_rating_vals = []  # ACTUAL QB Rating
+    qb_ypa_vals = []  # ACTUAL Yards Per Attempt
+    qb_td_vals = []  # ACTUAL TDs
+    qb_int_vals = []  # ACTUAL INTs
+    qb_td_int_ratio_vals = []  # ACTUAL TD/INT ratio
+    
+    # Fallback values for games without QB stats
+    ypa_vals = []  # For backwards compatibility
+    td_int_ratio_vals = []
+    sack_rate_vals = []
+    epa_proxy_vals = []
+    explosive_pass_rate_vals = []
+    explosive_run_rate_vals = []
+    
+    for g in games:
+        # Try to use ACTUAL QB stats if available
+        if 'qb_stats' in g and g['qb_stats']:
+            qb = g['qb_stats']
+            
+            # ACTUAL QB Rating (most comprehensive QB metric)
+            qb_rating_vals.append(qb.get('rating', 0))
+            
+            # ACTUAL YPA
+            qb_ypa_vals.append(qb.get('ypa', 0))
+            ypa_vals.append(qb.get('ypa', 0))
+            
+            # ACTUAL TDs and INTs
+            tds = qb.get('tds', 0)
+            ints = qb.get('ints', 0)
+            qb_td_vals.append(tds)
+            qb_int_vals.append(ints)
+            
+            # ACTUAL TD/INT ratio
+            td_int_ratio = tds / (ints + 0.5) if ints >= 0 else 2.0
+            qb_td_int_ratio_vals.append(td_int_ratio)
+            td_int_ratio_vals.append(td_int_ratio)
+            
+        else:
+            # Fallback to estimates if no QB stats
+            ints = g['off_stats'].get('interceptions', 0)
+            
+            ypa_vals.append(ypa)
+            qb_ypa_vals.append(ypa)
+            
+            rz_rate = g['off_stats'].get('redZoneRate', 0.5)
+            est_tds = (pts / 7) * rz_rate
+            td_int_ratio = (est_tds / (ints + 0.5)) if ints >= 0 else 2.0
+            td_int_ratio_vals.append(td_int_ratio)
+            qb_td_int_ratio_vals.append(td_int_ratio)
+            
+            qb_rating_vals.append(85.0)  # League average
+        
+        # Sack rate (calculate from team stats)
+        pass_yds = g['off_stats'].get('passingYards', 0)
+        comp_rate = g['off_stats'].get('completionRate', 0)
+        sacks_allowed = g['def_stats'].get('sacks', 0)
+        if comp_rate > 0:
+            attempts = pass_yds / (comp_rate * 7.5)
+            sack_rate = sacks_allowed / (attempts + sacks_allowed) if (attempts + sacks_allowed) > 0 else 0
+        else:
+            sack_rate = 0
+        sack_rate_vals.append(sack_rate)
+        
+        # EPA Proxy: (Points - League Average) / Total Plays
+        # League avg ~22 points, estimate plays from yards/ypp
+        pts = g['score_for']  # Define pts here for all games
+        ypp = g['off_stats'].get('yardsPerPlay', 5.5)
+        total_yds = g['off_stats'].get('totalYards', 0)
+        plays = total_yds / ypp if ypp > 0 else 60
+        epa_proxy = (pts - 22) / plays if plays > 0 else 0
+        epa_proxy_vals.append(epa_proxy)
+        
+        # Calculate ypa for all games (needed for explosive play calculation)
+        if comp_rate > 0:
+            attempts = pass_yds / (comp_rate * 7.5)
+            ypa = pass_yds / attempts if attempts > 0 else 0
+        else:
+            ypa = 0
+        
+        # Explosive Play Rates (proxy - estimate from YPP and yards)
+        # If YPP is high, likely more explosive plays
+        # Explosive pass: estimate 15+ yard completions
+        if comp_rate > 0 and ypa > 0:
+            # Higher YPA suggests more explosives
+            explosive_pass_pct = min(ypa / 12.0, 0.3)  # Cap at 30%
+        else:
+            explosive_pass_pct = 0
+        explosive_pass_rate_vals.append(explosive_pass_pct)
+        
+        # Explosive run: 10+ yard runs (estimate from rush avg)
+        rush_avg = g['off_stats'].get('rushingAvg', 0)
+        explosive_run_pct = min(rush_avg / 8.0, 0.25) if rush_avg > 4.5 else 0.05
+        explosive_run_rate_vals.append(explosive_run_pct)
     
     yards_allowed_vals = [g['def_stats'].get('totalYards', 0) for g in games]
     yards_per_play_allowed_vals = [g['def_stats'].get('yardsPerPlay', 0) for g in games]
     points_allowed_vals = [g['score_against'] for g in games]
     rushing_allowed_vals = [g['def_stats'].get('rushingYards', 0) for g in games]
+    rushing_avg_allowed_vals = [g['def_stats'].get('rushingAvg', 0) for g in games]
     passing_allowed_vals = [g['def_stats'].get('passingYards', 0) for g in games]
+    completion_allowed_vals = [g['def_stats'].get('completionRate', 0) for g in games]
     sacks_allowed_vals = [g['def_stats'].get('sacks', 0) for g in games]
+    red_zone_allowed_vals = [g['def_stats'].get('redZoneRate', 0) for g in games]
+    third_down_allowed_vals = [g['def_stats'].get('thirdDownRate', 0) for g in games]
+    interceptions_forced_vals = [g['def_stats'].get('interceptions', 0) for g in games]  # takeaways
+    
+    # Defensive explosive plays allowed (from opponent stats)
+    explosive_pass_allowed_vals = []
+    explosive_run_allowed_vals = []
+    for g in games:
+        opp_pass_yds = g['def_stats'].get('passingYards', 0)
+        opp_comp_rate = g['def_stats'].get('completionRate', 0)
+        
+        # Opponent's explosive pass rate = what we allowed
+        if opp_comp_rate > 0:
+            opp_attempts = opp_pass_yds / (opp_comp_rate * 7.5)
+            opp_ypa = opp_pass_yds / opp_attempts if opp_attempts > 0 else 0
+            explosive_pass_allowed = min(opp_ypa / 12.0, 0.3)
+        else:
+            explosive_pass_allowed = 0
+        explosive_pass_allowed_vals.append(explosive_pass_allowed)
+        
+        # Opponent's explosive run rate = what we allowed
+        opp_rush_avg = g['def_stats'].get('rushingAvg', 0)
+        explosive_run_allowed = min(opp_rush_avg / 8.0, 0.25) if opp_rush_avg > 4.5 else 0.05
+        explosive_run_allowed_vals.append(explosive_run_allowed)
     
     # offensive averages with recency weighting
     avg_yards_per_play = calculate_weighted_average(yards_per_play_vals)
     avg_total_yards = calculate_weighted_average(total_yards_vals)
     avg_points_scored = calculate_weighted_average(points_scored_vals)
     avg_third_down = calculate_weighted_average(third_down_vals)
+    avg_fourth_down = calculate_weighted_average(fourth_down_vals)
+    avg_red_zone = calculate_weighted_average(red_zone_vals)
     avg_turnovers_committed = calculate_weighted_average(turnovers_vals)
+    avg_interceptions_thrown = calculate_weighted_average(interceptions_vals)
+    avg_fumbles_lost = calculate_weighted_average(fumbles_vals)
     avg_rushing_yards = calculate_weighted_average(rushing_vals)
+    avg_rushing_avg = calculate_weighted_average(rushing_avg_vals)
     avg_passing_yards = calculate_weighted_average(passing_vals)
+    avg_completion_rate = calculate_weighted_average(completion_vals)
     avg_sacks_made = calculate_weighted_average(sacks_vals)  # defensive stat tracked on offense
+    avg_penalties = calculate_weighted_average(penalties_vals)
+    
+    # ACTUAL QB stats (when available)
+    avg_qb_rating = calculate_weighted_average(qb_rating_vals)
+    avg_qb_ypa = calculate_weighted_average(qb_ypa_vals)
+    avg_qb_tds = calculate_weighted_average(qb_td_vals) if qb_td_vals else 0
+    avg_qb_ints = calculate_weighted_average(qb_int_vals) if qb_int_vals else 0
+    avg_qb_td_int_ratio = calculate_weighted_average(qb_td_int_ratio_vals)
+    
+    # Backwards compatibility
+    avg_yards_per_attempt = avg_qb_ypa if avg_qb_ypa > 0 else calculate_weighted_average(ypa_vals)
+    avg_td_int_ratio = avg_qb_td_int_ratio if avg_qb_td_int_ratio > 0 else calculate_weighted_average(td_int_ratio_vals)
+    avg_sack_rate = calculate_weighted_average(sack_rate_vals)
+    avg_epa_proxy = calculate_weighted_average(epa_proxy_vals)
+    avg_explosive_pass_rate = calculate_weighted_average(explosive_pass_rate_vals)
+    avg_explosive_run_rate = calculate_weighted_average(explosive_run_rate_vals)
     
     # defensive averages with recency weighting
     avg_yards_allowed = calculate_weighted_average(yards_allowed_vals)
     avg_yards_per_play_allowed = calculate_weighted_average(yards_per_play_allowed_vals)
     avg_points_allowed = calculate_weighted_average(points_allowed_vals)
     avg_rushing_yards_allowed = calculate_weighted_average(rushing_allowed_vals)
+    avg_rushing_avg_allowed = calculate_weighted_average(rushing_avg_allowed_vals)
     avg_passing_yards_allowed = calculate_weighted_average(passing_allowed_vals)
+    avg_completion_allowed = calculate_weighted_average(completion_allowed_vals)
     avg_sacks_allowed = calculate_weighted_average(sacks_allowed_vals)
+    avg_red_zone_allowed = calculate_weighted_average(red_zone_allowed_vals)
+    avg_third_down_allowed = calculate_weighted_average(third_down_allowed_vals)
+    avg_interceptions_forced = calculate_weighted_average(interceptions_forced_vals)  # takeaways
     
     # recent form (last 3 games) - no weighting needed for binary outcomes
     recent_games = games[-3:] if len(games) >= 3 else games
@@ -395,8 +722,8 @@ def calculate_team_averages(team, teams_data, regular_only=True):
     total_points_allowed = sum(points_allowed_vals)
     pythagorean_exp = (total_points_scored ** 2.37) / ((total_points_scored ** 2.37) + (total_points_allowed ** 2.37))
     
-    # turnover differential (takeaways - giveaways)
-    takeaways = avg_sacks_made  # proxy - ideally would track INTs + fumbles recovered
+    # turnover differential (NOW using actual INTs instead of proxy)
+    takeaways = avg_interceptions_forced  # actual takeaways
     giveaways = avg_turnovers_committed
     turnover_margin = takeaways - giveaways
     
@@ -410,10 +737,27 @@ def calculate_team_averages(team, teams_data, regular_only=True):
             'total_yards': avg_total_yards,
             'points_scored': avg_points_scored,
             'third_down_rate': avg_third_down,
+            'fourth_down_rate': avg_fourth_down,
+            'red_zone_rate': avg_red_zone,
             'turnovers': avg_turnovers_committed,
+            'interceptions_thrown': avg_interceptions_thrown,
+            'fumbles_lost': avg_fumbles_lost,
             'rushing_yards': avg_rushing_yards,
+            'rushing_avg': avg_rushing_avg,
             'passing_yards': avg_passing_yards,
-            'sacks_made': avg_sacks_made
+            'completion_rate': avg_completion_rate,
+            'yards_per_attempt': avg_yards_per_attempt,
+            'td_int_ratio': avg_td_int_ratio,
+            'sack_rate': avg_sack_rate,
+            'sacks_made': avg_sacks_made,
+            'penalties': avg_penalties,
+            'epa_proxy': avg_epa_proxy,
+            'explosive_pass_rate': avg_explosive_pass_rate,
+            'explosive_run_rate': avg_explosive_run_rate,
+            # ACTUAL QB STATS (when available)
+            'qb_rating': avg_qb_rating,
+            'qb_tds_per_game': avg_qb_tds,
+            'qb_ints_per_game': avg_qb_ints
         },
         'defense': {
             'yards_allowed': avg_yards_allowed,
@@ -421,7 +765,14 @@ def calculate_team_averages(team, teams_data, regular_only=True):
             'points_allowed': avg_points_allowed,
             'sacks_allowed': avg_sacks_allowed,
             'rushing_yards_allowed': avg_rushing_yards_allowed,
-            'passing_yards_allowed': avg_passing_yards_allowed
+            'rushing_avg_allowed': avg_rushing_avg_allowed,
+            'passing_yards_allowed': avg_passing_yards_allowed,
+            'completion_allowed': avg_completion_allowed,
+            'red_zone_allowed': avg_red_zone_allowed,
+            'third_down_allowed': avg_third_down_allowed,
+            'interceptions_forced': avg_interceptions_forced,
+            'explosive_pass_allowed': calculate_weighted_average(explosive_pass_allowed_vals),
+            'explosive_run_allowed': calculate_weighted_average(explosive_run_allowed_vals)
         },
         'recent_form': {
             'wins': recent_wins,
@@ -550,6 +901,96 @@ def calculate_opponent_quality(team, teams_data):
     return sum(opponent_win_rates) / len(opponent_win_rates)
 
 
+def classify_offensive_style(team_avg):
+    """
+    Classifies team's offensive style based on run/pass balance
+    Returns: 'run_heavy', 'pass_heavy', 'balanced'
+    """
+    if not team_avg:
+        return 'balanced'
+    
+    rush_yards = team_avg['offense']['rushing_yards']
+    pass_yards = team_avg['offense']['passing_yards']
+    total_yards = rush_yards + pass_yards
+    
+    if total_yards == 0:
+        return 'balanced'
+    
+    rush_pct = rush_yards / total_yards
+    
+    if rush_pct > 0.55:
+        return 'run_heavy'
+    elif rush_pct < 0.45:
+        return 'pass_heavy'
+    else:
+        return 'balanced'
+
+
+def find_similar_matchup_performance(team, opponent_style, teams_data, matchup_type='offense'):
+    """
+    Finds how a team performed against opponents with similar style to upcoming opponent
+    matchup_type: 'offense' = how did team's offense do vs similar defenses
+                  'defense' = how did team's defense do vs similar offenses
+    """
+    if team not in teams_data:
+        return None
+    
+    games = [g for g in teams_data[team] if not g['preseason']]
+    similar_games = []
+    
+    for game in games:
+        opp = game['opponent']
+        opp_avg = calculate_team_averages(opp, teams_data, regular_only=True)
+        
+        if not opp_avg:
+            continue
+        
+        # Classify opponent's style
+        opp_style = classify_offensive_style(opp_avg)
+        
+        # Find games against similar style opponents
+        if opp_style == opponent_style:
+            if matchup_type == 'offense':
+                # How did our offense perform?
+                similar_games.append({
+                    'opponent': opp,
+                    'points_scored': game['score_for'],
+                    'yards': game['off_stats'].get('totalYards', 0),
+                    'ypp': game['off_stats'].get('yardsPerPlay', 0),
+                    'result': game['result']
+                })
+            else:  # defense
+                # How did our defense perform?
+                similar_games.append({
+                    'opponent': opp,
+                    'points_allowed': game['score_against'],
+                    'yards_allowed': game['def_stats'].get('totalYards', 0),
+                    'ypp_allowed': game['def_stats'].get('yardsPerPlay', 0),
+                    'result': game['result']
+                })
+    
+    if not similar_games:
+        return None
+    
+    # Calculate averages against similar opponents
+    if matchup_type == 'offense':
+        return {
+            'games': len(similar_games),
+            'avg_points': sum(g['points_scored'] for g in similar_games) / len(similar_games),
+            'avg_yards': sum(g['yards'] for g in similar_games) / len(similar_games),
+            'avg_ypp': sum(g['ypp'] for g in similar_games) / len(similar_games),
+            'win_rate': sum(1 for g in similar_games if g['result'] == 'W') / len(similar_games)
+        }
+    else:
+        return {
+            'games': len(similar_games),
+            'avg_points_allowed': sum(g['points_allowed'] for g in similar_games) / len(similar_games),
+            'avg_yards_allowed': sum(g['yards_allowed'] for g in similar_games) / len(similar_games),
+            'avg_ypp_allowed': sum(g['ypp_allowed'] for g in similar_games) / len(similar_games),
+            'win_rate': sum(1 for g in similar_games if g['result'] == 'W') / len(similar_games)
+        }
+
+
 def calculate_strength_adjusted_stats(team, teams_data):
     """
     calculates strength-adjusted offensive stats based on opponent defensive quality
@@ -650,13 +1091,18 @@ def advanced_prediction(home_team, away_team, teams_data, is_neutral=False, inju
     print(f"  Offense: {home_avg['offense']['yards_per_play']:.1f} yds/play, "
           f"{home_avg['offense']['points_scored']:.1f} pts/game, "
           f"{home_avg['offense']['third_down_rate']:.1%} 3rd down")
-    print(f"    Rushing: {home_avg['offense']['rushing_yards']:.1f} yds/game | "
-          f"Passing: {home_avg['offense']['passing_yards']:.1f} yds/game")
+    print(f"    Rushing: {home_avg['offense']['rushing_yards']:.1f} yds/game ({home_avg['offense']['rushing_avg']:.1f} avg) | "
+          f"Passing: {home_avg['offense']['passing_yards']:.1f} yds/game ({home_avg['offense']['completion_rate']:.1%} comp%)")
+    print(f"    Red Zone: {home_avg['offense']['red_zone_rate']:.1%} TD rate | "
+          f"4th Down: {home_avg['offense']['fourth_down_rate']:.1%} | "
+          f"Penalties: {home_avg['offense']['penalties']:.1f}/game")
     print(f"  Defense: {home_avg['defense']['points_allowed']:.1f} pts allowed/game, "
           f"{home_avg['defense']['yards_per_play_allowed']:.1f} yds/play allowed, "
           f"{home_avg['offense']['sacks_made']:.1f} sacks/game")
-    print(f"    vs Rush: {home_avg['defense']['rushing_yards_allowed']:.1f} yds/game | "
-          f"vs Pass: {home_avg['defense']['passing_yards_allowed']:.1f} yds/game")
+    print(f"    vs Rush: {home_avg['defense']['rushing_yards_allowed']:.1f} yds/game ({home_avg['defense']['rushing_avg_allowed']:.1f} avg) | "
+          f"vs Pass: {home_avg['defense']['passing_yards_allowed']:.1f} yds/game ({home_avg['defense']['completion_allowed']:.1%} comp%)")
+    print(f"    Red Zone D: {home_avg['defense']['red_zone_allowed']:.1%} allowed | "
+          f"INTs: {home_avg['defense']['interceptions_forced']:.1f}/game")
     print(f"  Recent Form (last {home_avg['recent_form']['games']} games): "
           f"{home_avg['recent_form']['wins']}-{home_avg['recent_form']['games'] - home_avg['recent_form']['wins']}, "
           f"{home_avg['recent_form']['points_scored']:.1f} pts/game")
@@ -694,13 +1140,18 @@ def advanced_prediction(home_team, away_team, teams_data, is_neutral=False, inju
     print(f"  Offense: {away_avg['offense']['yards_per_play']:.1f} yds/play, "
           f"{away_avg['offense']['points_scored']:.1f} pts/game, "
           f"{away_avg['offense']['third_down_rate']:.1%} 3rd down")
-    print(f"    Rushing: {away_avg['offense']['rushing_yards']:.1f} yds/game | "
-          f"Passing: {away_avg['offense']['passing_yards']:.1f} yds/game")
+    print(f"    Rushing: {away_avg['offense']['rushing_yards']:.1f} yds/game ({away_avg['offense']['rushing_avg']:.1f} avg) | "
+          f"Passing: {away_avg['offense']['passing_yards']:.1f} yds/game ({away_avg['offense']['completion_rate']:.1%} comp%)")
+    print(f"    Red Zone: {away_avg['offense']['red_zone_rate']:.1%} TD rate | "
+          f"4th Down: {away_avg['offense']['fourth_down_rate']:.1%} | "
+          f"Penalties: {away_avg['offense']['penalties']:.1f}/game")
     print(f"  Defense: {away_avg['defense']['points_allowed']:.1f} pts allowed/game, "
           f"{away_avg['defense']['yards_per_play_allowed']:.1f} yds/play allowed, "
           f"{away_avg['offense']['sacks_made']:.1f} sacks/game")
-    print(f"    vs Rush: {away_avg['defense']['rushing_yards_allowed']:.1f} yds/game | "
-          f"vs Pass: {away_avg['defense']['passing_yards_allowed']:.1f} yds/game")
+    print(f"    vs Rush: {away_avg['defense']['rushing_yards_allowed']:.1f} yds/game ({away_avg['defense']['rushing_avg_allowed']:.1f} avg) | "
+          f"vs Pass: {away_avg['defense']['passing_yards_allowed']:.1f} yds/game ({away_avg['defense']['completion_allowed']:.1%} comp%)")
+    print(f"    Red Zone D: {away_avg['defense']['red_zone_allowed']:.1%} allowed | "
+          f"INTs: {away_avg['defense']['interceptions_forced']:.1f}/game")
     print(f"  Recent Form (last {away_avg['recent_form']['games']} games): "
           f"{away_avg['recent_form']['wins']}-{away_avg['recent_form']['games'] - away_avg['recent_form']['wins']}, "
           f"{away_avg['recent_form']['points_scored']:.1f} pts/game")
@@ -739,8 +1190,53 @@ def advanced_prediction(home_team, away_team, teams_data, is_neutral=False, inju
     print(f"MATCHUP ANALYSIS")
     print(f"{'=' * 100}\n")
     
+    # Initialize points
     home_points = 0
     away_points = 0
+    
+    # Classify offensive styles
+    home_style = classify_offensive_style(home_avg)
+    away_style = classify_offensive_style(away_avg)
+    
+    print(f"Offensive Styles:")
+    print(f"  {home_team}: {home_style.upper().replace('_', ' ')} "
+          f"({home_avg['offense']['rushing_yards']:.0f} rush / {home_avg['offense']['passing_yards']:.0f} pass)")
+    print(f"  {away_team}: {away_style.upper().replace('_', ' ')} "
+          f"({away_avg['offense']['rushing_yards']:.0f} rush / {away_avg['offense']['passing_yards']:.0f} pass)")
+    print()
+    
+    # Find performance vs similar opponents
+    home_vs_similar_off = find_similar_matchup_performance(home_team, away_style, teams_data, 'defense')
+    away_vs_similar_off = find_similar_matchup_performance(away_team, home_style, teams_data, 'defense')
+    
+    if home_vs_similar_off and home_vs_similar_off['games'] >= 2:
+        print(f"Similar Matchup History:")
+        print(f"  {home_team} defense vs {away_style.replace('_', '-')} offenses ({home_vs_similar_off['games']} games):")
+        print(f"    Allowed {home_vs_similar_off['avg_points_allowed']:.1f} pts/game, "
+              f"{home_vs_similar_off['avg_ypp_allowed']:.1f} ypp ({home_vs_similar_off['win_rate']:.1%} win rate)")
+        
+        # Compare to overall defensive average
+        if home_vs_similar_off['avg_points_allowed'] < home_avg['defense']['points_allowed'] - 3:
+            home_points += 1.5
+            print(f"    >> {home_team} defense performs BETTER vs {away_style.replace('_', ' ')} teams (+1.5)")
+        elif home_vs_similar_off['avg_points_allowed'] > home_avg['defense']['points_allowed'] + 3:
+            away_points += 1.5
+            print(f"    >> {home_team} defense struggles vs {away_style.replace('_', ' ')} teams (+1.5 to {away_team})")
+    
+    if away_vs_similar_off and away_vs_similar_off['games'] >= 2:
+        print(f"  {away_team} defense vs {home_style.replace('_', '-')} offenses ({away_vs_similar_off['games']} games):")
+        print(f"    Allowed {away_vs_similar_off['avg_points_allowed']:.1f} pts/game, "
+              f"{away_vs_similar_off['avg_ypp_allowed']:.1f} ypp ({away_vs_similar_off['win_rate']:.1%} win rate)")
+        
+        # Compare to overall defensive average
+        if away_vs_similar_off['avg_points_allowed'] < away_avg['defense']['points_allowed'] - 3:
+            away_points += 1.5
+            print(f"    >> {away_team} defense performs BETTER vs {home_style.replace('_', ' ')} teams (+1.5)")
+        elif away_vs_similar_off['avg_points_allowed'] > away_avg['defense']['points_allowed'] + 3:
+            home_points += 1.5
+            print(f"    >> {away_team} defense struggles vs {home_style.replace('_', ' ')} teams (+1.5 to {home_team})")
+    
+    print()
     
     # 1. offensive vs defensive matchup
     # home offense vs away defense
@@ -1047,26 +1543,124 @@ def advanced_prediction(home_team, away_team, teams_data, is_neutral=False, inju
             home_points += 0.5
             print(f"    >> {away_team} struggles on the road (+0.5 to {home_team})")
     
-    # NEW: Red Zone Efficiency (approximated by points per 100 yards)
-    print(f"\nRed Zone Efficiency (Finishing Drives):")
-    home_rz_eff = (home_avg['offense']['points_scored'] / (home_avg['offense']['total_yards'] / 100)) if home_avg['offense']['total_yards'] > 0 else 0
-    away_rz_eff = (away_avg['offense']['points_scored'] / (away_avg['offense']['total_yards'] / 100)) if away_avg['offense']['total_yards'] > 0 else 0
+    # QB Completion % Matchup
+    print(f"\nQB Passing Accuracy:")
+    home_comp_vs_away_def = home_avg['offense']['completion_rate'] - away_avg['defense']['completion_allowed']
+    away_comp_vs_home_def = away_avg['offense']['completion_rate'] - home_avg['defense']['completion_allowed']
     
-    print(f"  {home_team}: {home_rz_eff:.2f} points per 100 yards")
-    print(f"  {away_team}: {away_rz_eff:.2f} points per 100 yards")
-    
-    if home_rz_eff > away_rz_eff * 1.15:
-        home_points += 1.5
-        print(f"    >> {home_team} significantly better at finishing drives (+1.5)")
-    elif home_rz_eff > away_rz_eff * 1.05:
-        home_points += 0.75
-        print(f"    >> {home_team} better at finishing drives (+0.75)")
-    elif away_rz_eff > home_rz_eff * 1.15:
+    print(f"  {home_team} QB: {home_avg['offense']['completion_rate']:.1%} vs {away_team} allowing {away_avg['defense']['completion_allowed']:.1%}")
+    if home_comp_vs_away_def > 0.10:
+        home_points += 2.0
+        print(f"    >> {home_team} QB should have high completion rate (+2.0)")
+    elif home_comp_vs_away_def > 0.05:
+        home_points += 1.0
+        print(f"    >> {home_team} QB has accuracy advantage (+1.0)")
+    elif home_comp_vs_away_def < -0.10:
         away_points += 1.5
-        print(f"    >> {away_team} significantly better at finishing drives (+1.5)")
-    elif away_rz_eff > home_rz_eff * 1.05:
+        print(f"    >> {away_team} pass defense should limit completions (+1.5 to {away_team})")
+    
+    print(f"  {away_team} QB: {away_avg['offense']['completion_rate']:.1%} vs {home_team} allowing {home_avg['defense']['completion_allowed']:.1%}")
+    if away_comp_vs_home_def > 0.10:
+        away_points += 2.0
+        print(f"    >> {away_team} QB should have high completion rate (+2.0)")
+    elif away_comp_vs_home_def > 0.05:
+        away_points += 1.0
+        print(f"    >> {away_team} QB has accuracy advantage (+1.0)")
+    elif away_comp_vs_home_def < -0.10:
+        home_points += 1.5
+        print(f"    >> {home_team} pass defense should limit completions (+1.5 to {home_team})")
+    
+    # Red Zone Efficiency Matchup (ACTUAL red zone TD%)
+    print(f"\nRed Zone TD% Matchup:")
+    print(f"  {home_team} RZ: {home_avg['offense']['red_zone_rate']:.1%} TD rate vs {away_team} allowing {away_avg['defense']['red_zone_allowed']:.1%}")
+    print(f"  {away_team} RZ: {away_avg['offense']['red_zone_rate']:.1%} TD rate vs {home_team} allowing {home_avg['defense']['red_zone_allowed']:.1%}")
+    
+    home_rz_advantage = home_avg['offense']['red_zone_rate'] - away_avg['defense']['red_zone_allowed']
+    away_rz_advantage = away_avg['offense']['red_zone_rate'] - home_avg['defense']['red_zone_allowed']
+    
+    if home_rz_advantage > 0.15:
+        home_points += 2.5
+        print(f"    >> {home_team} excellent red zone matchup (+2.5)")
+    elif home_rz_advantage > 0.08:
+        home_points += 1.5
+        print(f"    >> {home_team} favorable red zone matchup (+1.5)")
+    
+    if away_rz_advantage > 0.15:
+        away_points += 2.5
+        print(f"    >> {away_team} excellent red zone matchup (+2.5)")
+    elif away_rz_advantage > 0.08:
+        away_points += 1.5
+        print(f"    >> {away_team} favorable red zone matchup (+1.5)")
+    
+    # Rushing Efficiency (yards per carry)
+    print(f"\nRushing Efficiency (Yards Per Carry):")
+    print(f"  {home_team}: {home_avg['offense']['rushing_avg']:.1f} ypc vs {away_team} allowing {away_avg['defense']['rushing_avg_allowed']:.1f} ypc")
+    print(f"  {away_team}: {away_avg['offense']['rushing_avg']:.1f} ypc vs {home_team} allowing {home_avg['defense']['rushing_avg_allowed']:.1f} ypc")
+    
+    home_rush_eff_adv = home_avg['offense']['rushing_avg'] - away_avg['defense']['rushing_avg_allowed']
+    away_rush_eff_adv = away_avg['offense']['rushing_avg'] - home_avg['defense']['rushing_avg_allowed']
+    
+    if home_rush_eff_adv > 1.5:
+        home_points += 2.0
+        print(f"    >> {home_team} should dominate on the ground (+2.0)")
+    elif home_rush_eff_adv > 0.8:
+        home_points += 1.0
+        print(f"    >> {home_team} has rushing efficiency edge (+1.0)")
+    
+    if away_rush_eff_adv > 1.5:
+        away_points += 2.0
+        print(f"    >> {away_team} should dominate on the ground (+2.0)")
+    elif away_rush_eff_adv > 0.8:
+        away_points += 1.0
+        print(f"    >> {away_team} has rushing efficiency edge (+1.0)")
+    
+    # Interception/Takeaway Differential
+    print(f"\nTakeaway Battle (Interceptions):")
+    print(f"  {home_team}: {home_avg['offense']['interceptions_thrown']:.1f} INTs thrown/game, {home_avg['defense']['interceptions_forced']:.1f} INTs forced/game")
+    print(f"  {away_team}: {away_avg['offense']['interceptions_thrown']:.1f} INTs thrown/game, {away_avg['defense']['interceptions_forced']:.1f} INTs forced/game")
+    
+    # Matchup: home's INTs thrown vs away's INTs forced
+    home_int_risk = home_avg['offense']['interceptions_thrown'] - away_avg['defense']['interceptions_forced']
+    away_int_risk = away_avg['offense']['interceptions_thrown'] - home_avg['defense']['interceptions_forced']
+    
+    if home_int_risk < -0.5:  # Home throws few INTs but away doesn't force many = advantage
+        home_points += 1.0
+        print(f"    >> {home_team} protects ball well vs weak takeaway defense (+1.0)")
+    elif home_int_risk > 1.0:  # Home throws many INTs and away forces many = big problem
+        away_points += 2.5
+        print(f"    >> {away_team} should generate turnovers (+2.5)")
+    elif home_int_risk > 0.5:
+        away_points += 1.0
+        print(f"    >> {away_team} has turnover advantage (+1.0)")
+    
+    if away_int_risk < -0.5:
+        away_points += 1.0
+        print(f"    >> {away_team} protects ball well vs weak takeaway defense (+1.0)")
+    elif away_int_risk > 1.0:
+        home_points += 2.5
+        print(f"    >> {home_team} should generate turnovers (+2.5)")
+    elif away_int_risk > 0.5:
+        home_points += 1.0
+        print(f"    >> {home_team} has turnover advantage (+1.0)")
+    
+    # Penalty Discipline
+    print(f"\nPenalty Discipline:")
+    print(f"  {home_team}: {home_avg['offense']['penalties']:.1f} penalties/game")
+    print(f"  {away_team}: {away_avg['offense']['penalties']:.1f} penalties/game")
+    
+    penalty_diff = away_avg['offense']['penalties'] - home_avg['offense']['penalties']
+    if penalty_diff > 2.0:
+        home_points += 1.5
+        print(f"    >> {home_team} much more disciplined (+1.5)")
+    elif penalty_diff > 1.0:
+        home_points += 0.75
+        print(f"    >> {home_team} more disciplined (+0.75)")
+    elif penalty_diff < -2.0:
+        away_points += 1.5
+        print(f"    >> {away_team} much more disciplined (+1.5)")
+    elif penalty_diff < -1.0:
         away_points += 0.75
-        print(f"    >> {away_team} better at finishing drives (+0.75)")
+        print(f"    >> {away_team} more disciplined (+0.75)")
     
     # 8. UPDATED: Win Rate Factor (reduced weight) + Pythagorean Expectation
     print(f"\nWin Rate & Performance Indicators:")

@@ -1,11 +1,20 @@
 """
 NFL Batch Predictor
-Automatically predicts all games for the upcoming week
+Automatically predicts all games for the upcoming week using ML model
 """
 
 import requests
 import json
-from predictor import read_nfl_data, advanced_prediction
+import numpy as np
+from predictor import read_nfl_data, advanced_prediction, calculate_team_averages
+from ml_predictor import build_training_dataset, train_model, create_matchup_features, classify_offensive_style
+
+# Import injury data
+try:
+    from injuryextract import get_injury_data, calculate_injury_impact
+    INJURIES_AVAILABLE = True
+except ImportError:
+    INJURIES_AVAILABLE = False
 
 
 def get_upcoming_games(week_num, season_type='regular', year=2024):
@@ -69,12 +78,12 @@ def get_upcoming_games(week_num, season_type='regular', year=2024):
         return []
 
 
-def batch_predict_week(week_num, season_type='regular'):
+def batch_predict_week(week_num, season_type='regular', use_ml=True):
     """
-    predicts all games for a specific week
+    predicts all games for a specific week using ML model
     """
     print("=" * 100)
-    print(f"NFL BATCH PREDICTOR - {season_type.upper()} WEEK {week_num}")
+    print(f"NFL BATCH PREDICTOR ({'ML MODEL' if use_ml else 'HEURISTIC'}) - {season_type.upper()} WEEK {week_num}")
     print("=" * 100)
     print("\nLoading NFL data...")
     
@@ -86,6 +95,23 @@ def batch_predict_week(week_num, season_type='regular'):
         return
     
     print(f"Data loaded! {len(teams_data)} teams found.\n")
+    
+    # load injury data
+    injury_data = None
+    if INJURIES_AVAILABLE:
+        print("Loading injury data...")
+        injury_data = get_injury_data()
+        if injury_data:
+            print(f"Injury data loaded for {len(injury_data)} teams\n")
+    
+    # Train ML model if using ML mode
+    model = None
+    feature_names = None
+    if use_ml:
+        print("Training ML model on historical data...")
+        X, y, feature_names, game_info = build_training_dataset(teams_data, injury_data)
+        model, feature_importance = train_model(X, y, feature_names)
+        print()
     
     # get upcoming games
     print(f"Fetching games for Week {week_num}...")
@@ -109,51 +135,100 @@ def batch_predict_week(week_num, season_type='regular'):
         print(f"{'=' * 100}")
         
         try:
-            result = advanced_prediction(
-                game['home_team'], 
-                game['away_team'], 
-                teams_data, 
-                game['is_neutral']
-            )
-            
-            if result:
-                home_points = result['home_points']
-                away_points = result['away_points']
+            if use_ml and model is not None:
+                # ML prediction
+                home_avg = calculate_team_averages(game['home_team'], teams_data, regular_only=True)
+                away_avg = calculate_team_averages(game['away_team'], teams_data, regular_only=True)
                 
-                if home_points > away_points:
-                    diff = home_points - away_points
-                    confidence = min(diff / 6 * 100, 95)
+                if not home_avg or not away_avg:
+                    print(f"  Insufficient data for ML prediction")
+                    failed_games.append({
+                        'home_team': game['home_team'],
+                        'away_team': game['away_team'],
+                        'is_neutral': game['is_neutral'],
+                        'reason': 'Insufficient data'
+                    })
+                    continue
+                
+                # Create features
+                features_dict = create_matchup_features(game['home_team'], game['away_team'], home_avg, away_avg, teams_data, injury_data)
+                X = np.array([features_dict[fname] for fname in feature_names]).reshape(1, -1)
+                
+                # Get prediction
+                home_win_prob = model.predict_proba(X)[0, 1]
+                away_win_prob = 1 - home_win_prob
+                
+                # Determine winner
+                if home_win_prob > 0.5:
                     winner = game['home_team']
-                    loser = game['away_team']
-                elif away_points > home_points:
-                    diff = away_points - home_points
-                    confidence = min(diff / 6 * 100, 95)
-                    winner = game['away_team']
-                    loser = game['home_team']
+                    confidence = home_win_prob * 100
                 else:
-                    diff = 0
-                    confidence = 50
-                    winner = "TIE"
-                    loser = "TIE"
+                    winner = game['away_team']
+                    confidence = away_win_prob * 100
+                
+                # Display styles
+                home_style = classify_offensive_style(home_avg)
+                away_style = classify_offensive_style(away_avg)
+                
+                print(f"  {game['home_team']}: {home_avg['wins']}-{home_avg['games_played'] - home_avg['wins']} ({home_style})")
+                print(f"  {game['away_team']}: {away_avg['wins']}-{away_avg['games_played'] - away_avg['wins']} ({away_style})")
+                print(f"  → {winner} wins ({confidence:.1f}% confidence)")
                 
                 predictions.append({
                     'home_team': game['home_team'],
                     'away_team': game['away_team'],
-                    'home_points': home_points,
-                    'away_points': away_points,
+                    'home_win_prob': home_win_prob,
+                    'away_win_prob': away_win_prob,
                     'winner': winner,
                     'confidence': confidence,
                     'is_neutral': game['is_neutral'],
                     'status': 'predicted'
                 })
             else:
-                print(f"  Could not predict this game (missing team data)")
-                failed_games.append({
-                    'home_team': game['home_team'],
-                    'away_team': game['away_team'],
-                    'is_neutral': game['is_neutral'],
-                    'reason': 'Missing team data'
-                })
+                # Heuristic prediction (old method)
+                result = advanced_prediction(
+                    game['home_team'], 
+                    game['away_team'], 
+                    teams_data, 
+                    game['is_neutral'],
+                    injury_data
+                )
+                
+                if result:
+                    home_points = result['home_points']
+                    away_points = result['away_points']
+                    
+                    if home_points > away_points:
+                        diff = home_points - away_points
+                        confidence = min(diff / 6 * 100, 95)
+                        winner = game['home_team']
+                    elif away_points > home_points:
+                        diff = away_points - home_points
+                        confidence = min(diff / 6 * 100, 95)
+                        winner = game['away_team']
+                    else:
+                        diff = 0
+                        confidence = 50
+                        winner = "TIE"
+                    
+                    predictions.append({
+                        'home_team': game['home_team'],
+                        'away_team': game['away_team'],
+                        'home_points': home_points,
+                        'away_points': away_points,
+                        'winner': winner,
+                        'confidence': confidence,
+                        'is_neutral': game['is_neutral'],
+                        'status': 'predicted'
+                    })
+                else:
+                    print(f"  Could not predict this game (missing team data)")
+                    failed_games.append({
+                        'home_team': game['home_team'],
+                        'away_team': game['away_team'],
+                        'is_neutral': game['is_neutral'],
+                        'reason': 'Missing team data'
+                    })
         
         except Exception as e:
             print(f"  Error predicting game: {e}")
@@ -178,12 +253,27 @@ def batch_predict_week(week_num, season_type='regular'):
         away_marker = "  " if pred['winner'] != pred['away_team'] else ">>>"
         neutral_marker = " [NEUTRAL]" if pred['is_neutral'] else ""
         
+        # Determine confidence level label
+        conf = pred['confidence']
+        if conf > 85:
+            conf_label = "LOCK"
+        elif conf > 70:
+            conf_label = "CONFIDENT"
+        elif conf > 60:
+            conf_label = "LEAN"
+        else:
+            conf_label = "TOSS-UP"
+        
         print(f"Game {i}:{neutral_marker}")
         print(f"  {away_marker} {pred['away_team']}")
         print(f"  @")
         print(f"  {home_marker} {pred['home_team']}")
-        print(f"  PREDICTION: {pred['winner']} wins ({pred['confidence']:.0f}% confidence)")
-        print(f"  Score: {pred['home_team']} {pred['home_points']:.1f} - {pred['away_points']:.1f} {pred['away_team']}")
+        print(f"  PREDICTION: {pred['winner']} wins ({conf:.1f}% | {conf_label})")
+        
+        if 'home_points' in pred:  # Heuristic mode
+            print(f"  Score: {pred['home_team']} {pred['home_points']:.1f} - {pred['away_points']:.1f} {pred['away_team']}")
+        else:  # ML mode
+            print(f"  Probabilities: {pred['home_team']} {pred.get('home_win_prob', 0)*100:.1f}% | {pred['away_team']} {pred.get('away_win_prob', 0)*100:.1f}%")
         print()
     
     # show failed predictions
@@ -211,8 +301,12 @@ def batch_predict_week(week_num, season_type='regular'):
                 f.write(" [NEUTRAL SITE]")
             f.write("\n")
             f.write(f"  PREDICTION: {pred['winner']} wins\n")
-            f.write(f"  Confidence: {pred['confidence']:.0f}%\n")
-            f.write(f"  Points: {pred['home_team']} {pred['home_points']:.1f} - {pred['away_points']:.1f} {pred['away_team']}\n\n")
+            f.write(f"  Confidence: {pred['confidence']:.1f}%\n")
+            
+            if 'home_points' in pred:  # Heuristic mode
+                f.write(f"  Points: {pred['home_team']} {pred['home_points']:.1f} - {pred['away_points']:.1f} {pred['away_team']}\n\n")
+            else:  # ML mode
+                f.write(f"  Probabilities: {pred['home_team']} {pred.get('home_win_prob', 0)*100:.1f}% | {pred['away_team']} {pred.get('away_win_prob', 0)*100:.1f}%\n\n")
         
         if failed_games:
             f.write("\n" + "=" * 100 + "\n")
@@ -248,7 +342,8 @@ def main():
     if not season_type:
         season_type = 'regular'
     
-    batch_predict_week(week_num, season_type)
+    # Always use ML model
+    batch_predict_week(week_num, season_type, use_ml=True)
 
 
 if __name__ == "__main__":
