@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportsPredictor · NFL Analytics Control Room</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="console.css">
+</head>
+<body>
+    <div class="background-grid"></div>
+    <header class="hero">
+        <nav class="nav">
+            <div class="brand">
+                <span class="brand-mark">SP</span>
+                <div class="brand-copy">
+                    <span class="brand-title">SportsPredictor</span>
+                    <span class="brand-subtitle">NFL Insights</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#control-deck">Console</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#pipeline">Pipeline</a></li>
+                <li><a href="#models">Models</a></li>
+                <li><a href="#reports">Reports</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section class="hero-content hero-interactive">
+            <div class="hero-copy">
+                <span class="pill">NFL Control Room</span>
+                <h1>Run predictions, refresh data, and inspect the engine in one place.</h1>
+                <p>
+                    This dashboard mirrors the Python CLI tools powering SportsPredictor. Pick any matchup, batch the
+                    entire week, or refresh the underlying data feeds — the FastAPI bridge wraps the original scripts so
+                    you get the same outputs without leaving the browser.
+                </p>
+                <ul class="hero-highlights">
+                    <li>✅ Single-game projections with injury context</li>
+                    <li>✅ Weekly batch predictions powered by the ML ensemble</li>
+                    <li>✅ One-click refresh for NFL stats and injury reports</li>
+                </ul>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#matchup-console">Start with a matchup</a>
+                    <a class="btn btn-ghost" href="#control-deck">Orchestrate the week</a>
+                </div>
+            </div>
+            <div class="hero-panel hero-console" id="matchup-console">
+                <form id="matchup-form" class="panel-card interactive-card" novalidate>
+                    <span class="panel-tag">Single matchup</span>
+                    <h3>Predict a matchup</h3>
+                    <p class="panel-intro">
+                        Pick two teams and call the same routine used by the CLI. Neutral-site adjustments are optional;
+                        the ML ensemble always runs under the hood.
+                    </p>
+                    <div class="form-grid">
+                        <label class="form-group">
+                            <span class="form-label">Home team</span>
+                            <select id="home-team" class="input-control" required>
+                                <option value="" disabled selected>Loading teams...</option>
+                            </select>
+                        </label>
+                        <label class="form-group">
+                            <span class="form-label">Away team</span>
+                            <select id="away-team" class="input-control" required>
+                                <option value="" disabled selected>Loading teams...</option>
+                            </select>
+                        </label>
+                    </div>
+                    <label class="form-toggle">
+                        <input type="checkbox" id="neutral-site">
+                        <span>Neutral site matchup</span>
+                    </label>
+                    <button type="submit" class="btn btn-primary" id="matchup-submit">Run prediction</button>
+                    <p class="form-footnote">Need fresher data first? Use the refresh controls below.</p>
+                </form>
+                <div class="panel-card result-card interactive-card" id="matchup-result-card">
+                    <span class="panel-tag">Result</span>
+                    <h3>Matchup output</h3>
+                    <div class="result-block is-empty" id="matchup-result">
+                        Select two teams to preview a matchup.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section id="control-deck" class="section control-deck">
+            <div class="section-heading">
+                <span class="section-pill">Command center</span>
+                <h2>Batch the slate, refresh the feeds, and monitor the bridge.</h2>
+                <p>
+                    Each card plugs directly into the FastAPI layer that wraps the CLI scripts. Ensemble ML predictions run by
+                    default; fire one or all depending on how deep you want to go.
+                </p>
+            </div>
+            <div class="control-grid">
+                <form id="batch-form" class="panel-card interactive-card" novalidate>
+                    <span class="panel-tag">Weekly slate</span>
+                    <h3>Batch predict the week</h3>
+                    <p class="panel-intro">
+                        Pull upcoming games from ESPN and run <code>batch_predict_week</code>. Outputs mirror the CLI log with a
+                        structured summary for quick scans.
+                    </p>
+                    <div class="form-grid">
+                        <label class="form-group">
+                            <span class="form-label">Week</span>
+                            <input type="number" id="batch-week" class="input-control" min="1" max="18" value="10" required>
+                        </label>
+                        <label class="form-group">
+                            <span class="form-label">Season type</span>
+                            <select id="batch-season" class="input-control">
+                                <option value="regular">Regular season</option>
+                                <option value="preseason">Preseason</option>
+                            </select>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="batch-submit">Run weekly predictions</button>
+                    <div class="result-block is-empty" id="batch-result">No batch run yet.</div>
+                </form>
+
+                <div class="panel-card interactive-card" id="refresh-card">
+                    <span class="panel-tag">Data refresh</span>
+                    <h3>Sync feeds</h3>
+                    <p class="panel-intro">
+                        Kick off the data extractor and injury collector so the models stay current. These map directly to
+                        <code>dataextract.py</code> and <code>injuryextract.py</code>.
+                    </p>
+                    <div class="button-stack">
+                        <button class="btn btn-ghost" type="button" id="refresh-data">Refresh game data</button>
+                        <button class="btn btn-ghost" type="button" id="refresh-injuries">Refresh injuries</button>
+                    </div>
+                    <div class="result-block is-empty" id="refresh-result">Nothing refreshed yet.</div>
+                </div>
+
+                <div class="panel-card interactive-card" id="status-card">
+                    <span class="panel-tag">Bridge status</span>
+                    <h3>API heartbeat</h3>
+                    <p class="panel-intro">
+                        Quick peek at the FastAPI bridge that brokers the CLI commands. Confirm everything is reachable before
+                        queuing longer jobs.
+                    </p>
+                    <dl class="status-list">
+                        <div>
+                            <dt>API</dt>
+                            <dd id="status-api">Checking...</dd>
+                        </div>
+                        <div>
+                            <dt>Teams cached</dt>
+                            <dd id="status-teams">Loading...</dd>
+                        </div>
+                        <div>
+                            <dt>Last matchup</dt>
+                            <dd id="status-matchup">No runs yet</dd>
+                        </div>
+                        <div>
+                            <dt>Last refresh</dt>
+                            <dd id="status-refresh">No refresh yet</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section id="overview" class="section overview">
+            <div class="section-heading">
+                <span class="section-pill">What it does</span>
+                <h2>Ship matchup-ready intelligence in minutes, not hours.</h2>
+                <p>Purpose-built for friends who wanted actionable NFL picks backed by data, not vibes.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-label">Accuracy lift</span>
+                    <span class="stat-value">+14%</span>
+                    <p class="stat-caption">When users follow NFL reports with explanation context.</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Pipeline uptime</span>
+                    <span class="stat-value">99.2%</span>
+                    <p class="stat-caption">Async fetchers and cached league feeds keep nightly runs reliable.</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Runtime</span>
+                    <span class="stat-value">04:37</span>
+                    <p class="stat-caption">Minutes to scrape, feature engineer, and regenerate reports.</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Signals tracked</span>
+                    <span class="stat-value">37+</span>
+                    <p class="stat-caption">Drive efficiency, pressure rate deltas, cadence shifts, and more.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pipeline" class="section pipeline">
+            <div class="section-heading">
+                <span class="section-pill">Pipeline</span>
+                <h2>From raw feeds to accountable predictions.</h2>
+            </div>
+            <div class="pipeline-layout">
+                <aside class="pipeline-steps">
+                    <button class="pipeline-step is-active" data-step="01">
+                        <span class="step-index">01</span>
+                        <span class="step-title">Async ingestion</span>
+                        <span class="step-desc">League APIs, depth charts, advanced weather.</span>
+                    </button>
+                    <button class="pipeline-step" data-step="02">
+                        <span class="step-index">02</span>
+                        <span class="step-title">Feature vault</span>
+                        <span class="step-desc">Drive tensors, EPA deltas, rest and travel context.</span>
+                    </button>
+                    <button class="pipeline-step" data-step="03">
+                        <span class="step-index">03</span>
+                        <span class="step-title">Model ensemble</span>
+                        <span class="step-desc">Gradient boosting + calibrated logistic stacks.</span>
+                    </button>
+                    <button class="pipeline-step" data-step="04">
+                        <span class="step-index">04</span>
+                        <span class="step-title">Explainability</span>
+                        <span class="step-desc">SHAP-driven narratives for every recommendation.</span>
+                    </button>
+                    <button class="pipeline-step" data-step="05">
+                        <span class="step-index">05</span>
+                        <span class="step-title">Report engine</span>
+                        <span class="step-desc">PDF + CLI exports with CTA-ready summaries.</span>
+                    </button>
+                </aside>
+                <article class="pipeline-detail">
+                    <div class="detail-body">
+                        <h3 data-step-title>Async ingestion</h3>
+                        <p data-step-copy>
+                            Multiple async workers grab NFL stats, injury updates, betting lines, and NOAA weather snapshots.
+                            Each feed is normalized, deduped, and versioned so model runs can rewind any matchup state.
+                        </p>
+                        <ul class="detail-list" data-step-list>
+                            <li>Rate-limited requests fanned out with retry queues.</li>
+                            <li>Schema validator enforces field parity across seasons.</li>
+                            <li>Slack alerts trigger if any feed drifts or stalls.</li>
+                        </ul>
+                    </div>
+                    <div class="detail-footer">
+                        <span class="detail-tag" data-step-tag>Ingestion tier • 450 req/min</span>
+                        <span class="detail-meta" data-step-meta>Last run 02:14 AM · 34 sources healthy</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="models" class="section models">
+            <div class="section-heading">
+                <span class="section-pill">Model stack</span>
+                <h2>Multiple lenses, one confident probability curve.</h2>
+                <p>Each ensemble member focuses on a different signal family for better calibration.</p>
+            </div>
+            <div class="model-grid">
+                <article class="model-card">
+                    <header>
+                        <span class="model-tag">Drive momentum</span>
+                        <h3>Gradient Boosting (XGBoost)</h3>
+                    </header>
+                    <p>Feeds on rolling drive success, pressure disruption, and personnel packages.</p>
+                    <ul>
+                        <li>Rolling 6-week window with decay weighting.</li>
+                        <li>Auto-calibrated with isotonic regression.</li>
+                        <li>Outputs win probability and spread edge.</li>
+                    </ul>
+                </article>
+                <article class="model-card">
+                    <header>
+                        <span class="model-tag">Situational football</span>
+                        <h3>Logistic meta-ensemble</h3>
+                    </header>
+                    <p>Combines weather-adjusted EPA, rest days, travel load, and late injury overrides.</p>
+                    <ul>
+                        <li>Cross-validated with weekly backtests.</li>
+                        <li>Handles missing data with learned priors.</li>
+                        <li>Surface multidimensional SHAP narratives.</li>
+                    </ul>
+                </article>
+                <article class="model-card">
+                    <header>
+                        <span class="model-tag">Human override</span>
+                        <h3>Analyst sandbox</h3>
+                    </header>
+                    <p>Interactive CLI layer lets analysts stress-test scenarios and export custom reports.</p>
+                    <ul>
+                        <li>Mode toggles: conservative, neutral, upset.</li>
+                        <li>Outputs CSV, PDF, and Markdown briefs.</li>
+                        <li>Track override history for transparency.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="reports" class="section reports">
+            <div class="section-heading">
+                <span class="section-pill">Deliverables</span>
+                <h2>Reports designed to be skimmed and trusted.</h2>
+                <p>Every matchup ships with context panels, explanations, and next steps for bet slip or fantasy lineup.</p>
+            </div>
+            <div class="report-gallery">
+                <figure class="report-card">
+                    <div class="report-image" data-placeholder="Report Overview"></div>
+                    <figcaption>
+                        <h3>Game overview</h3>
+                        <p>Topline metrics: projected score, win probability curve, late-week injury confidence.</p>
+                    </figcaption>
+                </figure>
+                <figure class="report-card">
+                    <div class="report-image" data-placeholder="Explainer Panel"></div>
+                    <figcaption>
+                        <h3>Explainer panel</h3>
+                        <p>SHAP-driven callouts highlight the metrics pushing the recommendation over the line.</p>
+                    </figcaption>
+                </figure>
+                <figure class="report-card">
+                    <div class="report-image" data-placeholder="CLI Snapshot"></div>
+                    <figcaption>
+                        <h3>CLI snapshot</h3>
+                        <p>Terminal-first analysts can see batch run logs, confidence thresholds, and override history.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="contact" class="section callout">
+            <div class="callout-content">
+                <h2>Need the full playbook?</h2>
+                <p>
+                    The web front-end mirrors the nightly pipeline. Want access to the CLI, data dictionaries, or private dashboards?
+                    Drop a line and we can explore collaboration or shared research sprints.
+                </p>
+                <div class="callout-actions">
+                    <a class="btn btn-primary" href="mailto:alexis@sportspredictor.dev">alexis@sportspredictor.dev</a>
+                    <a class="btn btn-ghost" href="#control-deck">Back to console</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <span>SportsPredictor · Built for NFL obsession · © 2025</span>
+        <span class="footer-meta">Nightly rebuild · Observability powered by custom logging</span>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+Loading NFL data...
+Data loaded: 32 teams
+Fetching injury data...
+Injury data loaded: 800 total injuries
+
+====================================================================================================
+GAME PREDICTION: Chicago Bears @ Cincinnati Bengals
+====================================================================================================
+
+
+====================================================================================================
+DETAILED TEAM ANALYSIS
+====================================================================================================
+
+Cincinnati Bengals (Home) - 4-6 record:
+  Offense: 5.1 yds/play, 23.3 pts/game, 40.3% 3rd down
+    Rushing: 90.7 yds/game (4.5 avg) | Passing: 221.0 yds/game (63.8% comp%)
+    Red Zone: 69.3% TD rate | 4th Down: 51.7% | Penalties: 0.1/game
+  Defense: 31.4 pts allowed/game, 6.5 yds/play allowed, 2.1 sacks/game
+    vs Rush: 155.0 yds/game (5.3 avg) | vs Pass: 254.8 yds/game (69.4% comp%)
+    Red Zone D: 71.6% allowed | INTs: 0.0/game
+  Recent Form (last 3 games): 2-1, 34.7 pts/game
+  Close Games (≤7 pts): 4-1 (80.0%)
+  Home/Away Split: 60.0% home, 20.0% away
+  Turnover Margin: -1.0 per game
+  Pythagorean Win %: 31.7% (Actual: 40.0%)
+  Opponent Quality: 0.555 avg win rate
+  Defensive Schedule Strength: Rank 0.37 (Adjustment: 1.04x)
+    >> Faced TOP-TIER defenses (stats likely understated)
+  Injury Report: 8 injuries (excluding healthy/active)
+    Out/IR: 3, Doubtful: 0, Questionable: 5
+    Impact Score: 4.0 (position-weighted)
+
+Chicago Bears (Away) - 6-3 record:
+  Offense: 5.8 yds/play, 24.2 pts/game, 36.9% 3rd down
+    Rushing: 140.2 yds/game (4.7 avg) | Passing: 219.7 yds/game (61.0% comp%)
+    Red Zone: 48.4% TD rate | 4th Down: 45.3% | Penalties: 0.1/game
+  Defense: 24.3 pts allowed/game, 5.9 yds/play allowed, 1.7 sacks/game
+    vs Rush: 127.9 yds/game (4.6 avg) | vs Pass: 206.1 yds/game (70.7% comp%)
+    Red Zone D: 77.9% allowed | INTs: 0.0/game
+  Recent Form (last 3 games): 2-1, 22.7 pts/game
+  Close Games (≤7 pts): 3-1 (75.0%)
+  Home/Away Split: 75.0% home, 60.0% away
+  Turnover Margin: -0.8 per game
+  Pythagorean Win %: 48.9% (Actual: 66.7%)
+  Opponent Quality: 0.319 avg win rate
+  Defensive Schedule Strength: Rank 0.63 (Adjustment: 0.96x)
+    >> Faced WEAK defenses (stat-padding concern)
+  Injury Report: 10 injuries (excluding healthy/active)
+    Out/IR: 1, Doubtful: 1, Questionable: 8
+    Impact Score: 3.2 (position-weighted)
+
+====================================================================================================
+MATCHUP ANALYSIS
+====================================================================================================
+
+Offensive Styles:
+  Cincinnati Bengals: PASS HEAVY (91 rush / 221 pass)
+  Chicago Bears: PASS HEAVY (140 rush / 220 pass)
+
+Similar Matchup History:
+  Cincinnati Bengals defense vs pass-heavy offenses (9 games):
+    Allowed 30.2 pts/game, 6.3 ypp (44.4% win rate)
+  Chicago Bears defense vs pass-heavy offenses (8 games):
+    Allowed 24.1 pts/game, 5.9 ypp (75.0% win rate)
+
+Offensive Efficiency vs Defense:
+  Cincinnati Bengals offense vs Chicago Bears defense: 0.85 ratio
+    >> Chicago Bears defense dominates (+2.0 to Chicago Bears)
+  Chicago Bears offense vs Cincinnati Bengals defense: 0.88 ratio
+    >> Cincinnati Bengals defense has advantage (+1.0 to Cincinnati Bengals)
+
+Run Game Matchup:
+  Cincinnati Bengals rush (90.7 yds/g) vs Chicago Bears rush D (127.9 yds/g allowed): 0.71 ratio
+  Chicago Bears rush (140.2 yds/g) vs Cincinnati Bengals rush D (155.0 yds/g allowed): 0.90 ratio
+
+Pass Game Matchup:
+  Cincinnati Bengals pass (221.0 yds/g) vs Chicago Bears pass D (206.1 yds/g allowed): 1.07 ratio
+    >> Slight pass game advantage for Cincinnati Bengals (+0.75)
+  Chicago Bears pass (219.7 yds/g) vs Cincinnati Bengals pass D (254.8 yds/g allowed): 0.86 ratio
+
+Scoring Efficiency:
+  Cincinnati Bengals: 23.3 avg pts vs Chicago Bears allowing 24.3 avg
+  Chicago Bears: 24.2 avg pts vs Cincinnati Bengals allowing 31.4 avg
+
+Third Down Efficiency:
+  Cincinnati Bengals 3rd down: 40.3%
+  Chicago Bears 3rd down: 36.9%
+
+Pass Rush Pressure (Sacks):
+  Cincinnati Bengals: 2.1 sacks/game, 1.1 allowed (diff: +1.0)
+  Chicago Bears: 1.7 sacks/game, 2.4 allowed (diff: -0.7)
+    >> Cincinnati Bengals has strong pass rush advantage (+1.5)
+
+Momentum & Recent Form:
+  Cincinnati Bengals: 2-1 in last 3, scoring 34.7 pts/game
+  Chicago Bears: 2-1 in last 3, scoring 22.7 pts/game
+
+Opponent Quality Adjustment:
+  Similar opponent quality or not applicable
+
+Strength-of-Schedule Adjustment (Defensive Quality Faced):
+  Cincinnati Bengals: 1.04x adjustment (faced defenses ranked 0.37)
+  Chicago Bears: 0.96x adjustment (faced defenses ranked 0.63)
+    >> Cincinnati Bengals scoring well vs ELITE defenses (+1.5)
+    >> Chicago Bears stat-padding vs WEAK defenses (-2.0)
+
+Close Game Performance (≤7 points):
+  Cincinnati Bengals: 4-1 (80.0%) in close games
+  Chicago Bears: 3-1 (75.0%) in close games
+    >> Cincinnati Bengals excels in close games (+1.0)
+    >> Chicago Bears excels in close games (+1.0)
+
+Home Field Advantage: Cincinnati Bengals has DOMINANT home advantage (+3.0)
+  (60.0% home vs 20.0% away)
+
+  Home/Away Matchup Comparison:
+    Cincinnati Bengals at home: 60.0%
+    Chicago Bears on road: 60.0%
+
+QB Passing Accuracy:
+  Cincinnati Bengals QB: 63.8% vs Chicago Bears allowing 70.7%
+  Chicago Bears QB: 61.0% vs Cincinnati Bengals allowing 69.4%
+
+Red Zone TD% Matchup:
+  Cincinnati Bengals RZ: 69.3% TD rate vs Chicago Bears allowing 77.9%
+  Chicago Bears RZ: 48.4% TD rate vs Cincinnati Bengals allowing 71.6%
+
+Rushing Efficiency (Yards Per Carry):
+  Cincinnati Bengals: 4.5 ypc vs Chicago Bears allowing 4.6 ypc
+  Chicago Bears: 4.7 ypc vs Cincinnati Bengals allowing 5.3 ypc
+
+Takeaway Battle (Interceptions):
+  Cincinnati Bengals: 0.0 INTs thrown/game, 0.0 INTs forced/game
+  Chicago Bears: 0.0 INTs thrown/game, 0.0 INTs forced/game
+
+Penalty Discipline:
+  Cincinnati Bengals: 0.1 penalties/game
+  Chicago Bears: 0.1 penalties/game
+
+Win Rate & Performance Indicators:
+  Cincinnati Bengals Win Rate: +1.2 (4-6, 40.0%)
+  Chicago Bears Win Rate: +2.0 (6-3, 66.7%)
+
+  Bounce-Back Analysis (underlying performance vs results):
+    Cincinnati Bengals: No significant bounce-back indicators
+    Chicago Bears: No significant bounce-back indicators
+
+  Pythagorean Win% (luck detection):
+    Cincinnati Bengals: 31.7% expected vs 40.0% actual (diff: +8.3%)
+    Chicago Bears: 48.9% expected vs 66.7% actual (diff: +17.7%)
+      >> Chicago Bears has been lucky in close games (-1.0, regression risk)
+
+  Record Quality:
+
+Turnover Margin:
+  Cincinnati Bengals: -1.0 per game
+  Chicago Bears: -0.8 per game
+
+Injury Impact (Position-Weighted):
+  Cincinnati Bengals: 4.0 impact score (3 out, 0 doubtful, 0 key)
+  Chicago Bears: 3.2 impact score (1 out, 1 doubtful, 0 key)
+    >> Both teams relatively healthy
+
+====================================================================================================
+FINAL PREDICTION
+====================================================================================================
+
+Cincinnati Bengals: 9.9 points
+Chicago Bears: 2.0 points
+
+PREDICTION: Cincinnati Bengals wins
+Confidence: 95.0%
+
+====================================================================================================

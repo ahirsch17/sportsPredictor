@@ -1,0 +1,79 @@
+NFL PREDICTIONS - WEEK 11
+Successfully predicted: 15/15 games
+====================================================================================================
+
+Game 1: New York Jets @ New England Patriots
+  PREDICTION: New England Patriots wins
+  Confidence: 64.7%
+  Probabilities: New England Patriots 64.7% | New York Jets 35.3%
+
+Game 2: Washington Commanders @ Miami Dolphins
+  PREDICTION: Miami Dolphins wins
+  Confidence: 69.2%
+  Probabilities: Miami Dolphins 69.2% | Washington Commanders 30.8%
+
+Game 3: Carolina Panthers @ Atlanta Falcons
+  PREDICTION: Atlanta Falcons wins
+  Confidence: 55.6%
+  Probabilities: Atlanta Falcons 55.6% | Carolina Panthers 44.4%
+
+Game 4: Tampa Bay Buccaneers @ Buffalo Bills
+  PREDICTION: Buffalo Bills wins
+  Confidence: 50.2%
+  Probabilities: Buffalo Bills 50.2% | Tampa Bay Buccaneers 49.8%
+
+Game 5: Houston Texans @ Tennessee Titans
+  PREDICTION: Houston Texans wins
+  Confidence: 67.9%
+  Probabilities: Tennessee Titans 32.1% | Houston Texans 67.9%
+
+Game 6: Chicago Bears @ Minnesota Vikings
+  PREDICTION: Chicago Bears wins
+  Confidence: 65.3%
+  Probabilities: Minnesota Vikings 34.7% | Chicago Bears 65.3%
+
+Game 7: Green Bay Packers @ New York Giants
+  PREDICTION: Green Bay Packers wins
+  Confidence: 60.8%
+  Probabilities: New York Giants 39.2% | Green Bay Packers 60.8%
+
+Game 8: Cincinnati Bengals @ Pittsburgh Steelers
+  PREDICTION: Pittsburgh Steelers wins
+  Confidence: 86.8%
+  Probabilities: Pittsburgh Steelers 86.8% | Cincinnati Bengals 13.2%
+
+Game 9: Los Angeles Chargers @ Jacksonville Jaguars
+  PREDICTION: Los Angeles Chargers wins
+  Confidence: 61.7%
+  Probabilities: Jacksonville Jaguars 38.3% | Los Angeles Chargers 61.7%
+
+Game 10: Seattle Seahawks @ Los Angeles Rams
+  PREDICTION: Los Angeles Rams wins
+  Confidence: 50.6%
+  Probabilities: Los Angeles Rams 50.6% | Seattle Seahawks 49.4%
+
+Game 11: San Francisco 49ers @ Arizona Cardinals
+  PREDICTION: San Francisco 49ers wins
+  Confidence: 58.4%
+  Probabilities: Arizona Cardinals 41.6% | San Francisco 49ers 58.4%
+
+Game 12: Baltimore Ravens @ Cleveland Browns
+  PREDICTION: Baltimore Ravens wins
+  Confidence: 52.9%
+  Probabilities: Cleveland Browns 47.1% | Baltimore Ravens 52.9%
+
+Game 13: Kansas City Chiefs @ Denver Broncos
+  PREDICTION: Denver Broncos wins
+  Confidence: 64.2%
+  Probabilities: Denver Broncos 64.2% | Kansas City Chiefs 35.8%
+
+Game 14: Detroit Lions @ Philadelphia Eagles
+  PREDICTION: Philadelphia Eagles wins
+  Confidence: 82.2%
+  Probabilities: Philadelphia Eagles 82.2% | Detroit Lions 17.8%
+
+Game 15: Dallas Cowboys @ Las Vegas Raiders
+  PREDICTION: Las Vegas Raiders wins
+  Confidence: 63.1%
+  Probabilities: Las Vegas Raiders 63.1% | Dallas Cowboys 36.9%
+

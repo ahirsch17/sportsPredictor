@@ -6,8 +6,9 @@ Automatically predicts all games for the upcoming week using ML model
 import requests
 import json
 import numpy as np
+from datetime import datetime
 from predictor import read_nfl_data, advanced_prediction, calculate_team_averages
-from ml_predictor import build_training_dataset, train_model, create_matchup_features, classify_offensive_style
+from ml_predictor import build_training_dataset, train_model, create_matchup_features, classify_offensive_style, predict_game_ml
 
 # Import injury data
 try:
@@ -92,7 +93,11 @@ def batch_predict_week(week_num, season_type='regular', use_ml=True):
     
     if not teams_data:
         print("ERROR: Could not load NFL data. Run dataextract.py first.")
-        return
+        return {
+            'predictions': [],
+            'failed_games': [],
+            'error': 'NFL data unavailable. Run dataextract.py first.'
+        }
     
     print(f"Data loaded! {len(teams_data)} teams found.\n")
     
@@ -119,7 +124,11 @@ def batch_predict_week(week_num, season_type='regular', use_ml=True):
     
     if not games:
         print(f"No games found for Week {week_num}")
-        return
+        return {
+            'predictions': [],
+            'failed_games': [],
+            'error': f'No games found for week {week_num} ({season_type})'
+        }
     
     print(f"Found {len(games)} games to predict\n")
     
@@ -150,13 +159,27 @@ def batch_predict_week(week_num, season_type='regular', use_ml=True):
                     })
                     continue
                 
-                # Create features
-                features_dict = create_matchup_features(game['home_team'], game['away_team'], home_avg, away_avg, teams_data, injury_data)
-                X = np.array([features_dict[fname] for fname in feature_names]).reshape(1, -1)
+                # Use improved prediction function with calibration
+                prediction_result = predict_game_ml(
+                    game['home_team'], 
+                    game['away_team'], 
+                    teams_data, 
+                    model, 
+                    feature_names, 
+                    injury_data
+                )
                 
-                # Get prediction
-                home_win_prob = model.predict_proba(X)[0, 1]
-                away_win_prob = 1 - home_win_prob
+                if not prediction_result:
+                    failed_games.append({
+                        'home_team': game['home_team'],
+                        'away_team': game['away_team'],
+                        'is_neutral': game['is_neutral'],
+                        'reason': 'Prediction failed'
+                    })
+                    continue
+                
+                home_win_prob = prediction_result['home_win_prob']
+                away_win_prob = prediction_result['away_win_prob']
                 
                 # Determine winner
                 if home_win_prob > 0.5:
@@ -319,6 +342,18 @@ def batch_predict_week(week_num, season_type='regular', use_ml=True):
                 f.write(f"\n   Reason: {failed['reason']}\n\n")
     
     print(f"\nPredictions saved to predictions_week_{week_num}.txt")
+    
+    return {
+        'predictions': predictions,
+        'failed_games': failed_games,
+        'summary': {
+            'week': week_num,
+            'season_type': season_type,
+            'total_games': len(games),
+            'predicted_games': len(predictions),
+            'timestamp': datetime.now().isoformat()
+        }
+    }
 
 
 def main():

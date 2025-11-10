@@ -1,0 +1,11 @@
+NFL Batch Predictor
+====================================================================================================
+
+Enter week number (1-18): Traceback (most recent call last):
+  File "C:\Users\Alexi\aProjects\sportsPredictor\NFL\batch_predict.py", line 350, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Alexi\aProjects\sportsPredictor\NFL\batch_predict.py", line 333, in main
+    week_num = int(input("Enter week number (1-18): ").strip())
+                   ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

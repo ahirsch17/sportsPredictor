@@ -397,9 +397,142 @@ def train_model(X, y, feature_names):
     return calibrated_model, feature_importance
 
 
+def detect_qb_change(team, teams_data):
+    """
+    Detects if a team has recently changed QBs by comparing recent games
+    Returns adjustment factor (0.0 = no change, 0.15 = major QB change)
+    """
+    games = teams_data.get(team, [])
+    if len(games) < 2:
+        return 0.0
+    
+    # Get last 3 games (most recent games first, reverse order)
+    recent_games = [g for g in games if not g.get('preseason', False)][-3:]
+    if len(recent_games) < 2:
+        return 0.0
+    
+    # Method 1: Check QB performance variance (large changes suggest QB switch)
+    qb_ratings = []
+    for game in recent_games:
+        qb_stats = game.get('qb_stats', {})
+        if qb_stats and 'rating' in qb_stats:
+            qb_ratings.append(qb_stats['rating'])
+    
+    # If QB ratings vary wildly (like 40 to 100), likely QB change
+    if len(qb_ratings) >= 2:
+        rating_diff = max(qb_ratings) - min(qb_ratings)
+        if rating_diff > 40:  # Huge variance (starter vs backup)
+            return 0.12
+    
+    # Method 2: Check for dramatic YPA drops (backup QBs typically worse)
+    qb_ypa = []
+    for game in recent_games:
+        qb_stats = game.get('qb_stats', {})
+        if qb_stats and 'ypa' in qb_stats:
+            qb_ypa.append(qb_stats['ypa'])
+    
+    if len(qb_ypa) >= 2:
+        ypa_diff = max(qb_ypa) - min(qb_ypa)
+        if ypa_diff > 3.0:  # Big drop in yards per attempt (5.0 -> 2.0)
+            return 0.10
+    
+    # Method 3: Check for missing QB stats (new QB might not have stats parsed yet)
+    games_with_qb = sum(1 for g in recent_games if g.get('qb_stats'))
+    if games_with_qb < len(recent_games) and len(recent_games) >= 2:
+        # Some games missing QB stats - might indicate QB change
+        return 0.08
+    
+    return 0.0
+
+
+def calculate_uncertainty_adjustment(home_avg, away_avg, features_dict, teams_data):
+    """
+    Calculates uncertainty adjustment to reduce overconfidence
+    Returns multiplier (0.0-1.0) that pulls probability toward 50%
+    """
+    uncertainty = 0.0
+    
+    # 1. Team consistency (variance in recent performance)
+    home_games = teams_data.get(home_avg.get('team_name', ''), [])
+    away_games = teams_data.get(away_avg.get('team_name', ''), [])
+    
+    if home_games and away_games:
+        home_recent_scores = [g['score_for'] for g in home_games[-5:] if 'score_for' in g]
+        away_recent_scores = [g['score_for'] for g in away_games[-5:] if 'score_for' in g]
+        
+        if len(home_recent_scores) > 1 and len(away_recent_scores) > 1:
+            import statistics
+            home_std = statistics.stdev(home_recent_scores)
+            away_std = statistics.stdev(away_recent_scores)
+            
+            # High variance = more uncertainty
+            avg_std = (home_std + away_std) / 2
+            if avg_std > 15:
+                uncertainty += 0.10
+            elif avg_std > 10:
+                uncertainty += 0.06
+    
+    # 2. Recent form volatility (teams on losing/winning streaks can regress)
+    home_recent_form = home_avg.get('recent_form', {}).get('win_rate', 0.5)
+    away_recent_form = away_avg.get('recent_form', {}).get('win_rate', 0.5)
+    
+    # Extreme recent form (very high or very low) is less sustainable
+    form_diff = abs(home_recent_form - away_recent_form)
+    if form_diff > 0.7:  # One team 3-0, other 0-3
+        uncertainty += 0.08
+    elif form_diff > 0.5:  # One team 2-1, other 0-3
+        uncertainty += 0.05
+    
+    # 3. Feature extremeness (if features are extreme, model might be overconfident)
+    extreme_features = 0
+    for fname, fval in features_dict.items():
+        if 'diff' in fname or 'vs' in fname:
+            # Check if feature value is very extreme
+            if abs(fval) > 10:  # Very large difference
+                extreme_features += 1
+    
+    if extreme_features > 5:
+        uncertainty += 0.08
+    elif extreme_features > 3:
+        uncertainty += 0.05
+    
+    # 4. Record mismatch (big favorites can lose)
+    win_rate_diff = abs(home_avg.get('win_rate', 0.5) - away_avg.get('win_rate', 0.5))
+    if win_rate_diff > 0.4:  # One team 8-0, other 2-6
+        uncertainty += 0.06
+    
+    return min(uncertainty, 0.25)  # Cap at 25% uncertainty
+
+
+def apply_probability_calibration(home_win_prob, uncertainty_adjustment, qb_change_adjustment):
+    """
+    Applies post-processing calibration to make probabilities more realistic
+    """
+    # Start with raw probability
+    calibrated_prob = home_win_prob
+    
+    # Apply uncertainty adjustment (pulls toward 50%)
+    # More uncertainty = pull harder toward center
+    if uncertainty_adjustment > 0:
+        pull_factor = uncertainty_adjustment * 2  # Scale uncertainty
+        calibrated_prob = calibrated_prob * (1 - pull_factor) + 0.5 * pull_factor
+    
+    # Apply QB change adjustment (adds uncertainty for QB changes)
+    if qb_change_adjustment > 0:
+        calibrated_prob = calibrated_prob * (1 - qb_change_adjustment) + 0.5 * qb_change_adjustment
+    
+    # Cap probabilities at realistic bounds (nothing is 100% certain in NFL)
+    MIN_PROB = 0.05  # Even worst team has ~5% chance
+    MAX_PROB = 0.95  # Even best team has ~5% chance of losing
+    
+    calibrated_prob = max(MIN_PROB, min(MAX_PROB, calibrated_prob))
+    
+    return calibrated_prob
+
+
 def predict_game_ml(home_team, away_team, teams_data, model, feature_names, injury_data=None):
     """
-    Predicts game outcome using trained ML model
+    Predicts game outcome using trained ML model with improved calibration
     """
     home_avg = calculate_team_averages(home_team, teams_data, regular_only=True)
     away_avg = calculate_team_averages(away_team, teams_data, regular_only=True)
@@ -408,14 +541,41 @@ def predict_game_ml(home_team, away_team, teams_data, model, feature_names, inju
         print("Insufficient data for one or both teams")
         return None
     
+    # Store team names for QB detection
+    if 'team_name' not in home_avg:
+        home_avg['team_name'] = home_team
+    if 'team_name' not in away_avg:
+        away_avg['team_name'] = away_team
+    
     # Create features for this matchup
     features_dict = create_matchup_features(home_team, away_team, home_avg, away_avg, teams_data, injury_data)
     
     # Convert to array in same order as training
     X = np.array([features_dict[fname] for fname in feature_names]).reshape(1, -1)
     
-    # Get prediction
-    home_win_prob = model.predict_proba(X)[0, 1]
+    # Get raw prediction from model
+    raw_home_win_prob = model.predict_proba(X)[0, 1]
+    
+    # Detect QB changes (adds uncertainty)
+    home_qb_change = detect_qb_change(home_team, teams_data)
+    away_qb_change = detect_qb_change(away_team, teams_data)
+    qb_change_adjustment = (home_qb_change + away_qb_change) / 2
+    
+    if home_qb_change > 0 or away_qb_change > 0:
+        print(f"\n⚠️  QB CHANGE DETECTED:")
+        if home_qb_change > 0:
+            print(f"   {home_team} has changed QBs recently (uncertainty +{home_qb_change*100:.0f}%)")
+        if away_qb_change > 0:
+            print(f"   {away_team} has changed QBs recently (uncertainty +{away_qb_change*100:.0f}%)")
+    
+    # Calculate uncertainty adjustment
+    uncertainty_adj = calculate_uncertainty_adjustment(home_avg, away_avg, features_dict, teams_data)
+    
+    if uncertainty_adj > 0:
+        print(f"\n📊 UNCERTAINTY FACTORS: {uncertainty_adj*100:.0f}% adjustment (team volatility/upset potential)")
+    
+    # Apply calibration
+    home_win_prob = apply_probability_calibration(raw_home_win_prob, uncertainty_adj, qb_change_adjustment)
     away_win_prob = 1 - home_win_prob
     
     # Display team styles
