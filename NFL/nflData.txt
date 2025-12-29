@@ -3594,3 +3594,1836 @@ REGULAR_WEEK_10
     3rd Down: 6-17 | 4th Down: 1-1 | Red Zone: 2-3
     Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 5 | Penalties: 8-55
 
+
+====================================================================================================
+REGULAR_WEEK_10
+====================================================================================================
+
+[REGULAR_WEEK_10] Las Vegas Raiders @ Denver Broncos | 7-10 | Final
+  AWAY QB (Geno Smith): 16/26 for 143yds, 0TD/1INT, 5.5 YPA, 60.3 RTG
+  HOME QB (Bo Nix): 16/28 for 150yds, 1TD/2INT, 5.4 YPA, 54.2 RTG
+  AWAY (Las Vegas Raiders):
+    Total Yards: 188 | Yards/Play: 3.2 | Possession: 29:14
+    Passing: 114yds (16/27) | Rushing: 74yds (3.0 avg) | 1st Downs: 10
+    3rd Down: 4-15 | 4th Down: 0-1 | Red Zone: 1-1
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 6 | Penalties: 11-83
+  HOME (Denver Broncos):
+    Total Yards: 220 | Yards/Play: 3.9 | Possession: 30:46
+    Passing: 136yds (16/28) | Rushing: 84yds (3.1 avg) | 1st Downs: 10
+    3rd Down: 5-15 | 4th Down: 0-0 | Red Zone: 1-3
+    Turnovers: 2 (INT: 2, Fum: 0) | Sacks: 2 | Penalties: 11-78
+
+[REGULAR_WEEK_10] Atlanta Falcons @ Indianapolis Colts | 25-31 | Final
+  AWAY QB (Michael Penix Jr.): 12/28 for 177yds, 1TD/0INT, 6.3 YPA, 76.0 RTG
+  HOME QB (Daniel Jones): 19/26 for 255yds, 1TD/1INT, 9.8 YPA, 100.6 RTG
+  AWAY (Atlanta Falcons):
+    Total Yards: 290 | Yards/Play: 4.8 | Possession: 26:09
+    Passing: 150yds (12/28) | Rushing: 140yds (4.8 avg) | 1st Downs: 22
+    3rd Down: 0-8 | 4th Down: 0-0 | Red Zone: 3-3
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 3 | Penalties: 3-35
+  HOME (Indianapolis Colts):
+    Total Yards: 519 | Yards/Play: 7.0 | Possession: 40:20
+    Passing: 196yds (19/26) | Rushing: 323yds (7.9 avg) | 1st Downs: 25
+    3rd Down: 2-12 | 4th Down: 2-4 | Red Zone: 2-4
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 7 | Penalties: 7-56
+
+[REGULAR_WEEK_10] New York Giants @ Chicago Bears | 20-24 | Final
+  AWAY QB (Jaxson Dart): 19/29 for 242yds, 0TD/0INT, 8.3 YPA, 91.5 RTG
+  HOME QB (Caleb Williams): 20/36 for 220yds, 1TD/0INT, 6.1 YPA, 83.1 RTG
+  AWAY (New York Giants):
+    Total Yards: 431 | Yards/Play: 6.2 | Possession: 31:18
+    Passing: 262yds (22/36) | Rushing: 169yds (5.6 avg) | 1st Downs: 21
+    3rd Down: 5-14 | 4th Down: 1-4 | Red Zone: 1-4
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 4 | Penalties: 10-69
+  HOME (Chicago Bears):
+    Total Yards: 391 | Yards/Play: 6.1 | Possession: 28:42
+    Passing: 220yds (20/36) | Rushing: 171yds (6.1 avg) | 1st Downs: 23
+    3rd Down: 3-11 | 4th Down: 1-4 | Red Zone: 3-4
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 0 | Penalties: 3-25
+
+[REGULAR_WEEK_10] Buffalo Bills @ Miami Dolphins | 13-30 | Final
+  AWAY QB (Josh Allen): 28/40 for 306yds, 2TD/1INT, 7.7 YPA, 98.5 RTG
+  HOME QB (Tua Tagovailoa): 15/21 for 173yds, 2TD/2INT, 8.2 YPA, 88.1 RTG
+  AWAY (Buffalo Bills):
+    Total Yards: 376 | Yards/Play: 5.8 | Possession: 31:23
+    Passing: 289yds (28/40) | Rushing: 87yds (4.0 avg) | 1st Downs: 20
+    3rd Down: 5-15 | 4th Down: 1-2 | Red Zone: 0-1
+    Turnovers: 3 (INT: 1, Fum: 2) | Sacks: 3 | Penalties: 6-67
+  HOME (Miami Dolphins):
+    Total Yards: 370 | Yards/Play: 7.0 | Possession: 28:37
+    Passing: 173yds (15/21) | Rushing: 197yds (6.2 avg) | 1st Downs: 19
+    3rd Down: 3-9 | 4th Down: 0-0 | Red Zone: 1-1
+    Turnovers: 2 (INT: 2, Fum: 0) | Sacks: 0 | Penalties: 5-35
+
+[REGULAR_WEEK_10] Baltimore Ravens @ Minnesota Vikings | 27-19 | Final
+  AWAY QB (Lamar Jackson): 17/29 for 176yds, 1TD/0INT, 6.1 YPA, 87.7 RTG
+  HOME QB (J.J. McCarthy): 20/42 for 248yds, 1TD/2INT, 5.9 YPA, 54.5 RTG
+  AWAY (Baltimore Ravens):
+    Total Yards: 321 | Yards/Play: 4.9 | Possession: 32:35
+    Passing: 169yds (17/29) | Rushing: 152yds (4.2 avg) | 1st Downs: 23
+    3rd Down: 6-15 | 4th Down: 0-0 | Red Zone: 2-5
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 5-62
+  HOME (Minnesota Vikings):
+    Total Yards: 365 | Yards/Play: 6.0 | Possession: 27:25
+    Passing: 245yds (20/42) | Rushing: 120yds (6.7 avg) | 1st Downs: 18
+    3rd Down: 3-14 | 4th Down: 2-5 | Red Zone: 2-3
+    Turnovers: 3 (INT: 2, Fum: 1) | Sacks: 1 | Penalties: 13-102
+
+[REGULAR_WEEK_10] Cleveland Browns @ New York Jets | 20-27 | Final
+  AWAY QB (Dillon Gabriel): 17/32 for 167yds, 2TD/0INT, 5.2 YPA, 88.9 RTG
+  HOME QB (Justin Fields): 6/11 for 54yds, 1TD/1INT, 4.9 YPA, 60.4 RTG
+  AWAY (Cleveland Browns):
+    Total Yards: 278 | Yards/Play: 4.0 | Possession: 34:04
+    Passing: 120yds (17/32) | Rushing: 158yds (4.9 avg) | 1st Downs: 23
+    3rd Down: 6-16 | 4th Down: 0-1 | Red Zone: 1-2
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 6 | Penalties: 10-78
+  HOME (New York Jets):
+    Total Yards: 169 | Yards/Play: 3.6 | Possession: 25:56
+    Passing: 42yds (6/11) | Rushing: 127yds (3.8 avg) | 1st Downs: 12
+    3rd Down: 3-11 | 4th Down: 0-0 | Red Zone: 0-2
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 3 | Penalties: 7-61
+
+[REGULAR_WEEK_10] New England Patriots @ Tampa Bay Buccaneers | 28-23 | Final
+  AWAY QB (Drake Maye): 16/31 for 270yds, 2TD/1INT, 8.7 YPA, 89.4 RTG
+  HOME QB (Baker Mayfield): 28/43 for 273yds, 3TD/0INT, 6.3 YPA, 106.1 RTG
+  AWAY (New England Patriots):
+    Total Yards: 435 | Yards/Play: 7.4 | Possession: 27:35
+    Passing: 269yds (16/31) | Rushing: 166yds (6.1 avg) | 1st Downs: 16
+    3rd Down: 5-14 | 4th Down: 2-3 | Red Zone: 1-2
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 1 | Penalties: 5-49
+  HOME (Tampa Bay Buccaneers):
+    Total Yards: 371 | Yards/Play: 5.6 | Possession: 32:25
+    Passing: 258yds (28/43) | Rushing: 113yds (5.4 avg) | 1st Downs: 24
+    3rd Down: 5-13 | 4th Down: 0-1 | Red Zone: 2-3
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 2 | Penalties: 6-40
+
+[REGULAR_WEEK_10] New Orleans Saints @ Carolina Panthers | 17-7 | Final
+  AWAY QB (Tyler Shough): 19/27 for 282yds, 2TD/0INT, 10.4 YPA, 128.9 RTG
+  HOME QB (Bryce Young): 17/25 for 124yds, 0TD/1INT, 5.0 YPA, 62.8 RTG
+  AWAY (New Orleans Saints):
+    Total Yards: 388 | Yards/Play: 5.8 | Possession: 33:21
+    Passing: 266yds (19/28) | Rushing: 122yds (3.3 avg) | 1st Downs: 17
+    3rd Down: 8-17 | 4th Down: 2-3 | Red Zone: 0-2
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 2 | Penalties: 6-60
+  HOME (Carolina Panthers):
+    Total Yards: 175 | Yards/Play: 3.5 | Possession: 26:39
+    Passing: 102yds (17/25) | Rushing: 73yds (3.2 avg) | 1st Downs: 13
+    3rd Down: 3-9 | 4th Down: 0-1 | Red Zone: 1-2
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 2 | Penalties: 1-5
+
+[REGULAR_WEEK_10] Jacksonville Jaguars @ Houston Texans | 29-36 | Final
+  AWAY QB (Trevor Lawrence): 13/23 for 158yds, 1TD/1INT, 6.9 YPA, 74.2 RTG
+  HOME QB (Davis Mills): 27/45 for 292yds, 2TD/1INT, 6.5 YPA, 84.7 RTG
+  AWAY (Jacksonville Jaguars):
+    Total Yards: 213 | Yards/Play: 3.9 | Possession: 29:00
+    Passing: 119yds (13/23) | Rushing: 94yds (3.5 avg) | 1st Downs: 19
+    3rd Down: 4-11 | 4th Down: 0-0 | Red Zone: 2-4
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 5 | Penalties: 9-90
+  HOME (Houston Texans):
+    Total Yards: 412 | Yards/Play: 6.0 | Possession: 31:00
+    Passing: 282yds (27/45) | Rushing: 130yds (5.9 avg) | 1st Downs: 27
+    3rd Down: 10-15 | 4th Down: 1-2 | Red Zone: 4-5
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 2 | Penalties: 11-80
+
+[REGULAR_WEEK_10] Arizona Cardinals @ Seattle Seahawks | 22-44 | Final
+  AWAY QB (Jacoby Brissett): 22/44 for 258yds, 2TD/0INT, 5.9 YPA, 83.3 RTG
+  HOME QB (Sam Darnold): 10/12 for 178yds, 1TD/1INT, 14.8 YPA, 111.8 RTG
+  AWAY (Arizona Cardinals):
+    Total Yards: 335 | Yards/Play: 4.6 | Possession: 26:20
+    Passing: 206yds (22/45) | Rushing: 129yds (5.6 avg) | 1st Downs: 21
+    3rd Down: 6-16 | 4th Down: 2-5 | Red Zone: 3-6
+    Turnovers: 2 (INT: 0, Fum: 2) | Sacks: 5 | Penalties: 5-37
+  HOME (Seattle Seahawks):
+    Total Yards: 372 | Yards/Play: 6.3 | Possession: 33:40
+    Passing: 174yds (10/12) | Rushing: 198yds (4.3 avg) | 1st Downs: 22
+    3rd Down: 6-10 | 4th Down: 0-0 | Red Zone: 2-4
+    Turnovers: 3 (INT: 1, Fum: 2) | Sacks: 1 | Penalties: 3-20
+
+[REGULAR_WEEK_10] Los Angeles Rams @ San Francisco 49ers | 42-26 | Final
+  AWAY QB (Matthew Stafford): 24/36 for 280yds, 4TD/0INT, 7.8 YPA, 127.1 RTG
+  HOME QB (Mac Jones): 33/39 for 319yds, 3TD/1INT, 8.2 YPA, 115.7 RTG
+  AWAY (Los Angeles Rams):
+    Total Yards: 401 | Yards/Play: 6.0 | Possession: 32:32
+    Passing: 275yds (24/36) | Rushing: 126yds (4.2 avg) | 1st Downs: 31
+    3rd Down: 5-9 | 4th Down: 1-1 | Red Zone: 5-6
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 0-0
+  HOME (San Francisco 49ers):
+    Total Yards: 393 | Yards/Play: 6.6 | Possession: 27:28
+    Passing: 319yds (33/39) | Rushing: 74yds (3.5 avg) | 1st Downs: 24
+    3rd Down: 3-8 | 4th Down: 1-3 | Red Zone: 4-5
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 0 | Penalties: 7-45
+
+[REGULAR_WEEK_10] Detroit Lions @ Washington Commanders | 44-22 | Final
+  AWAY QB (Jared Goff): 25/33 for 320yds, 3TD/0INT, 9.7 YPA, 135.9 RTG
+  HOME QB (Marcus Mariota): 16/22 for 213yds, 2TD/0INT, 9.7 YPA, 133.3 RTG
+  AWAY (Detroit Lions):
+    Total Yards: 546 | Yards/Play: 8.0 | Possession: 32:36
+    Passing: 320yds (25/35) | Rushing: 226yds (6.8 avg) | 1st Downs: 30
+    3rd Down: 5-10 | 4th Down: 2-2 | Red Zone: 4-6
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 0 | Penalties: 3-1
+  HOME (Washington Commanders):
+    Total Yards: 288 | Yards/Play: 5.6 | Possession: 27:24
+    Passing: 195yds (16/22) | Rushing: 93yds (3.4 avg) | 1st Downs: 14
+    3rd Down: 2-10 | 4th Down: 3-3 | Red Zone: 3-3
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 2 | Penalties: 8-61
+
+[REGULAR_WEEK_10] Pittsburgh Steelers @ Los Angeles Chargers | 10-25 | Final
+  AWAY QB (Aaron Rodgers): 16/31 for 161yds, 1TD/2INT, 5.2 YPA, 50.6 RTG
+  HOME QB (Justin Herbert): 20/33 for 220yds, 1TD/0INT, 6.7 YPA, 90.5 RTG
+  AWAY (Pittsburgh Steelers):
+    Total Yards: 221 | Yards/Play: 4.4 | Possession: 22:25
+    Passing: 148yds (16/31) | Rushing: 73yds (4.6 avg) | 1st Downs: 11
+    3rd Down: 2-11 | 4th Down: 0-1 | Red Zone: 0-1
+    Turnovers: 3 (INT: 2, Fum: 1) | Sacks: 3 | Penalties: 4-29
+  HOME (Los Angeles Chargers):
+    Total Yards: 314 | Yards/Play: 4.6 | Possession: 37:35
+    Passing: 199yds (20/33) | Rushing: 115yds (3.7 avg) | 1st Downs: 18
+    3rd Down: 6-17 | 4th Down: 1-1 | Red Zone: 2-3
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 5 | Penalties: 8-55
+
+[REGULAR_WEEK_10] Philadelphia Eagles @ Green Bay Packers | 10-7 | Final
+  AWAY QB (Jalen Hurts): 15/26 for 183yds, 1TD/0INT, 7.0 YPA, 92.3 RTG
+  HOME QB (Jordan Love): 20/36 for 176yds, 0TD/0INT, 4.9 YPA, 68.8 RTG
+  AWAY (Philadelphia Eagles):
+    Total Yards: 294 | Yards/Play: 4.9 | Possession: 32:05
+    Passing: 183yds (15/26) | Rushing: 111yds (3.3 avg) | 1st Downs: 13
+    3rd Down: 7-16 | 4th Down: 0-2 | Red Zone: 0-1
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 0 | Penalties: 7-61
+  HOME (Green Bay Packers):
+    Total Yards: 261 | Yards/Play: 4.0 | Possession: 27:55
+    Passing: 157yds (20/36) | Rushing: 104yds (3.9 avg) | 1st Downs: 18
+    3rd Down: 5-13 | 4th Down: 1-3 | Red Zone: 1-1
+    Turnovers: 2 (INT: 0, Fum: 2) | Sacks: 3 | Penalties: 4-20
+
+
+====================================================================================================
+REGULAR_WEEK_10
+====================================================================================================
+
+[REGULAR_WEEK_10] Las Vegas Raiders @ Denver Broncos | 7-10 | Final
+  AWAY QB (Geno Smith): 16/26 for 143yds, 0TD/1INT, 5.5 YPA, 60.3 RTG
+  HOME QB (Bo Nix): 16/28 for 150yds, 1TD/2INT, 5.4 YPA, 54.2 RTG
+  AWAY (Las Vegas Raiders):
+    Total Yards: 188 | Yards/Play: 3.2 | Possession: 29:14
+    Passing: 114yds (16/27) | Rushing: 74yds (3.0 avg) | 1st Downs: 10
+    3rd Down: 4-15 | 4th Down: 0-1 | Red Zone: 1-1
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 6 | Penalties: 11-83
+  HOME (Denver Broncos):
+    Total Yards: 220 | Yards/Play: 3.9 | Possession: 30:46
+    Passing: 136yds (16/28) | Rushing: 84yds (3.1 avg) | 1st Downs: 10
+    3rd Down: 5-15 | 4th Down: 0-0 | Red Zone: 1-3
+    Turnovers: 2 (INT: 2, Fum: 0) | Sacks: 2 | Penalties: 11-78
+
+[REGULAR_WEEK_10] Atlanta Falcons @ Indianapolis Colts | 25-31 | Final
+  AWAY QB (Michael Penix Jr.): 12/28 for 177yds, 1TD/0INT, 6.3 YPA, 76.0 RTG
+  HOME QB (Daniel Jones): 19/26 for 255yds, 1TD/1INT, 9.8 YPA, 100.6 RTG
+  AWAY (Atlanta Falcons):
+    Total Yards: 290 | Yards/Play: 4.8 | Possession: 26:09
+    Passing: 150yds (12/28) | Rushing: 140yds (4.8 avg) | 1st Downs: 22
+    3rd Down: 0-8 | 4th Down: 0-0 | Red Zone: 3-3
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 3 | Penalties: 3-35
+  HOME (Indianapolis Colts):
+    Total Yards: 519 | Yards/Play: 7.0 | Possession: 40:20
+    Passing: 196yds (19/26) | Rushing: 323yds (7.9 avg) | 1st Downs: 25
+    3rd Down: 2-12 | 4th Down: 2-4 | Red Zone: 2-4
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 7 | Penalties: 7-56
+
+[REGULAR_WEEK_10] New York Giants @ Chicago Bears | 20-24 | Final
+  AWAY QB (Jaxson Dart): 19/29 for 242yds, 0TD/0INT, 8.3 YPA, 91.5 RTG
+  HOME QB (Caleb Williams): 20/36 for 220yds, 1TD/0INT, 6.1 YPA, 83.1 RTG
+  AWAY (New York Giants):
+    Total Yards: 431 | Yards/Play: 6.2 | Possession: 31:18
+    Passing: 262yds (22/36) | Rushing: 169yds (5.6 avg) | 1st Downs: 21
+    3rd Down: 5-14 | 4th Down: 1-4 | Red Zone: 1-4
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 4 | Penalties: 10-69
+  HOME (Chicago Bears):
+    Total Yards: 391 | Yards/Play: 6.1 | Possession: 28:42
+    Passing: 220yds (20/36) | Rushing: 171yds (6.1 avg) | 1st Downs: 23
+    3rd Down: 3-11 | 4th Down: 1-4 | Red Zone: 3-4
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 0 | Penalties: 3-25
+
+[REGULAR_WEEK_10] Buffalo Bills @ Miami Dolphins | 13-30 | Final
+  AWAY QB (Josh Allen): 28/40 for 306yds, 2TD/1INT, 7.7 YPA, 98.5 RTG
+  HOME QB (Tua Tagovailoa): 15/21 for 173yds, 2TD/2INT, 8.2 YPA, 88.1 RTG
+  AWAY (Buffalo Bills):
+    Total Yards: 376 | Yards/Play: 5.8 | Possession: 31:23
+    Passing: 289yds (28/40) | Rushing: 87yds (4.0 avg) | 1st Downs: 20
+    3rd Down: 5-15 | 4th Down: 1-2 | Red Zone: 0-1
+    Turnovers: 3 (INT: 1, Fum: 2) | Sacks: 3 | Penalties: 6-67
+  HOME (Miami Dolphins):
+    Total Yards: 370 | Yards/Play: 7.0 | Possession: 28:37
+    Passing: 173yds (15/21) | Rushing: 197yds (6.2 avg) | 1st Downs: 19
+    3rd Down: 3-9 | 4th Down: 0-0 | Red Zone: 1-1
+    Turnovers: 2 (INT: 2, Fum: 0) | Sacks: 0 | Penalties: 5-35
+
+[REGULAR_WEEK_10] Baltimore Ravens @ Minnesota Vikings | 27-19 | Final
+  AWAY QB (Lamar Jackson): 17/29 for 176yds, 1TD/0INT, 6.1 YPA, 87.7 RTG
+  HOME QB (J.J. McCarthy): 20/42 for 248yds, 1TD/2INT, 5.9 YPA, 54.5 RTG
+  AWAY (Baltimore Ravens):
+    Total Yards: 321 | Yards/Play: 4.9 | Possession: 32:35
+    Passing: 169yds (17/29) | Rushing: 152yds (4.2 avg) | 1st Downs: 23
+    3rd Down: 6-15 | 4th Down: 0-0 | Red Zone: 2-5
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 5-62
+  HOME (Minnesota Vikings):
+    Total Yards: 365 | Yards/Play: 6.0 | Possession: 27:25
+    Passing: 245yds (20/42) | Rushing: 120yds (6.7 avg) | 1st Downs: 18
+    3rd Down: 3-14 | 4th Down: 2-5 | Red Zone: 2-3
+    Turnovers: 3 (INT: 2, Fum: 1) | Sacks: 1 | Penalties: 13-102
+
+[REGULAR_WEEK_10] Cleveland Browns @ New York Jets | 20-27 | Final
+  AWAY QB (Dillon Gabriel): 17/32 for 167yds, 2TD/0INT, 5.2 YPA, 88.9 RTG
+  HOME QB (Justin Fields): 6/11 for 54yds, 1TD/1INT, 4.9 YPA, 60.4 RTG
+  AWAY (Cleveland Browns):
+    Total Yards: 278 | Yards/Play: 4.0 | Possession: 34:04
+    Passing: 120yds (17/32) | Rushing: 158yds (4.9 avg) | 1st Downs: 23
+    3rd Down: 6-16 | 4th Down: 0-1 | Red Zone: 1-2
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 6 | Penalties: 10-78
+  HOME (New York Jets):
+    Total Yards: 169 | Yards/Play: 3.6 | Possession: 25:56
+    Passing: 42yds (6/11) | Rushing: 127yds (3.8 avg) | 1st Downs: 12
+    3rd Down: 3-11 | 4th Down: 0-0 | Red Zone: 0-2
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 3 | Penalties: 7-61
+
+[REGULAR_WEEK_10] New England Patriots @ Tampa Bay Buccaneers | 28-23 | Final
+  AWAY QB (Drake Maye): 16/31 for 270yds, 2TD/1INT, 8.7 YPA, 89.4 RTG
+  HOME QB (Baker Mayfield): 28/43 for 273yds, 3TD/0INT, 6.3 YPA, 106.1 RTG
+  AWAY (New England Patriots):
+    Total Yards: 435 | Yards/Play: 7.4 | Possession: 27:35
+    Passing: 269yds (16/31) | Rushing: 166yds (6.1 avg) | 1st Downs: 16
+    3rd Down: 5-14 | 4th Down: 2-3 | Red Zone: 1-2
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 1 | Penalties: 5-49
+  HOME (Tampa Bay Buccaneers):
+    Total Yards: 371 | Yards/Play: 5.6 | Possession: 32:25
+    Passing: 258yds (28/43) | Rushing: 113yds (5.4 avg) | 1st Downs: 24
+    3rd Down: 5-13 | 4th Down: 0-1 | Red Zone: 2-3
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 2 | Penalties: 6-40
+
+[REGULAR_WEEK_10] New Orleans Saints @ Carolina Panthers | 17-7 | Final
+  AWAY QB (Tyler Shough): 19/27 for 282yds, 2TD/0INT, 10.4 YPA, 128.9 RTG
+  HOME QB (Bryce Young): 17/25 for 124yds, 0TD/1INT, 5.0 YPA, 62.8 RTG
+  AWAY (New Orleans Saints):
+    Total Yards: 388 | Yards/Play: 5.8 | Possession: 33:21
+    Passing: 266yds (19/28) | Rushing: 122yds (3.3 avg) | 1st Downs: 17
+    3rd Down: 8-17 | 4th Down: 2-3 | Red Zone: 0-2
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 2 | Penalties: 6-60
+  HOME (Carolina Panthers):
+    Total Yards: 175 | Yards/Play: 3.5 | Possession: 26:39
+    Passing: 102yds (17/25) | Rushing: 73yds (3.2 avg) | 1st Downs: 13
+    3rd Down: 3-9 | 4th Down: 0-1 | Red Zone: 1-2
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 2 | Penalties: 1-5
+
+[REGULAR_WEEK_10] Jacksonville Jaguars @ Houston Texans | 29-36 | Final
+  AWAY QB (Trevor Lawrence): 13/23 for 158yds, 1TD/1INT, 6.9 YPA, 74.2 RTG
+  HOME QB (Davis Mills): 27/45 for 292yds, 2TD/1INT, 6.5 YPA, 84.7 RTG
+  AWAY (Jacksonville Jaguars):
+    Total Yards: 213 | Yards/Play: 3.9 | Possession: 29:00
+    Passing: 119yds (13/23) | Rushing: 94yds (3.5 avg) | 1st Downs: 19
+    3rd Down: 4-11 | 4th Down: 0-0 | Red Zone: 2-4
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 5 | Penalties: 9-90
+  HOME (Houston Texans):
+    Total Yards: 412 | Yards/Play: 6.0 | Possession: 31:00
+    Passing: 282yds (27/45) | Rushing: 130yds (5.9 avg) | 1st Downs: 27
+    3rd Down: 10-15 | 4th Down: 1-2 | Red Zone: 4-5
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 2 | Penalties: 11-80
+
+[REGULAR_WEEK_10] Arizona Cardinals @ Seattle Seahawks | 22-44 | Final
+  AWAY QB (Jacoby Brissett): 22/44 for 258yds, 2TD/0INT, 5.9 YPA, 83.3 RTG
+  HOME QB (Sam Darnold): 10/12 for 178yds, 1TD/1INT, 14.8 YPA, 111.8 RTG
+  AWAY (Arizona Cardinals):
+    Total Yards: 335 | Yards/Play: 4.6 | Possession: 26:20
+    Passing: 206yds (22/45) | Rushing: 129yds (5.6 avg) | 1st Downs: 21
+    3rd Down: 6-16 | 4th Down: 2-5 | Red Zone: 3-6
+    Turnovers: 2 (INT: 0, Fum: 2) | Sacks: 5 | Penalties: 5-37
+  HOME (Seattle Seahawks):
+    Total Yards: 372 | Yards/Play: 6.3 | Possession: 33:40
+    Passing: 174yds (10/12) | Rushing: 198yds (4.3 avg) | 1st Downs: 22
+    3rd Down: 6-10 | 4th Down: 0-0 | Red Zone: 2-4
+    Turnovers: 3 (INT: 1, Fum: 2) | Sacks: 1 | Penalties: 3-20
+
+[REGULAR_WEEK_10] Los Angeles Rams @ San Francisco 49ers | 42-26 | Final
+  AWAY QB (Matthew Stafford): 24/36 for 280yds, 4TD/0INT, 7.8 YPA, 127.1 RTG
+  HOME QB (Mac Jones): 33/39 for 319yds, 3TD/1INT, 8.2 YPA, 115.7 RTG
+  AWAY (Los Angeles Rams):
+    Total Yards: 401 | Yards/Play: 6.0 | Possession: 32:32
+    Passing: 275yds (24/36) | Rushing: 126yds (4.2 avg) | 1st Downs: 31
+    3rd Down: 5-9 | 4th Down: 1-1 | Red Zone: 5-6
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 0-0
+  HOME (San Francisco 49ers):
+    Total Yards: 393 | Yards/Play: 6.6 | Possession: 27:28
+    Passing: 319yds (33/39) | Rushing: 74yds (3.5 avg) | 1st Downs: 24
+    3rd Down: 3-8 | 4th Down: 1-3 | Red Zone: 4-5
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 0 | Penalties: 7-45
+
+[REGULAR_WEEK_10] Detroit Lions @ Washington Commanders | 44-22 | Final
+  AWAY QB (Jared Goff): 25/33 for 320yds, 3TD/0INT, 9.7 YPA, 135.9 RTG
+  HOME QB (Marcus Mariota): 16/22 for 213yds, 2TD/0INT, 9.7 YPA, 133.3 RTG
+  AWAY (Detroit Lions):
+    Total Yards: 546 | Yards/Play: 8.0 | Possession: 32:36
+    Passing: 320yds (25/35) | Rushing: 226yds (6.8 avg) | 1st Downs: 30
+    3rd Down: 5-10 | 4th Down: 2-2 | Red Zone: 4-6
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 0 | Penalties: 3-1
+  HOME (Washington Commanders):
+    Total Yards: 288 | Yards/Play: 5.6 | Possession: 27:24
+    Passing: 195yds (16/22) | Rushing: 93yds (3.4 avg) | 1st Downs: 14
+    3rd Down: 2-10 | 4th Down: 3-3 | Red Zone: 3-3
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 2 | Penalties: 8-61
+
+[REGULAR_WEEK_10] Pittsburgh Steelers @ Los Angeles Chargers | 10-25 | Final
+  AWAY QB (Aaron Rodgers): 16/31 for 161yds, 1TD/2INT, 5.2 YPA, 50.6 RTG
+  HOME QB (Justin Herbert): 20/33 for 220yds, 1TD/0INT, 6.7 YPA, 90.5 RTG
+  AWAY (Pittsburgh Steelers):
+    Total Yards: 221 | Yards/Play: 4.4 | Possession: 22:25
+    Passing: 148yds (16/31) | Rushing: 73yds (4.6 avg) | 1st Downs: 11
+    3rd Down: 2-11 | 4th Down: 0-1 | Red Zone: 0-1
+    Turnovers: 3 (INT: 2, Fum: 1) | Sacks: 3 | Penalties: 4-29
+  HOME (Los Angeles Chargers):
+    Total Yards: 314 | Yards/Play: 4.6 | Possession: 37:35
+    Passing: 199yds (20/33) | Rushing: 115yds (3.7 avg) | 1st Downs: 18
+    3rd Down: 6-17 | 4th Down: 1-1 | Red Zone: 2-3
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 5 | Penalties: 8-55
+
+[REGULAR_WEEK_10] Philadelphia Eagles @ Green Bay Packers | 10-7 | Final
+  AWAY QB (Jalen Hurts): 15/26 for 183yds, 1TD/0INT, 7.0 YPA, 92.3 RTG
+  HOME QB (Jordan Love): 20/36 for 176yds, 0TD/0INT, 4.9 YPA, 68.8 RTG
+  AWAY (Philadelphia Eagles):
+    Total Yards: 294 | Yards/Play: 4.9 | Possession: 32:05
+    Passing: 183yds (15/26) | Rushing: 111yds (3.3 avg) | 1st Downs: 13
+    3rd Down: 7-16 | 4th Down: 0-2 | Red Zone: 0-1
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 0 | Penalties: 7-61
+  HOME (Green Bay Packers):
+    Total Yards: 261 | Yards/Play: 4.0 | Possession: 27:55
+    Passing: 157yds (20/36) | Rushing: 104yds (3.9 avg) | 1st Downs: 18
+    3rd Down: 5-13 | 4th Down: 1-3 | Red Zone: 1-1
+    Turnovers: 2 (INT: 0, Fum: 2) | Sacks: 3 | Penalties: 4-20
+
+
+====================================================================================================
+REGULAR_WEEK_11
+====================================================================================================
+
+[REGULAR_WEEK_11] New York Jets @ New England Patriots | 14-27 | Final
+  AWAY QB (Justin Fields): 15/26 for 116yds, 1TD/0INT, 4.5 YPA, 81.6 RTG
+  HOME QB (Drake Maye): 25/34 for 281yds, 1TD/0INT, 8.3 YPA, 107.6 RTG
+  AWAY (New York Jets):
+    Total Yards: 245 | Yards/Play: 4.3 | Possession: 28:04
+    Passing: 105yds (15/27) | Rushing: 140yds (5.0 avg) | 1st Downs: 15
+    3rd Down: 8-14 | 4th Down: 0-1 | Red Zone: 1-2
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 2 | Penalties: 7-62
+  HOME (New England Patriots):
+    Total Yards: 336 | Yards/Play: 5.4 | Possession: 31:56
+    Passing: 271yds (25/34) | Rushing: 65yds (2.4 avg) | 1st Downs: 23
+    3rd Down: 6-12 | 4th Down: 1-1 | Red Zone: 3-5
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 2-20
+
+[REGULAR_WEEK_11] Washington Commanders @ Miami Dolphins | 13-16 | Final
+  AWAY QB (Marcus Mariota): 20/30 for 213yds, 1TD/1INT, 7.1 YPA, 84.4 RTG
+  HOME QB (Tua Tagovailoa): 14/20 for 171yds, 0TD/0INT, 8.6 YPA, 96.0 RTG
+  AWAY (Washington Commanders):
+    Total Yards: 379 | Yards/Play: 5.9 | Possession: 32:36
+    Passing: 207yds (20/30) | Rushing: 172yds (5.2 avg) | 1st Downs: 22
+    3rd Down: 6-13 | 4th Down: 1-2 | Red Zone: 0-3
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 1 | Penalties: 6-31
+  HOME (Miami Dolphins):
+    Total Yards: 311 | Yards/Play: 5.8 | Possession: 29:51
+    Passing: 142yds (14/20) | Rushing: 169yds (5.5 avg) | 1st Downs: 19
+    3rd Down: 3-9 | 4th Down: 0-2 | Red Zone: 1-5
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 3 | Penalties: 4-39
+
+[REGULAR_WEEK_11] Carolina Panthers @ Atlanta Falcons | 30-27 | Final
+  AWAY QB (Bryce Young): 31/45 for 448yds, 3TD/0INT, 10.0 YPA, 123.2 RTG
+  HOME QB (Michael Penix Jr.): 13/16 for 175yds, 0TD/0INT, 10.9 YPA, 112.2 RTG
+  AWAY (Carolina Panthers):
+    Total Yards: 486 | Yards/Play: 6.5 | Possession: 37:07
+    Passing: 419yds (31/45) | Rushing: 67yds (2.7 avg) | 1st Downs: 22
+    3rd Down: 6-17 | 4th Down: 3-5 | Red Zone: 2-6
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 5 | Penalties: 8-49
+  HOME (Atlanta Falcons):
+    Total Yards: 348 | Yards/Play: 6.0 | Possession: 27:43
+    Passing: 223yds (19/30) | Rushing: 125yds (4.5 avg) | 1st Downs: 23
+    3rd Down: 4-11 | 4th Down: 0-0 | Red Zone: 3-3
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 0 | Penalties: 6-44
+
+[REGULAR_WEEK_11] Tampa Bay Buccaneers @ Buffalo Bills | 32-44 | Final
+  AWAY QB (Baker Mayfield): 16/28 for 173yds, 1TD/1INT, 6.2 YPA, 72.5 RTG
+  HOME QB (Josh Allen): 19/30 for 317yds, 3TD/2INT, 10.6 YPA, 104.4 RTG
+  AWAY (Tampa Bay Buccaneers):
+    Total Yards: 367 | Yards/Play: 5.4 | Possession: 35:07
+    Passing: 165yds (16/28) | Rushing: 202yds (5.2 avg) | 1st Downs: 21
+    3rd Down: 9-16 | 4th Down: 1-1 | Red Zone: 2-4
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 1 | Penalties: 2-30
+  HOME (Buffalo Bills):
+    Total Yards: 414 | Yards/Play: 7.8 | Possession: 24:53
+    Passing: 317yds (19/30) | Rushing: 97yds (4.2 avg) | 1st Downs: 19
+    3rd Down: 6-11 | 4th Down: 1-2 | Red Zone: 3-4
+    Turnovers: 3 (INT: 2, Fum: 1) | Sacks: 0 | Penalties: 7-45
+
+[REGULAR_WEEK_11] Houston Texans @ Tennessee Titans | 16-13 | Final
+  AWAY QB (Davis Mills): 26/41 for 274yds, 1TD/0INT, 6.7 YPA, 90.9 RTG
+  HOME QB (Cam Ward): 24/37 for 194yds, 1TD/0INT, 5.2 YPA, 87.0 RTG
+  AWAY (Houston Texans):
+    Total Yards: 315 | Yards/Play: 4.6 | Possession: 31:03
+    Passing: 240yds (26/41) | Rushing: 75yds (3.3 avg) | 1st Downs: 20
+    3rd Down: 4-13 | 4th Down: 0-1 | Red Zone: 1-3
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 4 | Penalties: 5-53
+  HOME (Tennessee Titans):
+    Total Yards: 229 | Yards/Play: 4.0 | Possession: 28:57
+    Passing: 171yds (24/37) | Rushing: 58yds (3.4 avg) | 1st Downs: 14
+    3rd Down: 6-15 | 4th Down: 0-0 | Red Zone: 1-1
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 3 | Penalties: 9-62
+
+[REGULAR_WEEK_11] Chicago Bears @ Minnesota Vikings | 19-17 | Final
+  AWAY QB (Caleb Williams): 16/32 for 193yds, 0TD/0INT, 6.0 YPA, 68.9 RTG
+  HOME QB (J.J. McCarthy): 16/32 for 150yds, 1TD/2INT, 4.7 YPA, 47.7 RTG
+  AWAY (Chicago Bears):
+    Total Yards: 320 | Yards/Play: 4.4 | Possession: 36:59
+    Passing: 180yds (16/32) | Rushing: 140yds (3.6 avg) | 1st Downs: 19
+    3rd Down: 7-18 | 4th Down: 0-0 | Red Zone: 1-2
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 2 | Penalties: 6-40
+  HOME (Minnesota Vikings):
+    Total Yards: 265 | Yards/Play: 4.9 | Possession: 23:01
+    Passing: 150yds (16/32) | Rushing: 115yds (5.2 avg) | 1st Downs: 15
+    3rd Down: 3-11 | 4th Down: 1-1 | Red Zone: 2-3
+    Turnovers: 2 (INT: 2, Fum: 0) | Sacks: 0 | Penalties: 2-15
+
+[REGULAR_WEEK_11] Green Bay Packers @ New York Giants | 27-20 | Final
+  AWAY QB (Jordan Love): 13/24 for 174yds, 2TD/0INT, 7.3 YPA, 105.2 RTG
+  HOME QB (Jameis Winston): 19/29 for 201yds, 0TD/1INT, 6.9 YPA, 71.2 RTG
+  AWAY (Green Bay Packers):
+    Total Yards: 296 | Yards/Play: 5.8 | Possession: 24:04
+    Passing: 168yds (15/26) | Rushing: 128yds (5.6 avg) | 1st Downs: 19
+    3rd Down: 7-11 | 4th Down: 0-0 | Red Zone: 4-4
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 2 | Penalties: 5-48
+  HOME (New York Giants):
+    Total Yards: 336 | Yards/Play: 4.9 | Possession: 35:56
+    Passing: 194yds (19/29) | Rushing: 142yds (3.7 avg) | 1st Downs: 22
+    3rd Down: 7-14 | 4th Down: 3-4 | Red Zone: 3-5
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 2 | Penalties: 6-77
+
+[REGULAR_WEEK_11] Cincinnati Bengals @ Pittsburgh Steelers | 12-34 | Final
+  AWAY QB (Joe Flacco): 23/40 for 199yds, 1TD/1INT, 5.0 YPA, 68.6 RTG
+  HOME QB (Mason Rudolph): 12/16 for 127yds, 1TD/0INT, 7.9 YPA, 118.5 RTG
+  AWAY (Cincinnati Bengals):
+    Total Yards: 297 | Yards/Play: 4.7 | Possession: 29:55
+    Passing: 192yds (23/40) | Rushing: 105yds (4.8 avg) | 1st Downs: 17
+    3rd Down: 7-15 | 4th Down: 0-1 | Red Zone: 0-2
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 1 | Penalties: 8-67
+  HOME (Pittsburgh Steelers):
+    Total Yards: 343 | Yards/Play: 5.7 | Possession: 30:05
+    Passing: 232yds (21/31) | Rushing: 111yds (4.0 avg) | 1st Downs: 22
+    3rd Down: 7-13 | 4th Down: 1-1 | Red Zone: 2-4
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 8-76
+
+[REGULAR_WEEK_11] Los Angeles Chargers @ Jacksonville Jaguars | 6-35 | Final
+  AWAY QB (Justin Herbert): 10/18 for 81yds, 0TD/1INT, 4.5 YPA, 44.0 RTG
+  HOME QB (Trevor Lawrence): 14/22 for 153yds, 1TD/1INT, 7.0 YPA, 80.3 RTG
+  AWAY (Los Angeles Chargers):
+    Total Yards: 135 | Yards/Play: 3.0 | Possession: 22:05
+    Passing: 93yds (13/26) | Rushing: 42yds (2.6 avg) | 1st Downs: 8
+    3rd Down: 3-12 | 4th Down: 1-3 | Red Zone: 0-1
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 3 | Penalties: 5-71
+  HOME (Jacksonville Jaguars):
+    Total Yards: 345 | Yards/Play: 5.0 | Possession: 37:55
+    Passing: 153yds (14/22) | Rushing: 192yds (4.1 avg) | 1st Downs: 30
+    3rd Down: 5-10 | 4th Down: 3-5 | Red Zone: 5-6
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 0 | Penalties: 1-5
+
+[REGULAR_WEEK_11] Seattle Seahawks @ Los Angeles Rams | 19-21 | Final
+  AWAY QB (Sam Darnold): 29/44 for 279yds, 0TD/4INT, 6.3 YPA, 45.5 RTG
+  HOME QB (Matthew Stafford): 15/28 for 130yds, 2TD/0INT, 4.6 YPA, 89.9 RTG
+  AWAY (Seattle Seahawks):
+    Total Yards: 414 | Yards/Play: 5.2 | Possession: 37:49
+    Passing: 279yds (29/44) | Rushing: 135yds (3.9 avg) | 1st Downs: 26
+    3rd Down: 7-16 | 4th Down: 1-1 | Red Zone: 1-4
+    Turnovers: 4 (INT: 4, Fum: 0) | Sacks: 0 | Penalties: 6-47
+  HOME (Los Angeles Rams):
+    Total Yards: 249 | Yards/Play: 5.0 | Possession: 22:11
+    Passing: 130yds (15/28) | Rushing: 119yds (5.4 avg) | 1st Downs: 12
+    3rd Down: 2-11 | 4th Down: 2-3 | Red Zone: 3-4
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 0 | Penalties: 6-43
+
+[REGULAR_WEEK_11] San Francisco 49ers @ Arizona Cardinals | 41-22 | Final
+  AWAY QB (Brock Purdy): 19/26 for 200yds, 3TD/0INT, 7.7 YPA, 133.5 RTG
+  HOME QB (Jacoby Brissett): 47/57 for 452yds, 2TD/2INT, 7.9 YPA, 96.8 RTG
+  AWAY (San Francisco 49ers):
+    Total Yards: 281 | Yards/Play: 5.4 | Possession: 25:45
+    Passing: 186yds (19/26) | Rushing: 95yds (3.8 avg) | 1st Downs: 24
+    3rd Down: 3-9 | 4th Down: 0-0 | Red Zone: 4-5
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 1-15
+  HOME (Arizona Cardinals):
+    Total Yards: 488 | Yards/Play: 6.9 | Possession: 34:15
+    Passing: 452yds (47/57) | Rushing: 36yds (2.6 avg) | 1st Downs: 24
+    3rd Down: 6-14 | 4th Down: 0-0 | Red Zone: 3-5
+    Turnovers: 3 (INT: 2, Fum: 1) | Sacks: 0 | Penalties: 17-130
+
+[REGULAR_WEEK_11] Baltimore Ravens @ Cleveland Browns | 23-16 | Final
+  AWAY QB (Lamar Jackson): 14/25 for 193yds, 0TD/2INT, 7.7 YPA, 47.6 RTG
+  HOME QB (Dillon Gabriel): 7/10 for 68yds, 0TD/0INT, 6.8 YPA, 88.8 RTG
+  AWAY (Baltimore Ravens):
+    Total Yards: 351 | Yards/Play: 5.8 | Possession: 32:59
+    Passing: 167yds (14/25) | Rushing: 184yds (6.1 avg) | 1st Downs: 17
+    3rd Down: 5-13 | 4th Down: 1-1 | Red Zone: 1-4
+    Turnovers: 3 (INT: 2, Fum: 1) | Sacks: 5 | Penalties: 4-26
+  HOME (Cleveland Browns):
+    Total Yards: 187 | Yards/Play: 3.5 | Possession: 27:01
+    Passing: 81yds (11/26) | Rushing: 106yds (4.2 avg) | 1st Downs: 10
+    3rd Down: 2-14 | 4th Down: 0-1 | Red Zone: 0-2
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 3 | Penalties: 5-41
+
+[REGULAR_WEEK_11] Kansas City Chiefs @ Denver Broncos | 19-22 | Final
+  AWAY QB (Patrick Mahomes): 29/45 for 276yds, 1TD/1INT, 6.1 YPA, 79.5 RTG
+  HOME QB (Bo Nix): 24/37 for 295yds, 0TD/0INT, 8.0 YPA, 89.4 RTG
+  AWAY (Kansas City Chiefs):
+    Total Yards: 311 | Yards/Play: 5.0 | Possession: 30:31
+    Passing: 249yds (29/45) | Rushing: 62yds (4.4 avg) | 1st Downs: 19
+    3rd Down: 5-13 | 4th Down: 0-1 | Red Zone: 1-4
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 3 | Penalties: 10-69
+  HOME (Denver Broncos):
+    Total Yards: 342 | Yards/Play: 5.6 | Possession: 29:29
+    Passing: 283yds (24/38) | Rushing: 59yds (2.8 avg) | 1st Downs: 16
+    3rd Down: 7-15 | 4th Down: 0-0 | Red Zone: 1-5
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 2 | Penalties: 10-147
+
+[REGULAR_WEEK_11] Detroit Lions @ Philadelphia Eagles | 9-16 | Final
+  AWAY QB (Jared Goff): 14/37 for 255yds, 1TD/1INT, 6.9 YPA, 60.1 RTG
+  HOME QB (Jalen Hurts): 14/28 for 135yds, 0TD/0INT, 4.8 YPA, 63.8 RTG
+  AWAY (Detroit Lions):
+    Total Yards: 317 | Yards/Play: 5.3 | Possession: 24:12
+    Passing: 243yds (14/37) | Rushing: 74yds (3.5 avg) | 1st Downs: 13
+    3rd Down: 3-13 | 4th Down: 0-5 | Red Zone: 0-1
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 2 | Penalties: 5-48
+  HOME (Philadelphia Eagles):
+    Total Yards: 272 | Yards/Play: 3.9 | Possession: 35:48
+    Passing: 124yds (14/28) | Rushing: 148yds (3.7 avg) | 1st Downs: 16
+    3rd Down: 4-15 | 4th Down: 0-1 | Red Zone: 1-3
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 9-78
+
+[REGULAR_WEEK_11] Dallas Cowboys @ Las Vegas Raiders | 33-16 | Final
+  AWAY QB (Dak Prescott): 25/33 for 268yds, 4TD/0INT, 8.1 YPA, 138.6 RTG
+  HOME QB (Geno Smith): 27/42 for 238yds, 1TD/1INT, 5.7 YPA, 77.3 RTG
+  AWAY (Dallas Cowboys):
+    Total Yards: 381 | Yards/Play: 5.9 | Possession: 33:36
+    Passing: 267yds (25/33) | Rushing: 114yds (3.7 avg) | 1st Downs: 24
+    3rd Down: 4-10 | 4th Down: 1-3 | Red Zone: 3-5
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 1 | Penalties: 6-50
+  HOME (Las Vegas Raiders):
+    Total Yards: 236 | Yards/Play: 4.1 | Possession: 26:24
+    Passing: 209yds (27/42) | Rushing: 27yds (2.3 avg) | 1st Downs: 17
+    3rd Down: 3-12 | 4th Down: 2-3 | Red Zone: 1-3
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 4 | Penalties: 6-40
+
+
+====================================================================================================
+REGULAR_WEEK_12
+====================================================================================================
+
+[REGULAR_WEEK_12] Buffalo Bills @ Houston Texans | 19-23 | Final
+  AWAY QB (Josh Allen): 24/34 for 253yds, 0TD/2INT, 7.4 YPA, 67.4 RTG
+  HOME QB (Davis Mills): 16/30 for 153yds, 2TD/0INT, 5.1 YPA, 90.0 RTG
+  AWAY (Buffalo Bills):
+    Total Yards: 326 | Yards/Play: 4.9 | Possession: 32:22
+    Passing: 183yds (24/34) | Rushing: 143yds (6.0 avg) | 1st Downs: 14
+    3rd Down: 5-16 | 4th Down: 3-5 | Red Zone: 0-2
+    Turnovers: 3 (INT: 2, Fum: 1) | Sacks: 8 | Penalties: 6-54
+  HOME (Houston Texans):
+    Total Yards: 261 | Yards/Play: 4.7 | Possession: 27:38
+    Passing: 153yds (16/30) | Rushing: 108yds (4.2 avg) | 1st Downs: 15
+    3rd Down: 2-12 | 4th Down: 1-1 | Red Zone: 2-4
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 0 | Penalties: 5-40
+
+[REGULAR_WEEK_12] Pittsburgh Steelers @ Chicago Bears | 28-31 | Final
+  AWAY QB (Mason Rudolph): 24/31 for 171yds, 1TD/1INT, 5.5 YPA, 86.9 RTG
+  HOME QB (Caleb Williams): 19/35 for 239yds, 3TD/0INT, 6.8 YPA, 104.3 RTG
+  AWAY (Pittsburgh Steelers):
+    Total Yards: 345 | Yards/Play: 5.0 | Possession: 33:09
+    Passing: 159yds (24/31) | Rushing: 186yds (5.2 avg) | 1st Downs: 22
+    3rd Down: 8-14 | 4th Down: 1-3 | Red Zone: 3-3
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 2 | Penalties: 6-41
+  HOME (Chicago Bears):
+    Total Yards: 328 | Yards/Play: 5.4 | Possession: 26:51
+    Passing: 229yds (19/35) | Rushing: 99yds (4.0 avg) | 1st Downs: 19
+    3rd Down: 7-13 | 4th Down: 1-1 | Red Zone: 3-3
+    Turnovers: 2 (INT: 0, Fum: 2) | Sacks: 1 | Penalties: 7-83
+
+[REGULAR_WEEK_12] New England Patriots @ Cincinnati Bengals | 26-20 | Final
+  AWAY QB (Drake Maye): 22/35 for 294yds, 1TD/1INT, 8.4 YPA, 87.1 RTG
+  HOME QB (Joe Flacco): 19/37 for 183yds, 1TD/1INT, 4.9 YPA, 63.2 RTG
+  AWAY (New England Patriots):
+    Total Yards: 392 | Yards/Play: 5.9 | Possession: 33:14
+    Passing: 285yds (22/35) | Rushing: 107yds (3.5 avg) | 1st Downs: 21
+    3rd Down: 5-13 | 4th Down: 0-1 | Red Zone: 0-2
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 1 | Penalties: 4-52
+  HOME (Cincinnati Bengals):
+    Total Yards: 307 | Yards/Play: 5.0 | Possession: 26:46
+    Passing: 187yds (20/38) | Rushing: 120yds (5.2 avg) | 1st Downs: 20
+    3rd Down: 3-13 | 4th Down: 2-3 | Red Zone: 1-1
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 1 | Penalties: 6-65
+
+[REGULAR_WEEK_12] New York Giants @ Detroit Lions | 27-34 | Final
+  AWAY QB (Jameis Winston): 18/36 for 366yds, 2TD/1INT, 10.2 YPA, 93.1 RTG
+  HOME QB (Jared Goff): 28/42 for 279yds, 2TD/1INT, 6.6 YPA, 91.3 RTG
+  AWAY (New York Giants):
+    Total Yards: 517 | Yards/Play: 6.7 | Possession: 37:11
+    Passing: 395yds (19/37) | Rushing: 122yds (3.1 avg) | 1st Downs: 25
+    3rd Down: 8-16 | 4th Down: 1-3 | Red Zone: 1-3
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 1 | Penalties: 7-59
+  HOME (Detroit Lions):
+    Total Yards: 494 | Yards/Play: 7.6 | Possession: 28:30
+    Passing: 257yds (28/42) | Rushing: 237yds (11.9 avg) | 1st Downs: 23
+    3rd Down: 5-12 | 4th Down: 0-0 | Red Zone: 2-4
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 3 | Penalties: 9-81
+
+[REGULAR_WEEK_12] Minnesota Vikings @ Green Bay Packers | 6-23 | Final
+  AWAY QB (J.J. McCarthy): 12/19 for 87yds, 0TD/2INT, 4.6 YPA, 34.2 RTG
+  HOME QB (Jordan Love): 14/21 for 139yds, 0TD/0INT, 6.6 YPA, 85.2 RTG
+  AWAY (Minnesota Vikings):
+    Total Yards: 145 | Yards/Play: 3.3 | Possession: 22:45
+    Passing: 52yds (12/19) | Rushing: 93yds (4.7 avg) | 1st Downs: 10
+    3rd Down: 2-9 | 4th Down: 0-1 | Red Zone: 0-1
+    Turnovers: 3 (INT: 2, Fum: 1) | Sacks: 5 | Penalties: 2-29
+  HOME (Green Bay Packers):
+    Total Yards: 288 | Yards/Play: 4.4 | Possession: 37:15
+    Passing: 142yds (15/22) | Rushing: 146yds (3.5 avg) | 1st Downs: 22
+    3rd Down: 7-14 | 4th Down: 0-0 | Red Zone: 2-4
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 2-10
+
+[REGULAR_WEEK_12] Seattle Seahawks @ Tennessee Titans | 30-24 | Final
+  AWAY QB (Sam Darnold): 16/26 for 244yds, 2TD/0INT, 9.4 YPA, 118.1 RTG
+  HOME QB (Cam Ward): 28/42 for 256yds, 1TD/0INT, 6.1 YPA, 91.0 RTG
+  AWAY (Seattle Seahawks):
+    Total Yards: 353 | Yards/Play: 7.5 | Possession: 22:35
+    Passing: 239yds (16/26) | Rushing: 114yds (5.7 avg) | 1st Downs: 19
+    3rd Down: 2-7 | 4th Down: 0-1 | Red Zone: 2-4
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 11-69
+  HOME (Tennessee Titans):
+    Total Yards: 296 | Yards/Play: 4.4 | Possession: 37:25
+    Passing: 232yds (28/42) | Rushing: 64yds (2.9 avg) | 1st Downs: 18
+    3rd Down: 6-17 | 4th Down: 5-7 | Red Zone: 2-3
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 4 | Penalties: 10-63
+
+[REGULAR_WEEK_12] Indianapolis Colts @ Kansas City Chiefs | 20-23 | Final
+  AWAY QB (Daniel Jones): 19/31 for 181yds, 2TD/0INT, 5.8 YPA, 99.0 RTG
+  HOME QB (Patrick Mahomes): 29/46 for 352yds, 0TD/1INT, 7.7 YPA, 77.4 RTG
+  AWAY (Indianapolis Colts):
+    Total Yards: 255 | Yards/Play: 5.1 | Possession: 25:28
+    Passing: 181yds (19/31) | Rushing: 74yds (3.9 avg) | 1st Downs: 10
+    3rd Down: 5-13 | 4th Down: 0-0 | Red Zone: 2-4
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 0 | Penalties: 11-83
+  HOME (Kansas City Chiefs):
+    Total Yards: 494 | Yards/Play: 5.4 | Possession: 42:35
+    Passing: 346yds (29/46) | Rushing: 148yds (3.6 avg) | 1st Downs: 33
+    3rd Down: 7-16 | 4th Down: 2-2 | Red Zone: 1-6
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 4 | Penalties: 7-57
+
+[REGULAR_WEEK_12] New York Jets @ Baltimore Ravens | 10-23 | Final
+  AWAY QB (Tyrod Taylor): 17/28 for 222yds, 1TD/1INT, 7.9 YPA, 82.7 RTG
+  HOME QB (Lamar Jackson): 13/23 for 153yds, 0TD/0INT, 6.7 YPA, 76.9 RTG
+  AWAY (New York Jets):
+    Total Yards: 282 | Yards/Play: 4.9 | Possession: 28:13
+    Passing: 204yds (17/28) | Rushing: 78yds (3.0 avg) | 1st Downs: 15
+    3rd Down: 4-11 | 4th Down: 0-2 | Red Zone: 1-2
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 3 | Penalties: 6-81
+  HOME (Baltimore Ravens):
+    Total Yards: 241 | Yards/Play: 4.2 | Possession: 31:47
+    Passing: 143yds (13/23) | Rushing: 98yds (2.9 avg) | 1st Downs: 16
+    3rd Down: 2-11 | 4th Down: 2-2 | Red Zone: 2-5
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 5-30
+
+[REGULAR_WEEK_12] Cleveland Browns @ Las Vegas Raiders | 24-10 | Final
+  AWAY QB (Shedeur Sanders): 11/20 for 209yds, 1TD/1INT, 10.5 YPA, 87.3 RTG
+  HOME QB (Geno Smith): 30/44 for 285yds, 1TD/0INT, 6.5 YPA, 93.5 RTG
+  AWAY (Cleveland Browns):
+    Total Yards: 270 | Yards/Play: 5.6 | Possession: 23:34
+    Passing: 206yds (11/20) | Rushing: 64yds (2.4 avg) | 1st Downs: 11
+    3rd Down: 3-12 | 4th Down: 0-0 | Red Zone: 2-3
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 1 | Penalties: 8-77
+  HOME (Las Vegas Raiders):
+    Total Yards: 268 | Yards/Play: 3.6 | Possession: 36:26
+    Passing: 208yds (30/44) | Rushing: 60yds (2.9 avg) | 1st Downs: 19
+    3rd Down: 4-17 | 4th Down: 1-3 | Red Zone: 1-1
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 10 | Penalties: 13-109
+
+[REGULAR_WEEK_12] Jacksonville Jaguars @ Arizona Cardinals | 27-24 | Final
+  AWAY QB (Trevor Lawrence): 18/30 for 256yds, 3TD/3INT, 8.5 YPA, 81.4 RTG
+  HOME QB (Jacoby Brissett): 33/49 for 317yds, 1TD/0INT, 6.5 YPA, 92.0 RTG
+  AWAY (Jacksonville Jaguars):
+    Total Yards: 371 | Yards/Play: 6.1 | Possession: 28:33
+    Passing: 237yds (18/30) | Rushing: 134yds (4.8 avg) | 1st Downs: 18
+    3rd Down: 3-11 | 4th Down: 0-1 | Red Zone: 3-5
+    Turnovers: 4 (INT: 3, Fum: 1) | Sacks: 3 | Penalties: 7-60
+  HOME (Arizona Cardinals):
+    Total Yards: 326 | Yards/Play: 4.3 | Possession: 37:26
+    Passing: 271yds (34/50) | Rushing: 55yds (2.8 avg) | 1st Downs: 25
+    3rd Down: 5-16 | 4th Down: 1-3 | Red Zone: 1-3
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 6 | Penalties: 7-53
+
+[REGULAR_WEEK_12] Philadelphia Eagles @ Dallas Cowboys | 21-24 | Final
+  AWAY QB (Jalen Hurts): 27/39 for 289yds, 1TD/0INT, 7.4 YPA, 99.2 RTG
+  HOME QB (Dak Prescott): 23/36 for 354yds, 2TD/1INT, 9.8 YPA, 103.2 RTG
+  AWAY (Philadelphia Eagles):
+    Total Yards: 339 | Yards/Play: 5.8 | Possession: 30:58
+    Passing: 276yds (27/39) | Rushing: 63yds (3.5 avg) | 1st Downs: 19
+    3rd Down: 5-12 | 4th Down: 0-0 | Red Zone: 3-3
+    Turnovers: 2 (INT: 0, Fum: 2) | Sacks: 1 | Penalties: 14-96
+  HOME (Dallas Cowboys):
+    Total Yards: 473 | Yards/Play: 7.0 | Possession: 29:02
+    Passing: 348yds (23/36) | Rushing: 125yds (4.0 avg) | 1st Downs: 25
+    3rd Down: 5-12 | 4th Down: 0-2 | Red Zone: 3-5
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 1 | Penalties: 8-69
+
+[REGULAR_WEEK_12] Atlanta Falcons @ New Orleans Saints | 24-10 | Final
+  AWAY QB (Kirk Cousins): 16/23 for 199yds, 2TD/1INT, 8.7 YPA, 107.0 RTG
+  HOME QB (Tyler Shough): 30/43 for 243yds, 0TD/1INT, 5.7 YPA, 74.1 RTG
+  AWAY (Atlanta Falcons):
+    Total Yards: 302 | Yards/Play: 5.5 | Possession: 27:09
+    Passing: 181yds (16/23) | Rushing: 121yds (4.2 avg) | 1st Downs: 13
+    3rd Down: 3-12 | 4th Down: 1-1 | Red Zone: 1-2
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 3 | Penalties: 9-82
+  HOME (New Orleans Saints):
+    Total Yards: 293 | Yards/Play: 3.8 | Possession: 32:51
+    Passing: 214yds (30/45) | Rushing: 79yds (2.8 avg) | 1st Downs: 21
+    3rd Down: 5-16 | 4th Down: 2-5 | Red Zone: 0-3
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 5 | Penalties: 4-36
+
+[REGULAR_WEEK_12] Tampa Bay Buccaneers @ Los Angeles Rams | 7-34 | Final
+  AWAY QB (Teddy Bridgewater): 8/15 for 62yds, 0TD/0INT, 4.1 YPA, 63.8 RTG
+  HOME QB (Matthew Stafford): 25/35 for 273yds, 3TD/0INT, 7.8 YPA, 122.7 RTG
+  AWAY (Tampa Bay Buccaneers):
+    Total Yards: 193 | Yards/Play: 2.9 | Possession: 31:48
+    Passing: 70yds (17/34) | Rushing: 123yds (4.2 avg) | 1st Downs: 14
+    3rd Down: 7-17 | 4th Down: 1-5 | Red Zone: 1-3
+    Turnovers: 2 (INT: 2, Fum: 0) | Sacks: 4 | Penalties: 2-10
+  HOME (Los Angeles Rams):
+    Total Yards: 333 | Yards/Play: 6.1 | Possession: 28:12
+    Passing: 263yds (25/35) | Rushing: 70yds (3.7 avg) | 1st Downs: 20
+    3rd Down: 4-10 | 4th Down: 0-1 | Red Zone: 2-2
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 4-32
+
+[REGULAR_WEEK_12] Carolina Panthers @ San Francisco 49ers | 9-20 | Final
+  AWAY QB (Bryce Young): 18/29 for 169yds, 1TD/2INT, 5.8 YPA, 60.8 RTG
+  HOME QB (Brock Purdy): 23/32 for 193yds, 1TD/3INT, 6.0 YPA, 58.5 RTG
+  AWAY (Carolina Panthers):
+    Total Yards: 230 | Yards/Play: 5.3 | Possession: 22:18
+    Passing: 161yds (18/29) | Rushing: 69yds (5.3 avg) | 1st Downs: 12
+    3rd Down: 1-7 | 4th Down: 0-0 | Red Zone: 0-2
+    Turnovers: 2 (INT: 2, Fum: 0) | Sacks: 1 | Penalties: 4-30
+  HOME (San Francisco 49ers):
+    Total Yards: 340 | Yards/Play: 4.9 | Possession: 37:42
+    Passing: 193yds (23/32) | Rushing: 147yds (3.9 avg) | 1st Downs: 23
+    3rd Down: 7-13 | 4th Down: 2-2 | Red Zone: 2-3
+    Turnovers: 3 (INT: 3, Fum: 0) | Sacks: 0 | Penalties: 2-6
+
+
+====================================================================================================
+REGULAR_WEEK_13
+====================================================================================================
+
+[REGULAR_WEEK_13] Green Bay Packers @ Detroit Lions | 31-24 | Final
+  AWAY QB (Jordan Love): 18/30 for 234yds, 4TD/0INT, 7.8 YPA, 124.2 RTG
+  HOME QB (Jared Goff): 20/26 for 256yds, 2TD/0INT, 9.8 YPA, 132.9 RTG
+  AWAY (Green Bay Packers):
+    Total Yards: 359 | Yards/Play: 6.0 | Possession: 28:54
+    Passing: 234yds (18/30) | Rushing: 125yds (4.2 avg) | 1st Downs: 18
+    3rd Down: 6-12 | 4th Down: 3-3 | Red Zone: 2-2
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 0 | Penalties: 3-20
+  HOME (Detroit Lions):
+    Total Yards: 352 | Yards/Play: 5.9 | Possession: 31:06
+    Passing: 233yds (20/27) | Rushing: 119yds (4.0 avg) | 1st Downs: 20
+    3rd Down: 8-13 | 4th Down: 0-2 | Red Zone: 2-3
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 3 | Penalties: 5-22
+
+[REGULAR_WEEK_13] Kansas City Chiefs @ Dallas Cowboys | 28-31 | Final
+  AWAY QB (Patrick Mahomes): 23/34 for 261yds, 4TD/0INT, 7.7 YPA, 129.7 RTG
+  HOME QB (Dak Prescott): 27/39 for 320yds, 2TD/1INT, 8.2 YPA, 100.4 RTG
+  AWAY (Kansas City Chiefs):
+    Total Yards: 362 | Yards/Play: 6.0 | Possession: 29:06
+    Passing: 243yds (23/34) | Rushing: 119yds (5.2 avg) | 1st Downs: 19
+    3rd Down: 5-13 | 4th Down: 3-3 | Red Zone: 3-3
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 3 | Penalties: 10-119
+  HOME (Dallas Cowboys):
+    Total Yards: 457 | Yards/Play: 7.0 | Possession: 30:54
+    Passing: 320yds (27/39) | Rushing: 137yds (5.3 avg) | 1st Downs: 23
+    3rd Down: 9-16 | 4th Down: 1-1 | Red Zone: 2-4
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 0 | Penalties: 7-50
+
+[REGULAR_WEEK_13] Cincinnati Bengals @ Baltimore Ravens | 32-14 | Final
+  AWAY QB (Joe Burrow): 24/46 for 261yds, 2TD/0INT, 5.7 YPA, 83.7 RTG
+  HOME QB (Lamar Jackson): 17/32 for 246yds, 0TD/1INT, 7.7 YPA, 65.4 RTG
+  AWAY (Cincinnati Bengals):
+    Total Yards: 382 | Yards/Play: 4.8 | Possession: 38:46
+    Passing: 254yds (24/46) | Rushing: 128yds (3.9 avg) | 1st Downs: 22
+    3rd Down: 8-19 | 4th Down: 1-2 | Red Zone: 1-6
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 1 | Penalties: 6-35
+  HOME (Baltimore Ravens):
+    Total Yards: 346 | Yards/Play: 6.1 | Possession: 21:14
+    Passing: 223yds (17/32) | Rushing: 123yds (5.6 avg) | 1st Downs: 16
+    3rd Down: 3-10 | 4th Down: 1-2 | Red Zone: 1-2
+    Turnovers: 5 (INT: 1, Fum: 4) | Sacks: 3 | Penalties: 7-53
+
+[REGULAR_WEEK_13] Chicago Bears @ Philadelphia Eagles | 24-15 | Final
+  AWAY QB (Caleb Williams): 17/36 for 154yds, 1TD/1INT, 4.3 YPA, 56.9 RTG
+  HOME QB (Jalen Hurts): 19/34 for 230yds, 2TD/1INT, 6.8 YPA, 84.2 RTG
+  AWAY (Chicago Bears):
+    Total Yards: 425 | Yards/Play: 5.0 | Possession: 39:18
+    Passing: 144yds (17/36) | Rushing: 281yds (6.0 avg) | 1st Downs: 28
+    3rd Down: 10-17 | 4th Down: 1-3 | Red Zone: 2-3
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 2 | Penalties: 4-35
+  HOME (Philadelphia Eagles):
+    Total Yards: 317 | Yards/Play: 6.2 | Possession: 20:42
+    Passing: 230yds (19/34) | Rushing: 87yds (5.1 avg) | 1st Downs: 14
+    3rd Down: 4-12 | 4th Down: 0-0 | Red Zone: 1-2
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 0 | Penalties: 7-44
+
+[REGULAR_WEEK_13] San Francisco 49ers @ Cleveland Browns | 26-8 | Final
+  AWAY QB (Brock Purdy): 16/29 for 168yds, 1TD/0INT, 5.8 YPA, 83.7 RTG
+  HOME QB (Shedeur Sanders): 16/25 for 149yds, 1TD/0INT, 6.0 YPA, 93.6 RTG
+  AWAY (San Francisco 49ers):
+    Total Yards: 252 | Yards/Play: 3.9 | Possession: 30:10
+    Passing: 161yds (16/30) | Rushing: 91yds (2.8 avg) | 1st Downs: 19
+    3rd Down: 11-17 | 4th Down: 0-0 | Red Zone: 3-5
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 3-11
+  HOME (Cleveland Browns):
+    Total Yards: 253 | Yards/Play: 4.2 | Possession: 29:50
+    Passing: 115yds (17/26) | Rushing: 138yds (4.5 avg) | 1st Downs: 15
+    3rd Down: 3-11 | 4th Down: 0-4 | Red Zone: 0-0
+    Turnovers: 2 (INT: 0, Fum: 2) | Sacks: 3 | Penalties: 4-25
+
+[REGULAR_WEEK_13] Jacksonville Jaguars @ Tennessee Titans | 25-3 | Final
+  AWAY QB (Trevor Lawrence): 16/27 for 229yds, 2TD/0INT, 8.5 YPA, 111.5 RTG
+  HOME QB (Cam Ward): 24/38 for 141yds, 0TD/0INT, 3.7 YPA, 70.2 RTG
+  AWAY (Jacksonville Jaguars):
+    Total Yards: 272 | Yards/Play: 4.8 | Possession: 31:26
+    Passing: 202yds (16/27) | Rushing: 70yds (2.6 avg) | 1st Downs: 20
+    3rd Down: 3-13 | 4th Down: 1-1 | Red Zone: 2-2
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 3 | Penalties: 13-98
+  HOME (Tennessee Titans):
+    Total Yards: 188 | Yards/Play: 3.4 | Possession: 28:34
+    Passing: 121yds (24/38) | Rushing: 67yds (4.8 avg) | 1st Downs: 11
+    3rd Down: 2-12 | 4th Down: 1-4 | Red Zone: 0-1
+    Turnovers: 2 (INT: 0, Fum: 2) | Sacks: 3 | Penalties: 10-86
+
+[REGULAR_WEEK_13] Houston Texans @ Indianapolis Colts | 20-16 | Final
+  AWAY QB (C.J. Stroud): 22/35 for 276yds, 0TD/1INT, 7.9 YPA, 75.4 RTG
+  HOME QB (Daniel Jones): 14/27 for 201yds, 2TD/0INT, 7.4 YPA, 101.0 RTG
+  AWAY (Houston Texans):
+    Total Yards: 364 | Yards/Play: 5.1 | Possession: 34:58
+    Passing: 256yds (22/35) | Rushing: 108yds (3.2 avg) | 1st Downs: 24
+    3rd Down: 6-13 | 4th Down: 0-2 | Red Zone: 2-5
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 2 | Penalties: 9-85
+  HOME (Indianapolis Colts):
+    Total Yards: 281 | Yards/Play: 5.5 | Possession: 25:02
+    Passing: 195yds (14/27) | Rushing: 86yds (3.7 avg) | 1st Downs: 17
+    3rd Down: 3-10 | 4th Down: 0-2 | Red Zone: 2-4
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 5-33
+
+[REGULAR_WEEK_13] New Orleans Saints @ Miami Dolphins | 17-21 | Final
+  AWAY QB (Tyler Shough): 26/38 for 239yds, 2TD/1INT, 6.3 YPA, 91.9 RTG
+  HOME QB (Tua Tagovailoa): 12/23 for 157yds, 0TD/1INT, 6.8 YPA, 55.9 RTG
+  AWAY (New Orleans Saints):
+    Total Yards: 294 | Yards/Play: 4.3 | Possession: 29:52
+    Passing: 213yds (26/38) | Rushing: 81yds (3.0 avg) | 1st Downs: 20
+    3rd Down: 4-12 | 4th Down: 0-1 | Red Zone: 2-2
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 4 | Penalties: 6-45
+  HOME (Miami Dolphins):
+    Total Yards: 298 | Yards/Play: 5.1 | Possession: 30:08
+    Passing: 134yds (12/23) | Rushing: 164yds (5.1 avg) | 1st Downs: 16
+    3rd Down: 4-12 | 4th Down: 0-1 | Red Zone: 0-2
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 4 | Penalties: 3-15
+
+[REGULAR_WEEK_13] Atlanta Falcons @ New York Jets | 24-27 | Final
+  AWAY QB (Kirk Cousins): 21/33 for 234yds, 1TD/0INT, 7.1 YPA, 94.8 RTG
+  HOME QB (Tyrod Taylor): 19/33 for 172yds, 1TD/0INT, 5.2 YPA, 81.9 RTG
+  AWAY (Atlanta Falcons):
+    Total Yards: 389 | Yards/Play: 5.8 | Possession: 32:55
+    Passing: 222yds (21/33) | Rushing: 167yds (5.2 avg) | 1st Downs: 25
+    3rd Down: 4-12 | 4th Down: 0-0 | Red Zone: 3-3
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 2 | Penalties: 1-27
+  HOME (New York Jets):
+    Total Yards: 269 | Yards/Play: 4.3 | Possession: 27:05
+    Passing: 159yds (19/33) | Rushing: 110yds (3.9 avg) | 1st Downs: 16
+    3rd Down: 7-16 | 4th Down: 1-1 | Red Zone: 2-3
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 2 | Penalties: 9-59
+
+[REGULAR_WEEK_13] Arizona Cardinals @ Tampa Bay Buccaneers | 17-20 | Final
+  AWAY QB (Jacoby Brissett): 29/40 for 301yds, 2TD/1INT, 7.5 YPA, 100.1 RTG
+  HOME QB (Baker Mayfield): 18/28 for 194yds, 1TD/0INT, 6.9 YPA, 96.4 RTG
+  AWAY (Arizona Cardinals):
+    Total Yards: 386 | Yards/Play: 6.3 | Possession: 29:34
+    Passing: 291yds (29/40) | Rushing: 95yds (5.0 avg) | 1st Downs: 22
+    3rd Down: 3-8 | 4th Down: 0-2 | Red Zone: 2-2
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 2 | Penalties: 4-33
+  HOME (Tampa Bay Buccaneers):
+    Total Yards: 279 | Yards/Play: 4.9 | Possession: 30:26
+    Passing: 184yds (18/28) | Rushing: 95yds (3.5 avg) | 1st Downs: 13
+    3rd Down: 7-16 | 4th Down: 1-1 | Red Zone: 2-4
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 2 | Penalties: 5-40
+
+[REGULAR_WEEK_13] Los Angeles Rams @ Carolina Panthers | 28-31 | Final
+  AWAY QB (Matthew Stafford): 18/28 for 243yds, 2TD/2INT, 8.7 YPA, 85.9 RTG
+  HOME QB (Bryce Young): 15/20 for 206yds, 3TD/0INT, 10.3 YPA, 147.1 RTG
+  AWAY (Los Angeles Rams):
+    Total Yards: 379 | Yards/Play: 7.4 | Possession: 24:44
+    Passing: 227yds (18/28) | Rushing: 152yds (7.2 avg) | 1st Downs: 22
+    3rd Down: 2-5 | 4th Down: 0-0 | Red Zone: 4-6
+    Turnovers: 3 (INT: 2, Fum: 1) | Sacks: 2 | Penalties: 1-5
+  HOME (Carolina Panthers):
+    Total Yards: 358 | Yards/Play: 5.8 | Possession: 35:16
+    Passing: 194yds (15/20) | Rushing: 164yds (4.1 avg) | 1st Downs: 17
+    3rd Down: 7-15 | 4th Down: 3-3 | Red Zone: 0-1
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 2 | Penalties: 7-70
+
+[REGULAR_WEEK_13] Minnesota Vikings @ Seattle Seahawks | 0-26 | Final
+  AWAY QB (Max Brosmer): 19/30 for 126yds, 0TD/4INT, 4.2 YPA, 32.8 RTG
+  HOME QB (Sam Darnold): 14/26 for 128yds, 0TD/0INT, 4.9 YPA, 67.5 RTG
+  AWAY (Minnesota Vikings):
+    Total Yards: 162 | Yards/Play: 3.2 | Possession: 25:39
+    Passing: 96yds (19/30) | Rushing: 66yds (4.1 avg) | 1st Downs: 11
+    3rd Down: 2-10 | 4th Down: 0-2 | Red Zone: 0-1
+    Turnovers: 5 (INT: 4, Fum: 1) | Sacks: 4 | Penalties: 10-80
+  HOME (Seattle Seahawks):
+    Total Yards: 219 | Yards/Play: 3.5 | Possession: 34:21
+    Passing: 94yds (14/26) | Rushing: 125yds (3.9 avg) | 1st Downs: 17
+    3rd Down: 6-15 | 4th Down: 1-1 | Red Zone: 1-2
+    Turnovers: 2 (INT: 0, Fum: 2) | Sacks: 4 | Penalties: 4-25
+
+[REGULAR_WEEK_13] Buffalo Bills @ Pittsburgh Steelers | 26-7 | Final
+  AWAY QB (Josh Allen): 15/23 for 123yds, 1TD/1INT, 5.3 YPA, 75.1 RTG
+  HOME QB (Aaron Rodgers): 10/21 for 117yds, 0TD/0INT, 5.6 YPA, 65.0 RTG
+  AWAY (Buffalo Bills):
+    Total Yards: 372 | Yards/Play: 5.0 | Possession: 41:59
+    Passing: 123yds (15/23) | Rushing: 249yds (4.9 avg) | 1st Downs: 26
+    3rd Down: 8-15 | 4th Down: 2-2 | Red Zone: 2-4
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 0 | Penalties: 7-45
+  HOME (Pittsburgh Steelers):
+    Total Yards: 166 | Yards/Play: 3.9 | Possession: 18:01
+    Passing: 108yds (10/24) | Rushing: 58yds (3.2 avg) | 1st Downs: 10
+    3rd Down: 3-9 | 4th Down: 0-1 | Red Zone: 1-2
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 1 | Penalties: 5-67
+
+[REGULAR_WEEK_13] Las Vegas Raiders @ Los Angeles Chargers | 14-31 | Final
+  AWAY QB (Geno Smith): 18/23 for 165yds, 2TD/1INT, 7.2 YPA, 107.4 RTG
+  HOME QB (Justin Herbert): 15/20 for 151yds, 2TD/1INT, 7.6 YPA, 108.5 RTG
+  AWAY (Las Vegas Raiders):
+    Total Yards: 156 | Yards/Play: 3.4 | Possession: 24:12
+    Passing: 125yds (18/23) | Rushing: 31yds (1.7 avg) | 1st Downs: 12
+    3rd Down: 2-8 | 4th Down: 0-2 | Red Zone: 2-2
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 5 | Penalties: 4-50
+  HOME (Los Angeles Chargers):
+    Total Yards: 341 | Yards/Play: 5.1 | Possession: 35:48
+    Passing: 149yds (16/21) | Rushing: 192yds (4.5 avg) | 1st Downs: 22
+    3rd Down: 12-17 | 4th Down: 0-1 | Red Zone: 3-5
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 3 | Penalties: 4-27
+
+[REGULAR_WEEK_13] Denver Broncos @ Washington Commanders | 27-26 | Final
+  AWAY QB (Bo Nix): 29/45 for 321yds, 1TD/1INT, 7.1 YPA, 83.7 RTG
+  HOME QB (Marcus Mariota): 28/50 for 294yds, 2TD/1INT, 5.9 YPA, 78.2 RTG
+  AWAY (Denver Broncos):
+    Total Yards: 402 | Yards/Play: 5.8 | Possession: 32:13
+    Passing: 315yds (29/45) | Rushing: 87yds (3.8 avg) | 1st Downs: 23
+    3rd Down: 7-15 | 4th Down: 1-1 | Red Zone: 3-5
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 1 | Penalties: 5-33
+  HOME (Washington Commanders):
+    Total Yards: 419 | Yards/Play: 4.9 | Possession: 35:00
+    Passing: 276yds (28/50) | Rushing: 143yds (4.3 avg) | 1st Downs: 30
+    3rd Down: 8-17 | 4th Down: 3-3 | Red Zone: 3-5
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 2 | Penalties: 5-35
+
+[REGULAR_WEEK_13] New York Giants @ New England Patriots | 15-33 | Final
+  AWAY QB (Jaxson Dart): 17/24 for 139yds, 1TD/0INT, 5.8 YPA, 99.1 RTG
+  HOME QB (Drake Maye): 24/31 for 282yds, 2TD/0INT, 9.1 YPA, 126.0 RTG
+  AWAY (New York Giants):
+    Total Yards: 239 | Yards/Play: 4.5 | Possession: 26:34
+    Passing: 128yds (17/24) | Rushing: 111yds (4.1 avg) | 1st Downs: 14
+    3rd Down: 4-11 | 4th Down: 0-3 | Red Zone: 0-0
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 2 | Penalties: 4-30
+  HOME (New England Patriots):
+    Total Yards: 395 | Yards/Play: 6.3 | Possession: 33:26
+    Passing: 276yds (24/31) | Rushing: 119yds (4.1 avg) | 1st Downs: 21
+    3rd Down: 6-13 | 4th Down: 1-1 | Red Zone: 1-5
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 3 | Penalties: 3-30
+
+
+====================================================================================================
+REGULAR_WEEK_14
+====================================================================================================
+
+[REGULAR_WEEK_14] Dallas Cowboys @ Detroit Lions | 30-44 | Final
+  AWAY QB (Dak Prescott): 31/47 for 376yds, 1TD/2INT, 8.0 YPA, 79.7 RTG
+  HOME QB (Jared Goff): 25/34 for 309yds, 1TD/0INT, 9.1 YPA, 111.0 RTG
+  AWAY (Dallas Cowboys):
+    Total Yards: 417 | Yards/Play: 5.5 | Possession: 31:23
+    Passing: 326yds (31/47) | Rushing: 91yds (3.8 avg) | 1st Downs: 25
+    3rd Down: 6-15 | 4th Down: 2-2 | Red Zone: 1-3
+    Turnovers: 3 (INT: 2, Fum: 1) | Sacks: 5 | Penalties: 7-76
+  HOME (Detroit Lions):
+    Total Yards: 408 | Yards/Play: 7.2 | Possession: 28:37
+    Passing: 299yds (25/34) | Rushing: 109yds (5.0 avg) | 1st Downs: 20
+    3rd Down: 3-8 | 4th Down: 0-0 | Red Zone: 4-5
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 8-50
+
+[REGULAR_WEEK_14] Seattle Seahawks @ Atlanta Falcons | 37-9 | Final
+  AWAY QB (Sam Darnold): 20/30 for 249yds, 3TD/1INT, 8.3 YPA, 111.7 RTG
+  HOME QB (Kirk Cousins): 15/30 for 162yds, 0TD/2INT, 5.4 YPA, 38.5 RTG
+  AWAY (Seattle Seahawks):
+    Total Yards: 365 | Yards/Play: 6.3 | Possession: 31:20
+    Passing: 236yds (20/30) | Rushing: 129yds (5.0 avg) | 1st Downs: 20
+    3rd Down: 6-13 | 4th Down: 0-0 | Red Zone: 2-4
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 2 | Penalties: 6-60
+  HOME (Atlanta Falcons):
+    Total Yards: 274 | Yards/Play: 4.4 | Possession: 28:40
+    Passing: 154yds (15/30) | Rushing: 120yds (3.9 avg) | 1st Downs: 15
+    3rd Down: 1-13 | 4th Down: 1-2 | Red Zone: 0-4
+    Turnovers: 3 (INT: 2, Fum: 1) | Sacks: 1 | Penalties: 8-56
+
+[REGULAR_WEEK_14] Cincinnati Bengals @ Buffalo Bills | 34-39 | Final
+  AWAY QB (Joe Burrow): 25/36 for 284yds, 4TD/2INT, 7.9 YPA, 106.7 RTG
+  HOME QB (Josh Allen): 22/28 for 251yds, 3TD/0INT, 9.0 YPA, 139.7 RTG
+  AWAY (Cincinnati Bengals):
+    Total Yards: 338 | Yards/Play: 6.0 | Possession: 28:12
+    Passing: 276yds (25/36) | Rushing: 62yds (3.3 avg) | 1st Downs: 25
+    3rd Down: 10-12 | 4th Down: 0-0 | Red Zone: 3-3
+    Turnovers: 2 (INT: 2, Fum: 0) | Sacks: 1 | Penalties: 4-30
+  HOME (Buffalo Bills):
+    Total Yards: 416 | Yards/Play: 6.9 | Possession: 31:48
+    Passing: 233yds (22/28) | Rushing: 183yds (6.3 avg) | 1st Downs: 22
+    3rd Down: 6-11 | 4th Down: 3-4 | Red Zone: 3-5
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 3 | Penalties: 6-68
+
+[REGULAR_WEEK_14] Tennessee Titans @ Cleveland Browns | 31-29 | Final
+  AWAY QB (Cam Ward): 14/28 for 117yds, 2TD/1INT, 4.2 YPA, 70.1 RTG
+  HOME QB (Shedeur Sanders): 23/42 for 364yds, 3TD/1INT, 8.7 YPA, 97.7 RTG
+  AWAY (Tennessee Titans):
+    Total Yards: 292 | Yards/Play: 4.6 | Possession: 31:56
+    Passing: 108yds (14/28) | Rushing: 184yds (5.3 avg) | 1st Downs: 13
+    3rd Down: 6-17 | 4th Down: 0-0 | Red Zone: 2-2
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 1 | Penalties: 11-85
+  HOME (Cleveland Browns):
+    Total Yards: 412 | Yards/Play: 6.4 | Possession: 28:04
+    Passing: 351yds (23/42) | Rushing: 61yds (3.1 avg) | 1st Downs: 22
+    3rd Down: 6-14 | 4th Down: 0-0 | Red Zone: 3-3
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 2 | Penalties: 7-50
+
+[REGULAR_WEEK_14] Washington Commanders @ Minnesota Vikings | 0-31 | Final
+  AWAY QB (Jayden Daniels): 9/20 for 78yds, 0TD/1INT, 3.9 YPA, 35.0 RTG
+  HOME QB (J.J. McCarthy): 16/23 for 163yds, 3TD/0INT, 7.1 YPA, 129.2 RTG
+  AWAY (Washington Commanders):
+    Total Yards: 206 | Yards/Play: 4.2 | Possession: 25:08
+    Passing: 99yds (11/24) | Rushing: 107yds (4.7 avg) | 1st Downs: 12
+    3rd Down: 3-10 | 4th Down: 1-3 | Red Zone: 0-2
+    Turnovers: 3 (INT: 2, Fum: 1) | Sacks: 2 | Penalties: 4-34
+  HOME (Minnesota Vikings):
+    Total Yards: 313 | Yards/Play: 5.1 | Possession: 34:52
+    Passing: 151yds (16/23) | Rushing: 162yds (4.8 avg) | 1st Downs: 25
+    3rd Down: 6-11 | 4th Down: 2-2 | Red Zone: 4-4
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 4 | Penalties: 3-24
+
+[REGULAR_WEEK_14] Miami Dolphins @ New York Jets | 34-10 | Final
+  AWAY QB (Tua Tagovailoa): 13/21 for 127yds, 1TD/0INT, 6.0 YPA, 94.7 RTG
+  HOME QB (Brady Cook): 14/30 for 163yds, 0TD/2INT, 5.4 YPA, 35.8 RTG
+  AWAY (Miami Dolphins):
+    Total Yards: 358 | Yards/Play: 5.7 | Possession: 36:07
+    Passing: 119yds (13/21) | Rushing: 239yds (5.8 avg) | 1st Downs: 23
+    3rd Down: 2-10 | 4th Down: 0-0 | Red Zone: 4-4
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 5-54
+  HOME (New York Jets):
+    Total Yards: 207 | Yards/Play: 3.6 | Possession: 23:53
+    Passing: 142yds (15/34) | Rushing: 65yds (3.8 avg) | 1st Downs: 12
+    3rd Down: 1-12 | 4th Down: 1-2 | Red Zone: 0-3
+    Turnovers: 3 (INT: 3, Fum: 0) | Sacks: 6 | Penalties: 6-50
+
+[REGULAR_WEEK_14] New Orleans Saints @ Tampa Bay Buccaneers | 24-20 | Final
+  AWAY QB (Tyler Shough): 13/20 for 144yds, 0TD/1INT, 7.2 YPA, 65.4 RTG
+  HOME QB (Baker Mayfield): 14/30 for 122yds, 1TD/1INT, 4.1 YPA, 55.1 RTG
+  AWAY (New Orleans Saints):
+    Total Yards: 260 | Yards/Play: 4.7 | Possession: 27:48
+    Passing: 121yds (13/20) | Rushing: 139yds (4.3 avg) | 1st Downs: 16
+    3rd Down: 5-11 | 4th Down: 0-1 | Red Zone: 2-3
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 3 | Penalties: 10-82
+  HOME (Tampa Bay Buccaneers):
+    Total Yards: 301 | Yards/Play: 4.4 | Possession: 32:12
+    Passing: 122yds (14/30) | Rushing: 179yds (4.6 avg) | 1st Downs: 19
+    3rd Down: 3-13 | 4th Down: 2-7 | Red Zone: 1-2
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 0 | Penalties: 7-49
+
+[REGULAR_WEEK_14] Indianapolis Colts @ Jacksonville Jaguars | 19-36 | Final
+  AWAY QB (Riley Leonard): 18/29 for 145yds, 0TD/1INT, 5.0 YPA, 60.3 RTG
+  HOME QB (Trevor Lawrence): 17/30 for 244yds, 2TD/0INT, 8.1 YPA, 105.4 RTG
+  AWAY (Indianapolis Colts):
+    Total Yards: 285 | Yards/Play: 4.5 | Possession: 29:55
+    Passing: 196yds (23/36) | Rushing: 89yds (3.4 avg) | 1st Downs: 20
+    3rd Down: 6-11 | 4th Down: 0-1 | Red Zone: 2-4
+    Turnovers: 3 (INT: 2, Fum: 1) | Sacks: 1 | Penalties: 5-45
+  HOME (Jacksonville Jaguars):
+    Total Yards: 350 | Yards/Play: 5.6 | Possession: 30:05
+    Passing: 247yds (18/31) | Rushing: 103yds (3.2 avg) | 1st Downs: 18
+    3rd Down: 7-15 | 4th Down: 1-2 | Red Zone: 3-5
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 0 | Penalties: 8-64
+
+[REGULAR_WEEK_14] Pittsburgh Steelers @ Baltimore Ravens | 27-22 | Final
+  AWAY QB (Aaron Rodgers): 23/34 for 284yds, 1TD/0INT, 8.4 YPA, 103.1 RTG
+  HOME QB (Lamar Jackson): 19/35 for 219yds, 1TD/1INT, 6.3 YPA, 71.0 RTG
+  AWAY (Pittsburgh Steelers):
+    Total Yards: 318 | Yards/Play: 6.2 | Possession: 26:16
+    Passing: 284yds (23/34) | Rushing: 34yds (2.0 avg) | 1st Downs: 13
+    3rd Down: 6-14 | 4th Down: 1-1 | Red Zone: 2-4
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 0 | Penalties: 7-33
+  HOME (Baltimore Ravens):
+    Total Yards: 420 | Yards/Play: 5.5 | Possession: 33:44
+    Passing: 203yds (19/35) | Rushing: 217yds (5.4 avg) | 1st Downs: 22
+    3rd Down: 7-18 | 4th Down: 3-4 | Red Zone: 2-6
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 2 | Penalties: 5-39
+
+[REGULAR_WEEK_14] Denver Broncos @ Las Vegas Raiders | 24-17 | Final
+  AWAY QB (Bo Nix): 31/38 for 212yds, 0TD/0INT, 5.6 YPA, 89.9 RTG
+  HOME QB (Geno Smith): 13/21 for 116yds, 1TD/0INT, 5.5 YPA, 92.6 RTG
+  AWAY (Denver Broncos):
+    Total Yards: 356 | Yards/Play: 4.9 | Possession: 39:03
+    Passing: 204yds (31/38) | Rushing: 152yds (4.9 avg) | 1st Downs: 27
+    3rd Down: 7-12 | 4th Down: 1-3 | Red Zone: 2-3
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 3 | Penalties: 8-50
+  HOME (Las Vegas Raiders):
+    Total Yards: 229 | Yards/Play: 4.8 | Possession: 20:57
+    Passing: 189yds (21/32) | Rushing: 40yds (3.3 avg) | 1st Downs: 16
+    3rd Down: 3-9 | 4th Down: 1-3 | Red Zone: 1-2
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 4 | Penalties: 3-25
+
+[REGULAR_WEEK_14] Chicago Bears @ Green Bay Packers | 21-28 | Final
+  AWAY QB (Caleb Williams): 19/35 for 186yds, 2TD/1INT, 5.3 YPA, 76.6 RTG
+  HOME QB (Jordan Love): 17/25 for 234yds, 3TD/1INT, 9.4 YPA, 120.7 RTG
+  AWAY (Chicago Bears):
+    Total Yards: 315 | Yards/Play: 4.6 | Possession: 33:29
+    Passing: 177yds (19/35) | Rushing: 138yds (4.3 avg) | 1st Downs: 21
+    3rd Down: 8-16 | 4th Down: 1-2 | Red Zone: 2-4
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 1 | Penalties: 4-17
+  HOME (Green Bay Packers):
+    Total Yards: 337 | Yards/Play: 6.5 | Possession: 26:31
+    Passing: 220yds (17/25) | Rushing: 117yds (4.5 avg) | 1st Downs: 17
+    3rd Down: 8-12 | 4th Down: 0-0 | Red Zone: 1-1
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 1 | Penalties: 6-55
+
+[REGULAR_WEEK_14] Los Angeles Rams @ Arizona Cardinals | 45-17 | Final
+  AWAY QB (Matthew Stafford): 22/31 for 281yds, 3TD/0INT, 9.1 YPA, 131.2 RTG
+  HOME QB (Jacoby Brissett): 25/44 for 271yds, 2TD/1INT, 6.2 YPA, 80.8 RTG
+  AWAY (Los Angeles Rams):
+    Total Yards: 530 | Yards/Play: 7.9 | Possession: 35:04
+    Passing: 281yds (22/31) | Rushing: 249yds (6.9 avg) | 1st Downs: 30
+    3rd Down: 3-8 | 4th Down: 0-0 | Red Zone: 3-4
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 0 | Penalties: 5-30
+  HOME (Arizona Cardinals):
+    Total Yards: 314 | Yards/Play: 5.1 | Possession: 24:56
+    Passing: 263yds (25/44) | Rushing: 51yds (3.6 avg) | 1st Downs: 17
+    3rd Down: 4-12 | 4th Down: 0-1 | Red Zone: 2-4
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 3 | Penalties: 7-42
+
+[REGULAR_WEEK_14] Houston Texans @ Kansas City Chiefs | 20-10 | Final
+  AWAY QB (C.J. Stroud): 15/31 for 203yds, 1TD/0INT, 6.5 YPA, 80.4 RTG
+  HOME QB (Patrick Mahomes): 14/33 for 160yds, 0TD/3INT, 4.8 YPA, 19.8 RTG
+  AWAY (Houston Texans):
+    Total Yards: 268 | Yards/Play: 4.1 | Possession: 31:58
+    Passing: 186yds (15/31) | Rushing: 82yds (2.6 avg) | 1st Downs: 14
+    3rd Down: 8-18 | 4th Down: 0-0 | Red Zone: 2-4
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 3 | Penalties: 8-59
+  HOME (Kansas City Chiefs):
+    Total Yards: 274 | Yards/Play: 4.3 | Possession: 28:02
+    Passing: 148yds (14/33) | Rushing: 126yds (4.3 avg) | 1st Downs: 15
+    3rd Down: 4-14 | 4th Down: 1-3 | Red Zone: 1-2
+    Turnovers: 3 (INT: 3, Fum: 0) | Sacks: 2 | Penalties: 5-20
+
+[REGULAR_WEEK_14] Philadelphia Eagles @ Los Angeles Chargers | 19-22 | Final
+  AWAY QB (Jalen Hurts): 21/40 for 240yds, 0TD/4INT, 6.0 YPA, 31.2 RTG
+  HOME QB (Justin Herbert): 12/26 for 139yds, 1TD/1INT, 5.3 YPA, 59.6 RTG
+  AWAY (Philadelphia Eagles):
+    Total Yards: 365 | Yards/Play: 5.5 | Possession: 29:26
+    Passing: 231yds (21/40) | Rushing: 134yds (5.4 avg) | 1st Downs: 19
+    3rd Down: 4-13 | 4th Down: 0-0 | Red Zone: 0-2
+    Turnovers: 5 (INT: 4, Fum: 1) | Sacks: 1 | Penalties: 6-53
+  HOME (Los Angeles Chargers):
+    Total Yards: 275 | Yards/Play: 3.9 | Possession: 38:05
+    Passing: 106yds (12/26) | Rushing: 169yds (4.4 avg) | 1st Downs: 16
+    3rd Down: 7-19 | 4th Down: 0-0 | Red Zone: 1-3
+    Turnovers: 3 (INT: 1, Fum: 2) | Sacks: 7 | Penalties: 7-55
+
+
+====================================================================================================
+REGULAR_WEEK_15
+====================================================================================================
+
+[REGULAR_WEEK_15] Atlanta Falcons @ Tampa Bay Buccaneers | 29-28 | Final
+  AWAY QB (Kirk Cousins): 30/44 for 373yds, 3TD/0INT, 8.5 YPA, 117.0 RTG
+  HOME QB (Baker Mayfield): 19/34 for 277yds, 2TD/1INT, 8.1 YPA, 90.0 RTG
+  AWAY (Atlanta Falcons):
+    Total Yards: 476 | Yards/Play: 7.2 | Possession: 31:51
+    Passing: 365yds (30/44) | Rushing: 111yds (5.3 avg) | 1st Downs: 27
+    3rd Down: 5-11 | 4th Down: 1-1 | Red Zone: 4-4
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 1 | Penalties: 19-125
+  HOME (Tampa Bay Buccaneers):
+    Total Yards: 338 | Yards/Play: 5.5 | Possession: 28:09
+    Passing: 250yds (19/34) | Rushing: 88yds (4.0 avg) | 1st Downs: 28
+    3rd Down: 4-9 | 4th Down: 0-0 | Red Zone: 3-3
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 5 | Penalties: 4-25
+
+[REGULAR_WEEK_15] Cleveland Browns @ Chicago Bears | 3-31 | Final
+  AWAY QB (Shedeur Sanders): 18/35 for 177yds, 0TD/3INT, 5.1 YPA, 30.3 RTG
+  HOME QB (Caleb Williams): 17/28 for 242yds, 2TD/0INT, 8.6 YPA, 112.5 RTG
+  AWAY (Cleveland Browns):
+    Total Yards: 192 | Yards/Play: 3.4 | Possession: 27:08
+    Passing: 142yds (18/35) | Rushing: 50yds (3.1 avg) | 1st Downs: 9
+    3rd Down: 4-14 | 4th Down: 0-1 | Red Zone: 0-1
+    Turnovers: 3 (INT: 3, Fum: 0) | Sacks: 5 | Penalties: 6-21
+  HOME (Chicago Bears):
+    Total Yards: 361 | Yards/Play: 5.6 | Possession: 32:52
+    Passing: 219yds (17/28) | Rushing: 142yds (4.3 avg) | 1st Downs: 21
+    3rd Down: 5-13 | 4th Down: 1-2 | Red Zone: 3-4
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 3 | Penalties: 4-25
+
+[REGULAR_WEEK_15] Baltimore Ravens @ Cincinnati Bengals | 24-0 | Final
+  AWAY QB (Lamar Jackson): 8/12 for 150yds, 2TD/1INT, 12.5 YPA, 114.6 RTG
+  HOME QB (Joe Burrow): 25/39 for 225yds, 0TD/2INT, 5.8 YPA, 58.2 RTG
+  AWAY (Baltimore Ravens):
+    Total Yards: 317 | Yards/Play: 7.9 | Possession: 20:41
+    Passing: 128yds (8/12) | Rushing: 189yds (7.9 avg) | 1st Downs: 15
+    3rd Down: 2-7 | 4th Down: 0-0 | Red Zone: 0-1
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 4 | Penalties: 2-10
+  HOME (Cincinnati Bengals):
+    Total Yards: 298 | Yards/Play: 4.2 | Possession: 39:19
+    Passing: 198yds (25/39) | Rushing: 100yds (3.4 avg) | 1st Downs: 18
+    3rd Down: 3-15 | 4th Down: 3-5 | Red Zone: 0-1
+    Turnovers: 2 (INT: 2, Fum: 0) | Sacks: 3 | Penalties: 4-30
+
+[REGULAR_WEEK_15] Los Angeles Chargers @ Kansas City Chiefs | 16-13 | Final
+  AWAY QB (Justin Herbert): 19/29 for 210yds, 1TD/1INT, 7.2 YPA, 84.0 RTG
+  HOME QB (Patrick Mahomes): 16/28 for 189yds, 0TD/1INT, 6.8 YPA, 62.9 RTG
+  AWAY (Los Angeles Chargers):
+    Total Yards: 295 | Yards/Play: 4.8 | Possession: 34:42
+    Passing: 201yds (19/29) | Rushing: 94yds (3.2 avg) | 1st Downs: 18
+    3rd Down: 5-14 | 4th Down: 0-0 | Red Zone: 1-2
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 4 | Penalties: 5-50
+  HOME (Kansas City Chiefs):
+    Total Yards: 239 | Yards/Play: 4.1 | Possession: 25:18
+    Passing: 190yds (19/33) | Rushing: 49yds (2.3 avg) | 1st Downs: 17
+    3rd Down: 6-13 | 4th Down: 0-0 | Red Zone: 1-3
+    Turnovers: 2 (INT: 2, Fum: 0) | Sacks: 5 | Penalties: 9-64
+
+[REGULAR_WEEK_15] Buffalo Bills @ New England Patriots | 35-31 | Final
+  AWAY QB (Josh Allen): 19/28 for 193yds, 3TD/0INT, 6.9 YPA, 123.1 RTG
+  HOME QB (Drake Maye): 14/23 for 155yds, 0TD/1INT, 6.7 YPA, 62.8 RTG
+  AWAY (Buffalo Bills):
+    Total Yards: 349 | Yards/Play: 5.2 | Possession: 35:21
+    Passing: 181yds (19/28) | Rushing: 168yds (4.5 avg) | 1st Downs: 22
+    3rd Down: 8-14 | 4th Down: 1-1 | Red Zone: 5-6
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 2 | Penalties: 2-15
+  HOME (New England Patriots):
+    Total Yards: 385 | Yards/Play: 7.5 | Possession: 24:39
+    Passing: 139yds (14/23) | Rushing: 246yds (9.8 avg) | 1st Downs: 19
+    3rd Down: 5-10 | 4th Down: 0-1 | Red Zone: 2-3
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 3 | Penalties: 7-65
+
+[REGULAR_WEEK_15] Washington Commanders @ New York Giants | 29-21 | Final
+  AWAY QB (Marcus Mariota): 10/19 for 211yds, 1TD/0INT, 11.1 YPA, 109.8 RTG
+  HOME QB (Jaxson Dart): 20/36 for 246yds, 2TD/1INT, 6.8 YPA, 83.8 RTG
+  AWAY (Washington Commanders):
+    Total Yards: 340 | Yards/Play: 5.9 | Possession: 30:48
+    Passing: 195yds (10/19) | Rushing: 145yds (3.9 avg) | 1st Downs: 19
+    3rd Down: 3-11 | 4th Down: 0-0 | Red Zone: 1-1
+    Turnovers: 2 (INT: 0, Fum: 2) | Sacks: 2 | Penalties: 11-67
+  HOME (New York Giants):
+    Total Yards: 384 | Yards/Play: 5.7 | Possession: 29:12
+    Passing: 238yds (20/37) | Rushing: 146yds (5.0 avg) | 1st Downs: 22
+    3rd Down: 2-12 | 4th Down: 2-4 | Red Zone: 3-4
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 1 | Penalties: 6-62
+
+[REGULAR_WEEK_15] Las Vegas Raiders @ Philadelphia Eagles | 0-31 | Final
+  AWAY QB (Kenny Pickett): 15/25 for 64yds, 0TD/1INT, 2.6 YPA, 47.9 RTG
+  HOME QB (Jalen Hurts): 12/15 for 175yds, 3TD/0INT, 11.7 YPA, 154.9 RTG
+  AWAY (Las Vegas Raiders):
+    Total Yards: 75 | Yards/Play: 1.8 | Possession: 20:35
+    Passing: 29yds (15/25) | Rushing: 46yds (3.5 avg) | 1st Downs: 7
+    3rd Down: 3-12 | 4th Down: 0-1 | Red Zone: 0-0
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 4 | Penalties: 3-39
+  HOME (Philadelphia Eagles):
+    Total Yards: 387 | Yards/Play: 5.9 | Possession: 39:25
+    Passing: 204yds (15/18) | Rushing: 183yds (3.9 avg) | 1st Downs: 27
+    3rd Down: 10-13 | 4th Down: 0-1 | Red Zone: 3-5
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 3-35
+
+[REGULAR_WEEK_15] New York Jets @ Jacksonville Jaguars | 20-48 | Final
+  AWAY QB (Brady Cook): 22/33 for 176yds, 1TD/3INT, 5.3 YPA, 52.1 RTG
+  HOME QB (Trevor Lawrence): 20/32 for 330yds, 5TD/0INT, 10.3 YPA, 136.7 RTG
+  AWAY (New York Jets):
+    Total Yards: 284 | Yards/Play: 4.2 | Possession: 33:07
+    Passing: 154yds (22/33) | Rushing: 130yds (4.1 avg) | 1st Downs: 19
+    3rd Down: 8-15 | 4th Down: 1-3 | Red Zone: 1-2
+    Turnovers: 3 (INT: 3, Fum: 0) | Sacks: 3 | Penalties: 6-44
+  HOME (Jacksonville Jaguars):
+    Total Yards: 438 | Yards/Play: 7.4 | Possession: 26:53
+    Passing: 330yds (20/32) | Rushing: 108yds (4.0 avg) | 1st Downs: 24
+    3rd Down: 4-9 | 4th Down: 0-0 | Red Zone: 4-6
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 0 | Penalties: 5-60
+
+[REGULAR_WEEK_15] Arizona Cardinals @ Houston Texans | 20-40 | Final
+  AWAY QB (Jacoby Brissett): 27/40 for 249yds, 3TD/1INT, 6.2 YPA, 98.9 RTG
+  HOME QB (C.J. Stroud): 22/29 for 260yds, 3TD/0INT, 9.0 YPA, 137.1 RTG
+  AWAY (Arizona Cardinals):
+    Total Yards: 307 | Yards/Play: 4.9 | Possession: 27:42
+    Passing: 235yds (27/40) | Rushing: 72yds (3.4 avg) | 1st Downs: 22
+    3rd Down: 5-12 | 4th Down: 1-3 | Red Zone: 2-3
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 2 | Penalties: 2-34
+  HOME (Houston Texans):
+    Total Yards: 399 | Yards/Play: 6.3 | Possession: 32:18
+    Passing: 256yds (22/29) | Rushing: 143yds (4.3 avg) | 1st Downs: 23
+    3rd Down: 7-13 | 4th Down: 0-0 | Red Zone: 3-6
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 5-40
+
+[REGULAR_WEEK_15] Green Bay Packers @ Denver Broncos | 26-34 | Final
+  AWAY QB (Jordan Love): 24/40 for 276yds, 1TD/2INT, 6.9 YPA, 68.3 RTG
+  HOME QB (Bo Nix): 23/34 for 302yds, 4TD/0INT, 8.9 YPA, 134.7 RTG
+  AWAY (Green Bay Packers):
+    Total Yards: 362 | Yards/Play: 5.7 | Possession: 29:28
+    Passing: 247yds (24/40) | Rushing: 115yds (5.8 avg) | 1st Downs: 19
+    3rd Down: 6-13 | 4th Down: 1-3 | Red Zone: 1-4
+    Turnovers: 2 (INT: 2, Fum: 0) | Sacks: 3 | Penalties: 10-72
+  HOME (Denver Broncos):
+    Total Yards: 391 | Yards/Play: 6.0 | Possession: 30:32
+    Passing: 302yds (23/34) | Rushing: 89yds (2.9 avg) | 1st Downs: 21
+    3rd Down: 4-11 | 4th Down: 2-4 | Red Zone: 4-4
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 0 | Penalties: 6-60
+
+[REGULAR_WEEK_15] Detroit Lions @ Los Angeles Rams | 34-41 | Final
+  AWAY QB (Jared Goff): 25/41 for 338yds, 3TD/0INT, 8.2 YPA, 111.6 RTG
+  HOME QB (Matthew Stafford): 24/38 for 368yds, 2TD/1INT, 9.7 YPA, 101.6 RTG
+  AWAY (Detroit Lions):
+    Total Yards: 396 | Yards/Play: 6.4 | Possession: 26:25
+    Passing: 326yds (25/41) | Rushing: 70yds (3.5 avg) | 1st Downs: 21
+    3rd Down: 5-14 | 4th Down: 2-2 | Red Zone: 3-4
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 4-25
+  HOME (Los Angeles Rams):
+    Total Yards: 519 | Yards/Play: 7.5 | Possession: 33:35
+    Passing: 360yds (24/38) | Rushing: 159yds (5.5 avg) | 1st Downs: 30
+    3rd Down: 2-9 | 4th Down: 3-3 | Red Zone: 4-6
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 2 | Penalties: 2-8
+
+[REGULAR_WEEK_15] Carolina Panthers @ New Orleans Saints | 17-20 | Final
+  AWAY QB (Bryce Young): 15/24 for 163yds, 1TD/0INT, 6.8 YPA, 96.4 RTG
+  HOME QB (Tyler Shough): 24/32 for 272yds, 1TD/0INT, 8.5 YPA, 110.4 RTG
+  AWAY (Carolina Panthers):
+    Total Yards: 281 | Yards/Play: 5.0 | Possession: 28:16
+    Passing: 154yds (15/24) | Rushing: 127yds (4.1 avg) | 1st Downs: 15
+    3rd Down: 7-14 | 4th Down: 2-3 | Red Zone: 1-1
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 1 | Penalties: 11-103
+  HOME (New Orleans Saints):
+    Total Yards: 337 | Yards/Play: 5.3 | Possession: 31:44
+    Passing: 256yds (24/33) | Rushing: 81yds (3.2 avg) | 1st Downs: 27
+    3rd Down: 6-11 | 4th Down: 1-2 | Red Zone: 2-3
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 5 | Penalties: 9-78
+
+[REGULAR_WEEK_15] Tennessee Titans @ San Francisco 49ers | 24-37 | Final
+  AWAY QB (Cam Ward): 18/29 for 170yds, 2TD/0INT, 5.9 YPA, 101.2 RTG
+  HOME QB (Brock Purdy): 23/30 for 295yds, 3TD/0INT, 9.8 YPA, 140.3 RTG
+  AWAY (Tennessee Titans):
+    Total Yards: 306 | Yards/Play: 6.2 | Possession: 22:55
+    Passing: 170yds (18/29) | Rushing: 136yds (6.8 avg) | 1st Downs: 18
+    3rd Down: 3-9 | 4th Down: 2-2 | Red Zone: 2-3
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 0 | Penalties: 7-57
+  HOME (San Francisco 49ers):
+    Total Yards: 430 | Yards/Play: 6.1 | Possession: 37:05
+    Passing: 292yds (23/30) | Rushing: 138yds (3.6 avg) | 1st Downs: 28
+    3rd Down: 9-15 | 4th Down: 1-1 | Red Zone: 4-6
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 2 | Penalties: 6-30
+
+[REGULAR_WEEK_15] Indianapolis Colts @ Seattle Seahawks | 16-18 | Final
+  AWAY QB (Philip Rivers): 18/27 for 120yds, 1TD/1INT, 4.4 YPA, 73.1 RTG
+  HOME QB (Sam Darnold): 22/36 for 271yds, 0TD/0INT, 7.5 YPA, 84.4 RTG
+  AWAY (Indianapolis Colts):
+    Total Yards: 220 | Yards/Play: 3.8 | Possession: 31:05
+    Passing: 118yds (18/27) | Rushing: 102yds (3.2 avg) | 1st Downs: 14
+    3rd Down: 5-13 | 4th Down: 0-0 | Red Zone: 1-1
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 1 | Penalties: 3-14
+  HOME (Seattle Seahawks):
+    Total Yards: 314 | Yards/Play: 5.3 | Possession: 28:55
+    Passing: 264yds (22/36) | Rushing: 50yds (2.3 avg) | 1st Downs: 15
+    3rd Down: 2-13 | 4th Down: 1-1 | Red Zone: 0-2
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 5-34
+
+[REGULAR_WEEK_15] Miami Dolphins @ Pittsburgh Steelers | 15-28 | Final
+  AWAY QB (Tua Tagovailoa): 22/28 for 253yds, 2TD/1INT, 9.0 YPA, 113.2 RTG
+  HOME QB (Aaron Rodgers): 23/27 for 224yds, 2TD/0INT, 8.3 YPA, 125.9 RTG
+  AWAY (Miami Dolphins):
+    Total Yards: 285 | Yards/Play: 5.9 | Possession: 26:27
+    Passing: 222yds (22/28) | Rushing: 63yds (3.9 avg) | 1st Downs: 16
+    3rd Down: 2-8 | 4th Down: 1-1 | Red Zone: 2-2
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 4 | Penalties: 6-31
+  HOME (Pittsburgh Steelers):
+    Total Yards: 336 | Yards/Play: 5.4 | Possession: 33:33
+    Passing: 201yds (23/27) | Rushing: 135yds (4.2 avg) | 1st Downs: 22
+    3rd Down: 4-13 | 4th Down: 3-3 | Red Zone: 3-3
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 3 | Penalties: 4-25
+
+
+====================================================================================================
+REGULAR_WEEK_16
+====================================================================================================
+
+[REGULAR_WEEK_16] Los Angeles Rams @ Seattle Seahawks | 37-38 | Final
+  AWAY QB (Matthew Stafford): 29/49 for 457yds, 3TD/0INT, 9.3 YPA, 110.7 RTG
+  HOME QB (Sam Darnold): 22/34 for 270yds, 2TD/2INT, 7.9 YPA, 84.2 RTG
+  AWAY (Los Angeles Rams):
+    Total Yards: 581 | Yards/Play: 6.6 | Possession: 40:33
+    Passing: 457yds (29/49) | Rushing: 124yds (3.2 avg) | 1st Downs: 26
+    3rd Down: 8-20 | 4th Down: 2-3 | Red Zone: 3-6
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 0 | Penalties: 8-54
+  HOME (Seattle Seahawks):
+    Total Yards: 415 | Yards/Play: 6.6 | Possession: 26:14
+    Passing: 244yds (22/34) | Rushing: 171yds (6.8 avg) | 1st Downs: 22
+    3rd Down: 4-11 | 4th Down: 0-0 | Red Zone: 2-3
+    Turnovers: 3 (INT: 2, Fum: 1) | Sacks: 4 | Penalties: 5-40
+
+[REGULAR_WEEK_16] Philadelphia Eagles @ Washington Commanders | 29-18 | Final
+  AWAY QB (Jalen Hurts): 22/30 for 185yds, 2TD/0INT, 6.2 YPA, 111.1 RTG
+  HOME QB (Marcus Mariota): 7/14 for 95yds, 0TD/0INT, 6.8 YPA, 72.0 RTG
+  AWAY (Philadelphia Eagles):
+    Total Yards: 385 | Yards/Play: 5.8 | Possession: 34:07
+    Passing: 178yds (22/30) | Rushing: 207yds (6.1 avg) | 1st Downs: 26
+    3rd Down: 4-9 | 4th Down: 0-0 | Red Zone: 3-3
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 2 | Penalties: 5-61
+  HOME (Washington Commanders):
+    Total Yards: 220 | Yards/Play: 4.3 | Possession: 25:53
+    Passing: 130yds (12/23) | Rushing: 90yds (3.5 avg) | 1st Downs: 15
+    3rd Down: 2-10 | 4th Down: 1-1 | Red Zone: 2-3
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 2 | Penalties: 5-44
+
+[REGULAR_WEEK_16] Green Bay Packers @ Chicago Bears | 16-22 | Final
+  AWAY QB (Malik Willis): 9/11 for 121yds, 1TD/0INT, 11.0 YPA, 142.8 RTG
+  HOME QB (Caleb Williams): 19/34 for 250yds, 2TD/0INT, 7.4 YPA, 98.9 RTG
+  AWAY (Green Bay Packers):
+    Total Yards: 384 | Yards/Play: 5.5 | Possession: 38:57
+    Passing: 192yds (17/24) | Rushing: 192yds (4.4 avg) | 1st Downs: 24
+    3rd Down: 6-12 | 4th Down: 1-3 | Red Zone: 0-5
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 2 | Penalties: 4-40
+  HOME (Chicago Bears):
+    Total Yards: 400 | Yards/Play: 6.7 | Possession: 26:13
+    Passing: 250yds (19/34) | Rushing: 150yds (5.8 avg) | 1st Downs: 20
+    3rd Down: 2-11 | 4th Down: 2-3 | Red Zone: 1-2
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 0 | Penalties: 10-105
+
+[REGULAR_WEEK_16] Buffalo Bills @ Cleveland Browns | 23-20 | Final
+  AWAY QB (Josh Allen): 12/19 for 130yds, 0TD/0INT, 6.8 YPA, 83.2 RTG
+  HOME QB (Shedeur Sanders): 20/29 for 157yds, 1TD/2INT, 5.4 YPA, 64.9 RTG
+  AWAY (Buffalo Bills):
+    Total Yards: 259 | Yards/Play: 5.2 | Possession: 24:37
+    Passing: 95yds (12/19) | Rushing: 164yds (5.7 avg) | 1st Downs: 16
+    3rd Down: 2-8 | 4th Down: 0-2 | Red Zone: 2-3
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 2 | Penalties: 5-35
+  HOME (Cleveland Browns):
+    Total Yards: 294 | Yards/Play: 4.6 | Possession: 35:23
+    Passing: 134yds (20/30) | Rushing: 160yds (5.2 avg) | 1st Downs: 22
+    3rd Down: 8-14 | 4th Down: 0-1 | Red Zone: 2-4
+    Turnovers: 2 (INT: 2, Fum: 0) | Sacks: 3 | Penalties: 5-44
+
+[REGULAR_WEEK_16] Los Angeles Chargers @ Dallas Cowboys | 34-17 | Final
+  AWAY QB (Justin Herbert): 23/29 for 300yds, 2TD/0INT, 10.3 YPA, 132.8 RTG
+  HOME QB (Dak Prescott): 21/30 for 244yds, 2TD/0INT, 8.1 YPA, 116.5 RTG
+  AWAY (Los Angeles Chargers):
+    Total Yards: 452 | Yards/Play: 7.3 | Possession: 34:27
+    Passing: 300yds (23/29) | Rushing: 152yds (4.6 avg) | 1st Downs: 24
+    3rd Down: 7-11 | 4th Down: 0-1 | Red Zone: 2-4
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 0 | Penalties: 4-34
+  HOME (Dallas Cowboys):
+    Total Yards: 340 | Yards/Play: 6.1 | Possession: 25:33
+    Passing: 249yds (23/32) | Rushing: 91yds (4.0 avg) | 1st Downs: 18
+    3rd Down: 4-9 | 4th Down: 1-3 | Red Zone: 1-3
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 1 | Penalties: 5-40
+
+[REGULAR_WEEK_16] Kansas City Chiefs @ Tennessee Titans | 9-26 | Final
+  AWAY QB (Chris Oladokun): 11/16 for 111yds, 0TD/0INT, 6.9 YPA, 88.3 RTG
+  HOME QB (Cam Ward): 21/28 for 228yds, 2TD/0INT, 8.1 YPA, 122.3 RTG
+  AWAY (Kansas City Chiefs):
+    Total Yards: 133 | Yards/Play: 3.1 | Possession: 21:59
+    Passing: 82yds (14/24) | Rushing: 51yds (3.4 avg) | 1st Downs: 9
+    3rd Down: 1-9 | 4th Down: 0-0 | Red Zone: 0-1
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 4 | Penalties: 10-59
+  HOME (Tennessee Titans):
+    Total Yards: 376 | Yards/Play: 5.4 | Possession: 38:01
+    Passing: 212yds (21/28) | Rushing: 164yds (4.1 avg) | 1st Downs: 22
+    3rd Down: 9-17 | 4th Down: 0-2 | Red Zone: 3-4
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 2 | Penalties: 12-82
+
+[REGULAR_WEEK_16] Cincinnati Bengals @ Miami Dolphins | 45-21 | Final
+  AWAY QB (Joe Burrow): 25/32 for 309yds, 4TD/0INT, 9.7 YPA, 146.5 RTG
+  HOME QB (Quinn Ewers): 20/30 for 260yds, 0TD/2INT, 8.7 YPA, 66.0 RTG
+  AWAY (Cincinnati Bengals):
+    Total Yards: 407 | Yards/Play: 6.7 | Possession: 31:32
+    Passing: 302yds (26/33) | Rushing: 105yds (4.0 avg) | 1st Downs: 23
+    3rd Down: 6-12 | 4th Down: 1-1 | Red Zone: 6-6
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 2 | Penalties: 2-10
+  HOME (Miami Dolphins):
+    Total Yards: 389 | Yards/Play: 6.7 | Possession: 28:28
+    Passing: 260yds (20/30) | Rushing: 129yds (4.6 avg) | 1st Downs: 19
+    3rd Down: 2-10 | 4th Down: 1-2 | Red Zone: 2-2
+    Turnovers: 3 (INT: 2, Fum: 1) | Sacks: 0 | Penalties: 3-20
+
+[REGULAR_WEEK_16] New York Jets @ New Orleans Saints | 6-29 | Final
+  AWAY QB (Brady Cook): 22/35 for 188yds, 0TD/1INT, 5.4 YPA, 64.9 RTG
+  HOME QB (Tyler Shough): 32/49 for 308yds, 1TD/0INT, 6.3 YPA, 89.5 RTG
+  AWAY (New York Jets):
+    Total Yards: 195 | Yards/Play: 3.1 | Possession: 28:42
+    Passing: 131yds (22/35) | Rushing: 64yds (3.2 avg) | 1st Downs: 12
+    3rd Down: 2-15 | 4th Down: 2-4 | Red Zone: 0-2
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 8 | Penalties: 7-54
+  HOME (New Orleans Saints):
+    Total Yards: 412 | Yards/Play: 5.3 | Possession: 31:18
+    Passing: 328yds (33/50) | Rushing: 84yds (3.4 avg) | 1st Downs: 23
+    3rd Down: 8-17 | 4th Down: 1-2 | Red Zone: 0-3
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 3 | Penalties: 3-30
+
+[REGULAR_WEEK_16] Minnesota Vikings @ New York Giants | 16-13 | Final
+  AWAY QB (J.J. McCarthy): 9/14 for 108yds, 0TD/1INT, 7.7 YPA, 58.0 RTG
+  HOME QB (Jaxson Dart): 7/13 for 33yds, 0TD/1INT, 2.5 YPA, 27.4 RTG
+  AWAY (Minnesota Vikings):
+    Total Yards: 240 | Yards/Play: 4.1 | Possession: 31:01
+    Passing: 126yds (16/23) | Rushing: 114yds (3.7 avg) | 1st Downs: 17
+    3rd Down: 7-12 | 4th Down: 1-1 | Red Zone: 1-3
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 4 | Penalties: 11-90
+  HOME (New York Giants):
+    Total Yards: 141 | Yards/Play: 2.9 | Possession: 28:59
+    Passing: 13yds (7/13) | Rushing: 128yds (4.3 avg) | 1st Downs: 12
+    3rd Down: 2-10 | 4th Down: 1-3 | Red Zone: 0-3
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 5 | Penalties: 11-74
+
+[REGULAR_WEEK_16] Tampa Bay Buccaneers @ Carolina Panthers | 20-23 | Final
+  AWAY QB (Baker Mayfield): 18/26 for 145yds, 1TD/1INT, 5.6 YPA, 79.8 RTG
+  HOME QB (Bryce Young): 21/32 for 191yds, 2TD/0INT, 6.0 YPA, 102.5 RTG
+  AWAY (Tampa Bay Buccaneers):
+    Total Yards: 296 | Yards/Play: 4.9 | Possession: 34:36
+    Passing: 127yds (18/26) | Rushing: 169yds (5.1 avg) | 1st Downs: 20
+    3rd Down: 8-14 | 4th Down: 0-0 | Red Zone: 2-3
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 2 | Penalties: 8-56
+  HOME (Carolina Panthers):
+    Total Yards: 275 | Yards/Play: 5.1 | Possession: 25:24
+    Passing: 174yds (21/32) | Rushing: 101yds (5.1 avg) | 1st Downs: 16
+    3rd Down: 6-12 | 4th Down: 0-0 | Red Zone: 1-2
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 2 | Penalties: 5-30
+
+[REGULAR_WEEK_16] Jacksonville Jaguars @ Denver Broncos | 34-20 | Final
+  AWAY QB (Trevor Lawrence): 23/36 for 279yds, 3TD/0INT, 7.8 YPA, 115.4 RTG
+  HOME QB (Bo Nix): 28/47 for 352yds, 1TD/1INT, 7.5 YPA, 81.2 RTG
+  AWAY (Jacksonville Jaguars):
+    Total Yards: 346 | Yards/Play: 5.1 | Possession: 33:13
+    Passing: 265yds (23/36) | Rushing: 81yds (3.0 avg) | 1st Downs: 22
+    3rd Down: 8-15 | 4th Down: 0-0 | Red Zone: 4-5
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 5 | Penalties: 2-20
+  HOME (Denver Broncos):
+    Total Yards: 445 | Yards/Play: 6.8 | Possession: 26:47
+    Passing: 344yds (28/47) | Rushing: 101yds (5.9 avg) | 1st Downs: 21
+    3rd Down: 5-14 | 4th Down: 1-3 | Red Zone: 1-2
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 1 | Penalties: 6-61
+
+[REGULAR_WEEK_16] Atlanta Falcons @ Arizona Cardinals | 26-19 | Final
+  AWAY QB (Kirk Cousins): 21/35 for 197yds, 2TD/1INT, 5.6 YPA, 82.7 RTG
+  HOME QB (Jacoby Brissett): 16/31 for 203yds, 1TD/1INT, 6.5 YPA, 69.7 RTG
+  AWAY (Atlanta Falcons):
+    Total Yards: 342 | Yards/Play: 4.7 | Possession: 35:34
+    Passing: 190yds (21/35) | Rushing: 152yds (4.1 avg) | 1st Downs: 24
+    3rd Down: 7-14 | 4th Down: 2-5 | Red Zone: 3-3
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 1 | Penalties: 4-20
+  HOME (Arizona Cardinals):
+    Total Yards: 320 | Yards/Play: 5.7 | Possession: 24:26
+    Passing: 188yds (16/31) | Rushing: 132yds (5.7 avg) | 1st Downs: 16
+    3rd Down: 7-13 | 4th Down: 0-0 | Red Zone: 0-2
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 2 | Penalties: 5-14
+
+[REGULAR_WEEK_16] Pittsburgh Steelers @ Detroit Lions | 29-24 | Final
+  AWAY QB (Aaron Rodgers): 27/41 for 266yds, 1TD/0INT, 6.5 YPA, 92.1 RTG
+  HOME QB (Jared Goff): 34/54 for 364yds, 3TD/0INT, 6.7 YPA, 101.2 RTG
+  AWAY (Pittsburgh Steelers):
+    Total Yards: 481 | Yards/Play: 6.9 | Possession: 34:06
+    Passing: 251yds (27/41) | Rushing: 230yds (8.5 avg) | 1st Downs: 23
+    3rd Down: 8-16 | 4th Down: 2-2 | Red Zone: 0-3
+    Turnovers: 1 (INT: 0, Fum: 1) | Sacks: 2 | Penalties: 8-89
+  HOME (Detroit Lions):
+    Total Yards: 361 | Yards/Play: 5.2 | Possession: 25:54
+    Passing: 346yds (34/54) | Rushing: 15yds (1.3 avg) | 1st Downs: 23
+    3rd Down: 6-15 | 4th Down: 1-2 | Red Zone: 1-4
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 3 | Penalties: 7-40
+
+[REGULAR_WEEK_16] Las Vegas Raiders @ Houston Texans | 21-23 | Final
+  AWAY QB (Geno Smith): 16/23 for 201yds, 2TD/1INT, 8.7 YPA, 107.3 RTG
+  HOME QB (C.J. Stroud): 23/35 for 187yds, 1TD/0INT, 5.3 YPA, 88.6 RTG
+  AWAY (Las Vegas Raiders):
+    Total Yards: 315 | Yards/Play: 5.9 | Possession: 28:14
+    Passing: 170yds (16/23) | Rushing: 145yds (5.4 avg) | 1st Downs: 12
+    3rd Down: 6-14 | 4th Down: 0-0 | Red Zone: 1-1
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 3 | Penalties: 9-85
+  HOME (Houston Texans):
+    Total Yards: 270 | Yards/Play: 4.4 | Possession: 31:46
+    Passing: 187yds (23/35) | Rushing: 83yds (3.2 avg) | 1st Downs: 16
+    3rd Down: 7-15 | 4th Down: 0-0 | Red Zone: 1-2
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 0 | Penalties: 4-29
+
+[REGULAR_WEEK_16] New England Patriots @ Baltimore Ravens | 28-24 | Final
+  AWAY QB (Drake Maye): 31/44 for 380yds, 2TD/1INT, 8.6 YPA, 102.5 RTG
+  HOME QB (Lamar Jackson): 7/10 for 101yds, 0TD/0INT, 10.1 YPA, 102.5 RTG
+  AWAY (New England Patriots):
+    Total Yards: 453 | Yards/Play: 6.4 | Possession: 31:49
+    Passing: 374yds (31/44) | Rushing: 79yds (3.4 avg) | 1st Downs: 24
+    3rd Down: 4-12 | 4th Down: 2-3 | Red Zone: 1-3
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 4 | Penalties: 5-50
+  HOME (Baltimore Ravens):
+    Total Yards: 330 | Yards/Play: 6.1 | Possession: 28:11
+    Passing: 159yds (16/20) | Rushing: 171yds (5.2 avg) | 1st Downs: 18
+    3rd Down: 7-11 | 4th Down: 0-0 | Red Zone: 2-3
+    Turnovers: 2 (INT: 0, Fum: 2) | Sacks: 1 | Penalties: 7-28
+
+[REGULAR_WEEK_16] San Francisco 49ers @ Indianapolis Colts | 48-27 | Final
+  AWAY QB (Brock Purdy): 25/34 for 295yds, 5TD/1INT, 8.7 YPA, 126.8 RTG
+  HOME QB (Philip Rivers): 23/35 for 277yds, 2TD/1INT, 7.9 YPA, 97.0 RTG
+  AWAY (San Francisco 49ers):
+    Total Yards: 440 | Yards/Play: 6.7 | Possession: 33:05
+    Passing: 295yds (25/34) | Rushing: 145yds (4.7 avg) | 1st Downs: 28
+    3rd Down: 7-11 | 4th Down: 1-1 | Red Zone: 4-6
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 1 | Penalties: 2-36
+  HOME (Indianapolis Colts):
+    Total Yards: 312 | Yards/Play: 5.4 | Possession: 26:55
+    Passing: 254yds (23/36) | Rushing: 58yds (2.9 avg) | 1st Downs: 19
+    3rd Down: 5-10 | 4th Down: 0-1 | Red Zone: 2-2
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 2 | Penalties: 6-45
+
+
+====================================================================================================
+REGULAR_WEEK_17
+====================================================================================================
+
+[REGULAR_WEEK_17] Dallas Cowboys @ Washington Commanders | 30-23 | Final
+  AWAY QB (Dak Prescott): 19/37 for 307yds, 2TD/0INT, 8.3 YPA, 97.5 RTG
+  HOME QB (Josh Johnson): 15/23 for 198yds, 0TD/0INT, 8.6 YPA, 92.3 RTG
+  AWAY (Dallas Cowboys):
+    Total Yards: 480 | Yards/Play: 5.5 | Possession: 38:44
+    Passing: 269yds (19/37) | Rushing: 211yds (4.8 avg) | 1st Downs: 28
+    3rd Down: 8-20 | 4th Down: 6-6 | Red Zone: 2-2
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 6 | Penalties: 11-89
+  HOME (Washington Commanders):
+    Total Yards: 328 | Yards/Play: 8.0 | Possession: 21:16
+    Passing: 190yds (15/23) | Rushing: 138yds (8.6 avg) | 1st Downs: 17
+    3rd Down: 1-6 | 4th Down: 0-0 | Red Zone: 1-3
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 2 | Penalties: 10-71
+
+
+====================================================================================================
+REGULAR_WEEK_17
+====================================================================================================
+
+[REGULAR_WEEK_17] Dallas Cowboys @ Washington Commanders | 30-23 | Final
+  AWAY QB (Dak Prescott): 19/37 for 307yds, 2TD/0INT, 8.3 YPA, 97.5 RTG
+  HOME QB (Josh Johnson): 15/23 for 198yds, 0TD/0INT, 8.6 YPA, 92.3 RTG
+  AWAY (Dallas Cowboys):
+    Total Yards: 480 | Yards/Play: 5.5 | Possession: 38:44
+    Passing: 269yds (19/37) | Rushing: 211yds (4.8 avg) | 1st Downs: 28
+    3rd Down: 8-20 | 4th Down: 6-6 | Red Zone: 2-2
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 6 | Penalties: 11-89
+  HOME (Washington Commanders):
+    Total Yards: 328 | Yards/Play: 8.0 | Possession: 21:16
+    Passing: 190yds (15/23) | Rushing: 138yds (8.6 avg) | 1st Downs: 17
+    3rd Down: 1-6 | 4th Down: 0-0 | Red Zone: 1-3
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 2 | Penalties: 10-71
+
+[REGULAR_WEEK_17] Detroit Lions @ Minnesota Vikings | 10-23 | Final
+  AWAY QB (Jared Goff): 18/29 for 197yds, 1TD/2INT, 6.8 YPA, 64.9 RTG
+  HOME QB (Max Brosmer): 9/16 for 51yds, 0TD/0INT, 3.2 YPA, 62.2 RTG
+  AWAY (Detroit Lions):
+    Total Yards: 231 | Yards/Play: 3.6 | Possession: 32:30
+    Passing: 163yds (18/29) | Rushing: 68yds (2.3 avg) | 1st Downs: 16
+    3rd Down: 5-14 | 4th Down: 2-2 | Red Zone: 1-1
+    Turnovers: 6 (INT: 2, Fum: 4) | Sacks: 5 | Penalties: 5-25
+  HOME (Minnesota Vikings):
+    Total Yards: 161 | Yards/Play: 3.2 | Possession: 27:30
+    Passing: 3yds (9/16) | Rushing: 158yds (5.6 avg) | 1st Downs: 11
+    3rd Down: 3-13 | 4th Down: 0-0 | Red Zone: 1-1
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 7 | Penalties: 3-20
+
+[REGULAR_WEEK_17] Denver Broncos @ Kansas City Chiefs | 20-13 | Final
+  AWAY QB (Bo Nix): 26/38 for 182yds, 1TD/1INT, 4.8 YPA, 76.9 RTG
+  HOME QB (Chris Oladokun): 13/22 for 66yds, 1TD/0INT, 3.0 YPA, 79.0 RTG
+  AWAY (Denver Broncos):
+    Total Yards: 303 | Yards/Play: 4.3 | Possession: 39:28
+    Passing: 175yds (26/38) | Rushing: 128yds (4.0 avg) | 1st Downs: 22
+    3rd Down: 11-18 | 4th Down: 1-1 | Red Zone: 2-4
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 1 | Penalties: 5-57
+  HOME (Kansas City Chiefs):
+    Total Yards: 139 | Yards/Play: 3.3 | Possession: 20:32
+    Passing: 57yds (13/22) | Rushing: 82yds (4.3 avg) | 1st Downs: 10
+    3rd Down: 4-11 | 4th Down: 1-2 | Red Zone: 1-1
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 2-10
+
+
+====================================================================================================
+REGULAR_WEEK_17
+====================================================================================================
+
+[REGULAR_WEEK_17] Dallas Cowboys @ Washington Commanders | 30-23 | Final
+  AWAY QB (Dak Prescott): 19/37 for 307yds, 2TD/0INT, 8.3 YPA, 97.5 RTG
+  HOME QB (Josh Johnson): 15/23 for 198yds, 0TD/0INT, 8.6 YPA, 92.3 RTG
+  AWAY (Dallas Cowboys):
+    Total Yards: 480 | Yards/Play: 5.5 | Possession: 38:44
+    Passing: 269yds (19/37) | Rushing: 211yds (4.8 avg) | 1st Downs: 28
+    3rd Down: 8-20 | 4th Down: 6-6 | Red Zone: 2-2
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 6 | Penalties: 11-89
+  HOME (Washington Commanders):
+    Total Yards: 328 | Yards/Play: 8.0 | Possession: 21:16
+    Passing: 190yds (15/23) | Rushing: 138yds (8.6 avg) | 1st Downs: 17
+    3rd Down: 1-6 | 4th Down: 0-0 | Red Zone: 1-3
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 2 | Penalties: 10-71
+
+[REGULAR_WEEK_17] Detroit Lions @ Minnesota Vikings | 10-23 | Final
+  AWAY QB (Jared Goff): 18/29 for 197yds, 1TD/2INT, 6.8 YPA, 64.9 RTG
+  HOME QB (Max Brosmer): 9/16 for 51yds, 0TD/0INT, 3.2 YPA, 62.2 RTG
+  AWAY (Detroit Lions):
+    Total Yards: 231 | Yards/Play: 3.6 | Possession: 32:30
+    Passing: 163yds (18/29) | Rushing: 68yds (2.3 avg) | 1st Downs: 16
+    3rd Down: 5-14 | 4th Down: 2-2 | Red Zone: 1-1
+    Turnovers: 6 (INT: 2, Fum: 4) | Sacks: 5 | Penalties: 5-25
+  HOME (Minnesota Vikings):
+    Total Yards: 161 | Yards/Play: 3.2 | Possession: 27:30
+    Passing: 3yds (9/16) | Rushing: 158yds (5.6 avg) | 1st Downs: 11
+    3rd Down: 3-13 | 4th Down: 0-0 | Red Zone: 1-1
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 7 | Penalties: 3-20
+
+[REGULAR_WEEK_17] Denver Broncos @ Kansas City Chiefs | 20-13 | Final
+  AWAY QB (Bo Nix): 26/38 for 182yds, 1TD/1INT, 4.8 YPA, 76.9 RTG
+  HOME QB (Chris Oladokun): 13/22 for 66yds, 1TD/0INT, 3.0 YPA, 79.0 RTG
+  AWAY (Denver Broncos):
+    Total Yards: 303 | Yards/Play: 4.3 | Possession: 39:28
+    Passing: 175yds (26/38) | Rushing: 128yds (4.0 avg) | 1st Downs: 22
+    3rd Down: 11-18 | 4th Down: 1-1 | Red Zone: 2-4
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 1 | Penalties: 5-57
+  HOME (Kansas City Chiefs):
+    Total Yards: 139 | Yards/Play: 3.3 | Possession: 20:32
+    Passing: 57yds (13/22) | Rushing: 82yds (4.3 avg) | 1st Downs: 10
+    3rd Down: 4-11 | 4th Down: 1-2 | Red Zone: 1-1
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 2-10
+
+[REGULAR_WEEK_17] Houston Texans @ Los Angeles Chargers | 20-16 | Final
+  AWAY QB (C.J. Stroud): 16/28 for 244yds, 2TD/2INT, 8.7 YPA, 80.1 RTG
+  HOME QB (Justin Herbert): 21/32 for 236yds, 1TD/1INT, 7.4 YPA, 84.9 RTG
+  AWAY (Houston Texans):
+    Total Yards: 362 | Yards/Play: 5.8 | Possession: 30:21
+    Passing: 244yds (16/28) | Rushing: 118yds (3.5 avg) | 1st Downs: 16
+    3rd Down: 3-11 | 4th Down: 0-0 | Red Zone: 0-0
+    Turnovers: 2 (INT: 2, Fum: 0) | Sacks: 0 | Penalties: 8-70
+  HOME (Los Angeles Chargers):
+    Total Yards: 275 | Yards/Play: 4.7 | Possession: 29:39
+    Passing: 201yds (21/32) | Rushing: 74yds (3.4 avg) | 1st Downs: 16
+    3rd Down: 6-15 | 4th Down: 0-0 | Red Zone: 2-5
+    Turnovers: 1 (INT: 1, Fum: 0) | Sacks: 5 | Penalties: 3-25
+
+[REGULAR_WEEK_17] Baltimore Ravens @ Green Bay Packers | 41-24 | Final
+  AWAY QB (Tyler Huntley): 16/20 for 107yds, 1TD/0INT, 5.4 YPA, 105.6 RTG
+  HOME QB (Malik Willis): 18/21 for 288yds, 1TD/0INT, 13.7 YPA, 134.6 RTG
+  AWAY (Baltimore Ravens):
+    Total Yards: 414 | Yards/Play: 5.6 | Possession: 40:16
+    Passing: 107yds (16/20) | Rushing: 307yds (5.8 avg) | 1st Downs: 30
+    3rd Down: 10-14 | 4th Down: 0-0 | Red Zone: 4-6
+    Turnovers: 0 (INT: 0, Fum: 0) | Sacks: 1 | Penalties: 6-45
+  HOME (Green Bay Packers):
+    Total Yards: 363 | Yards/Play: 8.2 | Possession: 19:44
+    Passing: 284yds (19/25) | Rushing: 79yds (4.6 avg) | 1st Downs: 18
+    3rd Down: 3-6 | 4th Down: 0-2 | Red Zone: 1-2
+    Turnovers: 2 (INT: 1, Fum: 1) | Sacks: 2 | Penalties: 5-38
+

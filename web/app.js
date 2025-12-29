@@ -8,7 +8,60 @@ document.addEventListener('DOMContentLoaded', () => {
     initPipeline();
     initScrollReveal();
     initConsole();
+    initFantasyHelper();
 });
+
+async function getCurrentNFLWeek() {
+    // Try to get the current week from ESPN API
+    try {
+        const currentYear = new Date().getFullYear();
+        const response = await fetch(`https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?seasontype=2&week=1&year=${currentYear}`);
+        if (response.ok) {
+            const data = await response.json();
+            // ESPN API returns current week in the response
+            if (data.week && data.week.number) {
+                return data.week.number;
+            }
+        }
+    } catch (error) {
+        console.log('Could not fetch current week from API, using date-based calculation');
+    }
+    
+    // Fallback: Calculate current NFL week based on date
+    // NFL regular season typically starts the week after Labor Day (first Monday in September)
+    const now = new Date();
+    const currentYear = now.getFullYear();
+    const currentMonth = now.getMonth() + 1; // 1-12
+    const currentDate = now.getDate();
+    
+    // NFL season starts around early September, Week 1 is typically the first full week
+    // Rough estimation based on month
+    if (currentMonth < 9) {
+        // Before September - likely preseason, default to week 1
+        return 1;
+    }
+    
+    // September: weeks 1-4
+    // October: weeks 5-9  
+    // November: weeks 10-14
+    // December: weeks 15-18
+    const weekMap = {
+        9: 1,   // September - start of season
+        10: 5,  // October
+        11: 10, // November
+        12: 15  // December
+    };
+    
+    if (weekMap[currentMonth]) {
+        const baseWeek = weekMap[currentMonth];
+        // Add week number based on which week of the month it is (rough estimate)
+        const weekOfMonth = Math.min(Math.ceil(currentDate / 7), 4);
+        return Math.min(baseWeek + weekOfMonth - 1, 18);
+    }
+    
+    // January or later - likely playoffs, default to week 18
+    return 18;
+}
 
 function initConsole() {
     const matchupForm = document.getElementById('matchup-form');
@@ -26,6 +79,7 @@ function initConsole() {
     const matchupResult = document.getElementById('matchup-result');
 
     fetchHealthStatus();
+    fetchDataStatus();
     loadTeams(homeSelect, awaySelect);
 
     matchupForm.addEventListener('submit', (event) => {
@@ -39,6 +93,28 @@ function initConsole() {
 
     if (batchForm) {
         const batchResult = document.getElementById('batch-result');
+        const batchWeekInput = document.getElementById('batch-week');
+        const batchSeasonSelect = document.getElementById('batch-season');
+        
+        // Set default week to current week
+        if (batchWeekInput) {
+            getCurrentNFLWeek().then(currentWeek => {
+                if (currentWeek) {
+                    batchWeekInput.value = currentWeek;
+                }
+            }).catch(() => {
+                // Fallback to week 1 if API call fails
+                batchWeekInput.value = 1;
+            });
+        }
+        
+        if (batchSeasonSelect) {
+            // Create custom dropdown for season select
+            const seasonOptions = Array.from(batchSeasonSelect.options).map(opt => opt.value);
+            const seasonLabels = Array.from(batchSeasonSelect.options).map(opt => opt.text);
+            const seasonOptionsMap = seasonLabels.map((label, i) => ({ value: seasonOptions[i], label }));
+            createCustomDropdownForFixedOptions(batchSeasonSelect, seasonOptionsMap, batchSeasonSelect.value || 'regular');
+        }
         batchForm.addEventListener('submit', (event) => onBatchSubmit(event, batchResult));
     }
 
@@ -78,6 +154,258 @@ async function loadTeams(homeSelect, awaySelect) {
     }
 }
 
+// Custom dropdown component for fixed options (value/label pairs)
+function createCustomDropdownForFixedOptions(selectElement, options, defaultValue) {
+    if (!selectElement) return null;
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'custom-select-wrapper';
+    
+    const defaultOption = options.find(opt => opt.value === defaultValue) || options[0];
+    const display = document.createElement('div');
+    display.className = 'custom-select-display';
+    display.textContent = defaultOption.label;
+    display.style.backgroundColor = 'rgba(15, 22, 38, 0.9)';
+    display.style.color = '#f8fbff';
+    
+    const dropdown = document.createElement('div');
+    dropdown.className = 'custom-select-dropdown';
+    dropdown.style.backgroundColor = '#0f1626';
+    
+    const hiddenInput = document.createElement('input');
+    hiddenInput.type = 'hidden';
+    hiddenInput.name = selectElement.name || '';
+    hiddenInput.value = defaultValue || defaultOption.value;
+    
+    let isOpen = false;
+    let selectedValue = defaultValue || defaultOption.value;
+    let selectedText = defaultOption.label;
+    
+    // Create option elements
+    options.forEach((option) => {
+        const optionEl = document.createElement('div');
+        optionEl.className = 'custom-select-option';
+        if (option.value === selectedValue) {
+            optionEl.classList.add('selected');
+        }
+        optionEl.textContent = option.label;
+        optionEl.dataset.value = option.value;
+        // Force inline styles to ensure visibility
+        optionEl.style.backgroundColor = '#0f1626';
+        optionEl.style.color = '#f8fbff';
+        
+        optionEl.addEventListener('click', () => {
+            selectedValue = option.value;
+            selectedText = option.label;
+            display.textContent = option.label;
+            hiddenInput.value = option.value;
+            selectElement.value = option.value;
+            selectElement.dispatchEvent(new Event('change', { bubbles: true }));
+            
+            // Update selected state
+            dropdown.querySelectorAll('.custom-select-option').forEach(opt => {
+                opt.classList.remove('selected');
+                opt.style.backgroundColor = '#0f1626';
+            });
+            optionEl.classList.add('selected');
+            optionEl.style.backgroundColor = 'rgba(92, 124, 250, 0.3)';
+            
+            closeDropdown();
+        });
+        
+        // Also ensure hover styles are applied
+        optionEl.addEventListener('mouseenter', () => {
+            optionEl.style.backgroundColor = 'rgba(92, 124, 250, 0.4)';
+        });
+        optionEl.addEventListener('mouseleave', () => {
+            if (!optionEl.classList.contains('selected')) {
+                optionEl.style.backgroundColor = '#0f1626';
+            }
+        });
+        
+        dropdown.appendChild(optionEl);
+    });
+    
+    function openDropdown() {
+        if (isOpen) return;
+        isOpen = true;
+        wrapper.classList.add('open');
+        document.addEventListener('click', handleOutsideClick);
+    }
+    
+    function closeDropdown() {
+        if (!isOpen) return;
+        isOpen = false;
+        wrapper.classList.remove('open');
+        document.removeEventListener('click', handleOutsideClick);
+    }
+    
+    function handleOutsideClick(event) {
+        if (!wrapper.contains(event.target)) {
+            closeDropdown();
+        }
+    }
+    
+    display.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (isOpen) {
+            closeDropdown();
+        } else {
+            openDropdown();
+        }
+    });
+    
+    wrapper.appendChild(display);
+    wrapper.appendChild(dropdown);
+    wrapper.appendChild(hiddenInput);
+    
+    // Replace the select element
+    selectElement.style.display = 'none';
+    selectElement.parentNode.insertBefore(wrapper, selectElement);
+    
+    // Sync value when original select changes
+    selectElement.addEventListener('change', () => {
+        hiddenInput.value = selectElement.value;
+        const selectedOpt = options.find(opt => opt.value === selectElement.value);
+        if (selectedOpt) {
+            selectedText = selectedOpt.label;
+            display.textContent = selectedText;
+        }
+    });
+    
+    return {
+        getValue: () => hiddenInput.value,
+        setValue: (value) => {
+            const optionEl = dropdown.querySelector(`[data-value="${value}"]`);
+            if (optionEl) {
+                optionEl.click();
+            }
+        }
+    };
+}
+
+// Custom dropdown component
+function createCustomDropdown(selectElement, options, placeholder) {
+    if (!selectElement) return null;
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'custom-select-wrapper';
+    
+    const display = document.createElement('div');
+    display.className = 'custom-select-display';
+    display.textContent = placeholder;
+    display.style.backgroundColor = 'rgba(15, 22, 38, 0.9)';
+    display.style.color = '#f8fbff';
+    
+    const dropdown = document.createElement('div');
+    dropdown.className = 'custom-select-dropdown';
+    dropdown.style.backgroundColor = '#0f1626';
+    
+    const hiddenInput = document.createElement('input');
+    hiddenInput.type = 'hidden';
+    hiddenInput.name = selectElement.name || '';
+    hiddenInput.value = '';
+    
+    let isOpen = false;
+    let selectedValue = '';
+    let selectedText = placeholder;
+    
+    // Create option elements
+    options.forEach((option) => {
+        const optionEl = document.createElement('div');
+        optionEl.className = 'custom-select-option';
+        optionEl.textContent = option;
+        optionEl.dataset.value = option;
+        
+        optionEl.addEventListener('click', () => {
+            selectedValue = option;
+            selectedText = option;
+            display.textContent = option;
+            hiddenInput.value = option;
+            selectElement.value = option; // Sync with original select
+            selectElement.dispatchEvent(new Event('change', { bubbles: true }));
+            
+            // Update selected state
+            dropdown.querySelectorAll('.custom-select-option').forEach(opt => {
+                opt.classList.remove('selected');
+                opt.style.backgroundColor = '#0f1626';
+            });
+            optionEl.classList.add('selected');
+            optionEl.style.backgroundColor = 'rgba(92, 124, 250, 0.3)';
+            
+            closeDropdown();
+        });
+        
+        // Also ensure hover styles are applied
+        optionEl.addEventListener('mouseenter', () => {
+            optionEl.style.backgroundColor = 'rgba(92, 124, 250, 0.4)';
+        });
+        optionEl.addEventListener('mouseleave', () => {
+            if (!optionEl.classList.contains('selected')) {
+                optionEl.style.backgroundColor = '#0f1626';
+            }
+        });
+        
+        dropdown.appendChild(optionEl);
+    });
+    
+    function openDropdown() {
+        if (isOpen) return;
+        isOpen = true;
+        wrapper.classList.add('open');
+        document.addEventListener('click', handleOutsideClick);
+    }
+    
+    function closeDropdown() {
+        if (!isOpen) return;
+        isOpen = false;
+        wrapper.classList.remove('open');
+        document.removeEventListener('click', handleOutsideClick);
+    }
+    
+    function handleOutsideClick(event) {
+        if (!wrapper.contains(event.target)) {
+            closeDropdown();
+        }
+    }
+    
+    display.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (isOpen) {
+            closeDropdown();
+        } else {
+            openDropdown();
+        }
+    });
+    
+    wrapper.appendChild(display);
+    wrapper.appendChild(dropdown);
+    wrapper.appendChild(hiddenInput);
+    
+    // Replace the select element
+    selectElement.style.display = 'none';
+    selectElement.parentNode.insertBefore(wrapper, selectElement);
+    
+    // Sync value when original select changes
+    selectElement.addEventListener('change', () => {
+        hiddenInput.value = selectElement.value;
+        if (selectElement.value) {
+            selectedText = options.find(opt => opt === selectElement.value) || placeholder;
+            display.textContent = selectedText;
+        }
+    });
+    
+    return {
+        getValue: () => hiddenInput.value,
+        setValue: (value) => {
+            const optionEl = dropdown.querySelector(`[data-value="${value}"]`);
+            if (optionEl) {
+                optionEl.click();
+            }
+        }
+    };
+}
+
 function setSelectPlaceholder(select, text, disabled = true) {
     if (!select) return;
     select.innerHTML = '';
@@ -109,6 +437,12 @@ function populateTeamSelect(select, teams, placeholder) {
     });
 
     select.disabled = false;
+    
+    // Create custom dropdown
+    const customDropdown = createCustomDropdown(select, teams, placeholder);
+    if (customDropdown) {
+        select.customDropdown = customDropdown;
+    }
 }
 
 async function onMatchupSubmit(event, controls) {
@@ -330,14 +664,18 @@ function renderBatchResult(container, data) {
     const predictions = Array.isArray(data?.predictions) ? data.predictions : [];
     const failed = Array.isArray(data?.failed_games) ? data.failed_games : [];
 
-    const highlightItems = predictions
-        .slice(0, 3)
-        .map((game, index) => `<li>${formatPredictionHighlight(game, index)}</li>`)
+    // Show all predictions, not just 3
+    const allPredictions = predictions
+        .map((game, index) => formatPredictionHighlight(game, index))
         .join('');
 
     const failureNote = failed.length
-        ? `<p class="form-footnote">${failed.length} games need manual review.</p>`
+        ? `<p class="form-footnote">${failed.length} game${failed.length > 1 ? 's' : ''} need${failed.length > 1 ? '' : 's'} manual review.</p>`
         : '';
+
+    const predictionsSection = predictions.length
+        ? `<div class="injury-summary"><h4>All Predictions (${predictions.length})</h4><div class="predictions-list">${allPredictions}</div></div>`
+        : '<p class="form-footnote">No games predicted. Check the data refresh status.</p>';
 
     const content = `
         <div class="result-metadata">
@@ -354,7 +692,7 @@ function renderBatchResult(container, data) {
                 <strong>${formatTimestamp(summary.timestamp)}</strong>
             </div>
         </div>
-        ${predictions.length ? `<div class="injury-summary"><h4>Highlights</h4><ul>${highlightItems}</ul></div>` : '<p class="form-footnote">No games predicted. Check the data refresh status.</p>'}
+        ${predictionsSection}
         ${failureNote}
     `;
 
@@ -364,14 +702,29 @@ function renderBatchResult(container, data) {
 function formatPredictionHighlight(game, index) {
     const home = escapeHtml(game?.home_team ?? 'Home');
     const away = escapeHtml(game?.away_team ?? 'Away');
-
+    const neutral = game?.is_neutral ? ' [NEUTRAL]' : '';
+    const gameNum = `<strong>Game ${index + 1}:</strong>`;
+    
     if (typeof game?.home_win_prob === 'number' && typeof game?.away_win_prob === 'number') {
+        // ML mode - show probabilities
         const winner = escapeHtml(game?.winner ?? (game.home_win_prob >= game.away_win_prob ? home : away));
         const confidence = toNumber(game?.confidence) || Math.max(game.home_win_prob, game.away_win_prob) * 100;
-        return `${index + 1}. ${away} @ ${home} — ${winner} (${confidence.toFixed(1)}%)`;
+        const homeProb = (game.home_win_prob * 100).toFixed(1);
+        const awayProb = (game.away_win_prob * 100).toFixed(1);
+        
+        return `
+            <div class="prediction-item">
+                ${gameNum} ${away} @ ${home}${neutral}
+                <div class="prediction-details">
+                    <span class="prediction-winner">→ ${winner} wins (${confidence.toFixed(1)}% confidence)</span>
+                    <span class="prediction-probs">${home} ${homeProb}% | ${away} ${awayProb}%</span>
+                </div>
+            </div>
+        `;
     }
 
     if (typeof game?.home_points === 'number' && typeof game?.away_points === 'number') {
+        // Heuristic mode - show score prediction
         const winner = game.home_points === game.away_points
             ? 'Toss-up'
             : game.home_points > game.away_points
@@ -379,10 +732,21 @@ function formatPredictionHighlight(game, index) {
                 : away;
         const diff = Math.abs(game.home_points - game.away_points);
         const confidence = Math.min((diff / 6) * 100, 95);
-        return `${index + 1}. ${away} @ ${home} — ${winner} (${confidence.toFixed(1)}%)`;
+        const homeScore = game.home_points.toFixed(1);
+        const awayScore = game.away_points.toFixed(1);
+        
+        return `
+            <div class="prediction-item">
+                ${gameNum} ${away} @ ${home}${neutral}
+                <div class="prediction-details">
+                    <span class="prediction-winner">→ ${winner} wins (${confidence.toFixed(1)}% confidence)</span>
+                    <span class="prediction-score">Score: ${home} ${homeScore} - ${awayScore} ${away}</span>
+                </div>
+            </div>
+        `;
     }
 
-    return `${index + 1}. ${away} @ ${home}`;
+    return `<div class="prediction-item">${gameNum} ${away} @ ${home}${neutral}</div>`;
 }
 
 async function handleRefresh(type, button, container) {
@@ -397,6 +761,8 @@ async function handleRefresh(type, button, container) {
         const html = renderRefreshDetails(type, response);
         updateResult(container, { status: 'success', html });
         updateStatus('refresh', formatTimestamp(response?.updated_at));
+        // Refresh data status after updating
+        fetchDataStatus();
     } catch (error) {
         const message = error instanceof Error ? error.message : 'Refresh failed';
         updateResult(container, { status: 'error', html: message });
@@ -412,9 +778,14 @@ function renderRefreshDetails(type, payload) {
     const details = payload.details ?? {};
 
     if (type === 'data') {
+        // Extract just the filename from the full path for better display
+        const filePath = details.file ?? 'nflData.txt';
+        const fileName = filePath.split(/[/\\]/).pop() || filePath;
+        const fullPath = filePath.length > 50 ? `${filePath.substring(0, 47)}...` : filePath;
+        
         return `
             <div class="result-metadata">
-                <div class="result-row"><span>File</span><strong>${escapeHtml(details.file ?? 'nflData.txt')}</strong></div>
+                <div class="result-row"><span>File</span><strong title="${escapeHtml(filePath)}">${escapeHtml(fileName)}</strong></div>
                 <div class="result-row"><span>Size</span><strong>${details.size_kb ? `${details.size_kb} KB` : '—'}</strong></div>
                 <div class="result-row"><span>Modified</span><strong>${formatTimestamp(details.modified_at)}</strong></div>
                 <div class="result-row"><span>Updated</span><strong>${updated}</strong></div>
@@ -449,6 +820,54 @@ async function fetchHealthStatus() {
     } catch (error) {
         const message = error instanceof Error ? error.message : 'Unavailable';
         updateStatus('api', `Offline · ${message}`);
+    }
+}
+
+async function fetchDataStatus() {
+    try {
+        const data = await request('/api/data/status');
+        const nflData = data?.nfl_data;
+        const injuries = data?.injuries;
+        
+        // Update refresh card with latest week info
+        const refreshCard = document.getElementById('refresh-card');
+        if (refreshCard) {
+            // Create or update status display
+            let statusDisplay = refreshCard.querySelector('.data-status-display');
+            if (!statusDisplay) {
+                statusDisplay = document.createElement('div');
+                statusDisplay.className = 'data-status-display';
+                const intro = refreshCard.querySelector('.panel-intro');
+                if (intro) {
+                    intro.parentNode.insertBefore(statusDisplay, intro.nextSibling);
+                }
+            }
+            
+            let statusHTML = '<div class="data-status-info">';
+            
+            // NFL Data status
+            if (nflData?.latest_week && nflData?.season_type) {
+                const seasonLabel = nflData.season_type === 'regular' ? 'Regular' : 'Preseason';
+                statusHTML += `<div class="status-item"><strong>Latest NFL data:</strong> ${seasonLabel} Week ${nflData.latest_week}</div>`;
+            } else if (nflData?.file_exists) {
+                statusHTML += '<div class="status-item"><strong>NFL data:</strong> File exists (week unknown)</div>';
+            } else {
+                statusHTML += '<div class="status-item"><strong>NFL data:</strong> No data file</div>';
+            }
+            
+            // Injuries status
+            if (injuries?.file_exists) {
+                statusHTML += '<div class="status-item"><strong>Injuries:</strong> Available</div>';
+            } else {
+                statusHTML += '<div class="status-item"><strong>Injuries:</strong> Not available</div>';
+            }
+            
+            statusHTML += '</div>';
+            statusDisplay.innerHTML = statusHTML;
+        }
+    } catch (error) {
+        // Silently fail - status is optional info
+        console.log('Could not fetch data status:', error);
     }
 }
 
@@ -583,59 +1002,59 @@ function initPipeline() {
 
     const stepData = {
         '01': {
-            title: 'Async ingestion',
-            copy: 'Multiple async workers grab NFL stats, injury updates, betting lines, and NOAA weather snapshots. Each feed is normalized, deduped, and versioned so model runs can rewind any matchup state.',
+            title: 'Data collection',
+            copy: 'Collect NFL stats, injury updates, and weather data from various sources.',
             bullets: [
-                'Rate-limited requests fanned out with retry queues.',
-                'Schema validator enforces field parity across seasons.',
-                'Slack alerts trigger if any feed drifts or stalls.',
+                'Automated data collection with error handling.',
+                'Data validation ensures consistency.',
+                'System monitors data quality.',
             ],
-            tag: 'Ingestion tier • 450 req/min',
-            meta: 'Last run 02:14 AM · 34 sources healthy',
+            tag: 'Data collection',
+            meta: 'System monitors all sources',
         },
         '02': {
-            title: 'Feature vault',
-            copy: 'A feature store curates drive-level tensors, red-zone efficiency, pass-rush win rates, and cadence shifts. Signals are versioned so historical backtests stay reproducible.',
+            title: 'Feature processing',
+            copy: 'Process team performance metrics, rest days, and travel factors.',
             bullets: [
-                'Windowed aggregates cached in DuckDB + Parquet.',
-                'Rest/travel adjustments computed with custom heuristics.',
-                'Anomaly detector flags outlier data points before train time.',
+                'Calculate team statistics and trends.',
+                'Factor in rest days and travel.',
+                'Identify unusual patterns in data.',
             ],
-            tag: 'Feature tier • 37 signals tracked',
-            meta: 'Last refresh 02:21 AM · 0 anomalies pending review',
+            tag: 'Processing • 37+ stats tracked',
+            meta: 'Data processed and ready',
         },
         '03': {
-            title: 'Model ensemble',
-            copy: 'Gradient boosting, calibrated logistic stacks, and Bayesian ridge models collaborate. Each focuses on a different signal family for calibration and scenario testing.',
+            title: 'Prediction models',
+            copy: 'Multiple models work together to make predictions. Each focuses on different factors.',
             bullets: [
-                'Weekly hyperparameter sweeps via optuna scheduler.',
-                'Validation spans rolling eight-week windows to avoid drift.',
-                'Calibration curves logged to compare expected vs. actual.',
+                'Models are trained and updated regularly.',
+                'Validation ensures accuracy.',
+                'Models are calibrated for reliability.',
             ],
-            tag: 'Model tier • 3 ensemble members',
-            meta: 'Backtest Week 9 MAE: 2.7 · Brier score: 0.18',
+            tag: 'Models • 3 different approaches',
+            meta: 'Models tested and validated',
         },
         '04': {
-            title: 'Explainability',
-            copy: 'SHAP value summaries and rule-based narratives automatically explain why a matchup leans a certain way. Plain-language breakdowns land alongside the numbers.',
+            title: 'Explanations',
+            copy: 'Show why each prediction was made. Clear explanations accompany every result.',
             bullets: [
-                'Top contributing features rendered as callout bullets.',
-                'Contextualizes injuries, weather, and tape-notes overrides.',
-                'Supports quick edits before exporting final report.',
+                'Highlight key factors in each prediction.',
+                'Explain impact of injuries, weather, and other factors.',
+                'Easy to understand summaries.',
             ],
-            tag: 'Explainability • Narrative engine v2.3',
-            meta: 'Template updated 3 days ago · Localization ready',
+            tag: 'Explanations',
+            meta: 'Clear explanations provided',
         },
         '05': {
-            title: 'Report engine',
-            copy: 'CLI and PDF output share the same rendering core. Batch runs push to Notion dashboards while analysts can export CSVs for parlay spreadsheets.',
+            title: 'Reports',
+            copy: 'Generate predictions and summaries. Export results in various formats.',
             bullets: [
-                'Markdown-to-PDF pipeline with custom React mailer.',
-                'Generates bet slip checklist with confidence intervals.',
-                'Audit log captures overrides and note history.',
+                'Generate detailed prediction reports.',
+                'Include confidence levels and key factors.',
+                'Export results as needed.',
             ],
-            tag: 'Delivery • Multi-channel',
-            meta: 'Nightly batch complete · 12 reports queued',
+            tag: 'Reports',
+            meta: 'Reports generated and ready',
         },
     };
 
@@ -662,6 +1081,110 @@ function initPipeline() {
             }
         });
     });
+}
+
+async function initFantasyHelper() {
+    await loadQBRankings();
+    await loadTeamOffenseRankings();
+}
+
+async function loadQBRankings() {
+    const container = document.getElementById('qb-rankings');
+    if (!container) return;
+    
+    try {
+        const data = await request('/api/fantasy/qb-rankings');
+        const qbs = Array.isArray(data?.qbs) ? data.qbs : [];
+        
+        if (qbs.length === 0) {
+            updateResult(container, { status: 'info', html: 'No QB data available. Refresh game data first.' });
+            return;
+        }
+        
+        const topQBs = qbs.slice(0, 15); // Show top 15
+        const qbList = topQBs.map((qb, index) => `
+            <div class="fantasy-item">
+                <div class="fantasy-rank">${index + 1}</div>
+                <div class="fantasy-info">
+                    <div class="fantasy-name">${escapeHtml(qb.name)} <span class="fantasy-team">(${escapeHtml(qb.team)})</span></div>
+                    <div class="fantasy-stats">
+                        <span>${qb.avg_yards} yds/g</span>
+                        <span>${qb.avg_tds} TD/g</span>
+                        <span>${qb.avg_ints} INT/g</span>
+                        <span class="fantasy-score">Score: ${qb.fantasy_score}</span>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+        
+        const html = `
+            <div class="fantasy-list">${qbList}</div>
+            <p class="form-footnote">Based on recent performance. Score = (Yards/25) + (TDs×4) - (INTs×2)</p>
+        `;
+        
+        updateResult(container, { status: 'success', html });
+    } catch (error) {
+        const message = error instanceof Error ? error.message : 'Failed to load QB rankings';
+        updateResult(container, { status: 'error', html: message });
+    }
+}
+
+async function loadTeamOffenseRankings() {
+    const container = document.getElementById('team-offense');
+    if (!container) return;
+    
+    try {
+        const data = await request('/api/fantasy/team-offense');
+        const rbRankings = Array.isArray(data?.rb_rankings) ? data.rb_rankings : [];
+        const wrRankings = Array.isArray(data?.wr_rankings) ? data.wr_rankings : [];
+        
+        if (rbRankings.length === 0 && wrRankings.length === 0) {
+            updateResult(container, { status: 'info', html: 'No team data available. Refresh game data first.' });
+            return;
+        }
+        
+        const rbList = rbRankings.map((team, index) => `
+            <div class="fantasy-item">
+                <div class="fantasy-rank">${index + 1}</div>
+                <div class="fantasy-info">
+                    <div class="fantasy-name">${escapeHtml(team.team)}</div>
+                    <div class="fantasy-stats">
+                        <span>${team.avg_rushing_yds} rush yds/g</span>
+                        <span>${team.avg_points} pts/g</span>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+        
+        const wrList = wrRankings.map((team, index) => `
+            <div class="fantasy-item">
+                <div class="fantasy-rank">${index + 1}</div>
+                <div class="fantasy-info">
+                    <div class="fantasy-name">${escapeHtml(team.team)}</div>
+                    <div class="fantasy-stats">
+                        <span>${team.avg_passing_yds} pass yds/g</span>
+                        <span>${team.avg_points} pts/g</span>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+        
+        const html = `
+            <div class="fantasy-section">
+                <h4>Top teams for RBs</h4>
+                <div class="fantasy-list">${rbList}</div>
+            </div>
+            <div class="fantasy-section" style="margin-top: 20px;">
+                <h4>Top teams for WRs</h4>
+                <div class="fantasy-list">${wrList}</div>
+            </div>
+        `;
+        
+        updateResult(container, { status: 'success', html });
+    } catch (error) {
+        const message = error instanceof Error ? error.message : 'Failed to load team rankings';
+        updateResult(container, { status: 'error', html: message });
+    }
 }
 
 function initScrollReveal() {

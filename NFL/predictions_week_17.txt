@@ -1,0 +1,84 @@
+NFL PREDICTIONS - WEEK 17
+Successfully predicted: 16/16 games
+====================================================================================================
+
+Game 1: Denver Broncos @ Kansas City Chiefs
+  PREDICTION: Denver Broncos wins
+  Confidence: 55.3%
+  Probabilities: Kansas City Chiefs 44.7% | Denver Broncos 55.3%
+
+Game 2: Dallas Cowboys @ Washington Commanders
+  PREDICTION: Dallas Cowboys wins
+  Confidence: 73.8%
+  Probabilities: Washington Commanders 26.2% | Dallas Cowboys 73.8%
+
+Game 3: Detroit Lions @ Minnesota Vikings
+  PREDICTION: Minnesota Vikings wins
+  Confidence: 57.6%
+  Probabilities: Minnesota Vikings 57.6% | Detroit Lions 42.4%
+
+Game 4: Houston Texans @ Los Angeles Chargers
+  PREDICTION: Los Angeles Chargers wins
+  Confidence: 64.5%
+  Probabilities: Los Angeles Chargers 64.5% | Houston Texans 35.5%
+
+Game 5: Baltimore Ravens @ Green Bay Packers
+  PREDICTION: Green Bay Packers wins
+  Confidence: 64.1%
+  Probabilities: Green Bay Packers 64.1% | Baltimore Ravens 35.9%
+
+Game 6: Arizona Cardinals @ Cincinnati Bengals
+  PREDICTION: Cincinnati Bengals wins
+  Confidence: 82.4%
+  Probabilities: Cincinnati Bengals 82.4% | Arizona Cardinals 17.6%
+
+Game 7: Pittsburgh Steelers @ Cleveland Browns
+  PREDICTION: Pittsburgh Steelers wins
+  Confidence: 77.1%
+  Probabilities: Cleveland Browns 22.9% | Pittsburgh Steelers 77.1%
+
+Game 8: New Orleans Saints @ Tennessee Titans
+  PREDICTION: New Orleans Saints wins
+  Confidence: 77.3%
+  Probabilities: Tennessee Titans 22.7% | New Orleans Saints 77.3%
+
+Game 9: Jacksonville Jaguars @ Indianapolis Colts
+  PREDICTION: Jacksonville Jaguars wins
+  Confidence: 58.1%
+  Probabilities: Indianapolis Colts 41.9% | Jacksonville Jaguars 58.1%
+
+Game 10: Tampa Bay Buccaneers @ Miami Dolphins
+  PREDICTION: Tampa Bay Buccaneers wins
+  Confidence: 58.6%
+  Probabilities: Miami Dolphins 41.4% | Tampa Bay Buccaneers 58.6%
+
+Game 11: New England Patriots @ New York Jets
+  PREDICTION: New England Patriots wins
+  Confidence: 72.6%
+  Probabilities: New York Jets 27.4% | New England Patriots 72.6%
+
+Game 12: Seattle Seahawks @ Carolina Panthers
+  PREDICTION: Seattle Seahawks wins
+  Confidence: 57.8%
+  Probabilities: Carolina Panthers 42.2% | Seattle Seahawks 57.8%
+
+Game 13: New York Giants @ Las Vegas Raiders
+  PREDICTION: New York Giants wins
+  Confidence: 53.4%
+  Probabilities: Las Vegas Raiders 46.6% | New York Giants 53.4%
+
+Game 14: Philadelphia Eagles @ Buffalo Bills
+  PREDICTION: Philadelphia Eagles wins
+  Confidence: 65.4%
+  Probabilities: Buffalo Bills 34.6% | Philadelphia Eagles 65.4%
+
+Game 15: Chicago Bears @ San Francisco 49ers
+  PREDICTION: San Francisco 49ers wins
+  Confidence: 52.5%
+  Probabilities: San Francisco 49ers 52.5% | Chicago Bears 47.5%
+
+Game 16: Los Angeles Rams @ Atlanta Falcons
+  PREDICTION: Los Angeles Rams wins
+  Confidence: 73.4%
+  Probabilities: Atlanta Falcons 26.6% | Los Angeles Rams 73.4%
+

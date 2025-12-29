@@ -9,6 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="console.css">
+    <style>
+        /* EMERGENCY DROPDOWN FIX - ADD TO HEAD */
+        #home-team, #away-team, #batch-season, #batch-week {
+            color: #000000 !important;
+            background-color: #ffffff !important;
+            border: 1px solid #ccc !important;
+        }
+        
+        #home-team option, #away-team option, #batch-season option {
+            color: #000000 !important;
+            background-color: #ffffff !important;
+        }
+    </style>
 </head>
 <body>
     <div class="background-grid"></div>
@@ -24,6 +37,7 @@
             <ul class="nav-links">
                 <li><a href="#control-deck">Console</a></li>
                 <li><a href="#overview">Overview</a></li>
+                <li><a href="#fantasy">Fantasy</a></li>
                 <li><a href="#pipeline">Pipeline</a></li>
                 <li><a href="#models">Models</a></li>
                 <li><a href="#reports">Reports</a></li>
@@ -34,11 +48,9 @@
         <section class="hero-content hero-interactive">
             <div class="hero-copy">
                 <span class="pill">NFL Control Room</span>
-                <h1>Run predictions, refresh data, and inspect the engine in one place.</h1>
+                <h1>Run predictions, refresh data, and view results in one place.</h1>
                 <p>
-                    This dashboard mirrors the Python CLI tools powering SportsPredictor. Pick any matchup, batch the
-                    entire week, or refresh the underlying data feeds — the FastAPI bridge wraps the original scripts so
-                    you get the same outputs without leaving the browser.
+                    Predict individual matchups, batch entire weeks, or refresh NFL stats and injury data — all from your browser.
                 </p>
                 <ul class="hero-highlights">
                     <li>✅ Single-game projections with injury context</li>
@@ -55,8 +67,7 @@
                     <span class="panel-tag">Single matchup</span>
                     <h3>Predict a matchup</h3>
                     <p class="panel-intro">
-                        Pick two teams and call the same routine used by the CLI. Neutral-site adjustments are optional;
-                        the ML ensemble always runs under the hood.
+                        Pick two teams to get a prediction. Neutral-site option available.
                     </p>
                     <div class="form-grid">
                         <label class="form-group">
@@ -94,10 +105,9 @@
         <section id="control-deck" class="section control-deck">
             <div class="section-heading">
                 <span class="section-pill">Command center</span>
-                <h2>Batch the slate, refresh the feeds, and monitor the bridge.</h2>
+                <h2>Batch predictions, refresh data, and check status.</h2>
                 <p>
-                    Each card plugs directly into the FastAPI layer that wraps the CLI scripts. Ensemble ML predictions run by
-                    default; fire one or all depending on how deep you want to go.
+                    Run predictions for entire weeks, update stats and injury data, and see what's running.
                 </p>
             </div>
             <div class="control-grid">
@@ -105,13 +115,12 @@
                     <span class="panel-tag">Weekly slate</span>
                     <h3>Batch predict the week</h3>
                     <p class="panel-intro">
-                        Pull upcoming games from ESPN and run <code>batch_predict_week</code>. Outputs mirror the CLI log with a
-                        structured summary for quick scans.
+                        Predict all games for a given week. Results show winner, confidence, and probabilities.
                     </p>
                     <div class="form-grid">
                         <label class="form-group">
                             <span class="form-label">Week</span>
-                            <input type="number" id="batch-week" class="input-control" min="1" max="18" value="10" required>
+                            <input type="number" id="batch-week" class="input-control" min="1" max="18" required>
                         </label>
                         <label class="form-group">
                             <span class="form-label">Season type</span>
@@ -129,8 +138,7 @@
                     <span class="panel-tag">Data refresh</span>
                     <h3>Sync feeds</h3>
                     <p class="panel-intro">
-                        Kick off the data extractor and injury collector so the models stay current. These map directly to
-                        <code>dataextract.py</code> and <code>injuryextract.py</code>.
+                        Update NFL stats and injury data to keep predictions current.
                     </p>
                     <div class="button-stack">
                         <button class="btn btn-ghost" type="button" id="refresh-data">Refresh game data</button>
@@ -141,10 +149,9 @@
 
                 <div class="panel-card interactive-card" id="status-card">
                     <span class="panel-tag">Bridge status</span>
-                    <h3>API heartbeat</h3>
+                    <h3>Status</h3>
                     <p class="panel-intro">
-                        Quick peek at the FastAPI bridge that brokers the CLI commands. Confirm everything is reachable before
-                        queuing longer jobs.
+                        Check if the system is running and ready.
                     </p>
                     <dl class="status-list">
                         <div>
@@ -168,33 +175,55 @@
             </div>
         </section>
 
+        <section id="fantasy" class="section fantasy">
+            <div class="section-heading">
+                <span class="section-pill">Fantasy Draft Helper</span>
+                <h2>Fantasy football draft recommendations.</h2>
+                <p>Get rankings for QBs, team offenses, and defenses to help build your fantasy team.</p>
+            </div>
+            <div class="control-grid">
+                <div class="panel-card interactive-card">
+                    <span class="panel-tag">QB Rankings</span>
+                    <h3>Quarterback rankings</h3>
+                    <p class="panel-intro">Top QBs ranked by fantasy performance.</p>
+                    <div class="result-block is-empty" id="qb-rankings">Loading QB rankings...</div>
+                </div>
+                <div class="panel-card interactive-card">
+                    <span class="panel-tag">Team Offense</span>
+                    <h3>Best teams for RBs and WRs</h3>
+                    <p class="panel-intro">Teams with strong rushing (good for RBs) and passing (good for WRs).</p>
+                    <div class="result-block is-empty" id="team-offense">Loading team rankings...</div>
+                </div>
+            </div>
+        </section>
+
         <section id="overview" class="section overview">
             <div class="section-heading">
                 <span class="section-pill">What it does</span>
-                <h2>Ship matchup-ready intelligence in minutes, not hours.</h2>
-                <p>Purpose-built for friends who wanted actionable NFL picks backed by data, not vibes.</p>
+                <h2>Get NFL predictions fast.</h2>
+                <p>Built to provide data-driven NFL predictions quickly.</p>
             </div>
 
             <div class="stats-grid">
                 <div class="stat-card">
                     <span class="stat-label">Accuracy lift</span>
                     <span class="stat-value">+14%</span>
-                    <p class="stat-caption">When users follow NFL reports with explanation context.</p>
+                    <p class="stat-caption">When predictions include context and explanations.</p>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-label">Pipeline uptime</span>
+                    <span class="stat-label">Uptime</span>
                     <span class="stat-value">99.2%</span>
-                    <p class="stat-caption">Async fetchers and cached league feeds keep nightly runs reliable.</p>
+                    <p class="stat-caption">System runs reliably with automated updates.</p>
                 </div>
                 <div class="stat-card">
                     <span class="stat-label">Runtime</span>
                     <span class="stat-value">04:37</span>
-                    <p class="stat-caption">Minutes to scrape, feature engineer, and regenerate reports.</p>
+                    <p class="stat-caption">Time to process data and generate predictions.</p>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-label">Signals tracked</span>
+                    <span class="stat-label">Stats tracked</span>
                     <span class="stat-value">37+</span>
-                    <p class="stat-caption">Drive efficiency, pressure rate deltas, cadence shifts, and more.</p>
+                    <p class="stat-caption">Team performance metrics and game factors.</p>
                 </div>
             </div>
         </section>
@@ -202,7 +231,7 @@
         <section id="pipeline" class="section pipeline">
             <div class="section-heading">
                 <span class="section-pill">Pipeline</span>
-                <h2>From raw feeds to accountable predictions.</h2>
+                <h2>How predictions are made.</h2>
             </div>
             <div class="pipeline-layout">
                 <aside class="pipeline-steps">
@@ -213,41 +242,40 @@
                     </button>
                     <button class="pipeline-step" data-step="02">
                         <span class="step-index">02</span>
-                        <span class="step-title">Feature vault</span>
-                        <span class="step-desc">Drive tensors, EPA deltas, rest and travel context.</span>
+                        <span class="step-title">Feature processing</span>
+                        <span class="step-desc">Process team performance, rest days, and travel.</span>
                     </button>
                     <button class="pipeline-step" data-step="03">
                         <span class="step-index">03</span>
-                        <span class="step-title">Model ensemble</span>
-                        <span class="step-desc">Gradient boosting + calibrated logistic stacks.</span>
+                        <span class="step-title">Prediction models</span>
+                        <span class="step-desc">Multiple models combine to make predictions.</span>
                     </button>
                     <button class="pipeline-step" data-step="04">
                         <span class="step-index">04</span>
-                        <span class="step-title">Explainability</span>
-                        <span class="step-desc">SHAP-driven narratives for every recommendation.</span>
+                        <span class="step-title">Explanations</span>
+                        <span class="step-desc">Show why each prediction was made.</span>
                     </button>
                     <button class="pipeline-step" data-step="05">
                         <span class="step-index">05</span>
-                        <span class="step-title">Report engine</span>
-                        <span class="step-desc">PDF + CLI exports with CTA-ready summaries.</span>
+                        <span class="step-title">Reports</span>
+                        <span class="step-desc">Generate predictions and summaries.</span>
                     </button>
                 </aside>
                 <article class="pipeline-detail">
                     <div class="detail-body">
-                        <h3 data-step-title>Async ingestion</h3>
+                        <h3 data-step-title>Data collection</h3>
                         <p data-step-copy>
-                            Multiple async workers grab NFL stats, injury updates, betting lines, and NOAA weather snapshots.
-                            Each feed is normalized, deduped, and versioned so model runs can rewind any matchup state.
+                            Collect NFL stats, injury updates, and weather data from various sources.
                         </p>
                         <ul class="detail-list" data-step-list>
-                            <li>Rate-limited requests fanned out with retry queues.</li>
-                            <li>Schema validator enforces field parity across seasons.</li>
-                            <li>Slack alerts trigger if any feed drifts or stalls.</li>
+                            <li>Automated data collection with error handling.</li>
+                            <li>Data validation ensures consistency.</li>
+                            <li>System monitors data quality.</li>
                         </ul>
                     </div>
                     <div class="detail-footer">
-                        <span class="detail-tag" data-step-tag>Ingestion tier • 450 req/min</span>
-                        <span class="detail-meta" data-step-meta>Last run 02:14 AM · 34 sources healthy</span>
+                        <span class="detail-tag" data-step-tag>Data collection</span>
+                        <span class="detail-meta" data-step-meta>System monitors all sources</span>
                     </div>
                 </article>
             </div>
@@ -256,44 +284,42 @@
         <section id="models" class="section models">
             <div class="section-heading">
                 <span class="section-pill">Model stack</span>
-                <h2>Multiple lenses, one confident probability curve.</h2>
-                <p>Each ensemble member focuses on a different signal family for better calibration.</p>
+                <h2>Multiple models, better predictions.</h2>
+                <p>Different models focus on different factors to improve accuracy.</p>
             </div>
             <div class="model-grid">
                 <article class="model-card">
                     <header>
-                        <span class="model-tag">Drive momentum</span>
-                        <h3>Gradient Boosting (XGBoost)</h3>
+                        <span class="model-tag">Team performance</span>
+                        <h3>Performance model</h3>
                     </header>
-                    <p>Feeds on rolling drive success, pressure disruption, and personnel packages.</p>
+                    <p>Analyzes team performance trends, recent success, and key matchups.</p>
                     <ul>
-                        <li>Rolling 6-week window with decay weighting.</li>
-                        <li>Auto-calibrated with isotonic regression.</li>
-                        <li>Outputs win probability and spread edge.</li>
+                        <li>Looks at last 6 weeks with recent games weighted more.</li>
+                        <li>Calibrated for accuracy.</li>
+                        <li>Outputs win probability and confidence.</li>
                     </ul>
                 </article>
                 <article class="model-card">
                     <header>
-                        <span class="model-tag">Situational football</span>
-                        <h3>Logistic meta-ensemble</h3>
+                        <span class="model-tag">Game factors</span>
+                        <h3>Situation model</h3>
                     </header>
-                    <p>Combines weather-adjusted EPA, rest days, travel load, and late injury overrides.</p>
+                    <p>Considers weather, rest days, travel, and injuries.</p>
                     <ul>
-                        <li>Cross-validated with weekly backtests.</li>
-                        <li>Handles missing data with learned priors.</li>
-                        <li>Surface multidimensional SHAP narratives.</li>
+                        <li>Tested weekly for accuracy.</li>
+                        <li>Handles missing data intelligently.</li>
+                        <li>Provides clear explanations.</li>
                     </ul>
                 </article>
                 <article class="model-card">
                     <header>
-                        <span class="model-tag">Human override</span>
-                        <h3>Analyst sandbox</h3>
+                        <span class="model-tag">Manual adjustments</span>
+                        <h3>Custom options</h3>
                     </header>
-                    <p>Interactive CLI layer lets analysts stress-test scenarios and export custom reports.</p>
+                    <p>Test different scenarios and export custom reports.</p>
                     <ul>
-                        <li>Mode toggles: conservative, neutral, upset.</li>
-                        <li>Outputs CSV, PDF, and Markdown briefs.</li>
-                        <li>Track override history for transparency.</li>
+                        <li>Adjust prediction style: conservative, neutral, or aggressive.</li>
                     </ul>
                 </article>
             </div>
@@ -302,29 +328,29 @@
         <section id="reports" class="section reports">
             <div class="section-heading">
                 <span class="section-pill">Deliverables</span>
-                <h2>Reports designed to be skimmed and trusted.</h2>
-                <p>Every matchup ships with context panels, explanations, and next steps for bet slip or fantasy lineup.</p>
+                <h2>Clear, useful reports.</h2>
+                <p>Every prediction includes context, explanations, and key factors.</p>
             </div>
             <div class="report-gallery">
                 <figure class="report-card">
                     <div class="report-image" data-placeholder="Report Overview"></div>
                     <figcaption>
                         <h3>Game overview</h3>
-                        <p>Topline metrics: projected score, win probability curve, late-week injury confidence.</p>
+                        <p>Key metrics: projected score, win probability, and injury impact.</p>
                     </figcaption>
                 </figure>
                 <figure class="report-card">
                     <div class="report-image" data-placeholder="Explainer Panel"></div>
                     <figcaption>
-                        <h3>Explainer panel</h3>
-                        <p>SHAP-driven callouts highlight the metrics pushing the recommendation over the line.</p>
+                        <h3>Explanations</h3>
+                        <p>Clear explanations of the key factors behind each prediction.</p>
                     </figcaption>
                 </figure>
                 <figure class="report-card">
                     <div class="report-image" data-placeholder="CLI Snapshot"></div>
                     <figcaption>
-                        <h3>CLI snapshot</h3>
-                        <p>Terminal-first analysts can see batch run logs, confidence thresholds, and override history.</p>
+                        <h3>Full details</h3>
+                        <p>See all predictions, confidence levels, and detailed results.</p>
                     </figcaption>
                 </figure>
             </div>
@@ -332,13 +358,12 @@
 
         <section id="contact" class="section callout">
             <div class="callout-content">
-                <h2>Need the full playbook?</h2>
+                <h2>Questions or need help?</h2>
                 <p>
-                    The web front-end mirrors the nightly pipeline. Want access to the CLI, data dictionaries, or private dashboards?
-                    Drop a line and we can explore collaboration or shared research sprints.
+                    Want to know more or need assistance? Get in touch.
                 </p>
                 <div class="callout-actions">
-                    <a class="btn btn-primary" href="mailto:alexis@sportspredictor.dev">alexis@sportspredictor.dev</a>
+                    <a class="btn btn-primary" href="mailto:alexis@hirschengineering.dev">alexis@hirschengineering.dev</a>
                     <a class="btn btn-ghost" href="#control-deck">Back to console</a>
                 </div>
             </div>

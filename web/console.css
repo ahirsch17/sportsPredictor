@@ -67,21 +67,167 @@
     padding: 12px 14px;
     border-radius: var(--radius-sm);
     border: 1px solid rgba(255, 255, 255, 0.14);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(15, 22, 38, 0.8);
     color: var(--fg);
     font-size: 0.95rem;
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Specific styling for select dropdowns */
+select.input-control {
+    background-color: rgba(15, 22, 38, 0.9);
+    color: var(--fg);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239aa7c7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 36px;
+    cursor: pointer;
+}
+
+select.input-control:hover {
+    background-color: rgba(15, 22, 38, 0.95);
 }
 
 .input-control:focus {
     outline: none;
     border-color: rgba(92, 124, 250, 0.6);
     box-shadow: 0 0 0 3px rgba(92, 124, 250, 0.12);
+    background-color: rgba(15, 22, 38, 0.95);
+}
+
+select.input-control:focus {
+    background-color: rgba(15, 22, 38, 0.95);
 }
 
 .input-control:disabled {
     opacity: 0.65;
     cursor: not-allowed;
+}
+
+/* Custom dropdown component */
+.custom-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.custom-select-display {
+    width: 100%;
+    padding: 12px 36px 12px 14px;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(15, 22, 38, 0.9);
+    color: var(--fg);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    position: relative;
+}
+
+.custom-select-display::after {
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239aa7c7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: transform 0.25s ease;
+}
+
+.custom-select-wrapper.open .custom-select-display::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.custom-select-wrapper.open .custom-select-display {
+    border-color: rgba(92, 124, 250, 0.6);
+    box-shadow: 0 0 0 3px rgba(92, 124, 250, 0.12);
+    background-color: rgba(15, 22, 38, 0.95);
+}
+
+.custom-select-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    background: rgba(15, 22, 38, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: var(--radius-sm);
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1000;
+    box-shadow: 0 10px 24px rgba(10, 16, 28, 0.5);
+    display: none;
+    backdrop-filter: blur(18px);
+}
+
+.custom-select-wrapper.open .custom-select-dropdown {
+    display: block;
+}
+
+.custom-select-option {
+    padding: 12px 14px !important;
+    color: #f8fbff !important;
+    background-color: #0f1626 !important;
+    background: #0f1626 !important;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color 0.15s ease, color 0.15s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.custom-select-option:last-child {
+    border-bottom: none;
+}
+
+.custom-select-option:hover {
+    background-color: rgba(92, 124, 250, 0.4) !important;
+    background: rgba(92, 124, 250, 0.4) !important;
+    color: #f8fbff !important;
+}
+
+.custom-select-option.selected {
+    background-color: rgba(92, 124, 250, 0.3) !important;
+    background: rgba(92, 124, 250, 0.3) !important;
+    color: #f8fbff !important;
+    font-weight: 500;
+}
+
+/* Force styling on all custom select elements */
+.custom-select-dropdown {
+    background: #0f1626 !important;
+    background-color: #0f1626 !important;
+}
+
+.custom-select-display {
+    background: rgba(15, 22, 38, 0.9) !important;
+    background-color: rgba(15, 22, 38, 0.9) !important;
+    color: #f8fbff !important;
+}
+
+.custom-select-dropdown::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-select-dropdown::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-select-dropdown::-webkit-scrollbar-thumb {
+    background-color: rgba(92, 124, 250, 0.4);
+    border-radius: 3px;
+}
+
+.custom-select-dropdown::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(92, 124, 250, 0.6);
 }
 
 .form-toggle {
@@ -121,15 +267,108 @@
     justify-content: center;
 }
 
+.data-status-display {
+    margin: 12px 0;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.data-status-info {
+    display: grid;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.status-item {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.status-item strong {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+}
+
+/* Fantasy helper styles */
+.fantasy-list {
+    display: grid;
+    gap: 8px;
+}
+
+.fantasy-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.fantasy-rank {
+    min-width: 30px;
+    font-weight: 600;
+    font-family: "Space Grotesk", sans-serif;
+    color: rgba(92, 124, 250, 0.9);
+    font-size: 1.1rem;
+}
+
+.fantasy-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.fantasy-name {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.fantasy-team {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+.fantasy-stats {
+    display: flex;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    flex-wrap: wrap;
+}
+
+.fantasy-score {
+    color: rgba(92, 124, 250, 0.9);
+    font-weight: 600;
+    margin-left: auto;
+}
+
+.fantasy-section h4 {
+    margin: 0 0 12px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.65);
+}
+
 .result-block {
     border-radius: var(--radius-md);
     border: 1px solid rgba(255, 255, 255, 0.12);
     background: rgba(15, 22, 38, 0.6);
     padding: 18px;
     min-height: 120px;
+    max-height: none;
     font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.82);
     transition: border-color 0.25s ease, background 0.25s ease;
+    overflow: visible;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .result-block.is-empty {
@@ -192,15 +431,17 @@
     gap: 8px;
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.7);
+    width: 100%;
 }
 
 .result-row {
     display: flex;
     justify-content: space-between;
     gap: 16px;
-    align-items: center;
-    padding: 6px 0;
+    align-items: flex-start;
+    padding: 8px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    flex-wrap: wrap;
 }
 
 .result-row:last-child {
@@ -212,10 +453,18 @@
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
+    flex-shrink: 0;
+    min-width: fit-content;
 }
 
 .result-row strong {
     font-weight: 600;
+    text-align: right;
+    word-break: break-word;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 70%;
+    flex: 1;
 }
 
 .injury-summary {
@@ -237,6 +486,73 @@
     padding-left: 18px;
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.85rem;
+}
+
+.predictions-list {
+    margin: 8px 0 0;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    max-height: none;
+    overflow-y: visible;
+    overflow-x: hidden;
+}
+
+.predictions-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.predictions-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.predictions-list::-webkit-scrollbar-thumb {
+    background-color: rgba(92, 124, 250, 0.4);
+    border-radius: 3px;
+}
+
+.predictions-list::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(92, 124, 250, 0.6);
+}
+
+.injury-summary ul li {
+    margin-bottom: 6px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.prediction-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.prediction-item:last-child {
+    border-bottom: none;
+}
+
+.prediction-item strong {
+    color: rgba(92, 124, 250, 0.9);
+    font-weight: 600;
+}
+
+.prediction-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 6px;
+    padding-left: 12px;
+    font-size: 0.85rem;
+}
+
+.prediction-winner {
+    color: rgba(92, 124, 250, 0.9);
+    font-weight: 500;
+}
+
+.prediction-probs,
+.prediction-score {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
 }
 
 .injury-card {
@@ -330,4 +646,40 @@
     .hero-highlights {
         margin-bottom: 24px;
     }
+}
+
+/* FIX FOR DROPDOWN TEXT - ADD TO BOTTOM OF FILE */
+select, .input-control, #home-team, #away-team, #batch-season, #batch-week {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+    border: 1px solid #e0e0e0 !important;
+}
+
+/* Make sure dropdown options are visible */
+select option {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+}
+
+/* Override any inherited white text color */
+.form-group select, 
+.form-group .input-control,
+#matchup-form select,
+#batch-form select,
+#batch-form input[type="number"] {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+}
+
+/* Remove any text-shadow or filter that might be hiding text */
+select *, option * {
+    color: #000000 !important;
+}
+
+/* Force black text on all form controls */
+.input-control:-webkit-autofill,
+.input-control:-webkit-autofill:hover, 
+.input-control:-webkit-autofill:focus {
+    -webkit-text-fill-color: #000000 !important;
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
 }

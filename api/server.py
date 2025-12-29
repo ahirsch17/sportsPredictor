@@ -10,11 +10,14 @@ from typing import Any, Dict, Optional
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
 # Ensure NFL modules are importable
 BASE_DIR = Path(__file__).resolve().parent.parent
 NFL_DIR = BASE_DIR / "NFL"
+WEB_DIR = BASE_DIR / "web"
 if str(NFL_DIR) not in sys.path:
     sys.path.insert(0, str(NFL_DIR))
 
@@ -26,7 +29,7 @@ from injuryextract import (  # type: ignore
     write_injury_report,
 )
 from predictor import advanced_prediction, read_nfl_data  # type: ignore
-from dataextract import update_mode  # type: ignore
+from dataextract import update_mode, get_last_week_from_file  # type: ignore
 
 
 app = FastAPI(
@@ -42,6 +45,8 @@ ALLOWED_ORIGINS = [
     "http://127.0.0.1:5173",
     "http://localhost:8000",
     "http://127.0.0.1:8000",
+    "http://localhost:8001",
+    "http://127.0.0.1:8001",
 ]
 
 app.add_middleware(
@@ -51,6 +56,42 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Serve static files from the web directory
+if WEB_DIR.exists():
+    # Serve CSS and JS files directly
+    @app.get("/styles.css")
+    async def serve_styles():
+        file_path = WEB_DIR / "styles.css"
+        if file_path.exists():
+            return FileResponse(str(file_path), media_type="text/css")
+        raise HTTPException(status_code=404, detail="styles.css not found")
+    
+    @app.get("/console.css")
+    async def serve_console_css():
+        file_path = WEB_DIR / "console.css"
+        if file_path.exists():
+            return FileResponse(str(file_path), media_type="text/css")
+        raise HTTPException(status_code=404, detail="console.css not found")
+    
+    @app.get("/app.js")
+    async def serve_app_js():
+        file_path = WEB_DIR / "app.js"
+        if file_path.exists():
+            return FileResponse(str(file_path), media_type="application/javascript")
+        raise HTTPException(status_code=404, detail="app.js not found")
+    
+    # Serve the main HTML file at the root
+    @app.get("/")
+    async def read_root():
+        index_file = WEB_DIR / "index.html"
+        if index_file.exists():
+            return FileResponse(str(index_file), media_type="text/html")
+        return {"message": "SportsPredictor API", "docs": "/docs"}
+else:
+    @app.get("/")
+    async def read_root():
+        return {"message": "SportsPredictor API", "docs": "/docs", "note": "Web directory not found"}
 
 
 cwd_lock = threading.Lock()
@@ -108,6 +149,59 @@ def format_matchup_response(result: Dict[str, Any], injury_data: Optional[Dict[s
 @app.get("/api/health")
 async def health_check():
     return {"status": "ok", "timestamp": datetime.utcnow().isoformat() + "Z"}
+
+
+@app.get("/api/data/status")
+async def get_data_status():
+    """Get information about the latest data available"""
+    def _get_status():
+        # Get last week from NFL data
+        last_week_info = get_last_week_from_file()
+        nfl_data_week = None
+        nfl_data_season_type = None
+        
+        if last_week_info:
+            nfl_data_season_type, nfl_data_week = last_week_info
+        
+        # Check if nflData.txt exists and get file info
+        file_path = NFL_DIR / "nflData.txt"
+        file_exists = file_path.exists()
+        file_info = {}
+        if file_exists:
+            stats = file_path.stat()
+            file_info = {
+                "size_kb": round(stats.st_size / 1024, 2),
+                "modified_at": datetime.fromtimestamp(stats.st_mtime).isoformat(),
+            }
+        
+        # Check injury file
+        injury_file = NFL_DIR / "injuries_current.txt"
+        injury_exists = injury_file.exists()
+        injury_info = {}
+        if injury_exists:
+            injury_stats = injury_file.stat()
+            injury_info = {
+                "modified_at": datetime.fromtimestamp(injury_stats.st_mtime).isoformat(),
+            }
+        
+        return {
+            "nfl_data": {
+                "latest_week": nfl_data_week,
+                "season_type": nfl_data_season_type,
+                "file_exists": file_exists,
+                **file_info,
+            },
+            "injuries": {
+                "file_exists": injury_exists,
+                **injury_info,
+            }
+        }
+    
+    try:
+        status = await run_blocking(_get_status)
+        return status
+    except Exception as exc:  # pylint: disable=broad-except
+        raise HTTPException(status_code=500, detail=f"Failed to get data status: {exc}") from exc
 
 
 @app.get("/api/teams")
@@ -250,6 +344,230 @@ async def refresh_nfl_data():
         "updated_at": datetime.utcnow().isoformat() + "Z",
         "details": details,
     }
+
+
+@app.get("/api/fantasy/qb-rankings")
+async def get_qb_rankings():
+    """Get QB rankings for fantasy football based on recent performance"""
+    def _get_rankings():
+        # Parse QB stats directly from nflData.txt to get names
+        nfl_data_file = BASE_DIR / "NFL" / "nflData.txt"
+        if not nfl_data_file.exists():
+            return {"qbs": []}
+        
+        qb_stats = {}
+        current_week = None
+        current_game_teams = None
+        
+        try:
+            with open(nfl_data_file, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+            
+            for i, line in enumerate(lines):
+                line = line.strip()
+                
+                # Track current week
+                if ('PRESEASON_WEEK' in line or 'REGULAR_WEEK' in line) and '[' not in line:
+                    current_week = line
+                    current_game_teams = None
+                    continue
+                
+                # Parse game line to get team names
+                if line.startswith('[') and '@' in line and '|' in line:
+                    try:
+                        game_part = line.split(']')[1].split('|')[0].strip()
+                        away_team, home_team = game_part.split('@')
+                        current_game_teams = {
+                            'away': away_team.strip(),
+                            'home': home_team.strip()
+                        }
+                    except Exception:
+                        pass
+                    continue
+                
+                # Parse QB lines: "  AWAY QB (Name): comp/att for yards, TDs/INTs, YPA, RTG"
+                if ('AWAY QB (' in line or 'HOME QB (' in line) and current_week and 'PRESEASON' not in current_week:
+                    try:
+                        # Extract QB name
+                        qb_name = line.split('(')[1].split(')')[0] if '(' in line else None
+                        if not qb_name or not current_game_teams:
+                            continue
+                        
+                        # Determine team
+                        is_away = 'AWAY QB' in line
+                        team_name = current_game_teams['away'] if is_away else current_game_teams['home']
+                        
+                        # Parse stats: "comp/att for yards, TDs/INTs, YPA, RTG"
+                        stats_part = line.split('):')[1].strip() if '):' in line else ''
+                        parts = [p.strip() for p in stats_part.split(',')]
+                        
+                        if len(parts) < 3:
+                            continue
+                        
+                        # Parse comp/att and yards from first part: "comp/att for yards"
+                        comp_att_yards = parts[0]
+                        comp_att = comp_att_yards.split('for')[0].strip()
+                        yards_str = comp_att_yards.split('for')[1].replace('yds', '').strip()
+                        
+                        # Parse TDs/INTs from second part: "TDsINTs"
+                        td_int_part = parts[1]
+                        tds_str = td_int_part.split('TD')[0].strip() if 'TD' in td_int_part else '0'
+                        ints_str = td_int_part.split('/')[1].split('INT')[0].strip() if '/' in td_int_part and 'INT' in td_int_part else '0'
+                        
+                        # Parse YPA (optional)
+                        ypa_str = parts[2].replace('YPA', '').strip() if len(parts) > 2 else '0.0'
+                        
+                        # Parse RTG (optional)
+                        rating_str = parts[3].replace('RTG', '').strip() if len(parts) > 3 else '0.0'
+                        
+                        # Initialize QB stats if needed
+                        if qb_name not in qb_stats:
+                            qb_stats[qb_name] = {
+                                'name': qb_name,
+                                'team': team_name,
+                                'games': 0,
+                                'total_yards': 0,
+                                'total_tds': 0,
+                                'total_ints': 0,
+                                'total_att': 0,
+                                'total_comp': 0,
+                                'qb_ratings': []
+                            }
+                        
+                        stats = qb_stats[qb_name]
+                        stats['games'] += 1
+                        stats['team'] = team_name  # Update to most recent team
+                        
+                        # Add stats
+                        try:
+                            stats['total_yards'] += int(yards_str)
+                            stats['total_tds'] += int(tds_str)
+                            stats['total_ints'] += int(ints_str)
+                            
+                            if '/' in comp_att:
+                                comp, att = comp_att.split('/')
+                                stats['total_comp'] += int(comp)
+                                stats['total_att'] += int(att)
+                            
+                            rating = float(rating_str)
+                            if rating > 0:
+                                stats['qb_ratings'].append(rating)
+                        except (ValueError, TypeError):
+                            pass
+                            
+                    except Exception:
+                        continue
+        
+        except Exception:
+            return {"qbs": []}
+        
+        # Calculate averages and fantasy score
+        qb_list = []
+        for qb_name, stats in qb_stats.items():
+            if stats['games'] == 0:
+                continue
+            
+            avg_yards = stats['total_yards'] / stats['games']
+            avg_tds = stats['total_tds'] / stats['games']
+            avg_ints = stats['total_ints'] / stats['games']
+            completion_pct = (stats['total_comp'] / stats['total_att'] * 100) if stats['total_att'] > 0 else 0
+            avg_rating = sum(stats['qb_ratings']) / len(stats['qb_ratings']) if stats['qb_ratings'] else 0
+            
+            # Simple fantasy score (yards/25 + TDs*4 - INTs*2)
+            fantasy_score = (avg_yards / 25) + (avg_tds * 4) - (avg_ints * 2)
+            
+            qb_list.append({
+                'name': stats['name'],
+                'team': stats['team'],
+                'games': stats['games'],
+                'avg_yards': round(avg_yards, 1),
+                'avg_tds': round(avg_tds, 1),
+                'avg_ints': round(avg_ints, 1),
+                'completion_pct': round(completion_pct, 1),
+                'avg_rating': round(avg_rating, 1),
+                'fantasy_score': round(fantasy_score, 1)
+            })
+        
+        # Sort by fantasy score descending
+        qb_list.sort(key=lambda x: x['fantasy_score'], reverse=True)
+        
+        return {"qbs": qb_list}
+    
+    try:
+        rankings = await run_blocking(_get_rankings)
+        return rankings
+    except Exception as exc:  # pylint: disable=broad-except
+        raise HTTPException(status_code=500, detail=f"Failed to get QB rankings: {exc}") from exc
+
+
+@app.get("/api/fantasy/team-offense")
+async def get_team_offense_rankings():
+    """Get team offensive rankings for fantasy (good for RB/WR picks)"""
+    def _get_rankings():
+        teams_data = read_nfl_data()
+        if not teams_data:
+            return {"teams": []}
+        
+        team_list = []
+        
+        for team_name, games in teams_data.items():
+            regular_games = [g for g in games if not g.get('preseason', False)]
+            if not regular_games:
+                continue
+            
+            total_rush_yds = 0
+            total_pass_yds = 0
+            total_points = 0
+            game_count = 0
+            
+            for game in regular_games:
+                off_stats = game.get('off_stats', {})
+                total_points += game.get('score_for', 0)
+                
+                rush_yds = off_stats.get('rushingYards', 0)
+                pass_yds = off_stats.get('passingYards', 0)
+                
+                if isinstance(rush_yds, (int, float)):
+                    total_rush_yds += rush_yds
+                if isinstance(pass_yds, (int, float)):
+                    total_pass_yds += pass_yds
+                
+                game_count += 1
+            
+            if game_count > 0:
+                avg_rush = total_rush_yds / game_count
+                avg_pass = total_pass_yds / game_count
+                avg_points = total_points / game_count
+                
+                # Fantasy relevance score
+                # High rushing = good for RBs, high passing = good for WRs
+                rb_score = avg_rush + (avg_points * 2)  # RBs benefit from rushing and scoring
+                wr_score = avg_pass + (avg_points * 2)  # WRs benefit from passing and scoring
+                
+                team_list.append({
+                    'team': team_name,
+                    'avg_rushing_yds': round(avg_rush, 1),
+                    'avg_passing_yds': round(avg_pass, 1),
+                    'avg_points': round(avg_points, 1),
+                    'rb_score': round(rb_score, 1),
+                    'wr_score': round(wr_score, 1)
+                })
+        
+        # Sort by RB score and WR score separately
+        rb_sorted = sorted(team_list, key=lambda x: x['rb_score'], reverse=True)
+        wr_sorted = sorted(team_list, key=lambda x: x['wr_score'], reverse=True)
+        
+        return {
+            "teams": team_list,
+            "rb_rankings": rb_sorted[:10],  # Top 10 for RB
+            "wr_rankings": wr_sorted[:10]   # Top 10 for WR
+        }
+    
+    try:
+        rankings = await run_blocking(_get_rankings)
+        return rankings
+    except Exception as exc:  # pylint: disable=broad-except
+        raise HTTPException(status_code=500, detail=f"Failed to get team rankings: {exc}") from exc
 
 
 if __name__ == "__main__":
