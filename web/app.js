@@ -5,6 +5,9 @@ const state = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Ensure page is interactive
+    document.body.style.pointerEvents = 'auto';
+    
     initPipeline();
     initScrollReveal();
     initConsole();

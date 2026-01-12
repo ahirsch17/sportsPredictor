@@ -648,6 +648,11 @@ select.input-control:focus {
     }
 }
 
+/* Ensure all interactive elements are clickable */
+body, body *, input, select, button, textarea, a {
+    pointer-events: auto !important;
+}
+
 /* FIX FOR DROPDOWN TEXT - ADD TO BOTTOM OF FILE */
 select, .input-control, #home-team, #away-team, #batch-season, #batch-week {
     color: #000000 !important;
