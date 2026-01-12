@@ -240,19 +240,23 @@ function createCustomDropdownForFixedOptions(selectElement, options, defaultValu
     }
     
     function handleOutsideClick(event) {
-        if (!wrapper.contains(event.target)) {
-            closeDropdown();
-        }
+        // Use setTimeout to avoid conflicts with other click handlers
+        setTimeout(() => {
+            if (!wrapper.contains(event.target) && isOpen) {
+                closeDropdown();
+            }
+        }, 0);
     }
     
     display.addEventListener('click', (e) => {
+        e.preventDefault();
         e.stopPropagation();
         if (isOpen) {
             closeDropdown();
         } else {
             openDropdown();
         }
-    });
+    }, { capture: true });
     
     wrapper.appendChild(display);
     wrapper.appendChild(dropdown);
@@ -365,19 +369,23 @@ function createCustomDropdown(selectElement, options, placeholder) {
     }
     
     function handleOutsideClick(event) {
-        if (!wrapper.contains(event.target)) {
-            closeDropdown();
-        }
+        // Use setTimeout to avoid conflicts with other click handlers
+        setTimeout(() => {
+            if (!wrapper.contains(event.target) && isOpen) {
+                closeDropdown();
+            }
+        }, 0);
     }
     
     display.addEventListener('click', (e) => {
+        e.preventDefault();
         e.stopPropagation();
         if (isOpen) {
             closeDropdown();
         } else {
             openDropdown();
         }
-    });
+    }, { capture: true });
     
     wrapper.appendChild(display);
     wrapper.appendChild(dropdown);
