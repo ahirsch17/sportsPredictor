@@ -1,6 +1,15 @@
 @echo off
-REM SportsPredictor Startup Script
+REM SportsPredictor Startup Script for Windows
 REM This script starts the FastAPI server and opens the web interface
+REM For macOS/Linux, use start.command or start.py instead
+
+REM Check if running on Windows
+if "%OS%"=="" (
+    echo ERROR: This script is for Windows only.
+    echo On macOS/Linux, use: start.command or python3 start.py
+    pause
+    exit /b 1
+)
 
 cd /d "%~dp0"
 

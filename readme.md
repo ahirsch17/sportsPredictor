@@ -5,10 +5,13 @@ Produces matchup forecasts with confidence percentages for NFL games.
 ## Quick Start
 
 ### Windows
-Double-click `start.bat` in File Explorer to start the server and open the web interface.
+**Double-click `start.bat`** in File Explorer to start the server and open the web interface.
 
-### macOS/Linux
-Double-click `start.command` in Finder (macOS) or run `./start.command` in terminal to start the server and open the web interface.
+### macOS
+**Double-click `start.command`** in Finder to start the server and open the web interface.
+
+### Linux
+Run `./start.command` in terminal to start the server and open the web interface.
 
 ### Manual Start
 From command line:
