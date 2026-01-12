@@ -436,12 +436,13 @@ def update_mode():
         if season_type == 'preseason':
             week_label = f"PRESEASON_WEEK_{week_num}"
         elif season_type == 'postseason':
-            week_label = f"REGULAR_WEEK_{week_num}"  # Store as REGULAR_WEEK for compatibility
+            week_label = f"REGULAR_WEEK_{week_num}"  # Store as REGULAR_WEEK_19-22 for compatibility
         else:
             week_label = f"REGULAR_WEEK_{week_num}"
         
-        print(f"Checking {week_label}...")
+        print(f"Checking {week_label} (season_type={season_type}, week={week_num})...")
         
+        # get_games_for_week will handle the week conversion (19-22 -> 1-4 for API)
         game_ids = get_games_for_week(season_type, week_num)
         
         if not game_ids:
