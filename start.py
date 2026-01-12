@@ -21,19 +21,27 @@ def main():
     print("=" * 50)
     print()
     
-    # Check if dependencies are installed
+    # Check if core dependencies are installed
     try:
         import fastapi
         import uvicorn
         import numpy
         import pandas
         import sklearn
-        import xgboost
     except ImportError as e:
         print(f"Missing dependency: {e}")
         print("Installing required dependencies...")
         subprocess.run([sys.executable, "-m", "pip", "install", "-q", "-r", "requirements.txt"], check=True)
         print("Dependencies installed!")
+        print()
+    
+    # Check xgboost separately (optional, needs libomp on macOS)
+    try:
+        import xgboost
+    except (ImportError, Exception) as e:
+        print(f"Warning: XGBoost not available ({type(e).__name__})")
+        print("ML predictions will use fallback methods.")
+        print("To enable XGBoost on macOS, run: brew install libomp")
         print()
     
     # Start the server

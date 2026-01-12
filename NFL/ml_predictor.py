@@ -8,7 +8,15 @@ import pandas as pd
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.calibration import CalibratedClassifierCV
 from sklearn.metrics import log_loss, accuracy_score, brier_score_loss
-import xgboost as xgb
+
+# XGBoost is optional (requires libomp on macOS)
+try:
+    import xgboost as xgb
+    XGBOOST_AVAILABLE = True
+except (ImportError, Exception):
+    xgb = None
+    XGBOOST_AVAILABLE = False
+
 from predictor import read_nfl_data, calculate_team_averages, classify_offensive_style
 from injuryextract import get_injury_data, calculate_injury_impact
 
@@ -320,6 +328,11 @@ def build_training_dataset(teams_data, injury_data=None):
 
 
 def train_model(X, y, feature_names):
+    if not XGBOOST_AVAILABLE:
+        raise RuntimeError(
+            "XGBoost is not available. On macOS, install OpenMP with: brew install libomp\n"
+            "The server will still work but ML predictions will be disabled."
+        )
     """
     Trains XGBoost model with proper validation and calibration
     """
