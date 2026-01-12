@@ -25,7 +25,12 @@ def main():
     try:
         import fastapi
         import uvicorn
-    except ImportError:
+        import numpy
+        import pandas
+        import sklearn
+        import xgboost
+    except ImportError as e:
+        print(f"Missing dependency: {e}")
         print("Installing required dependencies...")
         subprocess.run([sys.executable, "-m", "pip", "install", "-q", "-r", "requirements.txt"], check=True)
         print("Dependencies installed!")
