@@ -48,24 +48,41 @@ def main():
             creationflags=subprocess.CREATE_NEW_CONSOLE
         )
     else:
-        # On Unix/Mac, run in background
-        subprocess.Popen(
-            [
-                sys.executable, "-m", "uvicorn", "api.server:app",
-                "--reload", "--port", "8001"
-            ],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL
-        )
+        # On macOS/Linux, open a new terminal window to run the server
+        # This keeps the server running even after this script exits
+        if sys.platform == "darwin":  # macOS
+            # Escape the path properly for AppleScript
+            escaped_path = str(script_dir).replace('"', '\\"')
+            escaped_python = str(sys.executable).replace('"', '\\"')
+            apple_script = f'tell application "Terminal" to do script "cd \\"{escaped_path}\\" && \\"{escaped_python}\\" -m uvicorn api.server:app --reload --port 8001"'
+            subprocess.Popen(
+                ["osascript", "-e", apple_script],
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL
+            )
+        else:  # Linux
+            # For Linux, use xterm or gnome-terminal if available
+            subprocess.Popen(
+                [
+                    "xterm", "-e",
+                    f"cd {script_dir} && {sys.executable} -m uvicorn api.server:app --reload --port 8001"
+                ],
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL
+            )
     
     # Wait for server to be ready
     print("Waiting for server to be ready...")
     server_url = "http://127.0.0.1:8001"
     
+    # Give the server more time to start (especially if opening a new terminal)
+    time.sleep(2)
+    
     if check_server_ready(server_url):
         print("Server is ready!")
     else:
         print("Warning: Server may not be fully ready yet, but opening browser anyway...")
+        print("If the page doesn't load, wait a few seconds and refresh.")
     
     print()
     
@@ -80,9 +97,12 @@ def main():
     
     if sys.platform == "win32":
         print("To stop the server, close the 'SportsPredictor Server' window.")
+    elif sys.platform == "darwin":
+        print("Server is running in a new Terminal window.")
+        print("To stop it, close that Terminal window or press Ctrl+C in that window.")
     else:
-        print("Server is running in the background.")
-        print("To stop it, find the process and kill it, or press Ctrl+C.")
+        print("Server is running in a new terminal window.")
+        print("To stop it, close that window or press Ctrl+C.")
     print()
 
 if __name__ == "__main__":
