@@ -21,20 +21,27 @@ except ImportError:
 def get_upcoming_games(week_num, season_type='regular', year=2024):
     """
     gets all games scheduled for a specific week (completed or not)
+    week_num: If >= 19, treated as postseason (converted to API week 1-4)
     """
     base_api_url = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard"
+    
+    # Convert week 19-22 to postseason weeks 1-4 for API
+    actual_week = week_num
+    if week_num >= 19 and week_num <= 22:
+        actual_week = week_num - 18  # Convert 19->1, 20->2, 21->3, 22->4
+        season_type = 'postseason'
     
     # Handle season types: preseason=1, regular=2, postseason=3
     if season_type == 'preseason':
         season_type_num = 1
-    elif season_type == 'postseason' or (season_type == 'regular' and week_num >= 19):
+    elif season_type == 'postseason':
         season_type_num = 3  # Postseason uses type 3
     else:
         season_type_num = 2  # Regular season
     
     params = {
         'seasontype': season_type_num,
-        'week': week_num,
+        'week': actual_week,  # Use converted week for API
         'year': year
     }
     

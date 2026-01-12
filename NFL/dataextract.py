@@ -7,19 +7,28 @@ def get_games_for_week(season_type, week_num, year=2024):
     """
     gets all games with their IDs for a specific week from ESPN API
     season_type: 'preseason', 'regular', or 'postseason'
+    week_num: For postseason, this should be 1-4 (Wild Card, Divisional, Conference, Super Bowl)
+              For regular, this is 1-18
+              If week_num >= 19, it's converted to postseason week (week_num - 18)
     """
     base_api_url = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard"
+    
+    # Convert week 19-22 to postseason weeks 1-4
+    actual_week = week_num
+    if week_num >= 19 and week_num <= 22:
+        actual_week = week_num - 18  # Convert 19->1, 20->2, 21->3, 22->4
+        season_type = 'postseason'
     
     if season_type == 'preseason':
         season_type_num = 1
     elif season_type == 'postseason':
         season_type_num = 3
-    else:  # regular or regular/postseason (both use 2)
+    else:  # regular
         season_type_num = 2
     
     params = {
         'seasontype': season_type_num,
-        'week': week_num,
+        'week': actual_week,  # Use converted week for API
         'year': year
     }
     
@@ -170,7 +179,7 @@ def scrape_nfl_scores():
     print("Starting NFL data extraction with detailed stats from ESPN API...")
     
     # define weeks to scrape
-    # Regular and postseason are combined - both use 'regular' season_type for API
+    # Regular weeks 1-18, Postseason weeks 19-22 (mapped to API weeks 1-4)
     weeks_config = [
         ('preseason', 1), ('preseason', 2), ('preseason', 3),
         ('regular', 1), ('regular', 2), ('regular', 3), ('regular', 4), ('regular', 5),
@@ -184,7 +193,8 @@ def scrape_nfl_scores():
         if season_type == 'preseason':
             week_label = f"PRESEASON_WEEK_{week_num}"
         elif season_type == 'postseason':
-            week_label = f"REGULAR_WEEK_{week_num}"  # Store as REGULAR_WEEK for compatibility
+            # Store as REGULAR_WEEK_19-22 for compatibility, but these are postseason games
+            week_label = f"REGULAR_WEEK_{week_num}"  # Will be 19, 20, 21, or 22
         else:
             week_label = f"REGULAR_WEEK_{week_num}"
         
