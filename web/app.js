@@ -859,7 +859,7 @@ async function fetchDataStatus() {
             
             // NFL Data status
             if (nflData?.latest_week && nflData?.season_type) {
-                const seasonLabel = nflData.season_type === 'regular' ? 'Regular' : 'Preseason';
+                const seasonLabel = nflData.season_type === 'regular' ? 'Regular/Postseason' : 'Preseason';
                 statusHTML += `<div class="status-item"><strong>Latest NFL data:</strong> ${seasonLabel} Week ${nflData.latest_week}</div>`;
             } else if (nflData?.file_exists) {
                 statusHTML += '<div class="status-item"><strong>NFL data:</strong> File exists (week unknown)</div>';
