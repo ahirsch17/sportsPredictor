@@ -636,8 +636,8 @@ async function onBatchSubmit(event, container) {
     const seasonInput = document.getElementById('batch-season');
 
     const week = toNumber(weekInput?.value);
-    if (!Number.isFinite(week) || week < 1 || week > 18) {
-        updateResult(container, { status: 'error', html: 'Enter a week between 1 and 18.' });
+    if (!Number.isFinite(week) || week < 1 || week > 22) {
+        updateResult(container, { status: 'error', html: 'Enter a week between 1 and 22 (1-18 regular, 19-22 postseason).' });
         return;
     }
 
@@ -645,9 +645,15 @@ async function onBatchSubmit(event, container) {
     updateResult(container, { status: 'info', html: 'Running weekly batch...' });
 
     try {
+        // Auto-detect postseason for weeks 19-22
+        let season_type = seasonInput?.value ?? 'regular';
+        if (week >= 19 && week <= 22) {
+            season_type = 'regular';  // Use 'regular' but API will handle as postseason
+        }
+        
         const payload = {
             week,
-            season_type: seasonInput?.value ?? 'regular',
+            season_type: season_type,
             use_ml: true,
         };
         const response = await request('/api/batch', {

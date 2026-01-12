@@ -122,7 +122,7 @@ class MatchupRequest(BaseModel):
 
 class BatchRequest(BaseModel):
     week: int
-    season_type: str = "regular"
+    season_type: str = "regular"  # 'regular' includes both regular season and postseason
     use_ml: bool = True
 
 
@@ -257,7 +257,11 @@ async def predict_matchup(request: MatchupRequest):
 @app.post("/api/batch")
 async def run_batch_prediction(request: BatchRequest):
     def _batch():
-        result = batch_predict_week(request.week, request.season_type, use_ml=request.use_ml)
+        # Auto-detect postseason for weeks 19-22
+        season_type = request.season_type
+        if request.week >= 19 and request.week <= 22:
+            season_type = 'postseason'  # Use postseason API type for weeks 19-22
+        result = batch_predict_week(request.week, season_type, use_ml=request.use_ml)
         return result or {
             "predictions": [],
             "failed_games": [],

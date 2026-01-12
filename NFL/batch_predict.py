@@ -24,7 +24,13 @@ def get_upcoming_games(week_num, season_type='regular', year=2024):
     """
     base_api_url = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard"
     
-    season_type_num = 1 if season_type == 'preseason' else 2
+    # Handle season types: preseason=1, regular=2, postseason=3
+    if season_type == 'preseason':
+        season_type_num = 1
+    elif season_type == 'postseason' or (season_type == 'regular' and week_num >= 19):
+        season_type_num = 3  # Postseason uses type 3
+    else:
+        season_type_num = 2  # Regular season
     
     params = {
         'seasontype': season_type_num,

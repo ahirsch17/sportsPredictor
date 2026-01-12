@@ -501,6 +501,7 @@ def calculate_team_averages(team, teams_data, regular_only=True):
     
     games = teams_data[team]
     if regular_only:
+        # Include regular season AND postseason (weeks 19-22), exclude only preseason
         games = [g for g in games if not g['preseason']]
     
     if not games:

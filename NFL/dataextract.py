@@ -6,12 +6,15 @@ import time
 def get_games_for_week(season_type, week_num, year=2024):
     """
     gets all games with their IDs for a specific week from ESPN API
+    season_type: 'preseason', 'regular', or 'postseason'
     """
     base_api_url = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard"
     
     if season_type == 'preseason':
         season_type_num = 1
-    else:
+    elif season_type == 'postseason':
+        season_type_num = 3
+    else:  # regular or regular/postseason (both use 2)
         season_type_num = 2
     
     params = {
@@ -167,17 +170,21 @@ def scrape_nfl_scores():
     print("Starting NFL data extraction with detailed stats from ESPN API...")
     
     # define weeks to scrape
+    # Regular and postseason are combined - both use 'regular' season_type for API
     weeks_config = [
         ('preseason', 1), ('preseason', 2), ('preseason', 3),
         ('regular', 1), ('regular', 2), ('regular', 3), ('regular', 4), ('regular', 5),
         ('regular', 6), ('regular', 7), ('regular', 8), ('regular', 9), ('regular', 10),
         ('regular', 11), ('regular', 12), ('regular', 13), ('regular', 14), ('regular', 15),
-        ('regular', 16), ('regular', 17), ('regular', 18)
+        ('regular', 16), ('regular', 17), ('regular', 18),
+        ('postseason', 19), ('postseason', 20), ('postseason', 21), ('postseason', 22)
     ]
     
     for season_type, week_num in weeks_config:
         if season_type == 'preseason':
             week_label = f"PRESEASON_WEEK_{week_num}"
+        elif season_type == 'postseason':
+            week_label = f"REGULAR_WEEK_{week_num}"  # Store as REGULAR_WEEK for compatibility
         else:
             week_label = f"REGULAR_WEEK_{week_num}"
         
@@ -346,6 +353,9 @@ def get_last_week_from_file():
                 return ('preseason', week_num)
             elif 'REGULAR' in last_week:
                 week_num = int(last_week.split('_')[-1])
+                # Weeks 19-22 are postseason, but stored as REGULAR_WEEK
+                if week_num >= 19:
+                    return ('postseason', week_num)
                 return ('regular', week_num)
         
         return None
@@ -377,16 +387,32 @@ def update_mode():
     weeks_to_scrape = []
     
     if season_type == 'preseason':
-        # finish preseason, then start regular season
+        # finish preseason, then start regular/postseason
         for week in range(last_week_num, 4):  # Re-check current week for missed games
             weeks_to_scrape.append(('preseason', week))
-        # add all regular season weeks
+        # add all regular season weeks (1-18)
         for week in range(1, 19):
             weeks_to_scrape.append(('regular', week))
-    else:  # regular season
+        # add postseason weeks (19-22)
+        for week in range(19, 23):
+            weeks_to_scrape.append(('postseason', week))
+    elif season_type == 'postseason':
+        # Continue from last postseason week
+        for week in range(last_week_num, 23):
+            weeks_to_scrape.append(('postseason', week))
+    else:  # regular season - continue through postseason
         # Re-check the last scraped week to catch any missed games, then continue
-        for week in range(last_week_num, 19):  # Start from last week, not last+1
-            weeks_to_scrape.append(('regular', week))
+        if last_week_num < 19:
+            # Still in regular season, continue to postseason
+            for week in range(last_week_num, 19):
+                weeks_to_scrape.append(('regular', week))
+            # Add all postseason weeks
+            for week in range(19, 23):
+                weeks_to_scrape.append(('postseason', week))
+        else:
+            # Already in postseason
+            for week in range(last_week_num, 23):
+                weeks_to_scrape.append(('postseason', week))
     
     if not weeks_to_scrape:
         print("Already up to date! No new weeks to fetch.")
@@ -399,6 +425,8 @@ def update_mode():
     for season_type, week_num in weeks_to_scrape:
         if season_type == 'preseason':
             week_label = f"PRESEASON_WEEK_{week_num}"
+        elif season_type == 'postseason':
+            week_label = f"REGULAR_WEEK_{week_num}"  # Store as REGULAR_WEEK for compatibility
         else:
             week_label = f"REGULAR_WEEK_{week_num}"
         
