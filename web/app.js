@@ -111,13 +111,7 @@ function initConsole() {
             });
         }
         
-        if (batchSeasonSelect) {
-            // Create custom dropdown for season select
-            const seasonOptions = Array.from(batchSeasonSelect.options).map(opt => opt.value);
-            const seasonLabels = Array.from(batchSeasonSelect.options).map(opt => opt.text);
-            const seasonOptionsMap = seasonLabels.map((label, i) => ({ value: seasonOptions[i], label }));
-            createCustomDropdownForFixedOptions(batchSeasonSelect, seasonOptionsMap, batchSeasonSelect.value || 'regular');
-        }
+        // Use native select - more reliable
         batchForm.addEventListener('submit', (event) => onBatchSubmit(event, batchResult));
     }
 
@@ -197,7 +191,9 @@ function createCustomDropdownForFixedOptions(selectElement, options, defaultValu
         optionEl.style.backgroundColor = '#0f1626';
         optionEl.style.color = '#f8fbff';
         
-        optionEl.addEventListener('click', () => {
+        optionEl.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
             selectedValue = option.value;
             selectedText = option.label;
             display.textContent = option.label;
@@ -214,7 +210,7 @@ function createCustomDropdownForFixedOptions(selectElement, options, defaultValu
             optionEl.style.backgroundColor = 'rgba(92, 124, 250, 0.3)';
             
             closeDropdown();
-        });
+        }, { capture: true });
         
         // Also ensure hover styles are applied
         optionEl.addEventListener('mouseenter', () => {
@@ -320,7 +316,9 @@ function createCustomDropdown(selectElement, options, placeholder) {
         optionEl.textContent = option;
         optionEl.dataset.value = option;
         
-        optionEl.addEventListener('click', () => {
+        optionEl.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
             selectedValue = option;
             selectedText = option;
             display.textContent = option;
@@ -337,7 +335,7 @@ function createCustomDropdown(selectElement, options, placeholder) {
             optionEl.style.backgroundColor = 'rgba(92, 124, 250, 0.3)';
             
             closeDropdown();
-        });
+        }, { capture: true });
         
         // Also ensure hover styles are applied
         optionEl.addEventListener('mouseenter', () => {
@@ -441,11 +439,8 @@ function populateTeamSelect(select, teams, placeholder) {
 
     select.disabled = false;
     
-    // Create custom dropdown
-    const customDropdown = createCustomDropdown(select, teams, placeholder);
-    if (customDropdown) {
-        select.customDropdown = customDropdown;
-    }
+    // Use native select - more reliable and responsive
+    // Removed custom dropdown for better performance
 }
 
 async function onMatchupSubmit(event, controls) {
