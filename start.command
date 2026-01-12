@@ -4,5 +4,5 @@
 
 cd "$(dirname "$0")"
 
-# Simply run start.py - it handles everything
-python3 start.py
+# Open in Terminal so you can see the server output and stop it with Ctrl+C
+osascript -e 'tell application "Terminal" to activate' -e 'tell application "Terminal" to do script "cd \"'"$(pwd)"'\" && python3 start.py"'

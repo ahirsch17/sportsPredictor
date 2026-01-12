@@ -4,16 +4,13 @@ Produces matchup forecasts with confidence percentages for NFL games.
 
 ## Quick Start
 
-**Recommended: Use `start.py`** - Works on Windows, macOS, and Linux!
+**Just run this one command:**
 
-### Easiest Method (All Platforms)
 ```bash
 python3 start.py
 ```
-or
-```bash
-./start.py
-```
+
+That's it! The server will start, your browser will open automatically, and the server will keep running until you press `Ctrl+C`.
 
 ### Platform-Specific Options
 
