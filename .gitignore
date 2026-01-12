@@ -139,4 +139,12 @@ Thumbs.db
 api_keys.txt
 credentials.json
 
+# Generated data files
+NFL/nflData.txt
+NFL/nflData_backup.txt
+NFL/injuries_current.txt
+NFL/predictions_*.txt
+NFL/batch_output.txt
+NFL/*_vs_*.txt
+
 
