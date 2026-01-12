@@ -336,6 +336,12 @@ def train_model(X, y, feature_names):
     """
     Trains XGBoost model with proper validation and calibration
     """
+    if not XGBOOST_AVAILABLE:
+        raise RuntimeError(
+            "XGBoost is not available. On macOS, install OpenMP with: brew install libomp\n"
+            "The server will still work but ML predictions will be disabled."
+        )
+    
     # Split data for validation
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     
